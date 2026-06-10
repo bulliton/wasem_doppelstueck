@@ -3534,7 +3534,7 @@ const WMedia = {
   hotelKlassik: 'https://doppelstueck.com/wp-content/uploads/2024/03/Klassik-1024x1024.jpg',
   hotelStamm: 'https://doppelstueck.com/wp-content/uploads/2024/03/Stammhaus-1024x1024.jpg',
   hotelRoom2: 'https://doppelstueck.com/wp-content/uploads/2022/12/07557_Wasem-scaled.jpg',
-  hotelHero: 'https://doppelstueck.com/wp-content/uploads/2023/04/2-1.jpg',
+  hotelHero: 'https://doppelstueck.com/wp-content/uploads/2022/05/5_Wasem_Stammhaus_Weinhotel_Hotel_Wasem_Doppelstueck_Ingelheim_Wein-1.jpg',
   // Hochzeiten
   weddingArch: 'https://doppelstueck.com/wp-content/uploads/2022/11/Doppelstueck_Ingelheim_Weingut_Hochzeit_Weinberge_Trauung_Bogen_2.jpg',
   weddingHut: 'https://doppelstueck.com/wp-content/uploads/2022/11/Doppelstueck_Ingelheim_Weingut_Hochzeit_Weinberge_Trauung_Bogen_2.jpg',
@@ -3893,7 +3893,7 @@ const WC = {
         items: ['Eventkalender', 'Aktuelles', 'FAQ', 'Kontakt', 'Anfahrt']
       }],
       visit: 'Besuchen Sie uns',
-      address: ['Wasem Doppelstück', 'Weinbergstraße 1', '55218 Ingelheim am Rhein'],
+      address: ['Weingut Wasem Doppelstück', 'Burkhard Wasem', 'Stiegelgasse 50', '55218 Ingelheim'],
       rights: '© 2026 Weingut Wasem Doppelstück · Alle Rechte vorbehalten',
       legal: ['Impressum', 'Datenschutz', 'AGB']
     }
@@ -4173,7 +4173,7 @@ const WC = {
         items: ['Event Calendar', 'Journal', 'FAQ', 'Contact', 'Directions']
       }],
       visit: 'Visit us',
-      address: ['Wasem Doppelstück', 'Weinbergstraße 1', '55218 Ingelheim am Rhein'],
+      address: ['Weingut Wasem Doppelstück', 'Burkhard Wasem', 'Stiegelgasse 50', '55218 Ingelheim'],
       rights: '© 2026 Weingut Wasem Doppelstück · All rights reserved',
       legal: ['Imprint', 'Privacy', 'Terms']
     }
