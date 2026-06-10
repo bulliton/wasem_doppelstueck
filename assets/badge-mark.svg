@@ -1,0 +1,16 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  
+  
+  <circle cx="60" cy="60" r="56" fill="none" stroke="#0E0E0D" stroke-width="1"></circle>
+  
+  <circle cx="60" cy="60" r="48" fill="none" stroke="#0E0E0D" stroke-width="0.5"></circle>
+  
+  <defs>
+    <path id="circle-text" d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0"></path>
+  </defs>
+  <text font-family="&#39;Inter&#39;, sans-serif" font-size="8" font-weight="400" letter-spacing="0.22em" fill="#0E0E0D">
+    <textPath href="#circle-text" startOffset="5%">HANDGEMACHT · AUS RHEINHESSEN · </textPath>
+  </text>
+  
+  <text x="60" y="74" font-family="&#39;Cormorant Garamond&#39;, Georgia, serif" font-size="52" font-weight="500" text-anchor="middle" fill="#0E0E0D">W</text>
+</svg>

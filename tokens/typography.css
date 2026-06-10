@@ -1,0 +1,70 @@
+/* Wasem Doppelstück — Typography Tokens */
+
+:root {
+  /* ── Font Families ────────────────────────────────────────────────── */
+
+  /** Display serif — headlines, W mark, editorial text */
+  --font-display:  'Cormorant Garamond', 'Georgia', serif;
+
+  /** Body sans — UI, labels, buttons, navigation, body copy */
+  --font-body:     'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  /* ── Type Scale ───────────────────────────────────────────────────── */
+  /* Base: 16px = 1rem */
+
+  --text-2xs:   0.625rem;    /* 10px — legal, micro labels */
+  --text-xs:    0.6875rem;   /* 11px — buttons, overlines */
+  --text-sm:    0.8125rem;   /* 13px — captions, tags */
+  --text-base:  1rem;        /* 16px — body copy */
+  --text-md:    1.125rem;    /* 18px — lead paragraph */
+  --text-lg:    1.25rem;     /* 20px — card headings */
+  --text-xl:    1.5rem;      /* 24px — subheadings */
+  --text-2xl:   2rem;        /* 32px — section headings */
+  --text-3xl:   2.75rem;     /* 44px — page headings */
+  --text-4xl:   3.75rem;     /* 60px — display headings */
+  --text-5xl:   5.5rem;      /* 88px — hero headings */
+  --text-hero:  9rem;        /* 144px — W mark, watermark scale */
+
+  /* ── Font Weights ─────────────────────────────────────────────────── */
+
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+
+  /* ── Line Heights ─────────────────────────────────────────────────── */
+
+  --leading-none:    1;
+  --leading-tight:   1.1;
+  --leading-snug:    1.25;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.7;
+  --leading-loose:   2;
+
+  /* ── Letter Spacing ───────────────────────────────────────────────── */
+
+  --tracking-tighter: -0.03em;
+  --tracking-tight:   -0.01em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.06em;
+  --tracking-wider:    0.1em;
+  --tracking-widest:   0.18em;
+
+  /* ── Composite Styles (shorthand reference) ───────────────────────── */
+
+  /* Display / editorial — use these for major headings */
+  --style-hero:         600 var(--text-5xl)/var(--leading-tight) var(--font-display);
+  --style-display:      500 var(--text-4xl)/var(--leading-tight) var(--font-display);
+  --style-heading-1:    500 var(--text-3xl)/var(--leading-snug) var(--font-display);
+  --style-heading-2:    500 var(--text-2xl)/var(--leading-snug) var(--font-display);
+  --style-heading-3:    500 var(--text-xl)/var(--leading-snug) var(--font-display);
+  --style-heading-4:    500 var(--text-lg)/var(--leading-snug) var(--font-display);
+
+  /* Body / UI — use these for body text and interface elements */
+  --style-body-lg:      400 var(--text-md)/var(--leading-relaxed) var(--font-body);
+  --style-body:         400 var(--text-base)/var(--leading-relaxed) var(--font-body);
+  --style-body-sm:      400 var(--text-sm)/var(--leading-normal) var(--font-body);
+  --style-label:        500 var(--text-xs)/var(--leading-normal) var(--font-body);
+  --style-overline:     500 var(--text-2xs)/var(--leading-normal) var(--font-body);
+  --style-caption:      400 var(--text-sm)/var(--leading-normal) var(--font-body);
+}

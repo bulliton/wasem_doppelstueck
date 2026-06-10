@@ -1,0 +1,56 @@
+/* Wasem Doppelstück — Spacing & Layout Tokens */
+
+:root {
+  /* ── Base Spacing Scale (8px unit) ───────────────────────────────── */
+
+  --space-0:   0;
+  --space-1:   0.25rem;    /*  4px */
+  --space-2:   0.5rem;     /*  8px */
+  --space-3:   0.75rem;    /* 12px */
+  --space-4:   1rem;       /* 16px */
+  --space-5:   1.25rem;    /* 20px */
+  --space-6:   1.5rem;     /* 24px */
+  --space-8:   2rem;       /* 32px */
+  --space-10:  2.5rem;     /* 40px */
+  --space-12:  3rem;       /* 48px */
+  --space-16:  4rem;       /* 64px */
+  --space-20:  5rem;       /* 80px */
+  --space-24:  6rem;       /* 96px */
+  --space-32:  8rem;       /* 128px */
+  --space-40:  10rem;      /* 160px */
+  --space-48:  12rem;      /* 192px */
+
+  /* ── Section Spacing (generous — editorial luxury feel) ─────────── */
+
+  --section-xs: var(--space-12);   /* 48px  — compact sections */
+  --section-sm: var(--space-16);   /* 64px  — standard section padding */
+  --section-md: var(--space-24);   /* 96px  — comfortable sections */
+  --section-lg: var(--space-32);   /* 128px — spacious editorial sections */
+  --section-xl: var(--space-48);   /* 192px — hero / landmark sections */
+
+  /* ── Border Radius ───────────────────────────────────────────────── */
+  /* Brand: mostly sharp (0) — rounded only for pill tags and circle badges */
+
+  --radius-none:   0;
+  --radius-sm:     2px;
+  --radius-md:     4px;    /* subtle softening, use sparingly */
+  --radius-pill:   9999px; /* terroir chips, info tags */
+  --radius-circle: 50%;    /* BIO/VEGAN circular badges */
+
+  /* ── Container Widths ────────────────────────────────────────────── */
+
+  --container-xs:  480px;
+  --container-sm:  680px;
+  --container-md:  900px;
+  --container-lg:  1240px;
+  --container-xl:  1440px;
+
+  /* ── Z-Index Scale ───────────────────────────────────────────────── */
+
+  --z-base:     0;
+  --z-raised:   10;
+  --z-overlay:  100;
+  --z-nav:      200;
+  --z-modal:    300;
+  --z-toast:    400;
+}

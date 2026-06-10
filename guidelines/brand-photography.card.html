@@ -1,0 +1,41 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="Photography Style" subtitle="Natural light · warm tones · honest craft" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--color-bottle-black); font-family: var(--font-body); }
+  .grid { display: flex; height: 180px; }
+  .cell { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding: 14px; border-right: 1px solid rgba(246,241,232,0.1); position: relative; overflow: hidden; }
+  .cell:last-child { border-right: none; }
+  .placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+  .label { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-warm-ivory); position: relative; z-index: 1; }
+  .sub { font-size: 9px; color: var(--color-soft-sage); position: relative; z-index: 1; margin-top: 3px; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="cell" style="background:linear-gradient(160deg,#263321 0%,#1a2518 100%)">
+    <div class="label">Weinberg</div><div class="sub">Vineyard · golden hour</div>
+  </div>
+  <div class="cell" style="background:linear-gradient(160deg,#3d2c1e 0%,#2a1d12 100%)">
+    <div class="label">Keller</div><div class="sub">Cellar · barrel warmth</div>
+  </div>
+  <div class="cell" style="background:linear-gradient(160deg,#4a3828 0%,#2e2218 100%)">
+    <div class="label">Hände</div><div class="sub">Hands · craft close-up</div>
+  </div>
+  <div class="cell" style="background:linear-gradient(160deg,#5a4535 0%,#3d2e20 100%)">
+    <div class="label">Familie</div><div class="sub">People · honest moment</div>
+  </div>
+  <div class="cell" style="background:linear-gradient(160deg,#2a3020 0%,#1c2018 100%)">
+    <div class="label">Genuss</div><div class="sub">Pouring · food · guests</div>
+  </div>
+  <div class="cell" style="background:linear-gradient(160deg,#3a3228 0%,#252018 100%); flex:0.8">
+    <div style="text-align:right; position:relative; z-index:1">
+      <div style="font-size:9px; color:var(--color-soft-sage); line-height:1.6">Natural light only<br>Warm tones<br>No stock imagery<br>No posed shots</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

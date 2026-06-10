@@ -1,0 +1,68 @@
+/* Wasem Doppelstück — Color Tokens */
+
+:root {
+  /* ── Brand Primitives ─────────────────────────────────────────────── */
+
+  /** Bottle Black — primary dark, used for text, nav bg, buttons */
+  --color-bottle-black:     #0E0E0D;
+
+  /** Warm Ivory — primary page background */
+  --color-warm-ivory:       #F6F1E8;
+
+  /** Label Cream — slightly deeper cream for cards, surfaces */
+  --color-label-cream:      #EFE4D1;
+
+  /** Rheinhessen Sand — warm mid-tone, borders, dividers */
+  --color-rheinhessen-sand: #D6C0A0;
+
+  /** Vineyard Soil — warm brown accent, hover states, highlights */
+  --color-vineyard-soil:    #9A7655;
+
+  /** Vine Leaf Deep — dark forest green, nature accent */
+  --color-vine-leaf:        #263321;
+
+  /** Soft Sage — muted green-grey for secondary text, tags */
+  --color-soft-sage:        #A7A58E;
+
+  /** Slate Grey — mid grey for secondary text, captions */
+  --color-slate:            #686868;
+
+  /** Harvest Gold — warm amber accent for badges, highlights */
+  --color-harvest-gold:     #C4A862;
+
+  /** White — card surfaces */
+  --color-white:            #FFFFFF;
+
+  /* ── Semantic Aliases ─────────────────────────────────────────────── */
+
+  /* Surfaces */
+  --surface-page:           var(--color-warm-ivory);
+  --surface-card:           var(--color-white);
+  --surface-card-warm:      var(--color-label-cream);
+  --surface-muted:          var(--color-label-cream);
+  --surface-dark:           var(--color-bottle-black);
+  --surface-dark-elevated:  #1A1A19;
+
+  /* Text */
+  --text-primary:           var(--color-bottle-black);
+  --text-secondary:         var(--color-slate);
+  --text-muted:             var(--color-soft-sage);
+  --text-on-dark:           var(--color-warm-ivory);
+  --text-accent:            var(--color-vineyard-soil);
+  --text-link:              var(--color-bottle-black);
+
+  /* Borders */
+  --border-subtle:          var(--color-label-cream);
+  --border-default:         var(--color-rheinhessen-sand);
+  --border-strong:          var(--color-vineyard-soil);
+  --border-dark:            rgba(246, 241, 232, 0.15);
+
+  /* Accents */
+  --accent-primary:         var(--color-vineyard-soil);
+  --accent-secondary:       var(--color-vine-leaf);
+  --accent-warm:            var(--color-harvest-gold);
+
+  /* Interactive */
+  --interactive-hover-bg:   rgba(14, 14, 13, 0.06);
+  --interactive-overlay:    rgba(14, 14, 13, 0.4);
+}

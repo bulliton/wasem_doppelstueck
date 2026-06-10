@@ -1,0 +1,47 @@
+<!-- @dsCard group="Colors" viewport="700x220" name="Semantic Tokens" subtitle="Surface · Text · Border · Accent aliases" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px 24px; background: var(--color-warm-ivory); font-family: var(--font-body); }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .token { display: flex; align-items: center; gap: 8px; }
+  .dot { width: 20px; height: 20px; flex-shrink: 0; border: 1px solid rgba(14,14,13,0.12); }
+  .label { font-size: 10.5px; color: var(--text-secondary); }
+  .var { font-size: 9.5px; color: var(--text-muted); font-family: monospace; margin-top: 1px; }
+  .section-title { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 8px; font-weight: 500; }
+  .group { margin-bottom: 16px; }
+</style>
+</head>
+<body>
+<div class="group">
+  <div class="section-title">Surface</div>
+  <div class="grid">
+    <div class="token"><div class="dot" style="background:var(--surface-page)"></div><div><div class="label">page</div><div class="var">--surface-page</div></div></div>
+    <div class="token"><div class="dot" style="background:var(--surface-card)"></div><div><div class="label">card</div><div class="var">--surface-card</div></div></div>
+    <div class="token"><div class="dot" style="background:var(--surface-muted)"></div><div><div class="label">muted</div><div class="var">--surface-muted</div></div></div>
+    <div class="token"><div class="dot" style="background:var(--surface-dark)"></div><div><div class="label">dark</div><div class="var">--surface-dark</div></div></div>
+  </div>
+</div>
+<div class="group">
+  <div class="section-title">Text</div>
+  <div class="grid">
+    <div class="token"><div class="dot" style="background:var(--text-primary)"></div><div><div class="label">primary</div><div class="var">--text-primary</div></div></div>
+    <div class="token"><div class="dot" style="background:var(--text-secondary)"></div><div><div class="label">secondary</div><div class="var">--text-secondary</div></div></div>
+    <div class="token"><div class="dot" style="background:var(--text-muted)"></div><div><div class="label">muted</div><div class="var">--text-muted</div></div></div>
+    <div class="token"><div class="dot" style="background:var(--text-accent)"></div><div><div class="label">accent</div><div class="var">--text-accent</div></div></div>
+  </div>
+</div>
+<div class="group" style="margin-bottom:0">
+  <div class="section-title">Border &amp; Accent</div>
+  <div class="grid">
+    <div class="token"><div class="dot" style="background:var(--border-subtle)"></div><div><div class="label">subtle</div><div class="var">--border-subtle</div></div></div>
+    <div class="token"><div class="dot" style="background:var(--border-default)"></div><div><div class="label">default</div><div class="var">--border-default</div></div></div>
+    <div class="token"><div class="dot" style="background:var(--accent-primary)"></div><div><div class="label">accent primary</div><div class="var">--accent-primary</div></div></div>
+    <div class="token"><div class="dot" style="background:var(--accent-warm)"></div><div><div class="label">accent warm</div><div class="var">--accent-warm</div></div></div>
+  </div>
+</div>
+</body>
+</html>

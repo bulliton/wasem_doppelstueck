@@ -1,0 +1,54 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Icons — Outline System" subtitle="Lucide icons · Brand concept icons" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  body { margin: 0; padding: 24px 28px; background: var(--color-warm-ivory); font-family: var(--font-body); }
+  .section { margin-bottom: 20px; }
+  .section-label { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+  .icons { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .icon-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .icon-item svg { stroke: var(--color-bottle-black); width: 20px; height: 20px; }
+  .icon-name { font-size: 9px; color: var(--text-muted); text-align: center; letter-spacing: 0.04em; }
+</style>
+</head>
+<body>
+  <div class="section">
+    <div class="section-label">Functional UI Icons (Lucide · thin outline)</div>
+    <div class="icons" id="ui-icons"></div>
+  </div>
+  <div class="section" style="margin-bottom:0">
+    <div class="section-label">Brand Concept Icons (Lucide mapping)</div>
+    <div class="icons" id="brand-icons"></div>
+  </div>
+  <script>
+    const ui = [
+      ['shopping-cart','Cart'], ['menu','Nav'], ['x','Close'],
+      ['arrow-right','Arrow'], ['search','Search'], ['user','Account'],
+      ['globe','Language'], ['minus','Minus'], ['plus','Plus'], ['check','Check'],
+      ['chevron-down','Chevron']
+    ];
+    const brand = [
+      ['map-pin','Herkunft'], ['hand','Handwerk'], ['leaf','Nachhaltig'],
+      ['users','Familie'], ['grape','Lagenwein'], ['award','Qualität'],
+      ['handshake','Vertrauen'], ['shield','Beständig'], ['eye','Klarheit'],
+      ['link','Verbunden']
+    ];
+    function renderIcons(data, id) {
+      const el = document.getElementById(id);
+      data.forEach(([name, label]) => {
+        const div = document.createElement('div');
+        div.className = 'icon-item';
+        div.innerHTML = `<i data-lucide="${name}" style="width:20px;height:20px;stroke:#0E0E0D;stroke-width:1.25"></i><span class="icon-name">${label}</span>`;
+        el.appendChild(div);
+      });
+    }
+    renderIcons(ui, 'ui-icons');
+    renderIcons(brand, 'brand-icons');
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  </script>
+</body>
+</html>

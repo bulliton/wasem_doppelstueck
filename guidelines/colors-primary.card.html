@@ -1,0 +1,37 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Core Palette" subtitle="Bottle Black · Warm Ivory · Label Cream" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--color-warm-ivory); font-family: var(--font-body); }
+  .row { display: flex; height: 180px; }
+  .swatch { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding: 12px 14px; }
+  .name { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 3px; }
+  .hex  { font-size: 11px; opacity: 0.6; }
+  .light .name, .light .hex { color: var(--color-bottle-black); }
+  .dark  .name, .dark  .hex { color: var(--color-warm-ivory); }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="swatch dark"  style="background:#0E0E0D; flex:1.2">
+    <div class="name">Bottle Black</div>
+    <div class="hex">#0E0E0D</div>
+  </div>
+  <div class="swatch light" style="background:#F6F1E8">
+    <div class="name">Warm Ivory</div>
+    <div class="hex">#F6F1E8</div>
+  </div>
+  <div class="swatch light" style="background:#EFE4D1">
+    <div class="name">Label Cream</div>
+    <div class="hex">#EFE4D1</div>
+  </div>
+  <div class="swatch light" style="background:#FFFFFF; border: 1px solid #EFE4D1;">
+    <div class="name">White</div>
+    <div class="hex">#FFFFFF</div>
+  </div>
+</div>
+</body>
+</html>

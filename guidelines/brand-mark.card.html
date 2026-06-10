@@ -1,0 +1,49 @@
+<!-- @dsCard group="Brand" viewport="700x280" name="W Mark System" subtitle="Monogram · Wordmark · Secondary badge · Watermark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--color-warm-ivory); font-family: var(--font-body); }
+  .grid { display: flex; height: 280px; }
+  .cell { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-right: 1px solid var(--border-subtle); padding: 20px; }
+  .cell:last-child { border-right: none; }
+  .cell-label { font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+  .dark-cell { background: var(--color-bottle-black); }
+  .w-mark { font-family: var(--font-display); font-weight: 500; color: var(--color-bottle-black); line-height: 1; }
+  .w-sub { font-family: var(--font-body); font-size: 10px; font-weight: 400; letter-spacing: 0.2em; color: var(--color-bottle-black); text-align: center; line-height: 1.6; }
+  .w-mark-light { color: var(--color-warm-ivory); }
+  .w-sub-light { color: var(--color-warm-ivory); }
+</style>
+</head>
+<body>
+<div class="grid">
+  <!-- W mark -->
+  <div class="cell">
+    <div class="w-mark" style="font-size:100px">W</div>
+    <div class="cell-label">Monogram</div>
+  </div>
+  <!-- Wordmark -->
+  <div class="cell" style="flex:1.3">
+    <div style="text-align:center">
+      <div class="w-mark" style="font-size:72px">W</div>
+      <div class="w-sub">WASEM<br>DOPPELSTÜCK</div>
+    </div>
+    <div class="cell-label">Wordmark</div>
+  </div>
+  <!-- Dark background -->
+  <div class="cell dark-cell">
+    <div class="w-mark w-mark-light" style="font-size:72px">W</div>
+    <div class="w-sub w-sub-light">WASEM<br>DOPPELSTÜCK</div>
+    <div class="cell-label" style="color:var(--color-soft-sage)">On Dark</div>
+  </div>
+  <!-- Watermark usage -->
+  <div class="cell" style="background:#0E0E0D; position:relative; overflow:hidden">
+    <div style="position:absolute; font-family:var(--font-display); font-size:200px; font-weight:500; color:white; opacity:0.05; line-height:1; top:50%; left:50%; transform:translate(-50%,-50%)">W</div>
+    <div style="position:relative; z-index:1; font-family:var(--font-display); font-size:28px; font-weight:400; font-style:italic; color:var(--color-warm-ivory); text-align:center; line-height:1.3">Charakter.<br>Herkunft.<br>Handwerk.</div>
+    <div class="cell-label" style="position:relative; color:var(--color-soft-sage)">Watermark usage</div>
+  </div>
+</div>
+</body>
+</html>
