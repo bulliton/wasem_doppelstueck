@@ -42,9 +42,7 @@ This design system was developed from the following materials:
 - `uploads/Literwein_Weiss_bio-1-600x600.png` — Bottle product photo (Weiss liter)
 - `uploads/66fda140-8ae9-4af9-b3a0-da69919034c0.png` — Brand inspiration reference sheet (Doppelstück Weingut, Austria — related brand)
 - `uploads/58950ee3-cef4-4e1c-9c81-3ccc26ec0d41.png` — Wasem Doppelstück brand strategy + UI concept sheet (primary reference)
-- `uploads/Cormorant_Garamond,Inter.zip` — Font files (inaccessible at time of build; Google Fonts used as substitute — see note below)
-
-**No codebase or Figma file was provided.** This design system was built from the brand materials above plus the written brief.
+- `uploads/Cormorant_Garamond,Inter.zip` — Font files (Google Fonts used as substitute — see note below)
 
 ---
 
@@ -284,7 +282,6 @@ ui_kits/
     EventsPage.jsx            ← Events listing
     Footer.jsx                ← Footer
 readme.md                     ← This file
-SKILL.md                      ← Skill definition for Claude Code
 ```
 
 ---

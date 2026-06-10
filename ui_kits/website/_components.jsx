@@ -1,6 +1,5 @@
-/* ── Local DS component bundle for the standalone prototype ───────────
- * The compiler's _ds_bundle.js isn't reachable from this served path,
- * so we register the same components under the same namespace here.
+/* ── Local component bundle for the standalone prototype ──────────────
+ * Registers the same components under the shared namespace here.
  * Mirrors components/{core,feedback,forms,products}/*.jsx.
  * ------------------------------------------------------------------- */
 window.WasemDoppelstCkDesignSystem_9fe068 = window.WasemDoppelstCkDesignSystem_9fe068 || {};

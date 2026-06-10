@@ -16,20 +16,9 @@
 
   /* ── Transitions ─────────────────────────────────────────────────── */
 
-  --ease-default:   cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
-  --ease-in:        cubic-bezier(0.4, 0, 1, 1);   /* @kind other */
-  --ease-out:       cubic-bezier(0, 0, 0.2, 1);   /* @kind other */
-  --ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
-
-  --duration-fast:  120ms; /* @kind other */
-  --duration-base:  220ms; /* @kind other */
-  --duration-slow:  380ms; /* @kind other */
-  --duration-lazy:  600ms; /* @kind other */
-
-  --transition-fast:   var(--duration-fast) var(--ease-default); /* @kind other */
-  --transition-base:   var(--duration-base) var(--ease-default); /* @kind other */
-  --transition-slow:   var(--duration-slow) var(--ease-out);     /* @kind other */
-
+  --ease-default:   cubic-bezier(0.4, 0, 0.2, 1);  --ease-in:        cubic-bezier(0.4, 0, 1, 1);    --ease-out:       cubic-bezier(0, 0, 0.2, 1);    --ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast:  120ms;  --duration-base:  220ms;  --duration-slow:  380ms;  --duration-lazy:  600ms;
+  --transition-fast:   var(--duration-fast) var(--ease-default);  --transition-base:   var(--duration-base) var(--ease-default);  --transition-slow:   var(--duration-slow) var(--ease-out);    
   /* ── Borders ─────────────────────────────────────────────────────── */
 
   --border-width-thin:   1px;
@@ -38,22 +27,10 @@
 
   /* ── Opacity ─────────────────────────────────────────────────────── */
 
-  --opacity-disabled: 0.4; /* @kind other */
-  --opacity-muted:    0.6; /* @kind other */
-  --opacity-hover:    0.85; /* @kind other */
-
+  --opacity-disabled: 0.4;  --opacity-muted:    0.6;  --opacity-hover:    0.85;
   /* ── Z-Index ─────────────────────────────────────────────────────── */
 
-  --z-base:     0;   /* @kind other */
-  --z-raised:   10;  /* @kind other */
-  --z-overlay:  100; /* @kind other */
-  --z-nav:      200; /* @kind other */
-  --z-modal:    300; /* @kind other */
-  --z-toast:    400; /* @kind other */
-
+  --z-base:     0;    --z-raised:   10;   --z-overlay:  100;  --z-nav:      200;  --z-modal:    300;  --z-toast:    400;
   /* ── Backdrop ────────────────────────────────────────────────────── */
 
-  --backdrop-blur-sm: blur(8px);  /* @kind other */
-  --backdrop-blur-md: blur(16px); /* @kind other */
-  --backdrop-blur-lg: blur(32px); /* @kind other */
-}
+  --backdrop-blur-sm: blur(8px);   --backdrop-blur-md: blur(16px);  --backdrop-blur-lg: blur(32px);}
