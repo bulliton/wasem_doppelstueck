@@ -19,7 +19,7 @@ Status: läuft
 Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: docs/briefing.md enthält Fakten mit Quelle, 3 Personas, Markenkern-Kandidaten, Stimmzüge mit Beleg und offene Fragen an Marie
 
 ## A-002 · Art Direction (Fable)
-Status: eingang
+Status: prüfung
 Quelle: Benjamin 26.10. · Modell: architekt (Fable 5.1) · Abnahme: docs/art-direction.md enthält alle Punkte aus docs/fable-auftrag-art-direction.md
 
 ## A-003 · Brand Paper / Verkaufsdeck an Marie
