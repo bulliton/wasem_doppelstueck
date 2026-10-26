@@ -5,3 +5,6 @@ dist/
 !.env.example
 .claude/worktrees/
 .claude/settings.local.json
+
+# Rohvideo nicht committen
+prototyp/video/roh/

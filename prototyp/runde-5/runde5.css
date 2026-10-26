@@ -1,0 +1,290 @@
+/* Runde 5 „Drei Verben, eine Gasse“: Kalk, Tinte, Spätburgunder-Nacht, Abendgold */
+:root {
+  --kalk: #F4F0E8;
+  --tinte: #1B1A17;
+  --wein: #3A1820;
+  --gold: #E7B76A;
+  --stein: #6E665C;
+  --linie: rgba(27, 26, 23, .16);
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "Bricolage Grotesque", system-ui, sans-serif;
+  --rand: clamp(16px, 3vw, 40px);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --ease-tuer: cubic-bezier(.7, 0, .2, 1);
+  --nav: 76px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body {
+  margin: 0;
+  background: var(--kalk);
+  color: var(--tinte);
+  font: 400 17px/1.6 var(--sans);
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+img, video { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p { margin: 0; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* Marke: echte Wortmarke und W aus der Originaldatei */
+.wortmarke, .zeichen { display: block; background: currentColor; }
+.wortmarke {
+  width: 210px; aspect-ratio: 4260 / 328;
+  -webkit-mask: url(../marke/wasem-wortmarke.svg) center / contain no-repeat;
+          mask: url(../marke/wasem-wortmarke.svg) center / contain no-repeat;
+}
+.zeichen {
+  display: none; width: 34px; aspect-ratio: 1128 / 816;
+  -webkit-mask: url(../marke/wasem-w.svg) center / contain no-repeat;
+          mask: url(../marke/wasem-w.svg) center / contain no-repeat;
+}
+
+/* Knöpfe: kantig, keine Pillen */
+.knopf {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 0 22px;
+  border: 1px solid transparent; border-radius: 2px;
+  font: 600 15px/1 var(--sans); letter-spacing: .01em;
+  text-decoration: none; white-space: nowrap;
+  transition: background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
+}
+.knopf--gold { background: var(--gold); color: var(--wein); }
+.knopf--gold:hover { background: var(--kalk); }
+.knopf--linie { border-color: rgba(244, 240, 232, .5); color: var(--kalk); }
+.knopf--linie:hover { border-color: var(--kalk); background: rgba(244, 240, 232, .08); }
+.knopf--hell { background: var(--kalk); color: var(--wein); min-height: 44px; }
+.knopf--hell:hover { background: var(--gold); }
+
+.pfeil {
+  display: inline-block; margin-top: 8px; padding: 12px 0;
+  font: 600 15px/1.4 var(--sans);
+  text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px;
+  transition: text-underline-offset .2s var(--ease);
+}
+.pfeil:hover { text-underline-offset: 3px; }
+
+.label { font: 500 14px/1.4 var(--sans); color: rgba(244, 240, 232, .78); }
+.label--dunkel { color: var(--stein); }
+.gross {
+  font: 400 clamp(38px, 4.4vw, 64px)/1.05 var(--serif);
+  letter-spacing: -.02em;
+}
+
+/* Navigation: transparent auf dem Film, danach fest auf Kalk, verschwindet beim Runterscrollen */
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  height: var(--nav); padding: 0 var(--rand);
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  color: var(--tinte); background: var(--kalk);
+  border-bottom: 1px solid var(--linie);
+  transition: transform .35s var(--ease), background-color .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+}
+/* Auf dem Film: kein Text direkt auf dem Bild (Ilona), Marke und Links stehen auf kleinen Tafeln */
+.nav.ist-auf-film { color: var(--kalk); background: transparent; border-color: transparent; }
+.nav__marke, .nav__links { transition: background-color .3s var(--ease), padding .3s var(--ease); }
+.nav.ist-auf-film .nav__marke,
+.nav.ist-auf-film .nav__links { background: var(--wein); padding: 0 20px; height: 48px; display: flex; align-items: center; }
+.nav.ist-weg { transform: translateY(-100%); }
+.nav__marke { justify-self: start; padding: 12px 0; }
+.nav__links { display: flex; gap: 32px; }
+.nav__links a, .nav__shop { font: 500 15px/1 var(--sans); text-decoration: none; padding: 14px 0; }
+.nav__links a:hover, .nav__shop:hover { text-decoration: underline; text-underline-offset: 6px; }
+.nav__rechts { justify-self: end; display: flex; align-items: center; gap: 24px; }
+.nav:not(.ist-auf-film) .knopf--hell { background: var(--wein); color: var(--kalk); }
+
+/* Bühne: der Film hält an, das Tafel-Feld wechselt das Verb */
+.buehne { position: relative; height: 420svh; background: var(--wein); }
+.buehne__halt { position: sticky; top: 0; height: 100svh; overflow: hidden; }
+.medien { position: absolute; inset: 0; }
+.film, .bild img { width: 100%; height: 100%; object-fit: cover; }
+.film { filter: brightness(.86) saturate(1.05); }
+.bild {
+  position: absolute; inset: 0; margin: 0;
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1.15s var(--ease-tuer);
+}
+.bild img { transform: scale(1.14); transition: transform 1.6s var(--ease); }
+.bild.ist-offen { clip-path: inset(0 0 0 0); }
+.bild.ist-offen img { transform: scale(1); }
+
+.tafel {
+  position: absolute; left: var(--rand); bottom: var(--rand); z-index: 2;
+  width: min(640px, 50vw);
+  padding: clamp(24px, 3vw, 44px);
+  background: var(--wein); color: var(--kalk);
+}
+.tafel__stapel { display: grid; margin-top: 18px; }
+.zustand {
+  grid-area: 1 / 1; align-self: end;
+  visibility: hidden; opacity: 0;
+  transition: opacity .35s var(--ease), visibility 0s .35s;
+}
+.zustand.ist-aktiv { visibility: visible; opacity: 1; transition: opacity .2s var(--ease); }
+.zustand > *, .titel .zeile {
+  transform: translateY(18px); opacity: 0;
+  transition: transform .8s var(--ease), opacity .6s var(--ease);
+}
+.zustand.ist-aktiv > *, .zustand.ist-aktiv .titel .zeile { transform: none; opacity: 1; }
+.zustand.ist-aktiv > :nth-child(2) { transition-delay: .12s; }
+.zustand.ist-aktiv > :nth-child(3) { transition-delay: .2s; }
+.zustand.ist-aktiv > :nth-child(4) { transition-delay: .28s; }
+.zustand.ist-aktiv .titel .zeile:nth-child(2) { transition-delay: .08s; }
+.zustand.ist-aktiv .titel .zeile:nth-child(3) { transition-delay: .16s; }
+.zustand.ist-aktiv .wege { transition-delay: .3s; }
+
+.titel {
+  font: 400 clamp(30px, 3.3vw, 50px)/1.06 var(--serif);
+  letter-spacing: -.018em;
+  transform: none !important; opacity: 1 !important;
+}
+.titel .zeile { display: block; }
+.verb {
+  font: italic 300 clamp(58px, 7.2vw, 116px)/.86 var(--serif);
+  letter-spacing: -.025em; color: var(--gold);
+  margin-bottom: 18px; padding-bottom: .06em;
+  overflow: hidden;
+}
+.verb .b { display: inline-block; transform: translateY(105%); transition: transform .9s var(--ease); transition-delay: calc(var(--d) * 28ms); }
+.zustand.ist-aktiv .verb .b { transform: none; }
+.kapitel { font: 400 clamp(24px, 2.3vw, 34px)/1.15 var(--serif); letter-spacing: -.012em; max-width: 22ch; }
+.klein { margin-top: 14px; font-size: 16px; line-height: 1.55; color: rgba(244, 240, 232, .84); max-width: 46ch; }
+.wege { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+.schritte { list-style: none; display: flex; gap: 10px; margin: 30px 0 0; padding: 0; }
+.schritte li { flex: 1; font: 500 12px/1 var(--sans); color: rgba(244, 240, 232, .6); }
+.schritte li::before {
+  content: ""; display: block; height: 2px; margin-bottom: 9px;
+  background: linear-gradient(var(--gold), var(--gold)) left / 0 100% no-repeat, rgba(244, 240, 232, .22);
+  transition: background-size .6s var(--ease);
+}
+.schritte li.ist-voll { color: var(--kalk); }
+.schritte li.ist-voll::before { background-size: 100% 100%; }
+
+.weiter {
+  position: absolute; right: var(--rand); bottom: var(--rand); z-index: 2;
+  font: 500 13px/1 var(--sans); color: var(--kalk);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, .5);
+  writing-mode: vertical-rl; letter-spacing: .08em;
+  transition: opacity .3s var(--ease);
+}
+.weiter::after { content: ""; display: inline-block; width: 1px; height: 56px; margin-top: 12px; background: currentColor; transform-origin: top; animation: tropfen 2.4s var(--ease) infinite; }
+@keyframes tropfen { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+.buehne.ist-weiter .weiter { opacity: 0; }
+
+/* Was habt ihr vor: horizontale Reihe, auf dem Desktop gepinnt */
+.vorhaben { position: relative; }
+.vorhaben__halt {
+  display: flex; align-items: center; gap: clamp(40px, 5vw, 96px);
+  padding: 120px var(--rand) 96px;
+}
+.vorhaben__kopf {
+  flex: 0 0 min(340px, 28vw); position: relative; z-index: 2;
+  align-self: stretch; display: flex; flex-direction: column; justify-content: center;
+  background: var(--kalk); box-shadow: 0 0 0 var(--rand) var(--kalk); clip-path: inset(0 -40px 0 -100vw);
+}
+.vorhaben__kopf p { margin-top: 20px; color: var(--stein); max-width: 34ch; }
+.reihe { display: flex; gap: clamp(24px, 3vw, 48px); will-change: transform; }
+.karte { flex: 0 0 clamp(290px, 27vw, 420px); }
+.karte:nth-child(even) { margin-top: 12vh; }
+.karte__bild { aspect-ratio: 4 / 5; overflow: hidden; background: #e4ddd1; }
+.karte__bild img { width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ease); }
+.karte:hover .karte__bild img { transform: scale(1.04); }
+.karte__ort { margin-top: 18px; font: 500 13px/1.4 var(--sans); color: var(--stein); }
+.karte h3 { margin-top: 6px; font: 400 clamp(26px, 2.2vw, 34px)/1.1 var(--serif); letter-spacing: -.012em; }
+.karte h3 + p { margin-top: 10px; font-size: 16px; line-height: 1.55; max-width: 36ch; }
+.karte .pfeil { margin-top: 2px; }
+
+/* Shop: eine Zeile mit Haltung */
+.shop { padding: 64px var(--rand); border-top: 1px solid var(--linie); border-bottom: 1px solid var(--linie); }
+.shop__link {
+  display: block; margin-top: 10px; text-decoration: none;
+  font: 300 clamp(38px, 5vw, 72px)/1.05 var(--serif); letter-spacing: -.02em;
+}
+.shop__link span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; transition: text-underline-offset .25s var(--ease); }
+.shop__link:hover span { text-underline-offset: .08em; }
+
+/* Familie: versetzte Reihe */
+.familie { padding: 128px var(--rand) 144px; }
+.familie__kopf { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 40px; }
+.familie__kopf h2 { grid-column: 1 / 7; }
+.familie__kopf p { grid-column: 8 / 12; align-self: end; color: var(--stein); }
+.leute { list-style: none; margin: 64px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(16px, 2vw, 32px); }
+.leute li:nth-child(even) { margin-top: 72px; }
+.leute img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #e4ddd1; }
+.leute p { margin-top: 14px; font-size: 15px; line-height: 1.45; color: var(--stein); }
+.leute strong { display: block; font: 400 21px/1.2 var(--serif); color: var(--tinte); }
+
+/* Schluss */
+.schluss { background: var(--wein); color: var(--kalk); padding: clamp(96px, 12vw, 176px) var(--rand); }
+.schluss__titel { margin-top: 24px; font: 400 clamp(38px, 5.2vw, 80px)/1.04 var(--serif); letter-spacing: -.022em; max-width: 18ch; }
+.schluss .wege { margin-top: 44px; }
+
+.fuss { padding: 48px var(--rand) 56px; display: grid; gap: 12px; font-size: 14px; color: var(--stein); }
+.fuss .wortmarke { color: var(--tinte); width: 240px; margin-bottom: 12px; }
+.fuss__hinweis { font-size: 13px; }
+
+.leiste { display: none; }
+
+/* Tablet und Handy */
+@media (max-width: 1023px) {
+  .nav .nav__links, .nav.ist-auf-film .nav__links { display: none; }
+  .nav { grid-template-columns: 1fr auto; }
+  .vorhaben__halt { display: block; padding: 96px 0 72px; }
+  .vorhaben__kopf { padding: 0 var(--rand); max-width: 560px; }
+  .reihe {
+    margin-top: 40px; padding: 0 var(--rand) 8px; overflow-x: auto;
+    scroll-snap-type: x mandatory; scroll-padding: 0 var(--rand);
+    scrollbar-width: none;
+  }
+  .reihe::-webkit-scrollbar { display: none; }
+  .karte { flex-basis: min(78vw, 380px); scroll-snap-align: start; }
+  .karte:nth-child(even) { margin-top: 40px; }
+  .familie__kopf { display: block; }
+  .familie__kopf p { margin-top: 16px; max-width: 46ch; }
+  .leute { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin: 40px calc(var(--rand) * -1) 0; padding: 0 var(--rand); scrollbar-width: none; }
+  .leute::-webkit-scrollbar { display: none; }
+  .leute li { flex: 0 0 58vw; max-width: 260px; scroll-snap-align: start; }
+  .leute li:nth-child(even) { margin-top: 32px; }
+}
+
+@media (max-width: 767px) {
+  :root { --nav: 64px; }
+  .wortmarke { width: 180px; }
+  .nav .wortmarke { display: none; }
+  .nav .zeichen { display: block; }
+  .nav__shop { display: none; }
+  .buehne { height: 380svh; }
+  .tafel { left: 0; right: 0; bottom: 0; width: auto; padding: 22px var(--rand) calc(22px + env(safe-area-inset-bottom)); }
+  .tafel__stapel { margin-top: 12px; }
+  .titel { font-size: clamp(28px, 7.6vw, 34px); }
+  .titel .zeile { display: inline; }
+  .verb { font-size: clamp(52px, 15vw, 72px); margin-bottom: 12px; }
+  .kapitel { font-size: 24px; }
+  .klein { font-size: 15px; }
+  .wege { margin-top: 22px; }
+  .wege .knopf { flex: 1 1 0; padding: 0 14px; }
+  .schritte { margin-top: 22px; }
+  .weiter { display: none; }
+  .familie { padding: 88px var(--rand) 96px; }
+  .shop { padding: 48px var(--rand); }
+  .leiste {
+    display: flex; gap: 8px; position: fixed; inset: auto 0 0 0; z-index: 40;
+    padding: 10px var(--rand) calc(10px + env(safe-area-inset-bottom));
+    background: var(--kalk); border-top: 1px solid var(--linie);
+    transform: translateY(110%); transition: transform .35s var(--ease);
+  }
+  .leiste .knopf { flex: 1; }
+  .leiste .knopf--linie { color: var(--wein); border-color: var(--wein); }
+  body.zeige-leiste .leiste { transform: none; }
+  .fuss { padding-bottom: 104px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

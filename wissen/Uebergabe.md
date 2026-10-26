@@ -1,15 +1,17 @@
 # Übergabe
 
-Stand: 2026-10-26 · **A-004 Runde 4 abgelehnt (D langweilig, C: W-Animation nimmt Gefühl, Aufhänger „wack“). Runde 5: Strategie zuerst, Video-Hero, kreativer Neustart**
+Stand: 2026-10-26 · **A-004 Runde 5 gebaut: „Drei Verben, eine Gasse“ mit Video-Hero. Wartet auf Benjamins Urteil.**
 
 ## Stand
-- Runde 4 liegt committet unter `prototyp/runde-4/` (C Fenster, D Satz, Belege `docs/belege/runde-4/`), bleibt nur als „so nicht“ liegen.
-- Benjamins Urteil und die Strategie für Runde 5 stehen in `docs/runde-5-strategie-und-auftrag.md` (Käufergruppen, USP, was der erste Screen sagen muss, drei Aufhänger-Vorschläge, Video-Hero, was an der Identität neu gedacht wird, Auftrag in vier Schritten). Lessons eingetragen.
-- **Freigabe Benjamin 26.10.: Herbstvideo (41,5 MB, doppelstueck.com) darf geladen und für den Video-Hero geschnitten werden.** Ablage `prototyp/video/` (Rohdatei nicht committen, `.gitignore` ergänzen), Schnitt nach Vault `Playbooks/hero-video-aus-rohmaterial.md`.
-- Lokal: launch.json „repo“ (4321) und „repo-4322“. Branch `claude/brave-meitner-8193a0`, nicht gemergt, kein Push.
+- Konzept, Identität, Texte und Kritik: `docs/design-ideen-runde-5.md` (drei Konzepte Ort, Ritual, Mensch; gewählt Ritual).
+- Bau: `prototyp/runde-5/index.html` (+ `runde5.css`, `runde5.js`). Herbstvideo geschnitten: `prototyp/video/wasem-lese-hero-desktop.mp4` (1080p, 7,3 s, 6,0 MB) und `-mobil.mp4` (720×1280, 3,0 MB), Poster je JPG. Rohdatei in `prototyp/video/roh/` per `.gitignore` ausgeschlossen. Schnittzeiten stehen im Konzeptdokument.
+- Hero: Film randlos, die Seite hält an (420svh), im Spätburgunder-Feld wechselt das Verb probieren / feiern / schlafen, dabei öffnet sich je ein Foto (Vinothek, Weingarten Lichterkette, Doppelzimmer). Nav transparent, Marke und Links auf kleinen Tafeln (sonst unlesbar im Gegenlicht). Danach horizontale Reihe „Was habt ihr vor?“ (Desktop gepinnt, Handy wischbar), Shop-Zeile, Familie versetzt, Schluss, Handy-Leiste.
+- Identität neu: Newsreader + Bricolage Grotesque, Kalk `#F4F0E8`, Tinte, Spätburgunder-Nacht `#3A1820`, Abendgold `#E7B76A`.
+- Geprüft: 1440/375 ohne Überbreite, KI-Look A beide, eine H1, Knöpfe im ersten Screen, Tippflächen ≥ 44 px. Offen: Handy ohne Menü, Leerraum über der H1 am Handy, Safari, Reduced Motion live, Instagram-Ton.
+- Lokal: Server „repo“ (4321) liefert diesen Worktree, `http://localhost:4321/prototyp/runde-5/index.html`. Branch `claude/brave-meitner-8193a0`, nicht gemergt, kein Push.
 
 ## Starter-Prompt (neue Session, Modell Opus 5.5)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/brave-meitner-8193a0`. Lies `docs/runde-5-strategie-und-auftrag.md` (bindend), `wissen/Lessons.md` (Abschnitte Design und Inhalt), Skill `geschmack` (Profil, Moves `hero-film-name-randlos`, `hero-pin-satzwechsel`, `horizontal-pin`, Baustein `nav-transparent-kehrt-zurueck`). A-004 Runde 5: Aufhänger aus der Strategie durch `text-kritik`, dann `design-brainstorm` mit drei frischen Konzepten (nichts aus Runde 2–4 oder dem alten Prototyp), eines wählen, Identität neu schärfen, einen ganzen Start-Screen mit Video-Hero unter `prototyp/runde-5/` bauen (Herbstvideo ist freigegeben: laden, Rohdatei nicht committen, schneiden), Nav transparent, Text lesbar, Desktop und Mobil gleich stark. `design-kritik` ehrlich, Screenshots 1440/375, Wahlknopf. Kein Push, kein Merge.
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/brave-meitner-8193a0`. Lies `docs/design-ideen-runde-5.md` und Benjamins Urteil zu Runde 5 (aus seiner Nachricht). Bei Ja: Feinschliff `prototyp/runde-5/` (Handy-Menü, Tafel-Höhe am Handy, Instagram-Ton der Texte prüfen, Google-Bewertung als Beleg), dann JGA, Tagung, Passwort-Vorschau. Bei Nein: Befund als Lesson, Konzept „Mensch“ oder „Ort“ aus dem Dokument neu prüfen. `design-kritik` vor dem Commit. Kein Push, kein Merge ohne `pruefer`.
 
 ## Runde 4 (Branch `claude/brave-meitner-8193a0`, Fable-Session)
 - Identität gedämpft (`docs/design-ideen-runde-4.md`): Sand `#F1EAE0`, Flaschenschwarz `#1E1917`, Stein für Labels, Gold nur als Haarlinie, Koralle nur als Hover-Punkt; Cormorant Garamond 300 als dünne Display-Serif, Hanken Grotesk für UI. Eine Farbfläche: Kapitel „Zwei Häuser, eine Gasse“.
