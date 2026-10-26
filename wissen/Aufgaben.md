@@ -33,3 +33,7 @@ Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: 2–3 Screens (S
 ## A-005 · E-Mail-Verlauf mit Marie vollständig exportieren
 Status: eingang
 Quelle: Benjamin 26.10. · Modell: scout · Abnahme: Mails liegen in ~/Downloads, Fakten in docs/briefing.md ergänzt
+
+## A-006 · Konzeptrunde 2 nach Benjamins Feedback
+Status: frei
+Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: docs/instagram-ton.md, 2–3 eigene Richtungen gegen docs/art-direction.md verglichen, Storyboard von Benjamin freigegeben
