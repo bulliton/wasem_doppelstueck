@@ -1,24 +1,23 @@
 # Übergabe
 
-Stand: 2026-10-26 · Art Direction fertig (A-002 in prüfung), nächster Schritt Messungen und Brand Paper (A-003)
+Stand: 2026-10-26 · Brand Paper fertig (A-003 in prüfung), nächster Schritt Key-Screens (A-004)
 
 ## Zuletzt erledigt
-- `docs/art-direction.md` (Fable 5.1, Commit 64cd9aa auf main): Idee „Aus einem Glas wird ein ganzer Tag“, Kernsatz-Vorschlag „Kommt auf ein Glas. Bleibt den ganzen Tag.“, System Tageslauf (Uhrzeit-Labels, Tagesplan auf Angebotsseiten), Wortmarke weiterentwickeln (Serif-Versalien bleiben, Goldverlauf weg, kein W-Monogramm), Fraunces 300 + DM Sans, Grund #F4EEE3, Text #3A2A22, ein Akzent Spätburgunder #722F37, Shotlist 15, Stimme mit Vorher/Nachher, Moves (Signatur: mitlaufende Uhr im Kapitel-Index), Startseite 9 Abschnitte, Tagungs-LP 6, Verriss, Deck 11 Folien.
-- Bestand geprüft: Tagungs-, Weingut- und Events-Seite auf doppelstueck.com haben kein Foto (Beleg fürs Deck). Brauchbare Fotos: Hotelserie 2022/05, 07472/07475_Wasem, 06890_Wasem_web, Schwesternporträt (Bildmarke). Logo nur als PNG.
-- A-001 Briefing war bereits fertig (`docs/briefing.md`).
+- **Brand Paper / Verkaufsdeck** als Slides-Artefakt, 14 Folien, Bulliton-Rahmen: https://claude.ai/artifact/GA1cT9E2qYKLArKe6CeRXk (privat, Teilen über das Share-Menü). Quellen der Folien in `docs/brand-paper/project/`.
+- **Messungen** in `docs/belege/messungen-2026-10-26.md` mit Screenshots: Startseite mobil Leistung 61–68, LCP 13,7–14,3 s, 43 MB (41,5 MB Herbstvideo 2023). „Tagung Ingelheim“: doppelstueck.com nicht in Top 20, Platz 3 ist wasem.de (anderes Weingut, Kloster Engelthal). „Weinhotel Ingelheim“: Platz 1. Google-Profil 4,8 aus 235, Kategorie „Weinkellerei“.
+- **Korrektur:** Tagungsseite `/seminare-und-tagungen/` hat 14 Fotos; die Aussage „kein Foto“ in der Art Direction war falsch und ist korrigiert. Folie 3 zeigt stattdessen: keine Personenzahl, Pauschalen ohne Preis, kein Name, kein Ablauf.
+- Deck-Aufbau: 4 Befunde, „Was das heißt“, Idee, System Tageslauf, Specimen (2 Farbrichtungen gleichrangig), 3 Vorschau-Folien (Start, Tagung, JGA, im Wasem-Look mit Bestandsfotos), nächste Schritte, 4 Freigabefragen.
 
 ## Offen / nächste Schritte
-- **A-002 prüfen** (Benjamin liest `docs/art-direction.md`; pruefer-Lauf nicht nötig, reine Doku), dann Status `fertig`.
-- **Vor A-003 messen:** PageSpeed mobil, Google-Ranking „Tagung Ingelheim“ / „Tagungshotel Rheinhessen“, Google-Profil und Bewertungen; Screenshots für Folien 2 bis 4.
-- **A-003 Brand Paper / Verkaufsdeck** (Opus): Gliederung in `docs/art-direction.md` Punkt 12, Bulliton-Rahmen, zwei Farbrichtungen gleichrangig, Bestandsfotos gekennzeichnet.
-- **A-004 Key-Screens** Start, Tagung, JGA (Opus, `frontend-design`, dann `design-kritik`), Vorschau nur mit Passwort.
-- Fragen an Marie: 1, 3, 4, 7 aus dem Briefing plus neu 9: echte Uhrzeiten eines Tagungs- und eines JGA-Tags.
+- **A-003 prüfen** (Benjamin): Deck durchsehen. Platzhalter vor dem Versand füllen: Vorschau-Link, Passwort, Telefon, Mail (Folie 13); Pauschalenpreise und Uhrzeiten bleiben Platzhalter, bis Marie liefert.
+- Texte des Decks sind nicht durch `text-kritik` gelaufen; vor dem Versand nachholen.
+- **A-004 Key-Screens** Start, Tagung, JGA unter `prototyp/` (Opus, `frontend-design`, dann `design-kritik`), Vorlage sind die Vorschau-Folien 10 bis 12; danach Vorschau mit Passwortsperre und Link ins Deck.
+- Fragen an Marie: 1, 3, 4, 7 aus dem Briefing plus 9 (echte Uhrzeiten Tagungs- und JGA-Tag).
 - A-005 Mailverlauf, SWR/NDR-Link, Zielplattform: unverändert offen.
 
 ## Hinweise
-- Alter Prototyp im Root bleibt liegen (Link an Marie zeigt auf `ui_kits/website/Homepage.html`).
-- Worktrees `brave-meitner-8193a0` (gemergt) und `marke-briefing` (gemergt, locked) können weg, sobald die Sessions archiviert sind.
-- Kein Push ohne Rückfrage.
+- PageSpeed-API war über Tageskontingent; Lighthouse lokal per `npx lighthouse@12.6.0 --form-factor=mobile` funktioniert.
+- Alter Prototyp im Root bleibt liegen (Link an Marie). Kein Push ohne Rückfrage.
 
 ## Starter-Prompt (neue Session, Modell Opus 5.5)
-> Projekt wasem-doppelstueck-website. Lies `wissen/Uebergabe.md` und `docs/art-direction.md`. Miss zuerst PageSpeed mobil, Google-Ranking zu „Tagung Ingelheim“ und das Google-Profil von Wasem Doppelstück (Screenshots in `docs/belege/`). Dann A-003: Brand Paper als Slides-Artefakt nach Punkt 12 der Art Direction, Bulliton-Rahmen laut Vault `Playbooks/kunden-decks.md`. Worktree, kein Push.
+> Projekt wasem-doppelstueck-website. Lies `wissen/Uebergabe.md`, `docs/art-direction.md` Punkt 9 und 10 und die Vorschau-Folien in `docs/brand-paper/project/slides/vorschau-*.html`. A-004: Key-Screens Start, Tagung, JGA unter `prototyp/` bauen (Skill `frontend-design`, Bestandsfotos von doppelstueck.com gekennzeichnet), 375 und 1440 prüfen, `design-kritik`, Passwortsperre nach Vault `Playbooks/vorschau-passwortschutz.md`. Worktree, kein Push.
