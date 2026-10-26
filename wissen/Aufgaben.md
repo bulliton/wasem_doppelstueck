@@ -27,13 +27,13 @@ Status: prüfung
 Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: Slides-Artefakt im Bulliton-Rahmen, erst Belege (Google, PageSpeed, Tagungs-Sichtbarkeit), dann Marke, dann Vorschau und nächster Schritt
 
 ## A-004 · Key-Screens mit echten Fotos
-Status: eingang
-Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: 2–3 Screens (Start, Tagung, Event) unter prototyp/, 375 und 1440 ohne Überbreite, design-kritik bestanden
+Status: frei (Richtung A „Ihr schlaft ja hier“ freigegeben 26.10.)
+Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: 3 Screens (Start, JGA, Tagung) in Richtung A unter prototyp/, 375 und 1440 ohne Überbreite, design-kritik bestanden
 
 ## A-005 · E-Mail-Verlauf mit Marie vollständig exportieren
 Status: eingang
 Quelle: Benjamin 26.10. · Modell: scout · Abnahme: Mails liegen in ~/Downloads, Fakten in docs/briefing.md ergänzt
 
 ## A-006 · Konzeptrunde 2 nach Benjamins Feedback
-Status: prüfung (Storyboard liegt Benjamin vor, 26.10.; Ergebnis docs/design-ideen-konzeptrunde-2.md, Empfehlung A)
+Status: fertig (26.10., Benjamin hat Richtung A freigegeben; docs/design-ideen-konzeptrunde-2.md)
 Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: docs/instagram-ton.md, 2–3 eigene Richtungen gegen docs/art-direction.md verglichen, Storyboard von Benjamin freigegeben

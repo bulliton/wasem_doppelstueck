@@ -1,28 +1,38 @@
 # Übergabe
 
-Stand: 2026-10-26 · Brand Paper v8 steht, Benjamin verwirft Idee, Kernsatz, Tageslauf und Farben → Konzeptrunde 2
+Stand: 2026-10-26 · Konzeptrunde 2 fertig, Benjamin hat **Richtung A „Ihr schlaft ja hier“** freigegeben → A-004 Key-Screens
 
 ## Zuletzt erledigt
-- **Brand Paper** als Slides-Artefakt (14 Folien, Version 8): https://claude.ai/artifact/GA1cT9E2qYKLArKe6CeRXk, Quellen in `docs/brand-paper/project/`. Befund-Folien 2 bis 6 sind gut (Benjamin: „gefällt mir auch so“).
-- **Messungen** in `docs/belege/messungen-2026-10-26.md`: Startseite mobil 61–68 Punkte, LCP ~14 s, 43 MB (Herbstvideo 41,5 MB); „Tagung Ingelheim“ nicht in Top 20, Platz 3 ist wasem.de (anderes Weingut); „Weinhotel Ingelheim“ Platz 1; Google-Profil 4,8/235, Kategorie „Weinkellerei“.
-- Tagungsseite hat 14 Fotos (alte Aussage „kein Foto“ korrigiert). Straußwirtschaft gibt es (2026 erstmals, 02.05.–11.06.; Belege T, rheinhessen.de, ingelheim-erleben.de).
+- **A-006 Konzeptrunde 2** (Branch `claude/brave-meitner-8193a0`): `docs/instagram-ton.md` und `docs/design-ideen-konzeptrunde-2.md`. Drei eigene Richtungen gegen die Fable-Art-Direction, Benjamin wählte A.
+- Instagram @wasemdoppelstueck ist ohne Login gesperrt (Altersgrenze). Ausgewertet wurde TikTok @wasem.doppelstueck (gleicher Absender „Marie & Julia Wasem“, 21.200 Follower): Versal-Titel, gesprochener Ton, fast nur Weinberg und Keller, keine Hotel- oder JGA-Inhalte.
+- Davor: Brand Paper v8 (https://claude.ai/artifact/GA1cT9E2qYKLArKe6CeRXk, Quellen `docs/brand-paper/project/`), Messungen in `docs/belege/messungen-2026-10-26.md`.
 
-## Benjamins Feedback 26.10. (bindend)
-- Idee „aus einem Glas Wein wird ein ganzer Tag“ und Kernsatz „Kommt auf ein Glas. Bleibt den ganzen Tag.“: zu trocken, keine Emotion, „wie Wikipedia“. Neu: Ton, bei dem junge Frauen sagen „genau so ist es“.
-- Nicht mit „Frauenunternehmen / zwei Schwestern“ werben. Stärken: coole Räume, Design, lockerer Text, Erlebnis.
-- Folie 8 „Tageslauf“ unverständlich. Wasem hat zwei große Bereiche: Wein-Erlebnisse und Hotellerie/Hospitality, die sich mischen.
-- Farben wirken übernommen. Eigenes Design-Brainstorming machen, mit Fable-Art-Direction vergleichen, begründet entscheiden.
-- Reihenfolge jetzt: erst Design richtig aufziehen (Layout, Key-Screens), danach Deck/PDF für den Kunden anpassen.
+## Freigegebene Richtung A (bindend für A-004)
+- **Idee:** Bei Wasem endet der Weinabend nicht an der Autotür; Weingut (Stiegelgasse 50) und Weinhotel (Stiegelgasse 70, Stammhaus im Hof des Weinguts) liegen in derselben Gasse.
+- **Claim (Vorschlag, vor dem Deck durch `text-kritik`):** „Noch ein Glas? Ihr schlaft ja hier.“ Beweiszeile: „Bio-Weingut und Weinhotel in derselben Gasse in Ingelheim. Weinprobe, Planwagen, Tagung, 50 Zimmer.“ Ersatz ohne Frage: „Bleibt doch einfach. Das Zimmer ist im Hof.“
+- **Aufbau:** Hero mit Claim. Darunter zwei Bereiche nebeneinander: links **Wein erleben** (Proben, Planwagen, Workshops, Straußwirtschaft, Shop), rechts **Bleiben** (Zimmer, Frühstück, Eventraum). Darunter die gemischten Angebote (JGA mit Übernachtung, Wochenende, Tagung mit Weinprobe).
+- **Signatur (genau eine):** Die zwei Spalten laufen beim Scrollen zu einer zusammen, die gemischten Angebote erscheinen in der Fuge. Reduced Motion zeigt den Endzustand.
+- **Farbe aus dem Bestand:** Kalk `#F7F2E4`, Text Etikett-Anthrazit `#2B2622`, leise `#8C857E`, **Abendlicht `#F2BA66`** als einzige Fläche (Website-Akzent, Hero-Himmel, Etikett-Gold flach). Kein Spätburgunder-Rot mehr.
+- **Schrift:** Instrument Serif (Display) + Hanken Grotesk; Kapitelzeilen in Versalien (Wortmarke, Etikett, Captions).
+- **Moves:** `hero-satz-unten-links`, `kapitel-wechselseitig`, `einladung-mit-unterschrift`; Navigation/CTA/Footer aus `geschmack/bausteine/`.
+- **JGA-Headline (aus C):** „Endlich mal wieder alle an einem Tisch.“ **Tagung:** Team bleibt über Nacht, Anfrage an Marie.
+- **Fotos bis zum Shoot (alle „Foto: doppelstueck.com“):** Hero `wp-content/uploads/2024/02/06890_Wasem_web-…jpg` (zwei Frauen im Weinberg, Abendlicht; keine Namen nennen), Zimmer `2024/03/Stammhaus-…jpg` und `Klassik-…jpg`, Tagungsseite `/seminare-und-tagungen/` (14 Fotos), JGA-Serie 2025/04 mit Vorbehalt. Fehlende Motive als beschrifteter grauer Slot mit Shotlist-Zeile.
+
+## Benjamins Feedback 26.10. (bleibt bindend)
+- Gefühl statt Wikipedia; Ton, bei dem junge Frauen sagen „genau so ist es“.
+- Nicht mit „Frauenunternehmen / zwei Schwestern“ werben; Stärken: coole Räume, Design, lockerer Text, Erlebnis.
+- Zwei große Bereiche (Wein-Erlebnisse und Hospitality), die sich mischen; kein Tageslauf.
+- Reihenfolge: erst Design (Key-Screens), danach Deck/PDF anpassen.
 
 ## Offen / nächste Schritte
-- **A-006 Stand 26.10.:** `docs/instagram-ton.md` (Instagram ohne Login gesperrt, ausgewertet wurde TikTok @wasem.doppelstueck mit gleichem Absender) und `docs/design-ideen-konzeptrunde-2.md` (Richtungen A „Noch ein Glas? Ihr schlaft ja hier.“, B „Heute gehört der Hof euch.“, C „Endlich mal wieder alle an einem Tisch.“; Empfehlung A, Farbe Aprikose `#F2BA66` aus dem Bestand). Storyboard wartet auf Benjamins Freigabe.
-- **A-006 Konzeptrunde 2** (Opus, neue Session): Instagram von Wasem Doppelstück sichten (Captions, Inhalte, Ton; Skill `insta-sichten` bzw. Profil im Browser), Markenstimme daraus festhalten. Dann Skill `design-brainstorm` + `geschmack`: 2–3 eigene Richtungen (Idee, Claim mit Gefühl, Farbe, Layout) gegen `docs/art-direction.md` stellen, Benjamin als Inline-Storyboard mit Freigabeknopf vorlegen.
-- Danach A-004 Key-Screens nach freigegebener Richtung, dann Deck-Folien 7 bis 12 neu.
-- Deck-Platzhalter Folie 13 (Link, Passwort, Telefon, Mail) bleiben offen.
+- **A-004 Key-Screens** (frei, Opus, neue Session): Start, JGA, Tagung als ein Prototyp unter `prototyp/` in Richtung A, Desktop 1440 und Mobil 375, echte Fotos, eine Signatur-Bewegung (GSAP/Lenis), `design-kritik` vor dem Commit, Claims durch `text-kritik`. Danach Deck-Folien 6 bis 12 neu.
+- Instagram-Captions nachlesen, sobald Benjamin im Browser-Fenster eingeloggt ist (optional).
+- Deck-Platzhalter Folie 13 (Link, Passwort, Telefon, Mail). Vorschau für Marie nur mit Passwortsperre (Vault `Playbooks/vorschau-passwortschutz.md`).
+- Branch `claude/brave-meitner-8193a0` noch nicht nach `main` gemergt (nur Doku; vor dem Merge `pruefer`). Kein Push ohne Rückfrage.
 
 ## Hinweise
-- Lighthouse lokal: `npx lighthouse@12.6.0 --form-factor=mobile` (PageSpeed-API oft über Kontingent).
-- Alter Prototyp im Root bleibt liegen. Kein Push ohne Rückfrage.
+- Lighthouse lokal: `npx lighthouse@12.6.0 --form-factor=mobile`.
+- Alter Prototyp im Root bleibt liegen.
 
 ## Starter-Prompt (neue Session, Modell Opus 5.5)
-> Projekt wasem-doppelstueck-website. Lies `wissen/Uebergabe.md` (Abschnitt „Benjamins Feedback“ ist bindend) und `docs/briefing.md`. A-006: Erst den Instagram-Account von Wasem Doppelstück sichten und Ton, Themen, Bildwelt festhalten (`docs/instagram-ton.md`). Dann mit `design-brainstorm` und `geschmack` 2–3 eigene Richtungen entwickeln (Idee, Claim mit Gefühl für junge Frauen, Farbe, Aufbau nach den zwei Bereichen Wein-Erlebnis und Hospitality), gegen `docs/art-direction.md` vergleichen und mir als Inline-Storyboard mit Freigabeknopf zeigen. Worktree, kein Push.
+> Projekt wasem-doppelstueck-website. Lies `wissen/Uebergabe.md` (Abschnitt „Freigegebene Richtung A“ ist bindend) und `docs/design-ideen-konzeptrunde-2.md`. A-004: Baue die Key-Screens Start, JGA und Tagung in Richtung A „Ihr schlaft ja hier“ als einen Prototyp unter `prototyp/` (Skill `frontend-design`, Moves und Bausteine aus `geschmack`), mit echten Fotos von doppelstueck.com, Desktop und Mobil, einer Signatur-Bewegung (Spalten laufen zusammen). Texte durch `text-kritik`, dann `design-kritik`, Screenshots zeigen. Worktree, kein Push.
