@@ -1,6 +1,6 @@
 # Übergabe
 
-Stand: 2026-10-26 · **A-004 Runde 1 abgelehnt** („basic, nicht cool“) → Runde 2 in frischer Session
+Stand: 2026-10-26 · **A-004 Runde 2: zwei Start-Screens zur Wahl** (`prototyp/runde-2/a.html`, `b.html`), Maries Favorit Maxwell gemessen (`docs/belege/maxwell-messung.md`), Wortmarke und W als Vektor in `prototyp/marke/` (Quelle `2019/06/Wasem-Doppelstück.png` und Favicon; die frühere Angabe `2024/02/Doppelstueck.png` ist ein Foto). Nächster Schritt: Benjamin wählt A oder B, dann `design-kritik`, JGA und Tagung.
 
 ## Benjamins Urteil zu A-004 Runde 1 (26.10., bindend für Runde 2)
 - **Wortmarke falsch:** getippt statt echt. Die echte Wortmarke als Vektor übernehmen (Original `https://doppelstueck.com/wp-content/uploads/2024/02/Doppelstueck.png`, 2,9 MB; Vorarbeit aus dem Claude-Design-Prototyp `assets/logo-wordmark.svg`, `assets/logo-w.svg`; Vault `Playbooks/logo-als-code.md`). Gegen das Original prüfen, nicht gegen die Vorarbeit.

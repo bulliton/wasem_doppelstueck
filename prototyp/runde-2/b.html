@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Variante B · Wasem Doppelstück</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="runde2.css">
+<link rel="preload" as="image" href="../bilder/wasem-weinberg-abendlicht-glaeser.webp">
+</head>
+<body>
+
+<header class="nav nav--hell">
+  <a class="nav__mobil versal" href="#menue">Menü</a>
+  <nav class="nav__links" aria-label="Bereiche">
+    <a class="versal" href="#wein">Wein</a>
+    <a class="versal" href="#bleiben">Hotel</a>
+    <a class="versal" href="../jga.html">Feiern</a>
+    <a class="versal" href="../tagung.html">Tagung</a>
+  </nav>
+  <a class="nav__marke" href="b.html"><span class="marke" role="img" aria-label="Wasem Doppelstück"></span></a>
+  <div class="nav__rechts">
+    <a class="versal" href="#shop">Shop</a>
+    <a class="knopf knopf--linie nav__buchen" href="#bleiben"><span class="nur-gross">Zimmer </span>buchen</a>
+  </div>
+</header>
+
+<main>
+  <section class="wahl" data-hero>
+    <div class="wahl__bilder">
+      <img class="ist-aktiv" data-fuer="wein" src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="Zwei Frauen stoßen im Weinberg im Abendlicht an" fetchpriority="high">
+      <img data-fuer="bleiben" src="../bilder/wasem-hotelzimmer-balkon.webp" alt="Hotelzimmer mit Balkon" loading="lazy">
+      <img data-fuer="feiern" src="../bilder/wasem-jga-sekt-einschenken.webp" alt="Sekt wird in Gläser eingeschenkt" loading="lazy">
+      <img data-fuer="tagen" src="../bilder/wasem-eventraum-lange-tafeln.webp" alt="Eventraum mit langen Tafeln" loading="lazy">
+    </div>
+    <p class="quelle">Foto: doppelstueck.com</p>
+
+    <div class="wahl__inhalt">
+      <h1 class="wahl__satz">Noch ein Glas? Ihr schlaft ja hier.</h1>
+      <span class="marke wahl__marke" role="img" aria-label="Wasem Doppelstück"></span>
+    </div>
+
+    <div class="waehler">
+      <p class="waehler__frage" id="frage">Was habt ihr vor?</p>
+      <div class="waehler__tabs" role="tablist" aria-labelledby="frage">
+        <button role="tab" aria-selected="true" data-id="wein" data-ziel="#wein" data-weg="Weinprobe anfragen"
+          data-satz="Weinprobe in der Vinothek, Planwagen durch die Weinberge, Straußwirtschaft im Mai und Juni.">Wein probieren</button>
+        <button role="tab" aria-selected="false" data-id="bleiben" data-ziel="#bleiben" data-weg="Zimmer buchen"
+          data-satz="50 Zimmer in zwei Häusern, das Stammhaus steht im Hof des Weinguts.">Übernachten</button>
+        <button role="tab" aria-selected="false" data-id="feiern" data-ziel="../jga.html" data-weg="JGA planen"
+          data-satz="Junggesellinnenabschied mit Weinprobe, langer Tafel und Zimmern gleich nebenan.">Feiern</button>
+        <button role="tab" aria-selected="false" data-id="tagen" data-ziel="../tagung.html" data-weg="Tagung anfragen"
+          data-satz="Tagsüber im Eventraum, abends bei der Weinprobe. Geschlafen wird im Haus.">Tagen</button>
+      </div>
+      <div class="waehler__weg">
+        <p data-zeige-satz aria-live="polite">Weinprobe in der Vinothek, Planwagen durch die Weinberge, Straußwirtschaft im Mai und Juni.</p>
+        <a class="knopf knopf--voll" data-zeige-weg href="#wein">Weinprobe anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="haeuser">
+    <article class="haus" id="wein">
+      <div class="haus__bild">
+        <img src="../bilder/wasem-weingarten-tafel-gedeckt.webp" alt="Gedeckte Tafel im Weingarten" loading="lazy">
+        <div class="haus__titel"><h2>Wein erleben</h2><p>Weingut, Stiegelgasse 50</p></div>
+      </div>
+      <ul>
+        <li><a href="#anfrage">Weinprobe in der Vinothek</a></li>
+        <li><a href="#anfrage">Planwagenfahrt durch die Weinberge</a></li>
+        <li><a href="#anfrage">Workshops: Keramik, Perlen, Makramee, Neonpainting</a></li>
+        <li><a href="#anfrage">Straußwirtschaft im Mai und Juni</a></li>
+        <li><a href="#shop">Bio-Weine im Shop</a></li>
+      </ul>
+      <a class="knopf knopf--voll haus__haupt" href="#anfrage">Weinprobe anfragen</a>
+    </article>
+    <article class="haus" id="bleiben">
+      <div class="haus__bild">
+        <img src="../bilder/wasem-hotelzimmer-doppelbett.webp" alt="Doppelzimmer im Weinhotel" loading="lazy">
+        <div class="haus__titel"><h2>Bleiben</h2><p>Weinhotel, Stiegelgasse 70</p></div>
+      </div>
+      <ul>
+        <li><a href="#buchen">50 Zimmer in zwei Häusern</a></li>
+        <li><a href="#buchen">Stammhaus im Hof des Weinguts</a></li>
+        <li><a href="#buchen">Frühstück vom Buffet</a></li>
+        <li><a href="../tagung.html">Eventraum für Feiern und Tagungen</a></li>
+        <li><a href="#buchen">Aufzug und Tiefgarage im Haus Klassik</a></li>
+      </ul>
+      <a class="knopf knopf--voll haus__haupt" href="#buchen">Zimmer buchen</a>
+    </article>
+  </section>
+
+  <section class="gemischt" aria-labelledby="beides">
+    <h2 id="beides">Am besten bleibt ihr gleich über Nacht.</h2>
+    <a class="zeile" href="../jga.html">
+      <img src="../bilder/wasem-jga-blumenkranz-weinglas.webp" alt="Blumenkranz und Weinglas" loading="lazy">
+      <div><h3>JGA mit Übernachtung</h3><p>Endlich mal wieder alle an einem Tisch.</p></div>
+      <span class="versal">Ansehen</span>
+    </a>
+    <a class="zeile" href="#buchen">
+      <img src="../bilder/wasem-weingarten-tafel-gruen.webp" alt="Tafel im grünen Weingarten" loading="lazy">
+      <div><h3>Wochenende</h3><p>Abends Weinprobe in der Vinothek, danach sind es ein paar Schritte bis ins Zimmer.</p></div>
+      <span class="versal">Ansehen</span>
+    </a>
+    <a class="zeile" href="../tagung.html">
+      <img src="../bilder/wasem-eventraum-tagung-hoch.webp" alt="Eventraum für eine Tagung gestellt" loading="lazy">
+      <div><h3>Tagung</h3><p>Tagsüber im Eventraum, abends bei der Weinprobe. Geschlafen wird im Haus.</p></div>
+      <span class="versal">Ansehen</span>
+    </a>
+  </section>
+</main>
+
+<footer class="schluss" id="shop">
+  <span>Weingut &amp; Weinhotel Wasem Doppelstück, Stiegelgasse 50 und 70, 55218 Ingelheim</span>
+  <span>Fotos: doppelstueck.com</span>
+</footer>
+
+<nav class="leiste" aria-label="Schnelle Wege">
+  <a class="versal" href="#wein">Anfragen</a>
+  <a class="versal" href="#bleiben">Zimmer buchen</a>
+</nav>
+
+<script src="runde2.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+/* A-004 Runde 2: zwei Start-Screens. Tokens aus Brand Paper v8, Mechanik aus Maries Favorit (Maxwell). */
+:root {
+  --kalk: #F7F2E4;
+  --kalk-tief: #EDE5D2;
+  --anthrazit: #2B2622;
+  --leise: #6F6862;
+  --abendlicht: #F2BA66;
+  --linie: rgba(43, 38, 34, .16);
+
+  --serif: "Instrument Serif", Georgia, serif;
+  --grotesk: "Hanken Grotesk", system-ui, sans-serif;
+
+  --riesig: clamp(3.4rem, 1.2rem + 7.4vw, 8.5rem);
+  --titel: clamp(2.2rem, 1.5rem + 2.6vw, 4rem);
+  --kachel: clamp(1.9rem, 1.5rem + 1.2vw, 2.75rem);
+  --lead: clamp(1.1rem, 1.05rem + .25vw, 1.3rem);
+
+  --rand: clamp(16px, 3vw, 48px);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--kalk);
+  color: var(--anthrazit);
+  font: 400 1rem/1.55 var(--grotesk);
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; font-weight: 400; }
+p { margin: 0; }
+.kursiv { font-style: italic; }
+
+.versal {
+  font: 600 .72rem/1.2 var(--grotesk);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Wortmarke und W als Maske, damit sie die Textfarbe übernehmen */
+.marke {
+  display: block;
+  aspect-ratio: 4260 / 328;
+  background: currentColor;
+  -webkit-mask: url(../marke/wasem-wortmarke.svg) center / contain no-repeat;
+          mask: url(../marke/wasem-wortmarke.svg) center / contain no-repeat;
+}
+
+/* Knöpfe: eckig, eine Linie, gefüllt nur für den Hauptweg */
+.knopf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6em;
+  min-height: 52px;
+  padding: 0 1.6rem;
+  border: 1px solid currentColor;
+  font: 600 .78rem/1 var(--grotesk);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color .3s var(--ease), color .3s var(--ease);
+}
+.knopf--voll { background: var(--anthrazit); border-color: var(--anthrazit); color: var(--kalk); }
+.knopf--voll:hover { background: #000; }
+.knopf--linie:hover { background: var(--anthrazit); color: var(--kalk); }
+.knopf--hell.knopf--voll { background: var(--kalk); border-color: var(--kalk); color: var(--anthrazit); }
+.knopf--hell.knopf--linie { color: var(--kalk); }
+.knopf--hell.knopf--linie:hover { background: var(--kalk); color: var(--anthrazit); }
+
+.pfeil { text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+
+/* Navigation: Links links, Wortmarke Mitte, Buchen rechts */
+.nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 18px var(--rand);
+  color: var(--anthrazit);
+  transition: background-color .3s var(--ease), color .3s var(--ease);
+}
+.nav--hell { color: var(--kalk); }
+.nav.ist-gescrollt { background: var(--kalk); color: var(--anthrazit); box-shadow: 0 1px 0 var(--linie); }
+.nav__links, .nav__rechts { display: flex; gap: clamp(1rem, 2vw, 2rem); align-items: center; }
+.nav__rechts { justify-content: flex-end; }
+.nav__marke { width: clamp(170px, 18vw, 260px); }
+.nav .knopf { min-height: 40px; padding: 0 1.1rem; font-size: .7rem; }
+.nav__mobil { display: none; }
+
+.quelle {
+  position: absolute;
+  right: var(--rand);
+  bottom: 12px;
+  font-size: .7rem;
+  opacity: .75;
+}
+
+/* Feste Leiste am Handy: Hauptweg immer am Daumen */
+.leiste {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 25;
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--anthrazit);
+  transform: translateY(100%);
+  transition: transform .3s cubic-bezier(.23, 1, .32, 1);
+}
+.leiste.ist-da { transform: none; }
+.leiste a {
+  display: grid;
+  place-items: center;
+  min-height: 56px;
+  color: var(--kalk);
+}
+.leiste a + a { background: var(--abendlicht); color: var(--anthrazit); }
+
+/* ---------- Variante A: Das W ist ein Fenster ---------- */
+.fenster { height: 190svh; position: relative; }
+.fenster__buehne {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+}
+.fenster__bild {
+  position: absolute;
+  inset: 0;
+  /* Erste Ebene das W, zweite ein Rechteck, das beim Scrollen bis zum Rand wächst */
+  -webkit-mask-image: url(../marke/wasem-w.svg?v=2), linear-gradient(#000, #000);
+          mask-image: url(../marke/wasem-w.svg?v=2), linear-gradient(#000, #000);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: var(--w-x) var(--w-y), center;
+          mask-position: var(--w-x) var(--w-y), center;
+  -webkit-mask-size: var(--w-breite) auto, calc(var(--o) * 100%) calc(var(--o) * 100%);
+          mask-size: var(--w-breite) auto, calc(var(--o) * 100%) calc(var(--o) * 100%);
+  --w-x: 96%;
+  --w-y: 46%;
+  --w-breite: calc(48vw + var(--p, 0) * 150vw);
+  --o: max(0, (var(--p, 0) - .35) / .65);
+}
+.fenster__bild img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 40%;
+  transform: scale(calc(1.12 - var(--p, 0) * .12));
+}
+.fenster__text {
+  position: absolute;
+  left: var(--rand);
+  bottom: clamp(32px, 7vh, 72px);
+  width: min(40rem, 44vw);
+  opacity: calc(1 - var(--p, 0) * 2.4);
+}
+.fenster__text h1 {
+  margin: 0 0 1.25rem;
+  font: 400 var(--riesig)/.92 var(--serif);
+  letter-spacing: -.02em;
+}
+.fenster__text p.beweis { max-width: 30rem; font-size: var(--lead); color: var(--leise); }
+.wege { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+.fenster__ende {
+  position: absolute;
+  left: var(--rand);
+  bottom: clamp(24px, 5vh, 56px);
+  color: var(--kalk);
+  opacity: calc((var(--p, 0) - .75) * 4);
+}
+.fenster__ende p { font: 400 var(--titel)/1 var(--serif); max-width: 14ch; }
+.fenster .quelle { color: var(--kalk); opacity: calc((var(--p, 0) - .75) * 3); }
+
+/* Übersicht A: versetztes Raster statt Bento, Text unter dem Bild */
+.uebersicht { padding: clamp(80px, 14vh, 160px) var(--rand) clamp(64px, 10vh, 120px); }
+.uebersicht__kopf { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: clamp(40px, 7vh, 80px); }
+.uebersicht__kopf h2 { font: 400 var(--titel)/1 var(--serif); letter-spacing: -.01em; }
+.raster {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: clamp(16px, 2vw, 32px);
+  row-gap: clamp(56px, 9vh, 104px);
+}
+.angebot { text-decoration: none; display: block; }
+.angebot__bild { overflow: hidden; background: var(--kalk-tief); }
+.angebot__bild img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.angebot:hover .angebot__bild img { transform: scale(1.04); }
+.angebot h3 { margin: 1.1rem 0 .25rem; font: 400 var(--kachel)/1.05 var(--serif); }
+.angebot .ort { margin-bottom: .6rem; font-size: .875rem; color: var(--leise); }
+.angebot p { max-width: 28rem; color: var(--leise); }
+.angebot .pfeil { display: inline-block; margin-top: 1rem; font: 600 .74rem/1 var(--grotesk); letter-spacing: .14em; text-transform: uppercase; color: var(--anthrazit); }
+.angebot--1 { grid-column: 1 / span 5; }
+.angebot--1 .angebot__bild { aspect-ratio: 4 / 5; }
+.angebot--2 { grid-column: 7 / span 6; margin-top: 18vh; }
+.angebot--2 .angebot__bild { aspect-ratio: 3 / 2; }
+.angebot--3 { grid-column: 2 / span 4; }
+.angebot--3 .angebot__bild { aspect-ratio: 1; }
+.angebot--4 { grid-column: 7 / span 5; margin-top: -12vh; }
+.angebot--4 .angebot__bild { aspect-ratio: 4 / 5; }
+.shopzeile {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-top: clamp(64px, 10vh, 120px);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--linie);
+}
+.shopzeile p { font: 400 var(--kachel)/1.1 var(--serif); }
+
+/* ---------- Variante B: Was habt ihr vor? ---------- */
+.wahl { position: relative; min-height: 100svh; display: flex; flex-direction: column; color: var(--kalk); background: var(--anthrazit); }
+.wahl__bilder { position: absolute; inset: 0; overflow: hidden; }
+.wahl__bilder img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity .6s var(--ease), transform 1.6s var(--ease);
+}
+.wahl__bilder img.ist-aktiv { opacity: 1; transform: none; }
+.wahl__bilder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 24, 21, .28);
+}
+.wahl__inhalt {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  padding: 0 var(--rand) 0;
+}
+.wahl__satz { font: 400 var(--titel)/1 var(--serif); max-width: 16ch; margin-bottom: clamp(20px, 4vh, 40px); }
+.wahl__marke { width: 100%; }
+.waehler {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: clamp(16px, 3vw, 48px);
+  margin-top: clamp(24px, 4vh, 40px);
+  padding: 20px var(--rand);
+  background: var(--kalk);
+  color: var(--anthrazit);
+}
+.waehler__frage { font: 400 1.6rem/1 var(--serif); white-space: nowrap; }
+.waehler__tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.waehler__tabs button {
+  min-height: 48px;
+  padding: 0 1.1rem;
+  border: 1px solid var(--linie);
+  background: none;
+  color: inherit;
+  font: 600 .74rem/1 var(--grotesk);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color .3s var(--ease), border-color .3s var(--ease);
+}
+.waehler__tabs button:hover { border-color: var(--anthrazit); }
+.waehler__tabs button[aria-selected="true"] { background: var(--abendlicht); border-color: var(--abendlicht); }
+.waehler__weg { display: flex; align-items: center; gap: 1.5rem; }
+.waehler__weg p { max-width: 22rem; color: var(--leise); font-size: .95rem; }
+.wahl .quelle { top: 84px; bottom: auto; }
+
+/* Übersicht B: zwei Hausnummern, darunter das Gemischte auf Abendlicht */
+.haeuser { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2vw, 32px); padding: clamp(80px, 12vh, 140px) var(--rand); }
+.haus__bild { position: relative; aspect-ratio: 4 / 5; overflow: hidden; color: var(--kalk); }
+.haus__bild img { width: 100%; height: 100%; object-fit: cover; }
+.haus__bild::after { content: ""; position: absolute; inset: 0; background: rgba(28, 24, 21, .22); }
+.haus__titel { position: absolute; z-index: 1; left: clamp(20px, 2.5vw, 40px); bottom: clamp(20px, 3vw, 40px); }
+.haus__titel h2 { font: 400 var(--titel)/1 var(--serif); }
+.haus__titel p { margin-top: .5rem; font-size: .875rem; }
+.haus ul { list-style: none; margin: 0; padding: 0; }
+.haus li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.05rem 0;
+  border-bottom: 1px solid var(--linie);
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: padding-left .3s var(--ease);
+}
+.haus li a:hover { padding-left: .5rem; }
+.haus__haupt { margin-top: 1.5rem; }
+
+.gemischt { background: var(--abendlicht); padding: clamp(72px, 12vh, 140px) var(--rand); }
+.gemischt h2 { font: 400 var(--titel)/1 var(--serif); max-width: 18ch; margin-bottom: clamp(32px, 6vh, 64px); }
+.zeile {
+  display: grid;
+  grid-template-columns: clamp(88px, 12vw, 180px) 1fr auto;
+  align-items: center;
+  gap: clamp(16px, 3vw, 48px);
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(43, 38, 34, .3);
+  text-decoration: none;
+}
+.zeile:last-child { border-bottom: 1px solid rgba(43, 38, 34, .3); }
+.zeile img { aspect-ratio: 4 / 3; width: 100%; object-fit: cover; }
+.zeile h3 { font: 400 var(--kachel)/1.05 var(--serif); }
+.zeile p { margin-top: .35rem; max-width: 40rem; }
+.zeile .versal { white-space: nowrap; }
+.zeile:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .15em; }
+
+.schluss { padding: 40px var(--rand) 56px; display: flex; justify-content: space-between; gap: 1rem; color: var(--leise); font-size: .85rem; }
+
+/* ---------- Mobil ---------- */
+@media (max-width: 760px) {
+  .nav { grid-template-columns: auto 1fr auto; padding: 14px 16px; }
+  .nav__links, .nav__rechts > :not(.nav__buchen) { display: none; }
+  .nav__mobil { display: block; }
+  .nav__marke { width: 168px; justify-self: center; }
+  .nav .knopf { border: 0; padding: 0; min-height: 44px; }
+  .nur-gross { display: none; }
+  .leiste { display: grid; }
+
+  .fenster { height: auto; }
+  .fenster__buehne { position: relative; height: auto; display: flex; flex-direction: column; padding-top: 76px; }
+  .fenster__bild { position: relative; inset: auto; height: auto; aspect-ratio: 1128 / 816; margin: 8px 16px 0; --w-x: 50%; --w-y: 50%; --w-breite: 100%; --o: 0; }
+  .fenster__bild img { transform: none; }
+  .fenster__text { position: relative; left: auto; bottom: auto; width: auto; padding: 24px 16px 40px; opacity: 1; }
+  .fenster__ende, .fenster .quelle { display: none; }
+  .wege .knopf { flex: 1 1 100%; }
+
+  .uebersicht { padding: 56px 16px 72px; }
+  .uebersicht__kopf { display: block; }
+  .raster { display: block; }
+  .angebot { margin: 0 0 56px; }
+  .angebot--2, .angebot--4 { margin-left: 20%; margin-top: 0; }
+  .shopzeile { display: block; }
+  .shopzeile .pfeil { display: inline-block; margin-top: 1rem; }
+
+  .wahl { min-height: 0; }
+  .wahl__bilder { position: relative; height: 62svh; }
+  .wahl__inhalt { position: absolute; left: 0; right: 0; top: calc(62svh - 16px); transform: translateY(-100%); padding: 0 16px; }
+  .wahl__satz { font-size: 2.2rem; margin-bottom: 14px; }
+  .waehler { display: block; margin-top: 0; padding: 20px 16px 28px; }
+  .waehler__frage { margin-bottom: 14px; }
+  .waehler__tabs { display: grid; grid-template-columns: 1fr 1fr; }
+  .waehler__weg { display: block; margin-top: 18px; }
+  .waehler__weg p { margin-bottom: 14px; }
+  .waehler__weg .knopf { width: 100%; }
+  .wahl .quelle { top: 70px; }
+
+  .haeuser { grid-template-columns: 1fr; gap: 64px; padding: 64px 16px; }
+  .gemischt { padding: 64px 16px; }
+  .zeile { grid-template-columns: 88px 1fr; }
+  .zeile .versal { display: none; }
+  .schluss { display: block; padding: 32px 16px 96px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+  .fenster { height: auto; }
+  .fenster__buehne { position: relative; }
+}
