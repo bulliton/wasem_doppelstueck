@@ -1,5 +1,14 @@
 # Übergabe
 
+Stand: 2026-10-26 · **A-004 Runde 7: Brand-Sheet „Beides.“ gebaut, wartet auf Benjamins Ja.**
+
+## Runde 7 (Branch `claude/brave-meitner-8193a0`)
+- Konzept, drei Gedanken, Verriss: `docs/design-ideen-runde-7.md`. Sheet: `prototyp/runde-7/brand-sheet.html` (Bestandsfotos in `prototyp/runde-7/bestand/`).
+- Gedanke: „Beides.“ Weingut am Tag, Weinhotel am Abend, in einer Gasse; Gäste kaufen den Abend ohne Heimfahrt. Angebote als Paare. Zeichen: W der Wortmarke als zwei ineinandergreifende V (Gold | Kalk). Farbe: Kalk, Eiche, Mokka (Vinothek) und Nacht #1F2552, Gold #C9A866 (Stammhaus zur blauen Stunde, Wortmarke). Schrift: EB Garamond + Instrument Sans. Signatur: Seite wird beim Scrollen von Tag zu Nacht.
+- Bei Ja: `text-kritik` für Hero-Satz und Paketnamen, dann One-Shot-Hero `prototyp/runde-7/index.html`, Desktop und Mobil, `design-kritik`. Bei Nein: Befund als Lesson, Gedanke C (Altes Holz, helles Licht) prüfen. Kein Push.
+
+## Davor (Runde 6)
+
 Stand: 2026-10-26 · **A-004 Runde 6 „Das Maß“ abgelehnt („so wack“, ein Maß hat keine Aussagekraft). Runde 7: Markengedanke aus „Warum Doppelstück?“ mit Philosophie, neuer Farbwelt, Schrift zum Logo, Icon.**
 
 ## Benjamins Urteil zu Runde 6 (bindend)
