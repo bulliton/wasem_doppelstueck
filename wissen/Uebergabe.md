@@ -10,7 +10,7 @@ Stand: 2026-10-26 · Brand Paper fertig (A-003 in prüfung), nächster Schritt K
 
 ## Offen / nächste Schritte
 - **A-003 prüfen** (Benjamin): Deck durchsehen. Platzhalter vor dem Versand füllen: Vorschau-Link, Passwort, Telefon, Mail (Folie 13); Pauschalenpreise und Uhrzeiten bleiben Platzhalter, bis Marie liefert.
-- Texte des Decks sind nicht durch `text-kritik` gelaufen; vor dem Versand nachholen.
+- Decktexte sind durch `text-kritik` gelaufen (Version 7); Kernsatz unverändert, Varianten erst nach Maries Antwort auf Freigabefrage 1.
 - **A-004 Key-Screens** Start, Tagung, JGA unter `prototyp/` (Opus, `frontend-design`, dann `design-kritik`), Vorlage sind die Vorschau-Folien 10 bis 12; danach Vorschau mit Passwortsperre und Link ins Deck.
 - Fragen an Marie: 1, 3, 4, 7 aus dem Briefing plus 9 (echte Uhrzeiten Tagungs- und JGA-Tag).
 - A-005 Mailverlauf, SWR/NDR-Link, Zielplattform: unverändert offen.
