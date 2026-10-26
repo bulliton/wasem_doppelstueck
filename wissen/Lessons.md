@@ -5,6 +5,8 @@ Eine Zeile pro Lektion: Regel — Grund. Neue oben. Doppeltes zusammenführen. Z
 ## Technik
 
 ## Design
+- Text nie direkt auf ein Foto setzen, sondern auf eine ruhige Farbfläche (Etikett, Band): Ilona fand bei Maries Favorit Maxwell „den Text auf den Bildern“ nicht lesbar (Benjamins Telefonnotiz, `~/Downloads/Demo-Webseite-Feedback.rtf` Z. 318). Zielgruppe ist breit, nicht Luxus — 26.10., Runde 3.
+- Warme Familienporträts mit bestätigten Namen und Rollen liegen auf doppelstueck.com/team (`2023/04/<Name>_Wasem_Wasem_Doppelstueck_Weingut.jpg`, Burkhard `2024/12/Burkhard-Wasem.png`); Farbanker der Marke sind die Etiketten (Serifen-W auf Schwarz-Gold, Weiß, Koralle beim Gutswein) — 26.10.
 - Ein Markenzeichen allein (W als Bildfenster) trägt keinen Hero: im ersten Screen müssen Menschen, Wärme und Familie spürbar sein; Farbwelt darf neu sein statt aus der alten Seite, Ziel „edel, aber nicht krass edel“ — Benjamin, 26.10., Runde 2 Variante A.
 - Logo adaptiv bauen: Handy nur das W, Desktop die Wortmarke, beim Scrollen Wortmarke → W — Benjamin, 26.10.
 - Nie eine getippte Wortmarke („WASEM / Doppelstück“ in Hanken) in Nav oder Footer setzen: die echte Wortmarke aus der Originaldatei (doppelstueck.com `2019/06/Wasem-Doppelstück.png`, 2187 × 199, als Vektor in `prototyp/marke/`; `2024/02/Doppelstueck.png` ist ein Foto, `assets/logo-wordmark.svg` nur getippter Text) als Vektor übernehmen (Vault `Playbooks/logo-als-code.md`) — Benjamin, 26.10., Key-Screens A-004.

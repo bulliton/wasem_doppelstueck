@@ -1,0 +1,212 @@
+/* A-004 Runde 3: gemeinsamer Bau für beide Richtungen. Farben und Schriften setzt a.css oder b.css.
+   Regel aus Ilonas Einwand: Text liegt nie direkt auf einem Foto, sondern auf einer Fläche. */
+:root {
+  --rand: clamp(16px, 3vw, 48px);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --ease-raus: cubic-bezier(.16, 1, .3, 1);
+  --grotesk: "Hanken Grotesk", system-ui, sans-serif;
+  --titel: clamp(2.2rem, 1.4rem + 2.8vw, 4.2rem);
+  --kachel: clamp(1.7rem, 1.3rem + 1.2vw, 2.6rem);
+  --lead: clamp(1.05rem, 1rem + .3vw, 1.3rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--grund);
+  color: var(--tinte);
+  font: 400 1rem/1.55 var(--grotesk);
+  overflow-x: clip;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; font-weight: 400; }
+p { margin: 0; }
+
+.versal {
+  font: 600 .72rem/1.2 var(--grotesk);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Echte Marke als Maske, Farbe über currentColor */
+.marke, .zeichen { display: block; background: currentColor; }
+.marke {
+  aspect-ratio: 4260 / 328;
+  -webkit-mask: url(../marke/wasem-wortmarke.svg) center / contain no-repeat;
+          mask: url(../marke/wasem-wortmarke.svg) center / contain no-repeat;
+}
+.zeichen {
+  aspect-ratio: 1128 / 816;
+  -webkit-mask: url(../marke/wasem-w.svg) center / contain no-repeat;
+          mask: url(../marke/wasem-w.svg) center / contain no-repeat;
+}
+
+/* Knöpfe: eckig, gefüllt nur für den Hauptweg */
+.knopf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.6rem;
+  border: 1px solid currentColor;
+  font: 600 .78rem/1 var(--grotesk);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color .25s var(--ease), color .25s var(--ease), transform .16s var(--ease);
+}
+.knopf:active { transform: scale(.97); }
+.knopf--voll { background: var(--tinte); border-color: var(--tinte); color: var(--grund); }
+.knopf--linie:hover { background: var(--tinte); color: var(--grund); }
+.pfeil { text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+:focus-visible { outline: 2px solid var(--fokus, currentColor); outline-offset: 3px; }
+
+/* ---------- Navigation: Bereiche links, Marke Mitte, Buchen rechts ---------- */
+.nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 16px var(--rand);
+  color: var(--tinte);
+  background: var(--grund);
+  transition: box-shadow .3s var(--ease);
+}
+.nav.ist-gescrollt { box-shadow: 0 1px 0 var(--linie); }
+.nav__links, .nav__rechts { display: flex; gap: clamp(1rem, 2vw, 2rem); align-items: center; }
+.nav__rechts { justify-content: flex-end; }
+.nav .knopf { min-height: 40px; padding: 0 1.1rem; font-size: .7rem; }
+.nav__mobil { display: none; }
+
+/* Adaptives Logo: Desktop Wortmarke, nach dem ersten Scrollen das W; Handy immer das W */
+.nav__marke { position: relative; display: block; width: clamp(180px, 17vw, 250px); height: 40px; }
+.nav__marke > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  transition: opacity .45s var(--ease), scale .55s var(--ease-raus);
+}
+.nav__marke .marke { width: 100%; }
+.nav__marke .zeichen { width: 48px; opacity: 0; scale: .6; }
+.nav.ist-zeichen .nav__marke .marke { opacity: 0; scale: .85; }
+.nav.ist-zeichen .nav__marke .zeichen { opacity: 1; scale: 1; }
+
+/* ---------- Bereichskarten ---------- */
+.bereiche { padding: clamp(72px, 10vw, 150px) var(--rand) clamp(56px, 7vw, 110px); }
+.bereiche__kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+.bereiche__kopf h2 { font: 400 var(--titel)/1.02 var(--serif); letter-spacing: -.01em; }
+.karten {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(28px, 3vw, 48px) clamp(16px, 2vw, 32px);
+}
+.karte { display: block; text-decoration: none; }
+.karte__bild { overflow: hidden; background: var(--flaeche-leise); }
+.karte__bild img { width: 100%; height: 100%; object-fit: cover; transition: scale 1s var(--ease-raus); }
+.karte:hover .karte__bild img { scale: 1.05; }
+.karte h3 { font: 400 var(--kachel)/1.05 var(--serif); margin-top: 18px; }
+.karte p { margin-top: 8px; max-width: 36ch; color: var(--leise); }
+.karte .pfeil { position: relative; display: inline-block; margin-top: 14px; border: 0; }
+.karte .pfeil::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(.4);
+  transform-origin: 0 50%;
+  transition: transform .35s var(--ease);
+}
+.karte:hover .pfeil::after, .karte:focus-visible .pfeil::after { transform: none; }
+
+/* Zeilen-Maske für Kartentitel */
+.zeile { display: block; overflow: hidden; padding-bottom: .08em; }
+.zeile > span { display: block; }
+
+.shopzeile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px 24px;
+  margin-top: clamp(40px, 5vw, 72px);
+  padding-top: 20px;
+  border-top: 1px solid var(--linie);
+}
+.shopzeile p { font: 400 var(--kachel)/1.1 var(--serif); }
+
+/* ---------- Familie ---------- */
+.familie { padding: clamp(72px, 10vw, 150px) var(--rand); }
+.familie h2 { font: 400 var(--titel)/1.02 var(--serif); }
+.familie__einleitung { margin-top: 14px; max-width: 40ch; font-size: var(--lead); }
+.person img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.person h3 { font: 600 1rem/1.3 var(--grotesk); margin-top: 12px; }
+.person p { font-size: .92rem; color: var(--leise); }
+
+/* ---------- Schluss und Footer ---------- */
+.schluss { padding: clamp(72px, 10vw, 140px) var(--rand) 40px; }
+.schluss h2 { font: 400 clamp(3rem, 1.5rem + 7vw, 9rem)/.95 var(--serif); letter-spacing: -.02em; }
+.schluss__wege { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.schluss__fuss {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-top: clamp(64px, 8vw, 120px);
+  padding-top: 18px;
+  border-top: 1px solid currentColor;
+  font-size: .85rem;
+}
+.quelle { font-size: .7rem; color: var(--leise); }
+
+/* Feste Leiste am Handy: Hauptweg immer am Daumen */
+.leiste {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 25;
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--tinte);
+  translate: 0 100%;
+  transition: translate .3s cubic-bezier(.23, 1, .32, 1);
+}
+.leiste.ist-da { translate: 0 0; }
+.leiste a { display: grid; place-items: center; min-height: 56px; color: var(--grund); }
+.leiste a + a { background: var(--akzent); color: var(--auf-akzent); }
+
+@media (max-width: 760px) {
+  .nav { grid-template-columns: 1fr auto 1fr; padding: 12px var(--rand); }
+  .nav__links { display: none; }
+  .nav__mobil { display: block; padding: 15px 12px 15px 0; }
+  .nav .knopf { min-height: 44px; }
+  .shopzeile .pfeil { display: inline-block; padding: 14px 0; border: 0; text-decoration: underline; text-underline-offset: 4px; }
+  .nav__rechts .versal { display: none; }
+  .nav__marke { width: 56px; height: 44px; }
+  .nav__marke .marke { display: none; }
+  .nav__marke .zeichen { width: 44px; opacity: 1; scale: 1; }
+  .nur-gross { display: none; }
+  .karten { grid-template-columns: 1fr; }
+  .karte { grid-column: auto !important; margin-top: 0 !important; }
+  .leiste { display: grid; }
+  .schluss { padding-bottom: 96px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
