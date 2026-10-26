@@ -27,7 +27,7 @@ Status: prüfung
 Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: Slides-Artefakt im Bulliton-Rahmen, erst Belege (Google, PageSpeed, Tagungs-Sichtbarkeit), dann Marke, dann Vorschau und nächster Schritt
 
 ## A-004 · Key-Screens mit echten Fotos
-Status: prüfung (Prototyp unter prototyp/, 26.10., wartet auf Benjamins Urteil)
+Status: frei (Runde 1 abgelehnt 26.10., Runde 2 laut Übergabe)
 Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: 3 Screens (Start, JGA, Tagung) in Richtung A unter prototyp/, 375 und 1440 ohne Überbreite, design-kritik bestanden
 
 ## A-005 · E-Mail-Verlauf mit Marie vollständig exportieren

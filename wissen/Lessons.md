@@ -5,6 +5,9 @@ Eine Zeile pro Lektion: Regel — Grund. Neue oben. Doppeltes zusammenführen. Z
 ## Technik
 
 ## Design
+- Nie eine getippte Wortmarke („WASEM / Doppelstück“ in Hanken) in Nav oder Footer setzen: die echte Wortmarke aus der Originaldatei (doppelstueck.com `2024/02/Doppelstueck.png`, Vorarbeit `assets/logo-wordmark.svg`) als Vektor übernehmen (Vault `Playbooks/logo-als-code.md`) — Benjamin, 26.10., Key-Screens A-004.
+- Key-Screens A-004 (Stiegelgasse-Spalten, Kalk, Hairline-Listen) waren für Benjamin „basic, nicht cool“; die schwarze Mittellinie, zu der die Bilder zusammenlaufen, wirkt komisch. Maßstab ist Award-Niveau aus den 22 Referenzen (Sheet `1ZXVshzf…`, Skill `geschmack`) plus Maries Telefon-Favorit, gemessen an Brand Paper und Brand Identity; dazu Übersicht und schnelles, intuitives UI (Wasem will: modern, cool, schnell wissen, wie es geht) — Benjamin, 26.10.
+- Vor jeder Designentscheidung gegen Brand Identity (Brand Paper v8) prüfen, was bestehen bleiben muss (Wortmarke, W vom Etikett, Aprikose), statt eine neue Formsprache neben die Marke zu stellen — Benjamin, 26.10.
 - Eine Fable-Art-Direction ist ein Vorschlag, kein Auftrag: vor dem Bauen eigenes Design-Brainstorming (Farbe, Layout, Konzept) machen, mit der Vorlage vergleichen und begründet die bessere Richtung wählen — Benjamin, 26.10.: Farben und Tageslauf wirkten übernommen statt durchdacht.
 - Das System „Tageslauf“ (Uhrzeit-Kapitel, Folie 8) ist für Benjamin nicht verständlich; Wasem denkt in zwei großen Bereichen (Wein-Erlebnisse und Hotel/Hospitality), die sich mischen. Konzept daran ausrichten — Benjamin, 26.10.
 - Der Claude-Design-Prototyp (Juni) ist KI-Look: dunkles Luxus-Monogramm passt nicht zu einem herzlichen Familienweingut; Neustart bei null mit Briefing, Markenkern, Stimme — Benjamin, 26.10.
