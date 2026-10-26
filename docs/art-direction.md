@@ -90,7 +90,7 @@ Nicht mehr verwendet: der Goldverlauf der alten Wortmarke, das Schwarz des Proto
 **Bestandsfotos bis zum Shoot (doppelstueck.com, geprüft 26.10.):**
 - Taugen: Hotelserie 2022/05 (Stammhaus- und Klassik-Zimmer, Frühstücksraum; professionell, hell), `07472_Wasem.jpg` und `07475_Wasem.jpg` (12/2022), `06890_Wasem_web.jpg` (Startseiten-Hero 2024), das Schwestern-Porträt vor Fässern (Bildmarke, 1500 × 2000, gut als gerahmtes Familienbild).
 - Mit Vorbehalt: JGA-Serie 2025/04 (Blumen-Workshop, Brauchtumsfahrt, Fotoshooting; teils Handyfotos, teils PNG-Collagen), Banner „WeinEvents“ und „Ingelheimer Spätburgunder“ 2025 (Grafikbanner, nur als Quelle für Flaschenfotos).
-- Fehlen komplett: **Die Tagungsseite hat kein einziges Foto**, ebenso die Seiten Weingut und Events (nur Logo). Das ist ein Beleg fürs Deck, nicht nur eine Lücke.
+- Korrektur 26.10. (Messung): Die Tagungsseite `/seminare-und-tagungen/` hat 14 Fotos (Eventraum neu, Weingarten). Die frühere Aussage „kein einziges Foto“ beruhte vermutlich auf einer 404-URL. Die echte Lücke der Tagungsseite: keine Personenzahl, Pauschalen ohne Inhalt und Preis, kein Name, kein Ablauf (`docs/belege/messungen-2026-10-26.md`).
 - Im Deck jedes Bestandsfoto mit „Foto: doppelstueck.com“ kennzeichnen; Rohdaten und Vektorlogo sind Frage 4 an Marie.
 
 ## 8. Stimme
@@ -156,7 +156,7 @@ Bulliton-Rahmen nach Playbook: schwarzer Grund, Coolvetica und Manrope, Footer �
 
 1. **Cover:** Wasem Doppelstück.
 2. **Wer euch sucht, findet euch nicht.** Google-Suche „Tagung Ingelheim“ und „Tagungshotel Rheinhessen“ als Screenshot: wo Wasem steht (Messung vor dem Deck). Übersetzung: Tagungsplanerinnen buchen, was auf Seite eins steht.
-3. **Eure Tagungsseite hat kein Foto.** Screenshot der heutigen Tagungsseite neben der JGA-Seite. Übersetzung: Der Bereich, der die Nebensaison trägt, ist der leerste.
+3. **Eure Tagungsseite zeigt den Raum, aber nicht, was eine Planerin wissen muss.** (korrigiert 26.10.) Screenshot der Tagungsseite, Tabelle Frage gegen Seiteninhalt; kING nennt 129 € schon im Google-Treffer.
 4. **Die Seite ist langsam und dunkel, und die Familie fehlt.** PageSpeed-Werte mobil (Messung vor dem Deck), Screenshot Startseite. Übersetzung: Gäste lesen nicht, sie schauen; was sie sehen, ist Text.
 5. **Was das zusammen kostet.** Drei Zeilen: Tagungsanfragen gehen an Häuser, die gefunden werden; JGA-Gäste fragen alles per Telefon nach; die Straußwirtschaft 2026 stand nicht auf der Seite. Keine erfundenen Zahlen, nur Fakten aus dem Termin.
 6. **Die Idee: Aus einem Glas wird ein ganzer Tag.** Positionierung in drei Sätzen, Kernsatz, die drei Beweise (Familie, Bio und Preis, ein Hof).

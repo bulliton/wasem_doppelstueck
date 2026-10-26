@@ -23,7 +23,7 @@ Status: prüfung
 Quelle: Benjamin 26.10. · Modell: architekt (Fable 5.1) · Abnahme: docs/art-direction.md enthält alle Punkte aus docs/fable-auftrag-art-direction.md
 
 ## A-003 · Brand Paper / Verkaufsdeck an Marie
-Status: eingang
+Status: prüfung
 Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: Slides-Artefakt im Bulliton-Rahmen, erst Belege (Google, PageSpeed, Tagungs-Sichtbarkeit), dann Marke, dann Vorschau und nächster Schritt
 
 ## A-004 · Key-Screens mit echten Fotos
