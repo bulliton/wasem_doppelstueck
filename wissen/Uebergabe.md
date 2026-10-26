@@ -15,6 +15,7 @@ Stand: 2026-10-26 · Brand Paper v8 steht, Benjamin verwirft Idee, Kernsatz, Tag
 - Reihenfolge jetzt: erst Design richtig aufziehen (Layout, Key-Screens), danach Deck/PDF für den Kunden anpassen.
 
 ## Offen / nächste Schritte
+- **A-006 Stand 26.10.:** `docs/instagram-ton.md` (Instagram ohne Login gesperrt, ausgewertet wurde TikTok @wasem.doppelstueck mit gleichem Absender) und `docs/design-ideen-konzeptrunde-2.md` (Richtungen A „Noch ein Glas? Ihr schlaft ja hier.“, B „Heute gehört der Hof euch.“, C „Endlich mal wieder alle an einem Tisch.“; Empfehlung A, Farbe Aprikose `#F2BA66` aus dem Bestand). Storyboard wartet auf Benjamins Freigabe.
 - **A-006 Konzeptrunde 2** (Opus, neue Session): Instagram von Wasem Doppelstück sichten (Captions, Inhalte, Ton; Skill `insta-sichten` bzw. Profil im Browser), Markenstimme daraus festhalten. Dann Skill `design-brainstorm` + `geschmack`: 2–3 eigene Richtungen (Idee, Claim mit Gefühl, Farbe, Layout) gegen `docs/art-direction.md` stellen, Benjamin als Inline-Storyboard mit Freigabeknopf vorlegen.
 - Danach A-004 Key-Screens nach freigegebener Richtung, dann Deck-Folien 7 bis 12 neu.
 - Deck-Platzhalter Folie 13 (Link, Passwort, Telefon, Mail) bleiben offen.
