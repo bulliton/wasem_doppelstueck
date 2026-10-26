@@ -1,6 +1,14 @@
 # Übergabe
 
-Stand: 2026-10-26 · **A-004 Runde 5 gebaut: „Drei Verben, eine Gasse“ mit Video-Hero. Wartet auf Benjamins Urteil.**
+Stand: 2026-10-26 · **A-004 Runde 5 abgelehnt („nicht cool, nicht modern, nicht durchdacht“). Runde 6: zuerst ein tiefer Branding-Gedanke, dann ein One-Shot-Hero.**
+
+## Benjamins Urteil zu Runde 5 (bindend)
+- Bleibt als Version liegen (`prototyp/runde-5/`, Commit e9df86c), aber: wirkt nicht modern, nicht durchdacht, nutzt Geschmack und Möglichkeiten nicht. Zu sehr an seinen Vorgaben orientiert.
+- Gewünscht: ein tiefergründiges Branding mit eigenen Elementen, intelligent und kreativ weiterentwickelt (siehe, wie doppelstueck.com das W einsetzt), getragen von dem Branding-Gedanken, der auch in anderen Projekten funktioniert hat, und eine schöne One-Shot-Geschichte im ersten Screen.
+- Maßstab: der erste Shot von Haartraum (Repo `~/GitHub Repos/haartraum-website`, `docs/` Art Direction mit Farbnummer-System, Commit d34df92 und Key-Screens 4d93149). Dort kam alles aus einem System, das nur dem Kunden gehört.
+
+## Starter-Prompt Runde 6 (neue Session, Modell Opus 5.5)
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/brave-meitner-8193a0`. Lies „Urteil zu Runde 5“ in `wissen/Uebergabe.md`, `wissen/Lessons.md` (Design), `docs/runde-5-strategie-und-auftrag.md` nur als Rahmen. Dann zuerst verstehen, was bei Haartraum den ersten Shot stark gemacht hat (`~/GitHub Repos/haartraum-website/docs/`, Art Direction und Key-Screens ansehen). Danach auf doppelstueck.com und Instagram sammeln, wie Wasem das W, die Etiketten und den Namen nutzt (Doppelstück ist ein Fassmaß, 2400 l, prüfen). Daraus EIN Markensystem, das nur Wasem gehört (Elemente, Formen, Bewegung), per `design-brainstorm` mit Gegenrichtung schärfen, und einen One-Shot-Hero mit dem geschnittenen Lese-Film (`prototyp/video/`) oder Fotos unter `prototyp/runde-6/` bauen, Desktop und Mobil. `design-kritik` ehrlich gegen Haartraum als Messlatte. Kein Push.
 
 ## Stand
 - Konzept, Identität, Texte und Kritik: `docs/design-ideen-runde-5.md` (drei Konzepte Ort, Ritual, Mensch; gewählt Ritual).
