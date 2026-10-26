@@ -4,8 +4,22 @@
     {
       "name": "repo",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "4321"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4321"
+      ],
       "port": 4321
+    },
+    {
+      "name": "repo-4322",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4322"
+      ],
+      "port": 4322
     }
   ]
 }

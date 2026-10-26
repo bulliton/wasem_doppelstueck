@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Richtung C Fenster · Wasem Doppelstück</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="basis.css">
+<link rel="stylesheet" href="c.css">
+<link rel="preload" as="image" href="../bilder/wasem-weinberg-abendlicht-glaeser.webp" media="(min-width: 761px)">
+<link rel="preload" as="image" href="../bilder/wasem-jga-freundinnen-lachen.webp" media="(max-width: 760px)">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav__mobil versal" href="#menue">Menü</a>
+  <nav class="nav__links" aria-label="Bereiche">
+    <a class="versal" href="#bleiben">Hotel</a>
+    <a class="versal" href="#wein">Wein</a>
+    <a class="versal" href="../jga.html">Feiern</a>
+    <a class="versal" href="../tagung.html">Tagung</a>
+  </nav>
+  <a class="nav__marke" href="c.html" aria-label="Wasem Doppelstück, Startseite">
+    <span class="marke" aria-hidden="true"></span>
+    <span class="zeichen" aria-hidden="true"></span>
+  </a>
+  <div class="nav__rechts">
+    <a class="versal" href="#shop">Shop</a>
+    <a class="knopf knopf--voll" href="#bleiben"><span class="nur-gross">Zimmer&nbsp;</span>buchen</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-label="Willkommen">
+    <div class="hero__buehne">
+      <div class="hero__voll" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 760px)" srcset="../bilder/wasem-jga-freundinnen-lachen.webp">
+          <img src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="">
+        </picture>
+      </div>
+      <div class="hero__fenster">
+        <picture>
+          <source media="(max-width: 760px)" srcset="../bilder/wasem-jga-freundinnen-lachen.webp">
+          <img src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="Zwei Frauen stoßen im Weinberg im Abendlicht an" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="etikett">
+        <span class="versal label">Bio-Weingut und Weinhotel, Ingelheim</span>
+        <h1>Noch ein Glas? Ihr schlaft ja hier.</h1>
+        <p class="etikett__satz">Weinprobe, lange Tafel und 50&nbsp;Zimmer in derselben Gasse. Keine muss fahren.</p>
+        <div class="hero__wege">
+          <a class="knopf knopf--voll" href="#bleiben">Zimmer buchen</a>
+          <a class="knopf knopf--linie" href="#wein">Erlebnis anfragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bereiche" aria-labelledby="vorhaben">
+    <div class="bereiche__kopf">
+      <h2 id="vorhaben">Was habt ihr vor?</h2>
+      <p>Vier Wege, die sich mischen lassen: tagsüber Wein, abends die Tafel, nachts das Hotel.</p>
+    </div>
+    <div class="karten">
+      <a class="karte karte--1" id="bleiben" href="#buchen" data-zeige>
+        <div class="karte__bild" data-parallax><img src="../bilder/wasem-hotelzimmer-balkon.webp" alt="Hotelzimmer mit Balkon und Blick ins Grüne" loading="lazy"></div>
+        <div class="karte__kopf"><h3><span>Übernachten</span></h3><p class="karte__ort">Weinhotel, Stiegelgasse 70</p></div>
+        <p class="karte__text">50 Zimmer in zwei Häusern, Frühstück vom Buffet. Die Vinothek ist in derselben Gasse.</p>
+        <span class="weg versal">Zimmer buchen</span>
+      </a>
+      <a class="karte karte--2" id="wein" href="#anfrage" data-zeige>
+        <div class="karte__bild" data-parallax><img src="../bilder/wasem-vinothek-theke.webp" alt="Theke in der Vinothek" loading="lazy"></div>
+        <div class="karte__kopf"><h3><span>Wein erleben</span></h3><p class="karte__ort">Weingut, Stiegelgasse 50</p></div>
+        <p class="karte__text">Weinprobe in der Vinothek, Planwagen durch die Weinberge, im Mai und Juni die Straußwirtschaft.</p>
+        <span class="weg versal">Weinprobe anfragen</span>
+      </a>
+      <a class="karte karte--3" href="../jga.html" data-zeige>
+        <div class="karte__bild" data-parallax><img src="../bilder/wasem-jga-blumenkranz-weinglas.webp" alt="Blumenkranz und Weinglas beim Junggesellinnenabschied" loading="lazy"></div>
+        <div class="karte__kopf"><h3><span>Feiern und JGA</span></h3></div>
+        <p class="karte__text">Tagsüber Weinprobe oder Workshop, abends die lange Tafel. Und keine muss fahren.</p>
+        <span class="weg versal">JGA planen</span>
+      </a>
+      <a class="karte karte--4" href="../tagung.html" data-zeige>
+        <div class="karte__bild" data-parallax><img src="../bilder/wasem-steinwand-tafel-holzdecke.webp" alt="Tafel vor alter Steinwand unter der Holzdecke" loading="lazy"></div>
+        <div class="karte__kopf"><h3><span>Tagen</span></h3></div>
+        <p class="karte__text">Tagsüber im Eventraum, abends bei der Weinprobe. Geschlafen wird im Haus.</p>
+        <span class="weg versal">Tagung anfragen</span>
+      </a>
+    </div>
+    <div class="shopzeile" id="shop">
+      <p>Bio-Weine für zu Hause.</p>
+      <a class="weg versal" href="#shop">Zum Shop</a>
+    </div>
+  </section>
+
+  <section class="gasse" aria-labelledby="gasse">
+    <div class="gasse__text">
+      <span class="versal label">Stiegelgasse, Ingelheim</span>
+      <h2 id="gasse">Zwei Häuser, eine Gasse.</h2>
+      <p>Im Weingut wird probiert, gefeiert und getagt. Ein paar Schritte weiter steht das Weinhotel. Was ihr auch vorhabt, es liegt nah beieinander.</p>
+    </div>
+    <div class="gasse__haeuser">
+      <div class="haus">
+        <div class="haus__bild" data-parallax><img src="../bilder/wasem-weingarten-tafel-gruen.webp" alt="Gedeckte Tafel im Weingarten" loading="lazy"></div>
+        <p class="haus__nummer">50</p>
+        <p class="haus__name">Weingut, Vinothek, Eventraum</p>
+      </div>
+      <div class="haus">
+        <div class="haus__bild" data-parallax><img src="../bilder/wasem-hotelzimmer-doppelbett.webp" alt="Doppelzimmer im Weinhotel" loading="lazy"></div>
+        <p class="haus__nummer">70</p>
+        <p class="haus__name">Weinhotel, 50 Zimmer</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="familie" aria-labelledby="familie">
+    <div class="familie__kopf">
+      <h2 id="familie">Wer euch hier begegnet</h2>
+      <p>Ein Familienbetrieb mit drei Generationen im Haus, dazu ein Team, das eure Feier mitplant.</p>
+    </div>
+    <ul class="familie__reihe" data-zeige>
+      <li class="person">
+        <div class="person__bild" data-parallax><img src="../bilder/wasem-familie-ilona-anstossen.webp" alt="Ilona Wasem lacht mit einem Glas Weißwein in der Hand" loading="lazy"></div>
+        <h3>Ilona Wasem</h3><p>Leitung Weinhotel</p>
+      </li>
+      <li class="person">
+        <div class="person__bild" data-parallax><img src="../bilder/wasem-familie-julia-keller.webp" alt="Julia Wasem probiert im Keller Wein aus dem Tank" loading="lazy"></div>
+        <h3>Julia Wasem</h3><p>Gründerin und Winzerin</p>
+      </li>
+      <li class="person">
+        <div class="person__bild" data-parallax><img src="../bilder/wasem-familie-marie-tafel.webp" alt="Marie Wasem lacht an einer Tafel mit Gästen" loading="lazy"></div>
+        <h3>Marie Wasem</h3><p>Gründerin und Betriebsleitung</p>
+      </li>
+      <li class="person">
+        <div class="person__bild" data-parallax><img src="../bilder/wasem-familie-burkhard-weinberg.webp" alt="Burkhard Wasem im Weinberg, auf dem Pullover das W" loading="lazy"></div>
+        <h3>Burkhard Wasem</h3><p>Kellermeister</p>
+      </li>
+      <li class="person">
+        <div class="person__bild" data-parallax><img src="../bilder/wasem-familie-magda-tafel.webp" alt="Oma Magda lächelt am Tisch mit Gästen" loading="lazy"></div>
+        <h3>Oma Magda</h3><p>Teamköchin und Bäckerin</p>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<footer class="schluss">
+  <div class="schluss__kopf">
+    <div class="schluss__text">
+      <h2>Kommt vorbei.</h2>
+      <p class="schluss__satz">Stiegelgasse 50 und 70 in Ingelheim. Schreibt uns, was ihr vorhabt, wir planen es persönlich mit euch.</p>
+      <div class="schluss__wege">
+        <a class="knopf knopf--voll" href="#bleiben">Zimmer buchen</a>
+        <a class="knopf knopf--linie" href="#wein">Erlebnis anfragen</a>
+      </div>
+    </div>
+    <div class="schluss__bild" data-parallax><img src="../bilder/wasem-weingarten-abend-lichterkette.webp" alt="Weingarten am Abend unter der Lichterkette" loading="lazy"></div>
+  </div>
+  <div class="schluss__fuss">
+    <span class="zeichen" aria-hidden="true"></span>
+    <span>Weingut &amp; Weinhotel Wasem Doppelstück, 55218 Ingelheim</span>
+    <span class="quelle">Fotos: doppelstueck.com · Prototyp, Texte sind Vorschläge</span>
+  </div>
+</footer>
+
+<nav class="leiste" aria-label="Schnelle Wege">
+  <a class="versal" href="#wein">Anfragen</a>
+  <a class="versal" href="#bleiben">Zimmer buchen</a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="runde4.js" defer></script>
+</body>
+</html>

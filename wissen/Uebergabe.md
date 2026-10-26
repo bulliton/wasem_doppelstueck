@@ -1,6 +1,15 @@
 # Übergabe
 
-Stand: 2026-10-26 · **A-004 Runde 3 abgelehnt („knallt“, „basic“, kein Wow). Runde 4: neue Richtungen C/D, A/B bleiben zum Vergleich**
+Stand: 2026-10-26 · **A-004 Runde 4 gebaut: C „Fenster“ und D „Satz“ unter `prototyp/runde-4/`, Benjamin wählt**
+
+## Runde 4 (Branch `claude/brave-meitner-8193a0`, Fable-Session)
+- Identität gedämpft (`docs/design-ideen-runde-4.md`): Sand `#F1EAE0`, Flaschenschwarz `#1E1917`, Stein für Labels, Gold nur als Haarlinie, Koralle nur als Hover-Punkt; Cormorant Garamond 300 als dünne Display-Serif, Hanken Grotesk für UI. Eine Farbfläche: Kapitel „Zwei Häuser, eine Gasse“.
+- **C „Fenster“** `prototyp/runde-4/c.html`: Foto zuerst nur durch das große W, beim Scrollen öffnet sich das Fenster randlos (Maske `wasem-w.svg`, `--p` per JS), Sand-Etikett mit Goldrand trägt Satz und Wege. Handy: Freundinnen-Foto hochkant.
+- **D „Satz“** `prototyp/runde-4/d.html`: Riesensatz in zwei versetzten Zeilen, rechts das Foto im Fenster, beim Scrollen wächst es randlos und der Satz zieht weg.
+- Gemeinsam (`basis.css`, `runde4.js`): Lenis (CDN), Nav transparent auf dem Hero, beim Scrollen fest auf Sand, versteckt sich runter, kommt hoch zurück; Karten versetzt mit Innen-Parallax und Zeilen-Maske; Familie als versetzte Collage, am Handy wischbar; Schluss als Einladung; Handy-Leiste. Reduced Motion: Endzustand ohne Scroll-Bewegung.
+- Geprüft: 1440 und 375 ohne Überbreite, Hauptknöpfe im ersten Screen, KI-Look-Check A (0 Treffer), 231–243 Wörter, eine H1. Belege `docs/belege/runde-4/`. Nicht geprüft: Safari, Reduced Motion im Browser, `text-kritik` (Texte wie Runde 3).
+- Lokal: launch.json „repo-4322“ (zweiter Server für parallele Sessions), `http://localhost:4322/prototyp/runde-4/c.html` und `d.html`.
+- Nächster Schritt: Benjamins Wahl C oder D, dann Feinschliff der gewählten Richtung, JGA, Tagung, Deck-Folien, Passwort-Vorschau. Kein Merge, kein Push.
 
 ## Ergebnis Runde 3 (Branch `claude/brave-meitner-8193a0`)
 - **Ilonas Einwand gefunden:** Telefonnotiz `~/Downloads/Demo-Webseite-Feedback.rtf` Z. 318–320: Bei Maxwell kann man „den Text auf den Bildern“ nicht lesen; dazu Lesbarkeit, Barrierefreiheit, Kundschaft „Durchschnitt, nicht Luxus“. Folge: in beiden Richtungen liegt Text nie auf Fotos, sondern auf Farbflächen, Kontraste gerechnet.
