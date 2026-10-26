@@ -1,6 +1,18 @@
 # Übergabe
 
-Stand: 2026-10-26 · **A-004 Runde 6 gebaut: Markensystem „Das Maß“ (Eichstrich 0,2 l bis Doppelstück 2400 l), One-Shot-Hero mit steigender Weinfüllung. Wartet auf Benjamins Urteil.**
+Stand: 2026-10-26 · **A-004 Runde 6 „Das Maß“ abgelehnt („so wack“, ein Maß hat keine Aussagekraft). Runde 7: Markengedanke aus „Warum Doppelstück?“ mit Philosophie, neuer Farbwelt, Schrift zum Logo, Icon.**
+
+## Benjamins Urteil zu Runde 6 (bindend)
+- Das Maß ist nicht das Entscheidende, verkauft nichts, erzeugt kein „wow“. Wasem gibt es im Ort schon (wasem.de), also: Warum *Doppelstück*, was zeichnet sie aus? Daraus eine tiefgründige, verkaufbare Philosophie mit Charakter.
+- Passen muss: zwei Frauen, hochwertig, aber lokal erreichbar; ihre Farben und ihre Einrichtung (Räume ansehen!). Neue Ansätze für Farbwelt, Charakter, Brand Identity, eine Schrift, die zum Logo passt, Icon, eine einzigartige Kombination und das Wechselspiel insgesamt.
+
+## Beleg: so erklären sie den Namen selbst
+doppelstueck.com/4-langer-horn-spaetburgunder-raetsel/ (Rätsel der Weinwanderung): „Doppelstück steht für: uns als zwei Schwestern (Julia und Marie), zwei Generationen, zwei Unternehmen (Weingut und Weinhotel), aber auch für eine Holzfassart, mit der wir gerne arbeiten.“ Lösung dort: Doppelstück 2.400 l, Stück 1.200 l, Halbstück 600 l; im Keller auch Barrique 225 l und Tonneau 500 l. Damit sind Herkunft und Fassmaße belegt (Frage 1 an Marie erledigt).
+- Spannung zu klären: Lesson „nicht mit zwei Schwestern als Botschaft werben“. Das Doppel muss eine Haltung sein (zwei Dinge, die zusammengehören und sich ergänzen: Wein und Bett, Tag und Nacht, Tradition und jung, Region und Anspruch), nicht „Frauenunternehmen“.
+- Weitere Charakterstoffe von der alten Seite: Einzylinder-Cuvées (Traktor-Geschichte: Chardonnay = Motorblock, Grauburgunder = Antriebsrad; `/einzylinder-weine/`), „Post vom Doppelstück“ (Newsletter), Doppelstück-Geburtstag (8. Hoffest 2027, Gründung also etwa 2019), Doppelstück-Weingläser im Shop, „DobbelBock“ Fassenacht-Paket, Weinwanderungsrouten mit Rätseln.
+
+## Starter-Prompt Runde 7 (neue Session, Modell Opus 5.5)
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/brave-meitner-8193a0`. Lies „Urteil zu Runde 6“ und „Beleg“ in `wissen/Uebergabe.md`, `wissen/Lessons.md` (Design, Inhalt), Vault-Playbooks `farbwelt-aus-bestand.md` und `logo-als-code.md`. Dann: Räume, Einrichtung und Farben von Weingut und Hotel auf doppelstueck.com ansehen (Zimmer, Vinothek, Eventraum, Etiketten), die Wortmarke und das W genau anschauen. Daraus mit `design-brainstorm` drei Markengedanken rund um das Doppel (Philosophie, was Gäste kaufen, Gegenrichtung) und einen wählen; dazu Farbwelt aus dem Bestand, Schriftpaar passend zur Wortmarke, ein Icon/Zeichen aus dem Doppel. Zuerst als Brand-Sheet (Markengedanke in einem Satz, Farbe, Schrift, Zeichen, Wechselspiel) zeigen und Benjamins Ja holen, erst dann einen One-Shot-Hero unter `prototyp/runde-7/`. Haartraum (`~/GitHub Repos/haartraum-website/docs/art-direction.md`) bleibt die Messlatte. Kein Push.
 
 ## Runde 6 (Commit fc7b848, Branch `claude/brave-meitner-8193a0`)
 - Konzept, Gegenrichtungen, Storyboard, Kritik: `docs/design-ideen-runde-6.md`.
