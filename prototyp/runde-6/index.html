@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Wasem Doppelstück · Weingut und Weinhotel in Ingelheim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="runde6.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav__marke" href="#" aria-label="Wasem Doppelstück, Startseite">
+    <span class="wortmarke" aria-hidden="true"></span>
+    <span class="w" aria-hidden="true"></span>
+  </a>
+  <nav class="nav__links" aria-label="Hauptnavigation">
+    <a href="#mass">Erlebnisse</a>
+    <a href="#mass">Weinhotel</a>
+    <a href="#mass">Weine</a>
+    <a class="nav__buchen" href="#">Zimmer buchen</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-label="Willkommen">
+    <div class="hero__buehne">
+      <video class="film" muted playsinline loop autoplay preload="metadata"
+        poster="../video/wasem-lese-hero-poster.jpg"
+        data-src="../video/wasem-lese-hero-desktop.mp4"
+        data-src-mobil="../video/wasem-lese-hero-mobil.mp4"
+        data-poster-mobil="../video/wasem-lese-hero-poster-mobil.jpg"
+        aria-label="Lese im Weinberg über Ingelheim"></video>
+
+      <div class="fuellung">
+        <svg class="spiegel" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true">
+          <path class="spiegel__wein" d="M0,20 L1000,20 L1000,40 L0,40 Z"/>
+          <path class="spiegel__strich" d="M0,20 L1000,20"/>
+        </svg>
+        <p class="eichstrich" aria-hidden="true"><span class="eichstrich__name">Glas</span> <span class="eichstrich__zahl">0,2</span> l</p>
+
+        <div class="hero__text">
+          <h1 class="titel">
+            <span class="titel__kat">Weingut und Weinhotel in Ingelheim</span>
+            <span class="zeile"><span>Feiert im Weingut.</span></span>
+            <span class="zeile"><span>Schlaft ein paar Häuser weiter im Weinhotel.</span></span>
+          </h1>
+          <div class="wege">
+            <a class="weg weg--voll" href="#">Zimmer buchen</a>
+            <a class="weg" href="#mass">Feier oder Probe anfragen</a>
+          </div>
+        </div>
+
+        <p class="hero__voll">Ein Doppelstück ist das große Fass: 2400&nbsp;Liter. Bei uns ist es ein ganzes Wochenende.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mass" id="mass" aria-labelledby="mass-titel">
+    <h2 id="mass-titel" class="mass__titel">Wie viel darf’s sein?</h2>
+    <ol class="mass__reihe">
+      <li class="stueck">
+        <a href="#">
+          <p class="stueck__mass"><span>Glas</span> 0,2 l</p>
+          <span class="stueck__pegel" style="--pegel:2%" aria-hidden="true"></span>
+          <figure><img src="../bilder/wasem-vinothek-theke.webp" alt="Theke der Vinothek" loading="lazy"></figure>
+          <h3>Ein Glas</h3>
+          <p>Weinprobe in der Vinothek, zu zweit oder mit Freunden.</p>
+        </a>
+      </li>
+      <li class="stueck">
+        <a href="#">
+          <p class="stueck__mass"><span>Halbstück</span> 600 l</p>
+          <span class="stueck__pegel" style="--pegel:25%" aria-hidden="true"></span>
+          <figure><img src="../bilder/wasem-weingarten-abend-lichterkette.webp" alt="Weingarten am Abend unter einer Lichterkette" loading="lazy"></figure>
+          <h3>Ein Abend</h3>
+          <p>Feiern im Weingarten oder an der langen Tafel: Geburtstag, JGA, Firmenfest.</p>
+        </a>
+      </li>
+      <li class="stueck">
+        <a href="#">
+          <p class="stueck__mass"><span>Stück</span> 1200 l</p>
+          <span class="stueck__pegel" style="--pegel:50%" aria-hidden="true"></span>
+          <figure><img src="../bilder/wasem-hotelzimmer-doppelbett.webp" alt="Doppelzimmer im Weinhotel" loading="lazy"></figure>
+          <h3>Eine Nacht</h3>
+          <p>Zimmer im Weinhotel, morgens Frühstück, der Weg zurück ist eine Gasse lang.</p>
+        </a>
+      </li>
+      <li class="stueck">
+        <a href="#">
+          <p class="stueck__mass"><span>Doppelstück</span> 2400 l</p>
+          <span class="stueck__pegel" style="--pegel:100%" aria-hidden="true"></span>
+          <figure><img src="../bilder/wasem-jga-freundinnen-lachen.webp" alt="Freundinnen lachen am Tisch" loading="lazy"></figure>
+          <h3>Ein Wochenende</h3>
+          <p>Probe, Feier und Zimmer für die ganze Gruppe. Oder eure Tagung mit Übernachtung.</p>
+        </a>
+      </li>
+    </ol>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="runde6.js"></script>
+</body>
+</html>
