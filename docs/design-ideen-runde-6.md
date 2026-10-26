@@ -32,7 +32,7 @@ Risiko A: Liter als Gimmick. Gegenmittel wie bei Haartraum: jede Maßzahl hat ei
 4. Scroll: Die Füllung steigt bis zum oberen Rand, die Maßzahl zählt mit (Halbstück 600 l, Stück 1200 l, Doppelstück 2400 l), am Ende steht der Satz zum Namen. Danach ordnet dieselbe Skala die Angebote.
 
 Texte (Vorschläge, vor dem Zeigen an Marie durch `text-kritik` und Instagram-Ton):
-- Kategorie: „Weingut und Weinhotel · Stiegelgasse · Ingelheim“
+- Kategorie: „Weingut und Weinhotel in Ingelheim“
 - H1: „Feiert im Weingut. Schlaft ein paar Häuser weiter im Weinhotel.“
 - Am vollen Fass: „Ein Doppelstück ist das große Fass: 2400 Liter. Bei uns ist es ein ganzes Wochenende.“
 

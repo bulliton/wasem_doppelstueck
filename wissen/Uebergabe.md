@@ -1,5 +1,19 @@
 # Übergabe
 
+Stand: 2026-10-26 · **A-004 Runde 6 gebaut: Markensystem „Das Maß“ (Eichstrich 0,2 l bis Doppelstück 2400 l), One-Shot-Hero mit steigender Weinfüllung. Wartet auf Benjamins Urteil.**
+
+## Runde 6 (Commit fc7b848, Branch `claude/brave-meitner-8193a0`)
+- Konzept, Gegenrichtungen, Storyboard, Kritik: `docs/design-ideen-runde-6.md`.
+- Bau: `prototyp/runde-6/index.html` (+ `runde6.css`, `runde6.js`). Lokal `http://localhost:4321/prototyp/runde-6/index.html` (Server „repo“).
+- Hero: Lesefilm randlos, Spätburgunder steigt wie Wein im Glas bis zum goldenen Eichstrich („Glas 0,2 l“), schwappt nach; Kategorie, H1, zwei Wege erst auf der Füllung (Ilona). Scroll füllt bis oben, Eichstrich zählt Viertelstück, Halbstück, Stück, Doppelstück; am Ende der Satz zum Namen. Danach Maß-Reihe „Wie viel darf’s sein?“ (Glas, Abend, Nacht, Wochenende) mit Pegelstrich je Zeile.
+- Schrift neu: Libre Caslon Display + Bricolage Grotesque. Farben aus Runde 5.
+- Offen: Benjamins Urteil, Handy-Menü, Safari, Reduced Motion live, `text-kritik`, ganzer `design-kritik`-Lauf, Fassmaße gegen Fachquelle, Namensherkunft (Frage an Marie). Kein Push, nicht gemergt.
+
+## Starter-Prompt (neue Session, Modell Opus 5.5)
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/brave-meitner-8193a0`. Lies `docs/design-ideen-runde-6.md` und Benjamins Urteil zu Runde 6. Bei Ja: `design-kritik` und `text-kritik` ehrlich, Fassmaße belegen, Handy-Menü, Familie und Schluss im System „Das Maß“ (W einmal riesig in der Schlussfläche), Passwort-Vorschau. Bei Nein: Befund als Lesson, Gegenrichtung B oder C aus dem Dokument prüfen. Kein Push, kein Merge ohne `pruefer`.
+
+## Davor
+
 Stand: 2026-10-26 · **A-004 Runde 5 abgelehnt („nicht cool, nicht modern, nicht durchdacht“). Runde 6: zuerst ein tiefer Branding-Gedanke, dann ein One-Shot-Hero.**
 
 ## Benjamins Urteil zu Runde 5 (bindend)
