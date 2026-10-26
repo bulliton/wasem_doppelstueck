@@ -2,7 +2,7 @@
 
 Grundlage für die Art Direction (Fable) und das Brand Paper. Alles mit Quelle; was nicht belegt ist, steht unter „Offen“. Claims sind Vorschläge.
 
-Quellen: **T** = Transkript Termin Weingut 10.06.2026 (Franzi Wilbrand, Elena Colombini; `~/Downloads/Demo-Webseite-Feedback.rtf`) · **M** = Mailverlauf Marie (31.08., 02.10., 20.10.) · **W** = doppelstueck.com · **G** = Great Wine Capitals / mainz.de „Sister Act“ 2023 · **P** = alter Prototyp im Repo-Root.
+Quellen: **T** = Transkript Termin Weingut 10.06.2026 (Franzi Wilbrand, Elena Colombini; `~/Downloads/Demo-Webseite-Feedback.rtf`) · **M** = Mailverlauf Marie (31.08., 02.10., 20.10.) · **W** = doppelstueck.com · **G** = Great Wine Capitals / mainz.de „Sister Act“ 2023 · **P** = alter Prototyp im Repo-Root (`readme.md`, `uploads/58950ee3-….png`) · **rheinhessen.de** = Veranstaltungseintrag Straußwirtschaft 2026.
 
 ## 1. Stand des Projekts
 - Proaktiver Relaunch. Funzeln-Partnerschaft läuft (Weinwanderungen, Elena 08.05.). Angebot Website Relaunch Basic 990 € netto + Referenzliste (Google Sheet, 22 Seiten) + Link zum Prototyp an Marie am 31.08. Nachfass 02.10. und 20.10., **keine Antwort**. M
