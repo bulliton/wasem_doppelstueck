@@ -5,6 +5,7 @@ Eine Zeile pro Lektion: Regel — Grund. Neue oben. Doppeltes zusammenführen. Z
 ## Technik
 
 ## Design
+- Runde 3 (A „Etikett“ Koralle, B „Abendlicht“ Burgunder) war für Benjamin „überhaupt nicht schön“, die Farben „knallen sehr stark“, insgesamt „basic“, ohne Raffinesse und Wow, auch mobil. Fehler: Etikettfarbe wörtlich als große Fläche genommen (Koralle ist auf der Flasche ein kleiner Akzent) und Split-Hero als Standardlösung (steht auf der KI-Muster-Liste). Gut fanden er „Was habt ihr vor?“ mit Bildern und die Team-Reihe. Wunsch: Navigation liegt transparent auf dem Hero, mehr Effekte, modern, on brand — Benjamin, 26.10.
 - Text nie direkt auf ein Foto setzen, sondern auf eine ruhige Farbfläche (Etikett, Band): Ilona fand bei Maries Favorit Maxwell „den Text auf den Bildern“ nicht lesbar (Benjamins Telefonnotiz, `~/Downloads/Demo-Webseite-Feedback.rtf` Z. 318). Zielgruppe ist breit, nicht Luxus — 26.10., Runde 3.
 - Warme Familienporträts mit bestätigten Namen und Rollen liegen auf doppelstueck.com/team (`2023/04/<Name>_Wasem_Wasem_Doppelstueck_Weingut.jpg`, Burkhard `2024/12/Burkhard-Wasem.png`); Farbanker der Marke sind die Etiketten (Serifen-W auf Schwarz-Gold, Weiß, Koralle beim Gutswein) — 26.10.
 - Ein Markenzeichen allein (W als Bildfenster) trägt keinen Hero: im ersten Screen müssen Menschen, Wärme und Familie spürbar sein; Farbwelt darf neu sein statt aus der alten Seite, Ziel „edel, aber nicht krass edel“ — Benjamin, 26.10., Runde 2 Variante A.
