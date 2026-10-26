@@ -1,6 +1,15 @@
 # Übergabe
 
-Stand: 2026-10-26 · **A-004 Runde 4 gebaut: C „Fenster“ und D „Satz“ unter `prototyp/runde-4/`, Benjamin wählt**
+Stand: 2026-10-26 · **A-004 Runde 4 abgelehnt (D langweilig, C: W-Animation nimmt Gefühl, Aufhänger „wack“). Runde 5: Strategie zuerst, Video-Hero, kreativer Neustart**
+
+## Stand
+- Runde 4 liegt committet unter `prototyp/runde-4/` (C Fenster, D Satz, Belege `docs/belege/runde-4/`), bleibt nur als „so nicht“ liegen.
+- Benjamins Urteil und die Strategie für Runde 5 stehen in `docs/runde-5-strategie-und-auftrag.md` (Käufergruppen, USP, was der erste Screen sagen muss, drei Aufhänger-Vorschläge, Video-Hero, was an der Identität neu gedacht wird, Auftrag in vier Schritten). Lessons eingetragen.
+- Offene Entscheidung von Benjamin: Herbstvideo (41,5 MB, doppelstueck.com) laden ja/nein. Ohne Ja: Instagram-Reels sichten.
+- Lokal: launch.json „repo“ (4321) und „repo-4322“. Branch `claude/brave-meitner-8193a0`, nicht gemergt, kein Push.
+
+## Starter-Prompt (neue Session, Modell Opus 5.5)
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/brave-meitner-8193a0`. Lies `docs/runde-5-strategie-und-auftrag.md` (bindend), `wissen/Lessons.md` (Abschnitte Design und Inhalt), Skill `geschmack` (Profil, Moves `hero-film-name-randlos`, `hero-pin-satzwechsel`, `horizontal-pin`, Baustein `nav-transparent-kehrt-zurueck`). A-004 Runde 5: Aufhänger aus der Strategie durch `text-kritik`, dann `design-brainstorm` mit drei frischen Konzepten (nichts aus Runde 2–4 oder dem alten Prototyp), eines wählen, Identität neu schärfen, einen ganzen Start-Screen mit Video-Hero unter `prototyp/runde-5/` bauen (Video nur nach Benjamins Ja laden, sonst Reels sichten), Nav transparent, Text lesbar, Desktop und Mobil gleich stark. `design-kritik` ehrlich, Screenshots 1440/375, Wahlknopf. Kein Push, kein Merge.
 
 ## Runde 4 (Branch `claude/brave-meitner-8193a0`, Fable-Session)
 - Identität gedämpft (`docs/design-ideen-runde-4.md`): Sand `#F1EAE0`, Flaschenschwarz `#1E1917`, Stein für Labels, Gold nur als Haarlinie, Koralle nur als Hover-Punkt; Cormorant Garamond 300 als dünne Display-Serif, Hanken Grotesk für UI. Eine Farbfläche: Kapitel „Zwei Häuser, eine Gasse“.

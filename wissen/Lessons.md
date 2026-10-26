@@ -5,6 +5,8 @@ Eine Zeile pro Lektion: Regel — Grund. Neue oben. Doppeltes zusammenführen. Z
 ## Technik
 
 ## Design
+- Runde 4 (C „Fenster“ mit W-Maske, D „Satz“) abgelehnt: D „zu langweilig“, bei C nimmt die W-Animation (Fenster wächst) Gefühl weg; das W soll den Hero nicht mehr tragen. Benjamin will einen Hero mit vollflächigem Video, einen kreativen Neustart, der sich von allen bisherigen Prototypen löst, moderne Komponenten und Motion Graphics an die Marke angepasst, Brand Identity darf sich bewegen, Charakter bleibt — Benjamin, 26.10.
+- Nicht am alten Claude-Design-Prototyp oder an früheren Runden kleben: jede Runde beginnt mit frischen Konzepten aus Marke und Referenzen, nicht mit Varianten der letzten Runde — Benjamin, 26.10., Runde 4.
 - Runde 3 (A „Etikett“ Koralle, B „Abendlicht“ Burgunder) war für Benjamin „überhaupt nicht schön“, die Farben „knallen sehr stark“, insgesamt „basic“, ohne Raffinesse und Wow, auch mobil. Fehler: Etikettfarbe wörtlich als große Fläche genommen (Koralle ist auf der Flasche ein kleiner Akzent) und Split-Hero als Standardlösung (steht auf der KI-Muster-Liste). Gut fanden er „Was habt ihr vor?“ mit Bildern und die Team-Reihe. Wunsch: Navigation liegt transparent auf dem Hero, mehr Effekte, modern, on brand — Benjamin, 26.10.
 - Text nie direkt auf ein Foto setzen, sondern auf eine ruhige Farbfläche (Etikett, Band): Ilona fand bei Maries Favorit Maxwell „den Text auf den Bildern“ nicht lesbar (Benjamins Telefonnotiz, `~/Downloads/Demo-Webseite-Feedback.rtf` Z. 318). Zielgruppe ist breit, nicht Luxus — 26.10., Runde 3.
 - Warme Familienporträts mit bestätigten Namen und Rollen liegen auf doppelstueck.com/team (`2023/04/<Name>_Wasem_Wasem_Doppelstueck_Weingut.jpg`, Burkhard `2024/12/Burkhard-Wasem.png`); Farbanker der Marke sind die Etiketten (Serifen-W auf Schwarz-Gold, Weiß, Koralle beim Gutswein) — 26.10.
@@ -18,6 +20,7 @@ Eine Zeile pro Lektion: Regel — Grund. Neue oben. Doppeltes zusammenführen. Z
 - Der Claude-Design-Prototyp (Juni) ist KI-Look: dunkles Luxus-Monogramm passt nicht zu einem herzlichen Familienweingut; Neustart bei null mit Briefing, Markenkern, Stimme — Benjamin, 26.10.
 
 ## Inhalt
+- Ein Hero-Satz ist zuerst Verkaufsstrategie, dann Text: „Noch ein Glas? Ihr schlaft ja hier.“ war „wack“, „wie Wikipedia“, nicht durchdacht; wer landet, versteht ihn nicht. Vor dem Satz klären, wer kauft, was nur Wasem hat (Weingut + Weinhotel in einer Gasse) und was der Besucher im ersten Screen lesen muss (`docs/runde-5-strategie-und-auftrag.md`) — Benjamin, 26.10.
 - Claims und Idee-Sätze für Wasem müssen Gefühl tragen und junge Frauen ansprechen (cooles Design, coole Räume, lockerer Ton wie auf Instagram); „Kommt auf ein Glas. Bleibt den ganzen Tag.“ und „aus einem Glas Wein wird ein ganzer Tag“ lesen sich trocken wie Wikipedia — Benjamin, 26.10. Vor neuen Texten Instagram-Captions lesen.
 - Nicht mit „Frauenunternehmen“ oder „zwei Schwestern“ als Botschaft werben; die Familie darf vorkommen, die Botschaft sind Räume, Erlebnis, Stil — Benjamin, 26.10.
 - In Deck-Befunden immer den Schluss für den Kunden mitliefern (warum braucht ihr das?); „fehlt auf der Startseite“ allein reicht nicht — Benjamin, 26.10.
