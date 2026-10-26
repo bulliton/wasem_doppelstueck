@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Wasem Doppelstück · Weingut und Weinhotel in Ingelheim</title>
+<meta name="description" content="Bio-Weingut und Weinhotel in derselben Gasse in Ingelheim. Prototyp, Richtung A.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stil.css">
+<link rel="preload" as="image" href="bilder/wasem-weinberg-abendlicht-glaeser.webp">
+</head>
+<body>
+
+<header class="nav nav--auf-bild">
+  <nav class="nav__links" aria-label="Bereiche">
+    <button class="nav__menue versal" aria-expanded="false">Menü</button>
+    <a class="versal" href="#wein">Wein</a>
+    <a class="versal" href="jga.html">JGA</a>
+    <a class="versal" href="#bleiben">Hotel</a>
+    <a class="versal" href="tagung.html">Tagung</a>
+  </nav>
+  <a class="nav__marke" href="index.html">Wasem<small>Doppelstück</small></a>
+  <div class="nav__rechts">
+    <a class="versal" href="#wein">Shop</a>
+    <a class="versal nav__anfrage" href="#anfrage">Anfragen</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <img src="bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="Zwei Frauen halten im Weinberg ihre Weingläser in den Abendhimmel" width="1300" height="669" fetchpriority="high">
+    <div class="hero__text">
+      <h1>Noch ein Glas?<br> Ihr schlaft ja hier.</h1>
+      <p class="hero__beweis">Bio-Weingut und Weinhotel in derselben Gasse in Ingelheim. Weinprobe, Planwagen, Tagung, 50&nbsp;Zimmer.</p>
+    </div>
+    <p class="hero__quelle">Foto: doppelstueck.com</p>
+  </section>
+
+  <section class="gasse" aria-label="Wein erleben und Bleiben">
+    <p class="gasse__einstieg">Links das Weingut, rechts das Hotel, dazwischen ein paar Schritte über die Stiegelgasse.</p>
+    <div class="gasse__haeuser">
+      <article class="haus haus--wein" id="wein">
+        <span class="haus__nr versal">Stiegelgasse 50</span>
+        <figure><img src="bilder/wasem-weingarten-tafel-gruen.webp" alt="Gedeckte Holztafel mit Weingläsern im grünen Weingarten" width="1067" height="800" loading="lazy"></figure>
+        <div class="haus__inhalt">
+          <h2>Wein erleben</h2>
+          <ul>
+            <li>Weinprobe in der Vinothek</li>
+            <li>Planwagenfahrt mit der Winzerin</li>
+            <li>Workshops: Keramik, Perlen, Makramee, Neonpainting</li>
+            <li>Straußwirtschaft im Mai und Juni, mit Flammkuchen</li>
+            <li><a href="#wein">Bio-Weine im Shop</a>, viel Spätburgunder</li>
+          </ul>
+        </div>
+      </article>
+      <div class="gasse__fuge" aria-hidden="true"><span class="gasse__name versal">Stiegelgasse</span></div>
+      <article class="haus haus--bleiben" id="bleiben">
+        <span class="haus__nr versal">Stiegelgasse 70</span>
+        <figure><img src="bilder/wasem-hotelzimmer-doppelbett.webp" alt="Hotelzimmer mit Doppelbett, Sitzecke und bodentiefem Fenster" width="1800" height="1201" loading="lazy"></figure>
+        <div class="haus__inhalt">
+          <h2>Bleiben</h2>
+          <ul>
+            <li>50 Zimmer in zwei Häusern</li>
+            <li>Das Stammhaus steht im Hof des Weinguts</li>
+            <li>Frühstück vom Buffet</li>
+            <li>Eventraum für Feiern und Tagungen</li>
+            <li>Aufzug und Tiefgarage im Haus Klassik</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="fuge" aria-labelledby="fuge-titel">
+    <div class="fuge__flaeche">
+      <div class="fuge__innen">
+        <h2 id="fuge-titel">Am besten bleibt ihr gleich über Nacht.</h2>
+        <div class="angebote">
+          <a class="angebot" href="jga.html"><span class="versal">JGA mit Übernachtung</span><p>Endlich mal wieder alle an einem Tisch.</p></a>
+          <div class="angebot"><span class="versal">Wochenende</span><p>Abends Weinprobe in der Vinothek, danach sind es ein paar Schritte bis ins Zimmer.</p></div>
+          <a class="angebot" href="tagung.html"><span class="versal">Tagung</span><p>Tagsüber im Eventraum, abends bei der Weinprobe. Geschlafen wird im Haus.</p></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="einladung" id="anfrage">
+    <p>Sagt uns, wie viele ihr seid, den Rest planen wir.</p>
+    <a href="jga.html#anfrage">Anfrage schreiben</a>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div class="fuss__marke">Wasem Doppelstück</div>
+  <address class="fuss__adr" style="font-style:normal">Weingut: Stiegelgasse 50<br>Weinhotel: Stiegelgasse 70<br>55218 Ingelheim am Rhein</address>
+  <nav class="fuss__wege" aria-label="Fußnavigation"><a href="#wein">Weinshop</a><a href="#bleiben">Zimmer buchen</a><a href="jga.html">JGA</a><a href="tagung.html">Tagung</a></nav>
+  <p class="fuss__klein"><span>Prototyp A-004, nicht öffentlich</span><span>Fotos: doppelstueck.com</span><a href="#">Impressum</a><a href="#">Datenschutz</a></p>
+</footer>
+
+<div class="leiste versal" aria-label="Schnellzugriff"><a href="#bleiben">Zimmer buchen</a><a href="#anfrage">Anfragen</a></div>
+<script src="gasse.js"></script>
+</body>
+</html>

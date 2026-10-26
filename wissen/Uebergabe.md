@@ -1,8 +1,13 @@
 # Übergabe
 
-Stand: 2026-10-26 · Konzeptrunde 2 fertig, Benjamin hat **Richtung A „Ihr schlaft ja hier“** freigegeben → A-004 Key-Screens
+Stand: 2026-10-26 · **A-004 Key-Screens gebaut** (Prüfung), wartet auf Benjamins Urteil
 
 ## Zuletzt erledigt
+- **A-004 Key-Screens** unter `prototyp/` (`index.html`, `jga.html`, `tagung.html`, `stil.css`, `gasse.js`, 15 Fotos in `prototyp/bilder/` als WebP, alle von doppelstueck.com). Lokal: `http://localhost:4321/prototyp/` (launch.json „repo“).
+  - Signatur: Die Fuge zwischen „Wein erleben“ (Stiegelgasse 50) und „Bleiben“ (Stiegelgasse 70) ist die Stiegelgasse; beim Scrollen schließt sie sich, die Fotos werden ein Diptychon, aus der Mitte öffnet sich die Abendlicht-Fläche mit den gemischten Angeboten. Ohne Bibliothek, zwei CSS-Variablen. Reduced Motion zeigt den Endzustand.
+  - Texte durch `text-kritik`: `docs/key-screens-texte.md` (unbelegtes „Gewölbe“, „Terrasse“, „Bestuhlung“ gestrichen; Tagung-H1 „Euer Team tagt im Weingut und schläft im Hof.“).
+  - `design-kritik`: Messskript Note A (Tagung Desktop B vor Umbau), 375/1440 ohne Überbreite. Behoben: Split-Hero der Unterseiten, weiße Nav auf hellem Himmel, Textschatten.
+  - Offen aus der Kritik: Display-Größe bleibt bei 6 rem (Projektregel) statt der 140–225 px aus dem Profil; Stiegelgassen-Linie nur auf der Startseite, auf Unterseiten noch nicht weitergeführt. Schriften laufen über Google Fonts (für live selbst hosten). Formulare schicken nichts ab.
 - **A-006 Konzeptrunde 2** (Branch `claude/brave-meitner-8193a0`): `docs/instagram-ton.md` und `docs/design-ideen-konzeptrunde-2.md`. Drei eigene Richtungen gegen die Fable-Art-Direction, Benjamin wählte A.
 - Instagram @wasemdoppelstueck ist ohne Login gesperrt (Altersgrenze). Ausgewertet wurde TikTok @wasem.doppelstueck (gleicher Absender „Marie & Julia Wasem“, 21.200 Follower): Versal-Titel, gesprochener Ton, fast nur Weinberg und Keller, keine Hotel- oder JGA-Inhalte.
 - Davor: Brand Paper v8 (https://claude.ai/artifact/GA1cT9E2qYKLArKe6CeRXk, Quellen `docs/brand-paper/project/`), Messungen in `docs/belege/messungen-2026-10-26.md`.
@@ -25,7 +30,8 @@ Stand: 2026-10-26 · Konzeptrunde 2 fertig, Benjamin hat **Richtung A „Ihr sch
 - Reihenfolge: erst Design (Key-Screens), danach Deck/PDF anpassen.
 
 ## Offen / nächste Schritte
-- **A-004 Key-Screens** (frei, Opus, neue Session): Start, JGA, Tagung als ein Prototyp unter `prototyp/` in Richtung A, Desktop 1440 und Mobil 375, echte Fotos, eine Signatur-Bewegung (GSAP/Lenis), `design-kritik` vor dem Commit, Claims durch `text-kritik`. Danach Deck-Folien 6 bis 12 neu.
+- **A-004 abnehmen:** Benjamin schaut `prototyp/` an (Desktop und Handy). Danach Deck-Folien 6 bis 12 mit Screenshots neu, Passwort-Vorschau für Marie.
+- Frage an Marie ergänzen: Liegen Stammhaus und Haus Klassik direkt gegenüber? Bestuhlung und m² des Eventraums.
 - Instagram-Captions nachlesen, sobald Benjamin im Browser-Fenster eingeloggt ist (optional).
 - Deck-Platzhalter Folie 13 (Link, Passwort, Telefon, Mail). Vorschau für Marie nur mit Passwortsperre (Vault `Playbooks/vorschau-passwortschutz.md`).
 - Branch `claude/brave-meitner-8193a0` noch nicht nach `main` gemergt (nur Doku; vor dem Merge `pruefer`). Kein Push ohne Rückfrage.
@@ -35,4 +41,4 @@ Stand: 2026-10-26 · Konzeptrunde 2 fertig, Benjamin hat **Richtung A „Ihr sch
 - Alter Prototyp im Root bleibt liegen.
 
 ## Starter-Prompt (neue Session, Modell Opus 5.5)
-> Projekt wasem-doppelstueck-website. Lies `wissen/Uebergabe.md` (Abschnitt „Freigegebene Richtung A“ ist bindend) und `docs/design-ideen-konzeptrunde-2.md`. A-004: Baue die Key-Screens Start, JGA und Tagung in Richtung A „Ihr schlaft ja hier“ als einen Prototyp unter `prototyp/` (Skill `frontend-design`, Moves und Bausteine aus `geschmack`), mit echten Fotos von doppelstueck.com, Desktop und Mobil, einer Signatur-Bewegung (Spalten laufen zusammen). Texte durch `text-kritik`, dann `design-kritik`, Screenshots zeigen. Worktree, kein Push.
+> Projekt wasem-doppelstueck-website. Lies `wissen/Uebergabe.md`. A-004 liegt unter `prototyp/` in Prüfung: Benjamins Urteil einarbeiten, dann Deck-Folien 6 bis 12 mit Screenshots der Key-Screens neu (Brand Paper v8). Worktree, kein Push.

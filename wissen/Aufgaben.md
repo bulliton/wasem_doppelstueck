@@ -27,7 +27,7 @@ Status: prüfung
 Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: Slides-Artefakt im Bulliton-Rahmen, erst Belege (Google, PageSpeed, Tagungs-Sichtbarkeit), dann Marke, dann Vorschau und nächster Schritt
 
 ## A-004 · Key-Screens mit echten Fotos
-Status: frei (Richtung A „Ihr schlaft ja hier“ freigegeben 26.10.)
+Status: prüfung (Prototyp unter prototyp/, 26.10., wartet auf Benjamins Urteil)
 Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: 3 Screens (Start, JGA, Tagung) in Richtung A unter prototyp/, 375 und 1440 ohne Überbreite, design-kritik bestanden
 
 ## A-005 · E-Mail-Verlauf mit Marie vollständig exportieren

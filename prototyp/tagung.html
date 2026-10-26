@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tagung im Weingut · Wasem Doppelstück Ingelheim</title>
+<meta name="description" content="Tagung im Eventraum des Weinguts, Übernachtung im Weinhotel. Prototyp, Richtung A.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+<header class="nav">
+  <nav class="nav__links" aria-label="Bereiche">
+    <button class="nav__menue versal" aria-expanded="false">Menü</button>
+    <a class="versal" href="index.html#wein">Wein</a>
+    <a class="versal" href="jga.html">JGA</a>
+    <a class="versal" href="index.html#bleiben">Hotel</a>
+    <a class="versal" href="tagung.html" aria-current="page">Tagung</a>
+  </nav>
+  <a class="nav__marke" href="index.html">Wasem<small>Doppelstück</small></a>
+  <div class="nav__rechts">
+    <a class="versal" href="index.html#wein">Shop</a>
+    <a class="versal nav__anfrage" href="#anfrage">Anfragen</a>
+  </div>
+</header>
+
+<main class="seite">
+  <section class="kopf kopf--gross raster">
+    <h1 class="kopf__h1">Euer Team tagt im Weingut und schläft im Hof.</h1>
+    <figure class="kopf__bild--links bild">
+      <img class="r32" src="bilder/wasem-eventraum-lange-tafeln.webp" alt="Heller Eventraum mit langen Holztafeln und Stühlen" width="1024" height="768">
+      <figcaption class="quelle">Foto: doppelstueck.com</figcaption>
+    </figure>
+    <div class="kopf__seite">
+      <p class="kopf__lead" style="margin-top:0">Der Eventraum liegt im Stammhaus, mit Technik für hybride Treffen. Abends geht ihr zur Weinprobe in die Vinothek, die Zimmer sind im selben Haus und in derselben Gasse.</p>
+      <dl class="fakten">
+        <dt>Ideal für</dt><dd>30&nbsp;Personen</dd>
+        <dt>Platz für</dt><dd>knapp 50&nbsp;Personen</dd>
+        <dt>Technik</dt><dd>für hybride Treffen</dd>
+        <dt>Zimmer</dt><dd>50, in zwei Häusern</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block raster">
+    <figure class="links-bild bild">
+      <img class="r32" src="bilder/wasem-steinwand-tafel-holzdecke.webp" alt="Tafel mit Stühlen vor einer Natursteinwand unter alten Holzbalken" width="1300" height="867" loading="lazy">
+    </figure>
+    <div class="rechts-text">
+      <h2>Danach</h2>
+      <ul class="liste">
+        <li>Weinprobe in der Vinothek</li>
+        <li>Krimiwanderung durch die Weinberge, Rhein-Raft oder Wein-Yoga</li>
+        <li>50 Zimmer in zwei Häusern, Frühstück vom Buffet</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block raster">
+    <div class="links-text" style="grid-column: 2 / span 6">
+      <h2>Drei Pauschalen</h2>
+      <ul class="liste">
+        <li>Basic</li>
+        <li>Business</li>
+        <li>Premium All-in</li>
+      </ul>
+      <p style="margin-top:1.5rem;max-width:var(--measure)">Was drin ist und was es kostet, schickt euch Marie mit dem Angebot.</p>
+    </div>
+    <figure class="bild" style="grid-column: 9 / span 4; align-self:end">
+      <img class="r45" src="bilder/wasem-fruehstueck-buffet.webp" alt="Frühstücksbuffet mit Käse, Obst und Säften" width="1067" height="800" loading="lazy">
+      <figcaption class="quelle">Foto: doppelstueck.com</figcaption>
+    </figure>
+  </section>
+</main>
+
+<section class="anfrage" id="anfrage" aria-labelledby="anfrage-titel">
+  <div class="anfrage__innen">
+    <h2 id="anfrage-titel" class="versal" style="font-family:var(--grotesk);letter-spacing:.2em;margin-bottom:2rem">Tagung anfragen</h2>
+    <form>
+      <p class="anfrage__satz">
+        Wir kommen mit <label for="anzahl">Anzahl Personen</label><input id="anzahl" type="number" min="5" max="50" value="25"> Leuten am
+        <label for="datum">Datum</label><input id="datum" type="date"> und bleiben
+        <label for="nacht">Übernachtung</label><select id="nacht"><option>über Nacht</option><option>nur tagsüber</option></select>.
+      </p>
+      <button class="anfrage__knopf" type="submit">Anfrage an Marie senden</button>
+      <p class="anfrage__wer">Eure Anfrage geht direkt an Marie Wasem.</p>
+      <p class="anfrage__danke" tabindex="-1" hidden>Anfrage gesendet. Marie meldet sich mit einem Angebot. (Prototyp: es wurde nichts verschickt.)</p>
+    </form>
+  </div>
+</section>
+
+<footer class="fuss">
+  <div class="fuss__marke">Wasem Doppelstück</div>
+  <address class="fuss__adr" style="font-style:normal">Weingut: Stiegelgasse 50<br>Weinhotel: Stiegelgasse 70<br>55218 Ingelheim am Rhein</address>
+  <nav class="fuss__wege" aria-label="Fußnavigation"><a href="index.html#wein">Weinshop</a><a href="index.html#bleiben">Zimmer buchen</a><a href="jga.html">JGA</a><a href="tagung.html">Tagung</a></nav>
+  <p class="fuss__klein"><span>Prototyp A-004, nicht öffentlich</span><span>Fotos: doppelstueck.com</span><a href="#">Impressum</a><a href="#">Datenschutz</a></p>
+</footer>
+
+<div class="leiste versal" aria-label="Schnellzugriff"><a href="index.html#bleiben">Zimmer buchen</a><a href="#anfrage">Tagung anfragen</a></div>
+<script src="gasse.js"></script>
+</body>
+</html>
