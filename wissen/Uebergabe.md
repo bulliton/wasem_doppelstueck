@@ -1,6 +1,14 @@
 # Übergabe
 
-Stand: 2026-10-26 · **A-004 Runde 7: Brand-Sheet „Beides.“ gebaut, wartet auf Benjamins Ja.**
+Stand: 2026-10-27 · **A-004 Runde 7: Brand-Identity-Deck „Beides.“ (Beige + Espresso) gebaut, wartet auf Benjamins Antworten zu den 4 Freigabefragen.**
+
+## Deck Brand Identity (27.10.)
+- Slides-Artefakt: https://claude.ai/artifact/TSoUh6KXERev1LkYtXpz6E (11 Folien, Bulliton-Rahmen). Quelldateien nur im Scratchpad; bei Änderungen per Artifact `read` holen.
+- Benjamins Korrektur: Beige, Pinterest-warm, etwas Dunkel. Palette jetzt Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866 nur auf Espresso. Nachtblau ist raus. Flaschen (Koralle, Türkis, schwarzes W) bleiben die bunteste Stelle, nie als Fläche.
+- `prototyp/runde-7/brand-sheet.html` zeigt noch die alte Navy-Fassung; bei Ja auf die Beige-Tokens umstellen, dann One-Shot-Hero (Foto randlos links, Text auf Leinen, Scroll Richtung Hotel wird Espresso, W schließt sich).
+
+## Starter-Prompt (neue Session, Modell Opus 5.5)
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/brave-meitner-8193a0`. Lies „Deck Brand Identity“ in `wissen/Uebergabe.md` und `docs/design-ideen-runde-7.md`, dazu Benjamins Antworten zu den 4 Freigabefragen. Bei Ja: Tokens im Brand-Sheet auf Beige umstellen, `text-kritik` für Hero-Satz und Paare, One-Shot-Hero `prototyp/runde-7/index.html` Desktop und Mobil, `design-kritik`. Kein Push.
 
 ## Runde 7 (Branch `claude/brave-meitner-8193a0`)
 - Konzept, drei Gedanken, Verriss: `docs/design-ideen-runde-7.md`. Sheet: `prototyp/runde-7/brand-sheet.html` (Bestandsfotos in `prototyp/runde-7/bestand/`).
