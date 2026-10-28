@@ -1,6 +1,15 @@
 # Übergabe
 
-Stand: 2026-10-27 · **A-004 Runde 7: Brand-Identity-Deck „Beides.“ (Beige + Espresso) gebaut, wartet auf Benjamins Antworten zu den 4 Freigabefragen.**
+Stand: 2026-10-28 · **A-004 Runde 7: Benjamins Antworten zum Deck sind da. Farbe ja, Schrift zu klassisch, W aus zwei V nein, Strategie kritisch prüfen und Alternative entwickeln.**
+
+## Benjamins Urteil zum Deck (28.10., bindend)
+1. Markengedanke „Beides.“: nicht freigegeben. Erst fremde Kritik (Agent `architekt` oder `pruefer`, ohne meine Begründung, nur Belege und Deck), dann eine echte Alternativrichtung daneben. Benjamin fragt, was ein Doppelstück genau bedeutet: Beleg siehe unten (Fass 2.400 l plus ihre eigene Deutung: zwei Schwestern, zwei Generationen, Weingut und Hotel). In der Kritik auch Interviews und Transkripte durchsuchen (Namens-Grep „Wasem“, „Doppelstück“), ob sie selbst mehr dazu sagen.
+2. Farbwelt: ja, bleibt (Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866).
+3. Schrift: Gedanke „aus der Wortmarke abgeleitet“ gut, EB Garamond + Instrument Sans zu gewöhnlich. 3 bis 4 Google-Fonts mit mehr Charakter als Specimen nebeneinander zeigen (z. B. Fraunces mit SOFT/WONK, Gloock, Young Serif, Bodoni Moda nur noch nicht genutzt?, Instrument Serif schon in Runde 3; vorher prüfen, was Runde 3 bis 6 schon hatten: Bodoni Moda, Instrument Serif, Cormorant, Newsreader, Libre Caslon, Bricolage, Hanken).
+4. Zeichen W aus zwei V: nein, raus. Wortmarke und W bleiben original.
+
+## Starter-Prompt (neue Session, Modell Opus 5.5)
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/brave-meitner-8193a0`. Lies „Benjamins Urteil zum Deck“ und „Beleg“ in `wissen/Uebergabe.md`, `docs/design-ideen-runde-7.md`, Deck https://claude.ai/artifact/TSoUh6KXERev1LkYtXpz6E (per Artifact read). Schritte: (1) Agent `architekt` kritisiert „Beides.“ fremd, mit Transkript-Suche nach dem Namen; (2) eine Alternativrichtung mit `design-brainstorm`, beide gleichrangig; (3) 3–4 charaktervolle Google-Fonts als Specimen in der freigegebenen Farbwelt; (4) Deck aktualisieren: Folie Zeichen raus, Folien Idee/Schrift neu, Freigabefragen neu. Kein Hero, kein Push.
 
 ## Deck Brand Identity (27.10.)
 - Slides-Artefakt: https://claude.ai/artifact/TSoUh6KXERev1LkYtXpz6E (11 Folien, Bulliton-Rahmen). Quelldateien nur im Scratchpad; bei Änderungen per Artifact `read` holen.
