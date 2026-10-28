@@ -35,3 +35,11 @@ Warum A: Es ist der einzige Gedanke, der zugleich Philosophie (Name, belegt), Ve
 - Benjamins Ja zum Brand-Sheet, dann One-Shot-Hero unter `prototyp/runde-7/`.
 - Hero-Satz und Paketnamen durch `text-kritik`; Entfernung 50 zu 70 nicht behaupten, bis geprüft.
 - Desktop-Screenshot im versteckten Pane unzuverlässig; Sheet bei 714 px geprüft, ohne Überbreite.
+
+## Runde 7b (28.10.): fremde Prüfung, Gegenrichtung, Schrift
+- Benjamins Urteil: Farbwelt ja; Schrift zu klassisch; W aus zwei V raus; „Beides.“ fremd prüfen lassen.
+- Prüfer (Agent `architekt`, ohne meine Begründung): „Beides.“ **verwerfen**. Gattung statt Eigenes (Weinhotel = Weingut + Bett), Kern wieder „kein Heimweg“ (der abgelehnte Satz), ohne Unterzeile unverständlich, Paare folgen den zwei Firmen statt den Gästen, Slogan-Kette. Bleibt: Abgrenzung über den Namen (wasem.de) als Argument für Marie.
+- Kundenbelege (Telefonnotiz `~/Downloads/Demo-Webseite-Feedback.rtf`): Gäste sollen sich „über nichts mehr Gedanken machen“ (Z. 135); eine Person, keine Maschine, gegen automatisierten Mitbewerber (Z. 302–303); Gäste wissen oft nicht, was sie wollen (Z. 107); „keine Jungs JGAs“, stilvoller JGA (Z. 129); ~50 % der Zimmer junge Frauen 25–30 (Z. 315); Durchschnitt, nicht Luxus (Z. 326). `interview-transcript-raw-2026-10-09.txt` betrifft einen anderen Betrieb.
+- **Richtung 2 „Was habt ihr vor?“**: Anlass zuerst, Menschen mit Namen planen Wein, Raum, Zimmer; Gäste kaufen „sich um nichts kümmern“. Ton verspielt (Einzylinder, DobbelBock). Kernmoment: Freundinnen-Wochenende mit Stil. Risiken: „persönlich“ braucht Belege (Namen, Antwortzeit), Rückruf muss im Betrieb klappen, Shop braucht eigenen Weg, Name wird Absender.
+- Schrift-Specimens `prototyp/runde-7/schrift-specimen.html` (PNG in `specimen/`): 1 Fraunces (SOFT/WONK) + Schibsted Grotesk, 2 Gloock + Familjen Grotesk, 3 Young Serif + Onest, 4 Gilda Display + Figtree.
+- Deck v14: Zeichen und Vorschau raus; Folien Richtung 1 (idee, paare), Richtung 2 (vorhaben, anlaesse), Kritik, Schrift a/b, drei Freigabefragen.

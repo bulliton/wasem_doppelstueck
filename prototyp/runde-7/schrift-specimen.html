@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Wasem Schrift-Specimen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Gloock&family=Young+Serif&family=Gilda+Display&family=Schibsted+Grotesk:wght@400;600&family=Familjen+Grotesk:wght@400;600&family=Onest:wght@400;600&family=Figtree:wght@400;600&display=swap">
+<style>
+  :root {
+    --leinen: #EEE7DD; --sand: #D9CBB8; --stein: #9C8B7C;
+    --cognac: #94623E; --espresso: #2B201A; --gold: #C9A866;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--sand); color: var(--espresso); padding: 40px; display: grid; gap: 40px; justify-content: center; }
+  .karte { width: 1600px; height: 900px; background: var(--leinen); display: grid; grid-template-columns: 1fr 520px; overflow: hidden; }
+  .links { padding: 72px 80px; display: flex; flex-direction: column; justify-content: space-between; }
+  .rechts { background: var(--espresso); color: var(--leinen); padding: 72px 64px; display: flex; flex-direction: column; justify-content: space-between; }
+  .kopf { display: flex; justify-content: space-between; align-items: baseline; font-size: 22px; letter-spacing: 3px; text-transform: uppercase; color: #6A5A4D; }
+  .kopf b { color: var(--cognac); font-weight: 600; }
+  .gross { font-size: 168px; line-height: .92; letter-spacing: -2px; }
+  .orte { font-size: 30px; letter-spacing: 9px; text-transform: uppercase; margin-top: 28px; }
+  .satz { font-size: 28px; line-height: 1.45; max-width: 760px; color: #4E4036; }
+  .wortmarke { display: block; width: 100%; height: auto; }
+  .rechts .mittel { font-size: 64px; line-height: 1.02; }
+  .rechts .klein { font-size: 22px; line-height: 1.5; color: #BFB2A4; }
+  .knopf { display: inline-block; font-size: 20px; font-weight: 600; padding: 16px 26px; background: var(--leinen); color: var(--espresso); }
+  .linie { height: 1px; background: var(--gold); width: 120px; }
+
+  /* 1 Fraunces weich */
+  #fraunces .serif { font-family: "Fraunces", Georgia, serif; font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144; font-weight: 340; }
+  #fraunces .serif i { font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144; }
+  #fraunces .orte { font-variation-settings: "SOFT" 50, "opsz" 24; font-weight: 420; }
+  #fraunces .sans { font-family: "Schibsted Grotesk", Arial, sans-serif; }
+  /* 2 Gloock */
+  #gloock .serif { font-family: "Gloock", Georgia, serif; font-weight: 400; }
+  #gloock .gross { letter-spacing: -4px; }
+  #gloock .sans { font-family: "Familjen Grotesk", Arial, sans-serif; }
+  /* 3 Young Serif */
+  #young .serif { font-family: "Young Serif", Georgia, serif; font-weight: 400; }
+  #young .gross { font-size: 150px; letter-spacing: -3px; }
+  #young .sans { font-family: "Onest", Arial, sans-serif; }
+  /* 4 Gilda Display */
+  #gilda .serif { font-family: "Gilda Display", Georgia, serif; font-weight: 400; }
+  #gilda .gross { letter-spacing: 0; font-size: 156px; }
+  #gilda .orte { letter-spacing: 8px; }
+  #gilda .sans { font-family: "Figtree", Arial, sans-serif; }
+</style>
+</head>
+<body>
+
+<section class="karte" id="fraunces">
+  <div class="links sans">
+    <p class="kopf"><span><b>1</b> · Fraunces + Schibsted Grotesk</span><span>weich, warm, eigenwillig</span></p>
+    <div>
+      <p class="gross serif">Stiegel&shy;gasse <i>am Abend</i></p>
+      <p class="orte serif">Weingut · Weinhotel · Ingelheim</p>
+    </div>
+    <p class="satz">Weinprobe in der Vinothek, danach ein Zimmer in derselben Gasse. Fraunces mit weichen Enden und der „wonky“ Kursiv: so rund wie die Holzmosaike über den Betten.</p>
+  </div>
+  <div class="rechts sans">
+    <img class="wortmarke" src="../marke/wasem-wortmarke-original.png" alt="Wortmarke Wasem Doppelstück">
+    <div>
+      <p class="mittel serif">Feiern <i>und bleiben</i></p>
+      <div class="linie" style="margin:28px 0"></div>
+      <p class="klein">Spätburgunder, Grauburgunder, Liebesstück. Für Knöpfe, Preise und Fließtext die Grotesk.</p>
+    </div>
+    <span class="knopf">Zimmer ansehen</span>
+  </div>
+</section>
+
+<section class="karte" id="gloock">
+  <div class="links sans">
+    <p class="kopf"><span><b>2</b> · Gloock + Familjen Grotesk</span><span>kräftig, editorial, Café-Schild</span></p>
+    <div>
+      <p class="gross serif">Stiegel&shy;gasse am Abend</p>
+      <p class="orte serif">Weingut · Weinhotel · Ingelheim</p>
+    </div>
+    <p class="satz">Weinprobe in der Vinothek, danach ein Zimmer in derselben Gasse. Gloock hat harte Kontraste und dicke Bäuche: selbstbewusst wie ein Etikett, ohne Kursiv, ein Schnitt.</p>
+  </div>
+  <div class="rechts sans">
+    <img class="wortmarke" src="../marke/wasem-wortmarke-original.png" alt="Wortmarke Wasem Doppelstück">
+    <div>
+      <p class="mittel serif">Feiern und bleiben</p>
+      <div class="linie" style="margin:28px 0"></div>
+      <p class="klein">Spätburgunder, Grauburgunder, Liebesstück. Für Knöpfe, Preise und Fließtext die Grotesk.</p>
+    </div>
+    <span class="knopf">Zimmer ansehen</span>
+  </div>
+</section>
+
+<section class="karte" id="young">
+  <div class="links sans">
+    <p class="kopf"><span><b>3</b> · Young Serif + Onest</span><span>bodenständig, rund, Gasthaus</span></p>
+    <div>
+      <p class="gross serif">Stiegel&shy;gasse am Abend</p>
+      <p class="orte serif">Weingut · Weinhotel · Ingelheim</p>
+    </div>
+    <p class="satz">Weinprobe in der Vinothek, danach ein Zimmer in derselben Gasse. Young Serif ist schwer und freundlich, wie eine alte Weinkarte: lokal, ohne Schwelle, aber mit Haltung.</p>
+  </div>
+  <div class="rechts sans">
+    <img class="wortmarke" src="../marke/wasem-wortmarke-original.png" alt="Wortmarke Wasem Doppelstück">
+    <div>
+      <p class="mittel serif">Feiern und bleiben</p>
+      <div class="linie" style="margin:28px 0"></div>
+      <p class="klein">Spätburgunder, Grauburgunder, Liebesstück. Für Knöpfe, Preise und Fließtext die Grotesk.</p>
+    </div>
+    <span class="knopf">Zimmer ansehen</span>
+  </div>
+</section>
+
+<section class="karte" id="gilda">
+  <div class="links sans">
+    <p class="kopf"><span><b>4</b> · Gilda Display + Figtree</span><span>fein, nah an der Wortmarke</span></p>
+    <div>
+      <p class="gross serif">Stiegel&shy;gasse am Abend</p>
+      <p class="orte serif">Weingut · Weinhotel · Ingelheim</p>
+    </div>
+    <p class="satz">Weinprobe in der Vinothek, danach ein Zimmer in derselben Gasse. Gilda Display hat die feinen Serifen der goldenen Versalien, aber schärfere Kontraste: Modeheft statt Lehrbuch.</p>
+  </div>
+  <div class="rechts sans">
+    <img class="wortmarke" src="../marke/wasem-wortmarke-original.png" alt="Wortmarke Wasem Doppelstück">
+    <div>
+      <p class="mittel serif">Feiern und bleiben</p>
+      <div class="linie" style="margin:28px 0"></div>
+      <p class="klein">Spätburgunder, Grauburgunder, Liebesstück. Für Knöpfe, Preise und Fließtext die Grotesk.</p>
+    </div>
+    <span class="knopf">Zimmer ansehen</span>
+  </div>
+</section>
+
+</body>
+</html>
