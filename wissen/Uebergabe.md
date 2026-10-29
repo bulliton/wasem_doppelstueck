@@ -1,6 +1,12 @@
 # Übergabe
 
-Stand: 2026-10-28 · **A-004 Runde 7b: Deck v14 wartet auf Benjamins drei Antworten (Richtung, Schrift, Farbe/Zeichen).**
+Stand: 2026-10-29 · **A-004 Runde 7c: Benjamin hat Deck v14 beurteilt; Namensgedanke, neue Schriften und Deck v15 in Arbeit.**
+
+## Benjamins Urteil zu Deck v14 (29.10.)
+- Richtung 2 „Was habt ihr vor?“ bleibt.
+- Und-Paare raus (Folien `idee`, `paare`).
+- Fraunces verworfen (zu wenig Charakter); vier neue Schriften mit mehr Charakter, passend zur Garamond-Wortmarke.
+- „Warum Doppelstück, was bedeutet es, warum ist das gut für Gäste?“ ist unbeantwortet: kommt vor Schrift und Hero.
 
 ## Zuletzt erledigt
 - Fremde Prüfung von „Beides.“ (Agent `architekt`, ohne meine Begründung): Urteil verwerfen (Gattung statt Eigenes, wieder „kein Heimweg“, im ersten Screen unverständlich, Paare folgen den Firmen statt den Gästen). Abgrenzung über den Namen (wasem.de) bleibt als Argument für Marie. Belege und Zeilen: `docs/design-ideen-runde-7.md`, Abschnitt „Runde 7b“.
