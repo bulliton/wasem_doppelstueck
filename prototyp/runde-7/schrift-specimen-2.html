@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Wasem Schrift-Specimen 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Imbue:opsz,wght@10..100,100..900&family=Hedvig+Letters+Serif:opsz@12..24&family=Hedvig+Letters+Sans&family=Bellefair&family=Albert+Sans:wght@400;600&family=Hanken+Grotesk:wght@400;600&family=Geist:wght@400;600&display=swap">
+<style>
+  :root {
+    --leinen: #EEE7DD; --sand: #D9CBB8; --stein: #9C8B7C;
+    --cognac: #94623E; --espresso: #2B201A; --gold: #C9A866;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--sand); color: var(--espresso); padding: 40px; display: grid; gap: 40px; justify-content: center; }
+  .karte { width: 1600px; height: 900px; background: var(--leinen); display: grid; grid-template-columns: 1fr 560px; overflow: hidden; }
+  .links { padding: 72px 80px; display: flex; flex-direction: column; justify-content: space-between; }
+  .rechts { background: var(--espresso); color: var(--leinen); padding: 72px 64px; display: flex; flex-direction: column; justify-content: space-between; }
+  .kopf { display: flex; gap: 40px; justify-content: space-between; align-items: baseline; font-size: 22px; letter-spacing: 3px; text-transform: uppercase; color: #6A5A4D; }
+  .kopf b { color: var(--cognac); font-weight: 600; }
+  .gross { font-size: 176px; line-height: .92; letter-spacing: -3px; }
+  .orte { font-size: 30px; letter-spacing: 9px; text-transform: uppercase; margin-top: 32px; }
+  .satz { font-size: 27px; line-height: 1.45; max-width: 780px; color: #4E4036; }
+  .wortmarke { display: block; width: 100%; height: auto; }
+  .rechts .mittel { font-size: 60px; line-height: 1.04; }
+  .rechts .klein { font-size: 22px; line-height: 1.5; color: #BFB2A4; }
+  .knopf { display: inline-block; font-size: 20px; font-weight: 600; padding: 16px 26px; background: var(--leinen); color: var(--espresso); }
+  .linie { height: 1px; background: var(--gold); width: 120px; }
+
+  /* 1 Bona Nova */
+  #bona .serif { font-family: "Bona Nova", Georgia, serif; font-weight: 400; }
+  #bona .gross { letter-spacing: -4px; }
+  #bona .mittel { font-size: 52px; }
+  #bona .sans { font-family: "Albert Sans", Arial, sans-serif; }
+  /* 2 Imbue */
+  #imbue .serif { font-family: "Imbue", Georgia, serif; font-variation-settings: "opsz" 100; font-weight: 300; }
+  #imbue .gross { font-size: 230px; letter-spacing: -4px; line-height: .86; }
+  #imbue .orte { font-variation-settings: "opsz" 30; font-weight: 500; letter-spacing: 10px; }
+  #imbue .mittel { font-size: 78px; font-weight: 300; }
+  #imbue .sans { font-family: "Hanken Grotesk", Arial, sans-serif; }
+  /* 3 Hedvig Letters */
+  #hedvig .serif { font-family: "Hedvig Letters Serif", Georgia, serif; font-variation-settings: "opsz" 24; }
+  #hedvig .gross { font-size: 164px; letter-spacing: -5px; }
+  #hedvig .orte { letter-spacing: 7px; }
+  #hedvig .mittel { font-size: 54px; }
+  #hedvig .sans { font-family: "Hedvig Letters Sans", Arial, sans-serif; }
+  /* 4 Bellefair */
+  #bellefair .serif { font-family: "Bellefair", Georgia, serif; font-weight: 400; }
+  #bellefair .gross { font-size: 188px; letter-spacing: -2px; }
+  #bellefair .orte { letter-spacing: 11px; }
+  #bellefair .sans { font-family: "Geist", Arial, sans-serif; }
+</style>
+</head>
+<body>
+
+<section class="karte" id="bona">
+  <div class="links sans">
+    <p class="kopf"><span><b>1</b> · Bona Nova + Albert Sans</span><span>Buchschrift mit Kanten</span></p>
+    <div>
+      <p class="gross serif">Was habt ihr vor?</p>
+      <p class="orte serif">Weingut · Weinhotel · Ingelheim</p>
+    </div>
+    <p class="satz">Erzählt uns euren Anlass, wir planen ihn mit euch, bis nichts mehr offen ist. Bona Nova stammt wie die Wortmarke aus der Buchschrift, hat aber spitze Serifen und ein kräftiges, eigenwilliges g.</p>
+  </div>
+  <div class="rechts sans">
+    <img class="wortmarke" src="../marke/wasem-wortmarke-original.png" alt="Wortmarke Wasem Doppelstück">
+    <div>
+      <p class="mittel serif">Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.</p>
+      <div class="linie" style="margin:28px 0"></div>
+      <p class="klein">Spätburgunder, Grauburgunder, Liebesstück. Für Knöpfe, Preise und Fließtext die Grotesk.</p>
+    </div>
+    <span class="knopf">Anlass erzählen</span>
+  </div>
+</section>
+
+<section class="karte" id="imbue">
+  <div class="links sans">
+    <p class="kopf"><span><b>2</b> · Imbue + Hanken Grotesk</span><span>schmal, Modeheft</span></p>
+    <div>
+      <p class="gross serif">Was habt ihr vor?</p>
+      <p class="orte serif">Weingut · Weinhotel · Ingelheim</p>
+    </div>
+    <p class="satz">Erzählt uns euren Anlass, wir planen ihn mit euch, bis nichts mehr offen ist. Imbue ist schmal und fein wie ein Magazintitel; groß gesetzt passt viel Satz in wenig Breite.</p>
+  </div>
+  <div class="rechts sans">
+    <img class="wortmarke" src="../marke/wasem-wortmarke-original.png" alt="Wortmarke Wasem Doppelstück">
+    <div>
+      <p class="mittel serif">Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.</p>
+      <div class="linie" style="margin:28px 0"></div>
+      <p class="klein">Spätburgunder, Grauburgunder, Liebesstück. Für Knöpfe, Preise und Fließtext die Grotesk.</p>
+    </div>
+    <span class="knopf">Anlass erzählen</span>
+  </div>
+</section>
+
+<section class="karte" id="hedvig">
+  <div class="links sans">
+    <p class="kopf"><span><b>3</b> · Hedvig Letters Serif + Sans</span><span>jung, eigenwillig, eine Familie</span></p>
+    <div>
+      <p class="gross serif">Was habt ihr vor?</p>
+      <p class="orte serif">Weingut · Weinhotel · Ingelheim</p>
+    </div>
+    <p class="satz">Erzählt uns euren Anlass, wir planen ihn mit euch, bis nichts mehr offen ist. Hedvig hat schräge Anstriche und offene Formen; Serif und Sans kommen aus einer Hand.</p>
+  </div>
+  <div class="rechts sans">
+    <img class="wortmarke" src="../marke/wasem-wortmarke-original.png" alt="Wortmarke Wasem Doppelstück">
+    <div>
+      <p class="mittel serif">Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.</p>
+      <div class="linie" style="margin:28px 0"></div>
+      <p class="klein">Spätburgunder, Grauburgunder, Liebesstück. Für Knöpfe, Preise und Fließtext die Sans.</p>
+    </div>
+    <span class="knopf">Anlass erzählen</span>
+  </div>
+</section>
+
+<section class="karte" id="bellefair">
+  <div class="links sans">
+    <p class="kopf"><span><b>4</b> · Bellefair + Geist</span><span>hauchfein, luftig, nah an der Goldprägung</span></p>
+    <div>
+      <p class="gross serif">Was habt ihr vor?</p>
+      <p class="orte serif">Weingut · Weinhotel · Ingelheim</p>
+    </div>
+    <p class="satz">Erzählt uns euren Anlass, wir planen ihn mit euch, bis nichts mehr offen ist. Bellefair hat lange, feine Serifen und kleine Bäuche; groß gesetzt wirkt sie wie die geprägten Versalien auf dem Etikett.</p>
+  </div>
+  <div class="rechts sans">
+    <img class="wortmarke" src="../marke/wasem-wortmarke-original.png" alt="Wortmarke Wasem Doppelstück">
+    <div>
+      <p class="mittel serif">Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.</p>
+      <div class="linie" style="margin:28px 0"></div>
+      <p class="klein">Spätburgunder, Grauburgunder, Liebesstück. Für Knöpfe, Preise und Fließtext die Grotesk.</p>
+    </div>
+    <span class="knopf">Anlass erzählen</span>
+  </div>
+</section>
+
+</body>
+</html>
