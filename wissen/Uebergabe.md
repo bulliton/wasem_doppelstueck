@@ -1,29 +1,30 @@
 # Übergabe
 
-Stand: 2026-10-29 · **A-004 Runde 7c: Benjamin hat Deck v14 beurteilt; Namensgedanke, neue Schriften und Deck v15 in Arbeit.**
+Stand: 2026-10-29 · **A-004 Runde 7c: Namensgedanke „Ein Doppelstück lässt dem Wein Zeit“, vier neue Schriften, Deck v15. Wartet auf Benjamins drei Antworten.**
 
 ## Benjamins Urteil zu Deck v14 (29.10.)
 - Richtung 2 „Was habt ihr vor?“ bleibt.
 - Und-Paare raus (Folien `idee`, `paare`).
 - Fraunces verworfen (zu wenig Charakter); vier neue Schriften mit mehr Charakter, passend zur Garamond-Wortmarke.
-- „Warum Doppelstück, was bedeutet es, warum ist das gut für Gäste?“ ist unbeantwortet: kommt vor Schrift und Hero.
+- „Warum Doppelstück, was bedeutet es, warum ist das gut für Gäste?“ war unbeantwortet: kommt vor Schrift und Hero.
 
-## Zuletzt erledigt
-- Fremde Prüfung von „Beides.“ (Agent `architekt`, ohne meine Begründung): Urteil verwerfen (Gattung statt Eigenes, wieder „kein Heimweg“, im ersten Screen unverständlich, Paare folgen den Firmen statt den Gästen). Abgrenzung über den Namen (wasem.de) bleibt als Argument für Marie. Belege und Zeilen: `docs/design-ideen-runde-7.md`, Abschnitt „Runde 7b“.
-- Gegenrichtung 2 „Was habt ihr vor?“: Anlass zuerst, Menschen mit Namen planen Wein, Raum, Zimmer; Gäste kaufen „sich um nichts kümmern“; Ton verspielt (Einzylinder, DobbelBock); Kernmoment Freundinnen-Wochenende mit Stil. Quelle: Maries Telefonnotiz `~/Downloads/Demo-Webseite-Feedback.rtf` Z. 107, 129, 135, 302–303, 315, 326.
-- Vier Schrift-Specimens in der freigegebenen Farbwelt: `prototyp/runde-7/schrift-specimen.html`, PNG in `prototyp/runde-7/specimen/` (1 Fraunces + Schibsted Grotesk, 2 Gloock + Familjen Grotesk, 3 Young Serif + Onest, 4 Gilda Display + Figtree).
-- Deck https://claude.ai/artifact/TSoUh6KXERev1LkYtXpz6E (v14, 13 Folien): Zeichen und Vorschau raus; Richtung 1 (idee, paare), Richtung 2 (vorhaben, anlaesse), Kritik, Räume, Farbe, Flaschen, Schrift a/b, Freigabefragen.
+## Zuletzt erledigt (Runde 7c, Details `docs/design-ideen-runde-7c.md`)
+- **Namensgedanke:** Ein Doppelstück (großes Eichenfass, 2.400 l, „mit der wir gerne arbeiten“) lässt dem Wein Platz und Zeit, bis er nach seinen Trauben schmeckt; so planen sie mit Gästen: ein Mensch mit Namen fragt nach und plant Wein, Raum, Zimmer in einer Gasse, Gäste müssen vorher nichts wissen. H2 „Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.“ Durch `text-kritik` (Fassung 2) und USP-Test. Verworfen: „Platz für euren Plan“ (Maß aus Runde 6), „Macht ein Fass auf“ (Zweitsinn Trinken, Ballermann-Nähe), „Alles zu zweit“.
+- **Hero (Vorschlag):** Zeile „Weingut · Weinhotel · Ingelheim“, H1 „Was habt ihr vor?“, Unterzeile „Erzählt uns euren Anlass, wir planen ihn mit euch, bis nichts mehr offen ist.“, Knopf „Anlass erzählen“; Namenskapitel direkt darunter.
+- **Schriften:** `prototyp/runde-7/schrift-specimen-2.html`, PNG `prototyp/runde-7/specimen/wasem-schrift-specimen-{bona-nova,imbue,hedvig-letters,bellefair}.png`: 1 Bona Nova + Albert Sans, 2 Imbue + Hanken Grotesk, 3 Hedvig Letters Serif + Sans, 4 Bellefair + Geist.
+- **Deck v15** https://claude.ai/artifact/TSoUh6KXERev1LkYtXpz6E (12 Folien, Artifact-Zähler „Version 16“): `idee`, `paare` raus; `name` neu (Warum Doppelstück), `vorhaben` (Hero), `fass` neu (Namenskapitel), `kritik` neu (verworfen und offen), Schrift a/b mit neuen Specimens, Freigabefragen neu.
 
 ## Offen
-1. Benjamins Antworten: Richtung 1 oder 2, Schrift 1–4, Farbwelt/Zeichen-Raus bestätigt.
-2. Danach: Texte der Richtung durch `text-kritik`, Brand-Sheet `prototyp/runde-7/brand-sheet.html` auf Beige-Tokens und neue Schrift (zeigt noch Navy und das W aus zwei V), dann One-Shot-Hero `prototyp/runde-7/index.html`, Desktop und Mobil, `design-kritik`.
-3. Bei Richtung 2 mit Marie klären: wer betreut welchen Anlass (Franzi, Elena Events; Adelin Vertrieb), Antwortzeit, ob Rückruf im Betrieb klappt.
+1. Benjamins Antworten im Deck: (1) trägt der Namensgedanke, (2) Schrift 1–4, (3) Hero oben, Namenskapitel darunter.
+2. Danach: Brand-Sheet `prototyp/runde-7/brand-sheet.html` auf Beige-Tokens und gewählte Schrift (zeigt noch Navy und das W aus zwei V), dann One-Shot-Hero mit Namenskapitel `prototyp/runde-7/index.html`, Desktop und Mobil, `design-kritik`.
+3. Prüfmarken vor dem Kunden-Deck: Julia bestätigt das Fass-Bild; Marie klärt, wer bei welchem Anlass zurückruft (Franzi, Elena Events; Adelin Vertrieb) und wie schnell.
 
 ## Hinweise
-- Deck-Folien zeigen Richtungs-Texte noch in EB Garamond (Platzhalter bis zur Schriftwahl). Deck-Quelldateien nur per Artifact `read` holen.
+- Deck-Folien zeigen Richtungs-Texte in EB Garamond (Platzhalter bis zur Schriftwahl). Deck-Quelldateien nur per Artifact `read` holen.
 - Farbwelt fest: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866 nur als Linie auf Espresso.
-- Specimens neu rendern: Playwright-Skript (Element-Screenshots `#fraunces` usw.), Wortmarke dort als `prototyp/marke/wasem-wortmarke-original.png` (Gold), das SVG ist `currentColor`.
-- Ältere Runden (1–7) in der Git-Historie dieser Datei und in `docs/design-ideen-runde-*.md`. Branch nicht gemergt, kein Push.
+- Telefonnotiz `~/Downloads/Demo-Webseite-Feedback.rtf` mit `textutil -convert txt -stdout` lesen; Belege dann Z. 100, 122, 128, 304, 308, 319.
+- Specimens neu rendern: Python-Playwright, Element-Screenshots je `section.karte` (`#bona`, `#imbue`, `#hedvig`, `#bellefair`), mit `document.fonts.check` prüfen; Wortmarke `prototyp/marke/wasem-wortmarke-original.png`.
+- Branch `claude/warum-doppelstueck` (Worktree `.claude/worktrees/warum-doppelstueck`), nicht gemergt, kein Push. Ältere Runden in der Git-Historie dieser Datei und in `docs/design-ideen-runde-*.md`.
 
 ## Starter-Prompt (neue Session)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/brave-meitner-8193a0`. Lies `wissen/Uebergabe.md` und `docs/design-ideen-runde-7.md` (Abschnitt „Runde 7b“) sowie Benjamins Antworten zu den drei Freigabefragen im Deck. Gewählte Richtung: Hero-Satz und Kernsätze durch `text-kritik`, Brand-Sheet auf Beige und gewählte Schrift umstellen, dann One-Shot-Hero `prototyp/runde-7/index.html` Desktop und Mobil, `design-kritik`. Kein Push.
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md`, `docs/design-ideen-runde-7c.md` und Benjamins Antworten zu den drei Freigabefragen im Deck v15. Dann Brand-Sheet auf Beige und gewählte Schrift umstellen, One-Shot-Hero mit Namenskapitel `prototyp/runde-7/index.html` Desktop und Mobil bauen (`frontend-design`, Moves aus `geschmack`), `design-kritik`. Kein Push.
