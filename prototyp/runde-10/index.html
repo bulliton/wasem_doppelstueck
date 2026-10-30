@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Wasem Doppelstück · Weingut und Weinhotel in Ingelheim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;1,400&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../runde-8/basis.css">
+<link rel="stylesheet" href="../runde-9/basis.css">
+<style>
+/* Startseite Runde 10, Pilot: Hero als Satz mit Bildtausch, Namenskapitel als Zweiteiler. Idee: das Doppelstück lässt dem Wein Zeit (Klären). */
+.raster { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.8vw, 2.5rem); padding: 0 var(--rand); }
+
+/* ---------- Hero Runde 10: Bild im Leinen-Passepartout, darunter ein Satz ---------- */
+/* weil Text nie aufs Foto gehört (Ilona) und die Wortmarke auf Leinen immer lesbar bleibt; die Leinenfläche ist dieselbe wie die Seite darunter, man steht schon im Haus */
+.hero { height: 100svh; min-height: 640px; display: grid; grid-template-rows: 84px minmax(0, 1fr) auto; padding: 0 var(--rand); background: var(--leinen); }
+.hero__bild { grid-row: 2; position: relative; margin: 0; overflow: hidden; background: var(--sand); }
+/* Klären: jedes Bild kommt aus leichter Trübung scharf, weil Wein im Doppelstück ruht, bis er klar ist. Sättigung gedämpft, damit Leinen und Bild eine Familie sind */
+.hero__bild img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%;
+  opacity: 0; filter: blur(16px) saturate(.8); transform: scale(1.025);
+  transition: opacity .7s var(--ease), filter 1.5s var(--ease), transform 2s var(--ease); }
+.geladen .hero__bild img.an { opacity: 1; filter: blur(0) saturate(.8); transform: none; }
+.hero__bild .start { object-position: 0% 40%; }
+
+.hero__satz { grid-row: 3; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.8vw, 2.5rem); align-items: end;
+  padding: clamp(1.4rem, 3.4vh, 2.4rem) 0 clamp(1.5rem, 3.6vh, 2.6rem); }
+/* Zweiteiler: aufrecht die Tatsache, kursiv was Gäste davon haben; kursiv bleibt Espresso, weil Cognac nur Anfragen und Buchen bedeutet */
+.hero h1 { grid-column: 1 / -1; grid-row: 1; margin: 0; font: 400 clamp(2.1rem, 3.5vw, 3.6rem)/1.1 var(--serif); letter-spacing: -.02em; color: var(--espresso); transition: color .35s var(--ease-ui); }
+.hero h1 > span { display: block; opacity: 0; filter: blur(8px); transition: opacity 1.2s .2s var(--ease), filter 1.6s .2s var(--ease); }
+.hero h1 > .zweit { font-style: italic; transition-delay: .7s; }
+.geladen .hero h1 > span { opacity: 1; filter: none; }
+/* Die vier Angebote stehen im Satz in Albert Sans wie die Angaben auf einem Etikett: man liest sie als Satz und klickt sie als Weg */
+.hero h1 a { font: 500 .6em/1 var(--sans); font-style: normal; letter-spacing: .08em; text-transform: uppercase; vertical-align: .14em;
+  padding: .55em .02em; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .4em;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); transition: color .35s var(--ease-ui), text-decoration-color .35s var(--ease-ui); }
+/* Hover verändert die Umgebung: der Satz tritt auf 22 % zurück, das Wort bleibt, das Bild darüber wird zu seiner Welt */
+.hero h1.zeigt { color: color-mix(in srgb, var(--espresso) 22%, transparent); }
+.hero h1.zeigt a { color: inherit; }
+.hero h1 a.aktiv { color: var(--espresso); text-decoration-color: var(--espresso); }
+/* Bildzeile oben rechts im Band, neben der kurzen ersten Zeile: sie wechselt mit dem Bild */
+.hero__ort { grid-column: 9 / 13; grid-row: 1; align-self: start; justify-self: end; text-align: right; margin: .35rem 0 0; font-size: .8rem; line-height: 1.45; color: var(--leise); }
+.hero__ort span { display: block; }
+.hero__ort .label { margin-top: .4rem; font-size: .66rem; color: var(--espresso); }
+@media (max-width: 900px) {
+  .hero { grid-template-rows: 64px minmax(0, 1fr) auto; min-height: 580px; }
+  .hero__satz { padding: 1.1rem 0 1.4rem; }
+  .hero h1 > span { text-wrap: balance; }
+  .hero h1 { grid-column: 1 / -1; font-size: clamp(1.6rem, 7.4vw, 2.1rem); line-height: 1.16; }
+  .hero h1 a { padding: .8em .02em; }
+  .hero__ort { display: none; }
+}
+@media (hover: none) { .hero__bild img:not(.start) { display: none; } }
+
+.nav:not(.fest) { background: transparent; }
+.entwurf { display: none; } /* Entwurfshinweis steht im Footer */
+
+
+/* ---------- Namenskapitel: die eine Espresso-Fläche ---------- */
+/* weil die dunkle Fläche der Keller ist, in dem das Doppelstück liegt; sie kommt genau einmal vor */
+.fass { background: var(--espresso); color: var(--leinen); padding: clamp(7rem, 18vh, 11rem) var(--rand) clamp(6rem, 15vh, 10rem);
+  display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.8vw, 2.5rem); }
+/* Doppel als Satzbau: die zweite Hälfte setzt drei Spalten weiter ein, wie das zweite Stück neben dem ersten */
+.fass h2 { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; margin: 0; font: 400 clamp(2.6rem, 5.8vw, 6rem)/1.02 var(--serif); letter-spacing: -.025em; }
+.fass h2 > span { grid-column: 1 / 13; text-wrap: balance; }
+.fass h2 > .zweit { grid-column: 4 / 13; font-style: italic; color: var(--sand); }
+/* Klären statt Maske: die zweite Hälfte braucht länger, weil der Satz von Zeit handelt */
+.fass .klar { opacity: 0; filter: blur(10px); transition: opacity 1.4s var(--ease), filter 1.8s var(--ease); }
+.fass h2 > .zweit.klar { transition-duration: 2.2s, 3s; transition-delay: .9s; }
+.fass .fass__text.klar, .fass figure.klar { transition-delay: 1.8s; }
+.fass.sichtbar .klar { opacity: 1; filter: none; }
+.fass figure { grid-column: 1 / 4; grid-row: 2; align-self: start; margin: clamp(3rem, 8vh, 5.5rem) 0 0; }
+.fass figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; filter: saturate(.8); }
+.fass figcaption { margin-top: .6rem; font-size: .78rem; color: color-mix(in srgb, var(--leinen) 62%, transparent); }
+.fass__text { grid-column: 4 / 9; grid-row: 2; margin-top: clamp(3rem, 8vh, 5.5rem); color: color-mix(in srgb, var(--leinen) 84%, transparent); font-size: 1.06rem; }
+.fass__text p { margin: 0 0 1rem; max-width: 46ch; }
+.fass__text a { color: var(--leinen); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .35em; display: inline-flex; min-height: 44px; align-items: center; font-weight: 500; }
+
+/* ---------- Kapitel je Angebot: Bild und Text im Wechsel ---------- */
+.kapitel { padding-top: clamp(6rem, 18vh, 12rem); align-items: end; }
+.kapitel figure { margin: 0; overflow: hidden; background: var(--sand); }
+.kapitel figure img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); transition: transform 1.6s var(--ease); }
+.kapitel.sichtbar figure img { transform: none; }
+.kapitel--quer figure { grid-column: 1 / 8; aspect-ratio: 3 / 2; }
+.kapitel--hoch figure { grid-column: 2 / 7; aspect-ratio: 4 / 5; }
+.kapitel--quer .kapitel__text { grid-column: 9 / 13; }
+.kapitel--hoch .kapitel__text { grid-column: 8 / 12; }
+.kapitel--rechts figure { grid-column: 6 / 13; grid-row: 1; }
+.kapitel--rechts.kapitel--hoch figure { grid-column: 7 / 12; }
+.kapitel--rechts .kapitel__text { grid-column: 1 / 5; grid-row: 1; }
+.kapitel--rechts.kapitel--hoch .kapitel__text { grid-column: 2 / 6; }
+/* Hotel bricht das Wechselraster: Bild über die volle Rasterbreite, Text darunter in zwei Spalten */
+.kapitel--breit { align-items: start; }
+.kapitel--breit figure { grid-column: 1 / -1; aspect-ratio: 21 / 9; margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.kapitel--breit .kapitel__text { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: start; }
+.kapitel--breit h2 { grid-column: 1 / 6; }
+.kapitel--breit .kapitel__satz { grid-column: 7 / 11; }
+.kapitel--breit .kapitel__satz ~ * { grid-column: 7 / 11; justify-self: start; }
+.kapitel h2 { margin: 0 0 1.5rem; }
+.kapitel h2 .wort { font-size: clamp(3.4rem, 5.6vw, 5.6rem); }
+.kapitel.sichtbar h2 .wort > span { transform: translateY(-100%); transition-delay: .3s; }
+.kapitel__satz { margin: 0 0 1rem; font: 400 clamp(1.35rem, 1.9vw, 1.75rem)/1.25 var(--serif); text-wrap: balance; }
+.kapitel__text p { max-width: 40ch; }
+.kapitel__text p:not(.kapitel__satz) { margin: 0 0 1rem; color: var(--leise); }
+.weg { display: inline-flex; align-items: center; gap: .6rem; min-height: 48px; margin-top: .75rem; padding: 0 1.4rem; background: var(--espresso); color: var(--leinen); font: 500 .9rem/1 var(--sans); transition: background-color .25s var(--ease-ui); }
+.weg:hover { background: var(--cognac); }
+.kapitel figcaption { font-size: .78rem; color: var(--leise); padding-top: .5rem; background: var(--leinen); }
+
+/* ruhiger Einstieg für Text */
+.auf { opacity: 0; transform: translateY(1.5rem); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+.sichtbar .auf, .auf.sichtbar { opacity: 1; transform: none; }
+
+/* ---------- Familie ---------- */
+.familie { padding-top: clamp(7rem, 20vh, 13rem); }
+.familie__kopf { grid-column: 1 / 7; }
+.familie__kopf h2 { margin: 0; font: 400 clamp(2.2rem, 3.8vw, 3.6rem)/1.06 var(--serif); letter-spacing: -.015em; text-wrap: balance; }
+.familie__kopf p:last-child { margin: 1.25rem 0 0; max-width: 44ch; color: var(--leise); }
+.familie ul { grid-column: 1 / -1; list-style: none; margin: clamp(2.5rem, 6vh, 4rem) 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(1rem, 2.8vw, 2.5rem); }
+.familie li:nth-child(even) { margin-top: clamp(2rem, 5vw, 4.5rem); }
+.familie img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--sand); }
+.familie b { display: block; margin-top: .9rem; font: 400 1.5rem/1.1 var(--serif); }
+.familie span { display: block; margin-top: .3rem; font-size: .88rem; color: var(--leise); }
+.familie__team { grid-column: 1 / 8; margin: clamp(2rem, 5vh, 3rem) 0 0; font: italic 400 1.2rem/1.4 var(--serif); }
+
+/* ---------- Anlass als Satz ---------- */
+.anlass { padding-top: clamp(7rem, 20vh, 13rem); padding-bottom: clamp(6rem, 16vh, 10rem); }
+.anlass__kopf { grid-column: 1 / 5; }
+.anlass__kopf h2 { margin: 0; font: 400 clamp(2.2rem, 3.8vw, 3.6rem)/1.06 var(--serif); letter-spacing: -.015em; }
+.anlass__kopf p { margin: 1rem 0 0; max-width: 32ch; color: var(--leise); }
+.anlass form { grid-column: 6 / -1; }
+.anlass fieldset { border: 0; margin: 0; padding: 0; font: 400 clamp(1.7rem, 3.1vw, 2.8rem)/1.65 var(--serif); }
+.anlass legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.feld { font: inherit; color: var(--cognac); background: none; border: 0; border-bottom: 1px solid var(--cognac); padding: 0 .1em; border-radius: 0; min-height: 44px; transition: border-color .2s var(--ease-ui); }
+.feld:focus { outline: none; border-bottom-width: 2px; }
+.feld--zahl { width: 2.2ch; text-align: center; -moz-appearance: textfield; }
+.feld--zahl::-webkit-inner-spin-button { -webkit-appearance: none; }
+.feld--datum { width: 10.5ch; }
+select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
+.kontakt { display: grid; grid-template-columns: 1fr auto; gap: 1rem 1.5rem; align-items: end; margin-top: 2rem; max-width: 46rem; }
+.kontakt label { display: block; font-size: .9rem; margin-bottom: .35rem; color: var(--leise); }
+.kontakt input { width: 100%; min-height: 48px; font: inherit; color: inherit; background: none; border: 0; border-bottom: 1px solid var(--linie); padding: 0; }
+.kontakt input:focus { outline: none; border-bottom-color: var(--cognac); }
+.kontakt button { border: 0; cursor: pointer; margin: 0; }
+.anlass__danach { margin: 1.25rem 0 0; font-size: .95rem; color: var(--leise); max-width: 52ch; }
+.danke { display: none; font: 400 clamp(1.5rem, 2.4vw, 2.1rem)/1.3 var(--serif); margin: 0; }
+.gesendet fieldset, .gesendet .kontakt, .gesendet .anlass__danach { display: none; }
+.gesendet .danke { display: block; }
+
+/* ---------- Footer: ruhig auf Sand ---------- */
+.fuss { background: var(--sand); padding: clamp(4rem, 9vh, 6rem) var(--rand) 2rem; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.8vw, 2.5rem); row-gap: 2.5rem; }
+.fuss .wm { grid-column: 1 / -1; width: 100%; max-width: 64rem; }
+.fuss__spalte { grid-column: span 3; font-size: .9rem; }
+.fuss__spalte .label { margin: 0 0 .9rem; color: var(--leise); font-size: .68rem; }
+.fuss__spalte ul { list-style: none; margin: 0; padding: 0; }
+.fuss__spalte li a, .fuss__spalte address a { display: inline-flex; min-height: 44px; align-items: center; }
+.fuss__spalte a:hover { text-decoration: underline; text-underline-offset: .3em; }
+.fuss address { font-style: normal; line-height: 1.7; }
+.fuss__klein { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 1rem; margin: 0; padding-top: 1.25rem; border-top: 1px solid var(--linie); font-size: .78rem; color: var(--leise); }
+
+/* ---------- Menü: Vollbild mit den vier Kapiteln ---------- */
+
+@media (max-width: 900px) {
+  .fakt { grid-column: 1 / -1; grid-row: 2; text-align: left; max-width: none; font-size: .8rem; line-height: 1.35; margin-top: -.25rem; }
+  .fakt b { display: inline; margin: 0 0 0 .4rem; }
+
+  .fass { padding-top: 5.5rem; padding-bottom: 5.5rem; }
+  .fass h2 { font-size: clamp(2.1rem, 9.6vw, 2.7rem); }
+  .fass h2 > span, .fass h2 > .zweit { grid-column: 1 / -1; }
+  .fass h2 > .zweit { padding-left: 1.5rem; }
+  .fass__text { grid-column: 1 / -1; grid-row: 2; margin-top: 2.5rem; }
+  .fass figure { grid-column: 1 / 9; grid-row: 3; margin-top: 1.5rem; }
+
+  .raster > * { grid-column: 1 / -1 !important; grid-row: auto !important; }
+  .kapitel { padding-top: 5rem; }
+  .kapitel figure { margin-bottom: 1.5rem; }
+  .kapitel--hoch figure { aspect-ratio: 4 / 5; }
+  .kapitel--breit figure { aspect-ratio: 3 / 2; }
+  .kapitel--breit .kapitel__text { display: block; }
+  .kapitel h2 .wort { font-size: clamp(2.8rem, 13.5vw, 4.2rem); }
+
+  .familie { padding-top: 5.5rem; }
+  .familie ul { grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; }
+  .familie li:nth-child(even) { margin-top: 1.5rem; }
+  .familie li:last-child { grid-column: 1; }
+  .familie b { font-size: 1.25rem; }
+
+  .anlass { padding-top: 5.5rem; padding-bottom: 5rem; }
+  .anlass form { margin-top: 2rem; }
+  .anlass fieldset { font-size: clamp(1.45rem, 6.4vw, 1.8rem); line-height: 1.75; }
+  .kontakt { grid-template-columns: 1fr; }
+
+  .fuss { padding-bottom: calc(2rem + 54px); row-gap: 2rem; }
+  .fuss__spalte { grid-column: span 6; }
+  .fuss__klein { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) { .auf, .programm li { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+<a class="sr" href="#inhalt">Zum Inhalt</a>
+<nav class="nav nav--dunkel" aria-label="Hauptnavigation">
+  <button class="nav__menue" type="button" aria-expanded="false" aria-controls="menue"><i aria-hidden="true"></i>Menü</button>
+  <a class="nav__marke" href="#" aria-label="Wasem Doppelstück, Startseite"><span class="wm"></span><span class="w"></span></a>
+  <div class="nav__wege"><a class="anfragen" href="#anlass">Anfragen</a><a class="buchen" href="#hotel">Zimmer buchen</a></div>
+</nav>
+
+<div class="menue" id="menue" role="dialog" aria-modal="true" aria-label="Menü" aria-hidden="true">
+  <div class="menue__text">
+    <div class="menue__kopf"><button class="menue__zu" type="button">Schließen</button></div>
+    <ol>
+      <li><a href="#wein">Wein</a></li>
+      <li><a href="#hotel">Hotel</a></li>
+      <li><a href="#feste">Feste</a></li>
+      <li><a href="#tagungen">Tagungen</a></li>
+      <li class="anfragen"><a href="#anlass">Anfragen</a></li>
+    </ol>
+    <div class="menue__fuss"><p>Weingut · Stiegelgasse 50<br>Weinhotel · Stiegelgasse 70<br>55218 Ingelheim</p><p><a href="https://doppelstueck.com">Shop</a><br><a href="#hotel">Zimmer buchen</a></p></div>
+  </div>
+  <div class="menue__bild" aria-hidden="true">
+    <img class="an" src="../bilder/wasem-vinothek-theke.webp" alt="">
+    <img src="../runde-7/bestand/wasem-hotelzimmer-holzmosaik.webp" alt="">
+    <img src="../bilder/wasem-weingarten-abend-lichterkette.webp" alt="">
+    <img src="../bilder/wasem-steinwand-tafel-holzdecke.webp" alt="">
+    <img src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="">
+  </div>
+</div>
+
+<main id="inhalt">
+  <section class="hero" aria-labelledby="h-hero">
+    <figure class="hero__bild" aria-hidden="true">
+      <picture>
+        <source media="(max-width: 900px)" srcset="../bilder/wasem-jga-freundinnen-lachen.webp">
+        <img class="an start" src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="" data-unter="Abends im Weinberg über Ingelheim">
+      </picture>
+      <img src="../bilder/wasem-vinothek-theke.webp" alt="" data-unter="Die Vinothek im Weingut">
+      <img src="../bilder/wasem-hotelzimmer-balkon.webp" alt="" data-unter="Ein Zimmer im Weinhotel">
+      <img src="../bilder/wasem-weingarten-tafel-gruen.webp" alt="" data-unter="Gedeckt im Weingarten">
+      <img src="../bilder/wasem-eventraum-lange-tafeln.webp" alt="" data-unter="Der Eventraum mit langen Tafeln">
+    </figure>
+    <div class="hero__satz">
+      <h1 id="h-hero"><span>Weingut und Weinhotel in Ingelheim,</span>
+        <span class="zweit">mit Zeit für <a href="#wein">Wein</a>, eine Nacht im <a href="#hotel">Hotel</a>, eure <a href="#feste">Feste</a> und <a href="#tagungen">Tagungen</a>.</span></h1>
+      <p class="hero__ort"><span class="hero__unter" aria-live="polite">Abends im Weinberg über Ingelheim</span><span class="label">Stiegelgasse 50 und 70</span></p>
+    </div>
+  </section>
+
+  <section class="fass" id="doppelstueck" aria-labelledby="h-fass">
+    <h2 id="h-fass"><span class="klar">Ein Doppelstück lässt dem Wein Zeit.</span> <span class="zweit klar">So planen wir auch mit euch.</span></h2>
+    <figure class="klar"><img src="../bilder/wasem-familie-julia-keller.webp" alt="Julia Wasem im Weinkeller" loading="lazy"><figcaption>Julia im Weinkeller</figcaption></figure>
+    <div class="fass__text klar">
+      <p>Doppelstück heißt das große Eichenfass mit 2.400&nbsp;Litern, in dem wir gern ausbauen. Darin hat ein Wein Platz und Zeit, bis er nach seinen Trauben schmeckt.</p>
+      <p>Für euch heißt das: Ihr müsst noch nicht wissen, wie euer Tag aussehen soll. Erzählt uns den Anlass. Wir fragen nach und planen Wein, Raum und Zimmer mit euch, bis er nach euch aussieht.</p>
+      <p><a href="#anlass">Anlass erzählen</a></p>
+    </div>
+  </section>
+
+  <section class="kapitel kapitel--quer raster" id="wein" aria-labelledby="h-wein">
+    <figure><img src="../bilder/wasem-vinothek-theke.webp" alt="Vinothek im Weingut mit Theke, Barhockern und Weinregal unter alten Holzbalken" loading="lazy"></figure>
+    <div class="kapitel__text auf">
+      <h2 id="h-wein"><span class="wort" aria-hidden="true"><span>Wein</span><span>Wein</span></span><span class="sr">Wein</span></h2>
+      <p class="kapitel__satz">Burgunder aus Ingelheim, bio seit 2022.</p>
+      <p>Julia macht die Weine, ihr Vater Burkhard ist Kellermeister. Im Mittelpunkt steht Spätburgunder, dazu Riesling, Grau- und Weißburgunder, Sekt und Alkoholfreies. Probieren könnt ihr in der Vinothek, bestellen im Shop.</p>
+      <a class="weg" href="https://doppelstueck.com/">Weine ansehen</a>
+    </div>
+  </section>
+
+  <section class="kapitel kapitel--breit raster" id="hotel" aria-labelledby="h-hotel">
+    <figure><img src="../bilder/wasem-hotelzimmer-balkon.webp" alt="Hotelzimmer mit Balkontür und hellem Holz" loading="lazy"></figure>
+    <div class="kapitel__text auf">
+      <h2 id="h-hotel"><span class="wort" aria-hidden="true"><span>Hotel</span><span>Hotel</span></span><span class="sr">Hotel</span></h2>
+      <p class="kapitel__satz">Zwei Häuser, ein Weinhotel.</p>
+      <p>Das Stammhaus liegt im Hof des Weinguts, das Haus Klassik an der Stiegelgasse 70, mit Aufzug und Tiefgarage. 50 Zimmer, seit 2002 in der Familie. Ilona leitet das Hotel.</p>
+      <a class="weg" href="https://doppelstueck.com/">Zimmer buchen</a>
+    </div>
+  </section>
+
+  <section class="kapitel kapitel--hoch raster" id="feste" aria-labelledby="h-feste">
+    <figure><img src="../bilder/wasem-jga-freundinnen-lachen.webp" alt="Freundinnen lachen gemeinsam bei einem Junggesellinnenabschied" loading="lazy"></figure>
+    <div class="kapitel__text auf">
+      <h2 id="h-feste"><span class="wort" aria-hidden="true"><span>Feste</span><span>Feste</span></span><span class="sr">Feste</span></h2>
+      <p class="kapitel__satz">Ihr feiert im Weinberg und schlaft gleich nebenan.</p>
+      <p>Junggesellinnenabschied, Hochzeit mit freier Trauung in den Weinbergen, Geburtstag oder Weinwanderung. Dazu Workshops wie Keramik oder Makramee und die Rundfahrt mit der Winzerin.</p>
+      <a class="weg" href="#anlass">Fest anfragen</a>
+    </div>
+  </section>
+
+  <section class="kapitel kapitel--hoch kapitel--rechts raster" id="tagungen" aria-labelledby="h-tagungen">
+    <figure><img src="../bilder/wasem-eventraum-tagung-hoch.webp" alt="Eventraum im Stammhaus, für eine Tagung gestellt" loading="lazy"></figure>
+    <div class="kapitel__text auf">
+      <h2 id="h-tagungen"><span class="wort" aria-hidden="true"><span>Tagungen</span><span>Tagungen</span></span><span class="sr">Tagungen</span></h2>
+      <p class="kapitel__satz">Tagungsraum und Zimmer liegen im selben Haus.</p>
+      <p>Der Eventraum im Stammhaus hat Technik für hybride Treffen und Platz für knapp 50 Personen, am besten passen 30. Drei Pauschalen von Basic bis All-in. Zimmer und Rahmenprogramm planen wir gleich mit.</p>
+      <a class="weg" href="#anlass">Tagung anfragen</a>
+    </div>
+  </section>
+
+  <section class="familie raster" aria-labelledby="h-familie">
+    <div class="familie__kopf auf">
+      <h2 id="h-familie">Hinter jedem Angebot steht jemand aus der Familie.</h2>
+      <p>Drei Generationen arbeiten an der Stiegelgasse. Ihr wisst vorher, wer euch empfängt.</p>
+    </div>
+    <ul class="auf">
+      <li><img src="../bilder/wasem-familie-marie-tafel.webp" alt="Marie Wasem" loading="lazy"><b>Marie</b><span>kümmert sich um Planung und Zahlen</span></li>
+      <li><img src="../bilder/wasem-familie-julia-keller.webp" alt="Julia Wasem im Weinkeller" loading="lazy"><b>Julia</b><span>macht die Weine</span></li>
+      <li><img src="../bilder/wasem-familie-ilona-anstossen.webp" alt="Ilona Wasem" loading="lazy"><b>Ilona</b><span>leitet das Weinhotel</span></li>
+      <li><img src="../bilder/wasem-familie-burkhard-weinberg.webp" alt="Burkhard Wasem im Weinberg" loading="lazy"><b>Burkhard</b><span>Kellermeister</span></li>
+      <li><img src="../bilder/wasem-familie-magda-tafel.webp" alt="Magda Wasem" loading="lazy"><b>Magda</b><span>backt für Gäste und Team</span></li>
+    </ul>
+    <p class="familie__team auf">Feste und Tagungen planen Franzi und Elena mit euch.</p>
+  </section>
+
+  <section class="anlass raster" id="anlass" aria-labelledby="h-anlass">
+    <div class="anlass__kopf auf">
+      <h2 id="h-anlass">Erzählt uns euren Anlass.</h2>
+      <p>Drei Angaben reichen für den Anfang. Den Rest klären wir im Gespräch.</p>
+    </div>
+    <form class="auf" novalidate>
+      <fieldset>
+        <legend>Euer Anlass in einem Satz</legend>
+        Wir sind <input class="feld feld--zahl" type="number" inputmode="numeric" min="1" max="200" value="12" aria-label="Personen"> Leute, wir planen
+        <select class="feld" aria-label="Anlass">
+          <option>einen Junggesellinnenabschied</option>
+          <option>eine Hochzeit</option>
+          <option>einen Geburtstag</option>
+          <option>eine Tagung</option>
+          <option>eine Weinprobe</option>
+          <option>etwas anderes</option>
+        </select>
+        und denken an den <input class="feld feld--datum" type="date" aria-label="Wunschdatum">.
+      </fieldset>
+      <div class="kontakt">
+        <div><label for="kontakt">Wie erreichen wir euch? E-Mail oder Telefon</label><input id="kontakt" type="text" autocomplete="email"></div>
+        <button class="weg" type="submit">Anlass schicken</button>
+      </div>
+      <p class="anlass__danach">Darauf antwortet euch ein Mensch aus unserem Team, mit Namen und Telefonnummer.</p>
+      <p class="danke" role="status">Danke. Wir melden uns bei euch und fragen nach, was ihr euch vorstellt.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="fuss">
+  <span class="wm" role="img" aria-label="Wasem Doppelstück"></span>
+  <div class="fuss__spalte">
+    <p class="label">Besuchen</p>
+    <address>Weingut · Stiegelgasse 50<br>Weinhotel · Stiegelgasse 70<br>55218 Ingelheim</address>
+  </div>
+  <div class="fuss__spalte">
+    <p class="label">Angebot</p>
+    <ul><li><a href="#wein">Wein und Shop</a></li><li><a href="#hotel">Weinhotel</a></li><li><a href="#feste">Feste</a></li><li><a href="#tagungen">Tagungen</a></li></ul>
+  </div>
+  <div class="fuss__spalte">
+    <p class="label">Direkt</p>
+    <ul><li><a href="#hotel">Zimmer buchen</a></li><li><a href="#anlass">Anlass erzählen</a></li><li><a href="#">Instagram</a></li></ul>
+  </div>
+  <div class="fuss__spalte">
+    <p class="label">Rechtliches</p>
+    <ul><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li></ul>
+  </div>
+  <p class="fuss__klein"><span>Entwurf Runde 10, nicht öffentlich · Texte sind Vorschläge</span><span>Fotos: doppelstueck.com</span></p>
+</footer>
+
+<nav class="leiste" aria-label="Schnellwege"><a href="#hotel">Zimmer buchen</a><a href="#anlass">Anfragen</a></nav>
+<p class="entwurf">Entwurf Runde 10 · Pilot Hero und Name</p>
+
+<script src="../runde-9/nav.js"></script>
+<script>
+
+// Hero: Angebot zeigen tauscht das Bild, der Satz tritt zurück (Maus und Tastatur)
+const satz = document.querySelector('.hero h1');
+const heroBilder = [...document.querySelectorAll('.hero__bild img')];
+const unter = document.querySelector('.hero__unter');
+const zeigen = i => { heroBilder.forEach((b, j) => b.classList.toggle('an', j === i)); unter.textContent = heroBilder[i].dataset.unter; };
+satz.querySelectorAll('a').forEach((a, i) => {
+  const an = () => { satz.classList.add('zeigt'); a.classList.add('aktiv'); zeigen(i + 1); };
+  const ab = () => { satz.classList.remove('zeigt'); a.classList.remove('aktiv'); zeigen(0); };
+  a.addEventListener('mouseenter', an); a.addEventListener('mouseleave', ab);
+  a.addEventListener('focus', an); a.addEventListener('blur', ab);
+});
+
+// Abschnitte einmalig sichtbar machen (Kapitelwort rollt, Text kommt ruhig)
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('sichtbar'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -20% 0px' });
+document.querySelectorAll('.fass, .kapitel, .familie .auf, .anlass .auf').forEach(el => io.observe(el));
+
+// Anlass: Entwurf, schickt nichts ab
+document.querySelector('.anlass form').addEventListener('submit', e => { e.preventDefault(); e.currentTarget.classList.add('gesendet'); });
+</script>
+</body>
+</html>

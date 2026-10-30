@@ -36,3 +36,19 @@ Anlass: Runde 9 war für Benjamin „okay, aber nicht special, sieht AI aus“. 
 3. Angebote als klickbarer Satz, Hover tauscht Bild; mobil ohne Hover voll bedienbar, Tippflächen ≥ 44 px.
 4. Wortmarke in der Nav auf jedem Bild lesbar, Label „Entwurf Runde 8“ weg.
 5. Benjamin sieht Vorher/Nachher als Storyboard neben der Referenz.
+
+## Pilot Runde 10: Entscheidungen mit Grund (`prototyp/runde-10/index.html`, 30.10.)
+| Entscheidung | weil |
+|---|---|
+| Bild im Leinen-Passepartout statt randlos, Satz darunter | Text gehört nicht aufs Foto (Ilona); die Wortmarke steht auf Leinen immer lesbar; die Leinenfläche ist dieselbe wie die Seite darunter, man steht schon im Haus. |
+| H1 als Satz mit den vier Angeboten in Albert Sans, Versal, klickbar | Die Angaben stehen wie auf einem Etikett im Satz: man liest einen Gedanken und klickt einen Weg (Jägerhof-Lehre 5), statt Karte oder Liste. |
+| Zweiteiler: aufrecht „Weingut und Weinhotel in Ingelheim,“ kursiv „mit Zeit für …“ | Tatsache zuerst (Kategorie in H1), das Gefühl kursiv; „Zeit“ führt zum Namensgedanken. 17 Wörter, Wortlaut ist Vorschlag. |
+| Hover/Fokus: Satz geht auf 22 %, Wort bleibt, Bild wechselt in seine Welt | Hover verändert die Umgebung, nicht den Link (Lehre 4); vier Welten in einem Screen ohne Karussell. Mobil ohne Hover: Links springen ins Kapitel, Tippfläche 47 px. |
+| Reveal „Klären“ (Unschärfe → scharf) für Bild, H1 und Namenskapitel | Wein ruht im Doppelstück, bis er klar ist; ersetzt die Standard-Zeilenmaske. |
+| Kursive bleibt Espresso (Hero) bzw. Sand (Espresso-Fläche), nie Cognac | Cognac bedeutet nur Anfragen und Buchen (Lehre 6). |
+| Sättigung der Hero-Bilder auf 80 % | Leinen und Bild sollen eine Familie sein (Clos-Apalta-Lehre). |
+| Namenskapitel: zweite Hälfte drei Spalten versetzt, Text unter ihr, Foto unter der ersten | Doppel als Satzbau, das zweite Stück steht neben dem ersten; keine leere Ecke, kein Goldstrich. |
+| Zweite Hälfte klärt langsamer (3 s statt 1,8 s) | Der Satz handelt von Zeit. |
+| Espresso-Fläche genau einmal | Sie ist der Keller, in dem das Doppelstück liegt. |
+
+Offen: Das Keller-Foto zeigt Julia an Edelstahltanks, der Text spricht vom Eichenfass (Foto Doppelstück fehlt, Shoot). Maßstab: H1 50 px ist ruhiger als Jägerhofs 200-px-Wort; bewusst Lesesatz statt Plakat, von Benjamin zu entscheiden.
