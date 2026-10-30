@@ -115,21 +115,8 @@
 
 /* ---------- Hotel: zwei Häuser, zwei Bilder ---------- */
 /* Doppel als Bildsatz: zwei Zimmer, das große links, das kleinere tiefer rechts, wie zwei Hausnummern in einer Gasse; beide warm, weil das Nachtblau der Fassadenfotos aus der Leinen-Palette fällt */
-.hotel .zt { grid-column: 3 / 13; margin-bottom: var(--mittel); }
-.hotel .bild--a { grid-column: 1 / 8; grid-row: 2 / 4; }
-.hotel .bild--a > div { aspect-ratio: 3 / 2; }
-.hotel .bild--b { grid-column: 9 / 13; grid-row: 2; margin-top: clamp(4rem, 12vh, 8rem); }
-.hotel .bild--b > div { aspect-ratio: 1; }
-.hotel .text { grid-column: 9 / 13; grid-row: 3; margin-top: var(--eng); }
-/* Die Zahl steht plakatgroß, weil sie die eine Angabe ist, die eine Gastgeberin fürs Gruppenzimmer zuerst sucht (Clos Apalta: Zahl als Überschrift) */
-.hotel .zahl { display: block; margin: -.12em 0 -.08em -.05em; font: 400 clamp(7rem, 15vw, 15rem)/.82 var(--serif); letter-spacing: -.05em; color: var(--espresso); font-variant-numeric: lining-nums; }
-.hotel .zahl + p { margin-top: .4rem; }
 
-/* ---------- Runde 10c: Hotel in zwei Anmutungsrahmen (Vergleich über ?rahmen=a|b|alt) ---------- */
-html:not([data-rahmen="alt"]) .hotel--alt, html:not([data-rahmen="a"]) .hotel--a, html:not([data-rahmen="b"]) .hotel--b { display: none; }
-.rahmenwahl { position: fixed; left: 1rem; bottom: 1rem; z-index: 60; display: flex; gap: 2px; padding: 3px; background: var(--espresso); font: 500 .75rem/1 var(--sans); }
-.rahmenwahl a { display: inline-flex; align-items: center; min-height: 36px; padding: 0 .8rem; color: var(--sand); }
-.rahmenwahl a[aria-current] { background: var(--leinen); color: var(--espresso); }
+/* ---------- Runde 10c: Hotel als Aushängeschild (Benjamins Wahl, A) ---------- */
 /* Bühne: läuft beim Scrollen durch, ein Fortschritt p (0 bis 1) steuert alles; gepinnt nur am Desktop */
 .buehne { position: relative; height: 230svh; }
 .buehne__halt { position: sticky; top: 0; height: 100svh; min-height: 620px; overflow: hidden; }
@@ -158,26 +145,6 @@ html:not([data-rahmen="alt"]) .hotel--alt, html:not([data-rahmen="a"]) .hotel--a
 .zimmer img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.8); transform: scale(var(--zoom, 1.15)); transform-origin: 30% 50%; }
 .zimmer .notiz { position: absolute; top: calc(-1 * 1.6rem); left: 0; margin: 0; opacity: var(--info, 0); }
 
-/* Rahmen B „Fenster“: das Stammhaus am Abend als Fensterreihe zweier Häuser; die Fenster gehen nacheinander an, eins öffnet sich zum Zimmer und nimmt die Fläche
-   weil man nach dem Wein an der Theke nicht mehr fährt: das Licht im Fenster ist das Versprechen des Hotels, und es zeigt beide Häuser, ohne sie aufzuzählen */
-.hotel--b { background: var(--espresso); color: var(--leinen); padding-bottom: 0; }
-.hotel--b .zt { grid-column: 1 / 10; }
-.hotel--b .zt > .zweit { color: var(--sand); }
-.haeuser { position: absolute; inset: 0; }
-.haus { position: absolute; bottom: 14vh; display: grid; gap: clamp(.8rem, 1.6vw, 1.4rem); opacity: var(--haeuser, 1); }
-.haus--stamm { left: var(--rand); grid-template-columns: repeat(4, clamp(48px, 5.4vw, 84px)); }
-.haus--klassik { right: var(--rand); grid-template-columns: repeat(3, clamp(48px, 5.4vw, 84px)); }
-.haus > span:not(.haus__name) { aspect-ratio: 5 / 7; border: 1px solid color-mix(in srgb, var(--sand) 30%, transparent); background: color-mix(in srgb, var(--gold) calc(var(--licht, 0) * 78%), transparent);
-  box-shadow: 0 0 calc(var(--licht, 0) * 34px) calc(var(--licht, 0) * 2px) color-mix(in srgb, var(--gold) calc(var(--licht, 0) * 30%), transparent); }
-.haus__name { grid-column: 1 / -1; margin-top: .6rem; font: 500 .66rem/1 var(--sans); letter-spacing: .3em; text-transform: uppercase; color: var(--stein); }
-.fenster { position: absolute; margin: 0; overflow: hidden; background: #1b1512; left: var(--fx); top: var(--fy); width: var(--fw); height: var(--fh); }
-.fenster img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.8) brightness(var(--hell, .4)); transform: scale(var(--zoom, 1.3)); }
-.fenster::after { content: ""; position: absolute; inset: 0; background: var(--gold); mix-blend-mode: soft-light; opacity: calc(1 - var(--hell, .4)); pointer-events: none; }
-.hotel--b .text { position: absolute; right: var(--rand); bottom: 14vh; width: min(30vw, 400px); opacity: var(--info, 0); transform: translateY(calc((1 - var(--info, 0)) * 24px)); }
-.hotel--b .zahl { display: block; font: 400 clamp(5rem, 9vw, 9rem)/.82 var(--serif); letter-spacing: -.05em; font-variant-numeric: lining-nums; color: var(--leinen); }
-.hotel--b .text p { color: color-mix(in srgb, var(--leinen) 78%, transparent); margin: .8rem 0 1.2rem; }
-.hotel--b .weg:hover { background: var(--leinen); color: var(--espresso); }
-.hotel--b .notiz { color: var(--stein); }
 
 /* ---------- Feste: der zweite große Moment der Seite ---------- */
 /* Der Satz läuft groß über die ganze Breite (Jägerhof-Maßstab), weil Feste das ist, wofür die Hauptzielgruppe kommt; die Anlässe stehen klickbar darin.
@@ -278,10 +245,9 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
   .raster > * { grid-column: 1 / -1 !important; grid-row: auto !important; }
   :root { --weit: 5.5rem; --mittel: 2rem; }
   .zt { font-size: clamp(1.9rem, 8.4vw, 2.4rem); }
-  .wein .text, .hotel .text, .tagungen .text, .feste .text { margin-top: var(--eng); }
+  .wein .text, .tagungen .text, .feste .text { margin-top: var(--eng); }
   .wein .zt, .tagungen .zt { margin-bottom: var(--mittel); }
   /* Hotel mobil: das Zimmer rückt halb nach rechts, damit das Doppel auch schmal sichtbar bleibt */
-  .hotel .bild--b { margin: var(--eng) 0 0 33% !important; }
   .feste .satz { font-size: clamp(1.6rem, 7.4vw, 2rem); }
   .feste .satz a { font-size: .62em; padding: 1.05em .02em; }
   .tagungen .bild { width: 72%; margin-bottom: var(--mittel); }
@@ -315,15 +281,6 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
   .zimmer img { aspect-ratio: 4 / 5; height: auto; transform: none; }
   .zimmer .notiz { position: static; opacity: 1; }
   .hotel--a .buehne__halt > .zimmer { order: 2; }
-  .haeuser { position: relative; inset: auto; display: flex; justify-content: space-between; align-items: end; }
-  .haus { position: static; gap: .5rem; }
-  .haus--stamm { grid-template-columns: repeat(4, 9vw); } .haus--klassik { grid-template-columns: repeat(3, 9vw); }
-  .haus > span:not(.haus__name) { --licht: .85; }
-  .haus__name { font-size: .58rem; letter-spacing: .2em; }
-  .fenster { position: relative; inset: auto; width: 100%; height: auto; margin-top: var(--mittel); }
-  .fenster img { aspect-ratio: 4 / 5; height: auto; transform: none; filter: saturate(.8); }
-  .fenster::after { display: none; }
-  .hotel--b .text { position: static; width: auto; --info: 1; margin-top: var(--eng); padding-bottom: var(--weit); }
 }
 @media (prefers-reduced-motion: reduce) and (min-width: 901px) { .buehne { height: 100svh; } }
 @media (prefers-reduced-motion: reduce) { .klar { opacity: 1; filter: none; } }
@@ -415,33 +372,6 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
     </div></div>
   </section>
 
-  <section class="kapitel hotel--b" id="hotel-b" aria-labelledby="h-hotel-b">
-    <div class="raster"><h2 class="zt" id="h-hotel-b"><span class="klar">Ein Weinhotel in zwei Häusern,</span> <span class="zweit klar">eins davon im Hof des Weinguts.</span></h2></div>
-    <div class="buehne"><div class="buehne__halt">
-      <div class="haeuser" aria-hidden="true">
-        <div class="haus haus--stamm"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="haus__name">Stammhaus</span></div>
-        <div class="haus haus--klassik"><span></span><span></span><span></span><span></span><span></span><span></span><span class="haus__name">Haus Klassik</span></div>
-      </div>
-      <figure class="fenster"><img src="../bilder/wasem-hotelzimmer-balkon.webp" alt="Hotelzimmer mit Balkontür und hellem Holz" loading="lazy"></figure>
-      <div class="text">
-        <span class="notiz">hinter einem der Fenster, ein Zimmer mit Balkon</span>
-        <span class="zahl">50</span>
-        <p>Zimmer im Stammhaus und im Haus Klassik an der Stiegelgasse 70, mit Aufzug und Tiefgarage. Ilona leitet das Hotel.</p>
-        <a class="weg" href="https://doppelstueck.com/">Zimmer buchen</a>
-      </div>
-    </div></div>
-  </section>
-
-  <section class="kapitel hotel hotel--alt raster" id="hotel-alt" aria-labelledby="h-hotel">
-    <h2 class="zt" id="h-hotel"><span class="klar">Ein Weinhotel in zwei Häusern,</span> <span class="zweit klar">eins davon im Hof des Weinguts.</span></h2>
-    <figure class="bild bild--a"><figcaption class="notiz">ein Zimmer mit Balkon</figcaption><div><img src="../bilder/wasem-hotelzimmer-balkon.webp" alt="Hotelzimmer mit Balkontür und hellem Holz" loading="lazy"></div></figure>
-    <figure class="bild bild--b"><figcaption class="notiz">Holz an der Wand, ein anderes Zimmer</figcaption><div><img src="../runde-7/bestand/wasem-hotelzimmer-holzmosaik.webp" alt="Hotelzimmer mit Holzmosaik an der Wand" loading="lazy"></div></figure>
-    <div class="text klar">
-      <span class="zahl">50</span>
-      <p>Zimmer im Stammhaus und im Haus Klassik an der Stiegelgasse 70, mit Aufzug und Tiefgarage. Seit 2002 in der Familie, Ilona leitet das Hotel.</p>
-      <a class="weg" href="https://doppelstueck.com/">Zimmer buchen</a>
-    </div>
-  </section>
 
   <section class="kapitel feste raster" id="feste" aria-labelledby="h-feste">
     <h2 class="zt" id="h-feste"><span class="klar">Ihr feiert im Weingarten,</span> <span class="zweit klar">und schlaft gleich nebenan.</span></h2>
@@ -582,17 +512,11 @@ document.querySelectorAll('[data-anlass]').forEach(a => a.addEventListener('clic
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('sichtbar'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -20% 0px' });
 document.querySelectorAll('.fass, .kapitel').forEach(el => io.observe(el));
 
-// Runde 10c: Hotel in zwei Rahmen, Vergleich über ?rahmen=a|b|alt (Wahlleiste unten links, fliegt nach Benjamins Wahl raus)
-const rahmen = ['a', 'b', 'alt'].includes(new URLSearchParams(location.search).get('rahmen')) ? new URLSearchParams(location.search).get('rahmen') : 'a';
-document.documentElement.dataset.rahmen = rahmen;
-document.querySelectorAll('.hotel--a, .hotel--b, .hotel--alt').forEach(s => { s.id = s.matches('.hotel--' + rahmen) ? 'hotel' : ''; });
-const wahl = document.createElement('nav'); wahl.className = 'rahmenwahl'; wahl.setAttribute('aria-label', 'Rahmen für das Hotel wählen');
-[['a', 'A Schild'], ['b', 'B Fenster'], ['alt', '10b']].forEach(([k, t]) => { const a = document.createElement('a'); a.href = '?rahmen=' + k + '#hotel'; a.textContent = t; if (k === rahmen) a.setAttribute('aria-current', 'true'); wahl.append(a); });
-document.body.append(wahl);
+// Runde 10c: Hotel als Aushängeschild
 
 const klemm = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x)), lerp = (a, b, t) => a + (b - a) * t;
 const teil = (p, a, b) => klemm((p - a) / (b - a)), aus = t => 1 - Math.pow(1 - t, 3), sanft = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-const buehne = document.querySelector('.hotel--' + rahmen + ' .buehne');
+const buehne = document.querySelector('.hotel--a .buehne');
 const still = matchMedia('(max-width: 900px)'), ruhig = matchMedia('(prefers-reduced-motion: reduce)');
 if (buehne) {
   const halt = buehne.firstElementChild, sec = buehne.closest('section');
@@ -618,24 +542,9 @@ if (buehne) {
     return Math.abs(schwung) > .002;
   };
 
-  // B: Fenster gehen nacheinander an, das letzte ist das Zimmer und nimmt die Fläche
-  const fenster = halt.querySelector('.fenster'), luken = [...halt.querySelectorAll('.haus > span:not(.haus__name)')];
-  const ziel = luken[1], folge = luken.filter(l => l !== ziel).sort((a, b) => (luken.indexOf(a) * 7) % 13 - (luken.indexOf(b) * 7) % 13);
-  const zeichneB = p => {
-    folge.forEach((l, i) => l.style.setProperty('--licht', aus(teil(p, .02 + i * .022, .1 + i * .022)).toFixed(3)));
-    const hr = halt.getBoundingClientRect(), z = ziel.getBoundingClientRect(), rand = randPx();
-    const o = sanft(teil(p, .42, .86)), B = hr.width, H = hr.height;
-    const r = { x: lerp(z.left - hr.left, rand, o), y: lerp(z.top - hr.top, H * .1, o), w: lerp(z.width, B * .56, o), h: lerp(z.height, H * .76, o) };
-    ['x', 'y', 'w', 'h'].forEach(k => fenster.style.setProperty('--f' + k, r[k] + 'px'));
-    fenster.style.setProperty('--hell', (lerp(.12, .55, aus(teil(p, .3, .4))) + .45 * o).toFixed(3));
-    fenster.style.setProperty('--zoom', (1.3 - .3 * o).toFixed(4));
-    halt.style.setProperty('--haeuser', (1 - o).toFixed(3));
-    halt.style.setProperty('--info', aus(teil(p, .8, .97)).toFixed(3));
-    return false;
-  };
-  const zeichne = rahmen === 'a' ? zeichneA : zeichneB;
+  const zeichne = zeichneA;
   const tick = () => {
-    if (still.matches) { halt.removeAttribute('style'); fenster && fenster.removeAttribute('style'); luken.forEach(l => l.removeAttribute('style')); requestAnimationFrame(tick); return; }
+    if (still.matches) { halt.removeAttribute('style'); requestAnimationFrame(tick); return; }
     if (ruhig.matches) { zeichne(1); requestAnimationFrame(tick); return; }
     messen(); ist = lerp(ist, soll, .085); if (Math.abs(ist - soll) < .0004) ist = soll;
     zeichne(ist); requestAnimationFrame(tick);
