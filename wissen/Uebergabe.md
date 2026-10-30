@@ -1,6 +1,6 @@
 # Übergabe
 
-Stand: 2026-10-30 (Nacht) · **A-004: Runde 10 komplett (Hero, Name, Wein, Hotel, Feste, Tagungen, Familie, Anlass). Urteil Benjamin zu den Kapiteln offen.**
+Stand: 2026-10-30 (Nacht) · **A-004: Runde 10 komplett (Hero, Name, Wein, Hotel, Feste, Tagungen, Familie, Anlass). Benjamin wollte „mutiger“: Feste ist jetzt der zweite große Moment, Hotel-Zahl plakatgroß. Urteil offen.**
 
 ## Benjamins Entscheidungen
 - 30.10. (spät): Pilot Runde 10 trägt: ruhiger Lesesatz (H1 50 px) und Bild im Leinen-Passepartout bleiben, Kapitel darunter weiterbauen.
@@ -11,10 +11,11 @@ Stand: 2026-10-30 (Nacht) · **A-004: Runde 10 komplett (Hero, Name, Wein, Hotel
 ## Zuletzt erledigt
 - `prototyp/runde-10/index.html`: Kapitel Wein bis Anlass neu. Jede Überschrift Zweiteiler (aufrecht/kursiv), Reveal Klären überall, Doppel-Rolle und Zeilenmaske raus, drei Abstandsstufen, Bildnotizen über Bildern. Hotel: zwei Zimmer versetzt + „50“. Feste: Anlässe klickbar im Satz mit Bildtausch, Klick wählt Anlass im Formular vor. Tagungen: Angaben-Liste. Familie: Größe nach Zuständigkeit. Cognac nur Anfragen/Buchen (gemessen).
 - „weil“-Tabelle in `docs/sektion/README.md` (Abschnitt „Kapitel darunter“). Storyboard Referenz neben Wasem: `prototyp/runde-10/storyboard-runde-10-kapitel.jpg`. KI-Look A (1440/375), kein Überlauf, Tippflächen ≥ 44 px.
+- Runde 10b „mutiger“: Feste-Satz über die Breite (4,6 rem), Foto springt beim Hover neben das Wort (JS `festHin`), Hotel-„50“ bis 15 rem. Magenta-Lichterkette gegen Sekt-Foto getauscht.
 - design-kritik: Fassaden-Nachtfoto (Nachtblau) im Hotel durch Balkonzimmer ersetzt.
 
 ## Offen
-1. Benjamins Urteil zu den Kapiteln (Storyboard zeigen).
+1. Benjamins Urteil zu Runde 10b (Feste und Hotel mutiger). Falls weiter zu zahm: Wein oder Tagungen ebenso auf Referenz-Maßstab heben, Tagungen evtl. Clos-Apalta-Hover (Bild übernimmt die Fläche).
 2. Neue Überschriften und Feste-Satz durch `text-kritik` (alles Vorschläge). Hero-Satz ebenso.
 3. Keller-Foto zeigt Edelstahltanks, Text sagt Eichenfass: Foto Doppelstück fehlt (Shoot).
 4. Prüfmarken Julia/Marie: Fass 2.400 l, 50 Zimmer, Personen 30/50, bio seit 2022, Rollen.

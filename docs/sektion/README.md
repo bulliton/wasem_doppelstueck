@@ -61,6 +61,8 @@ Anlass: Runde 9 war für Benjamin „okay, aber nicht special, sieht AI aus“. 
 | Wein: Bild links groß, Text unten rechts am Bildrand, Shop als Textlink | Erst den Ort sehen, dann lesen; Shop ist kein Anfragen/Buchen, also kein Cognac. |
 | Hotel: zwei Zimmerbilder versetzt, groß links und klein tiefer rechts; „50“ groß über den Angaben | Zwei Häuser als Doppel im Bildsatz; die Zimmerzahl ist die Angabe, die Gruppenplanerinnen zuerst suchen. Fassadenfoto verworfen, weil sein Nachtblau aus der Palette fällt (Lesson 27.10.). |
 | Feste: Anlässe klickbar im Satz, Hover tauscht das Bild, Klick wählt den Anlass im Formular vor | Jägerhof-Lehre 4 und 5 wie im Hero; niemand muss den Anlass zweimal sagen. Mobil feste Bildwahl, Tippflächen 44 px. |
+| Feste mutiger (Runde 10b): Satz über die Breite in 4,6 rem, Foto springt beim Hover neben das Wort, Überschrift bleibt frei | Benjamin wollte mehr Mut; Feste ist das, wofür die Hauptzielgruppe kommt, darum ist es nach dem Namenskapitel der zweite große Moment (Jägerhof-Maßstab). Magenta-Lichterkettenfoto raus, fällt aus der Palette. |
+| Hotel-Zahl „50“ plakatgroß (bis 15 rem) | Eine wahre Zahl trägt mehr als ein Adjektiv (Clos Apalta). |
 | Tagungen: Angaben als Liste mit Haarlinien (Personen, Technik, Pauschalen, Dazu) | Planerinnen vergleichen Werte; Etikettform statt Kacheln. |
 | Familie: Marie und Julia groß, Ilona, Burkhard, Magda kleiner in zweiter Reihe | Größe nach Zuständigkeit: wer mit euch plant und den Wein macht, steht vorn. |
 | Anlass: Zweiteiler endet auf „klären“, Formular als Satz bleibt, Knopf Cognac | Der Name kommt am Schluss als Wort zurück; Cognac nur hier und bei Buchen. |

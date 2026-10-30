@@ -121,24 +121,28 @@
 .hotel .bild--b { grid-column: 9 / 13; grid-row: 2; margin-top: clamp(4rem, 12vh, 8rem); }
 .hotel .bild--b > div { aspect-ratio: 1; }
 .hotel .text { grid-column: 9 / 13; grid-row: 3; margin-top: var(--eng); }
-/* Die Zahl steht groß, weil sie die eine Angabe ist, die eine Gastgeberin fürs Gruppenzimmer zuerst sucht (Clos Apalta: Zahl als Überschrift) */
-.hotel .zahl { display: block; font: 400 clamp(3.4rem, 5vw, 4.8rem)/1 var(--serif); letter-spacing: -.03em; color: var(--espresso); font-variant-numeric: lining-nums; }
+/* Die Zahl steht plakatgroß, weil sie die eine Angabe ist, die eine Gastgeberin fürs Gruppenzimmer zuerst sucht (Clos Apalta: Zahl als Überschrift) */
+.hotel .zahl { display: block; margin: -.12em 0 -.08em -.05em; font: 400 clamp(7rem, 15vw, 15rem)/.82 var(--serif); letter-spacing: -.05em; color: var(--espresso); font-variant-numeric: lining-nums; }
 .hotel .zahl + p { margin-top: .4rem; }
 
-/* ---------- Feste: ein Satz, vier Anlässe ---------- */
-/* Wie im Hero: Anlässe stehen klickbar im Satz; Hover tauscht das Bild daneben, weil Hover die Umgebung verändert, nicht den Link (Jägerhof). Klick führt ins Anfrageformular mit vorgewähltem Anlass */
-.feste .zt { grid-column: 1 / 7; }
-.feste .satz { grid-column: 1 / 7; margin: var(--mittel) 0 0; font: 400 clamp(1.5rem, 2.2vw, 2.05rem)/1.45 var(--serif); color: var(--espresso); transition: color .35s var(--ease-ui); }
-.feste .satz a { font: 500 .62em/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; vertical-align: .12em; padding: .7em .02em; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .4em; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); }
+/* ---------- Feste: der zweite große Moment der Seite ---------- */
+/* Der Satz läuft groß über die ganze Breite (Jägerhof-Maßstab), weil Feste das ist, wofür die Hauptzielgruppe kommt; die Anlässe stehen klickbar darin.
+   Hover dimmt den Satz und das Foto springt an das gezeigte Wort: die Umgebung antwortet, nicht der Link. Das Foto liegt über gedimmtem Text, nie Text auf dem Foto */
+.feste { position: relative; }
+.feste .zt { grid-column: 1 / 8; }
+.feste .satz { grid-column: 1 / -1; margin: var(--mittel) 0 0; max-width: 21em; font: 400 clamp(2.3rem, 4.6vw, 4.6rem)/1.16 var(--serif); letter-spacing: -.02em; color: var(--espresso); transition: color .35s var(--ease-ui); position: relative; z-index: 1; }
+.feste .satz a { font: 500 .5em/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; vertical-align: .22em; padding: .9em .02em; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .45em; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); position: relative; z-index: 3; }
 .feste .satz.zeigt { color: color-mix(in srgb, var(--espresso) 22%, transparent); }
 .feste .satz.zeigt a { color: inherit; }
 .feste .satz a.aktiv { color: var(--espresso); text-decoration-color: var(--espresso); }
 .feste .text { grid-column: 1 / 6; margin-top: var(--mittel); }
-.feste .bild { grid-column: 8 / 13; grid-row: 1 / 5; align-self: start; position: sticky; top: 96px; }
+@media (min-width: 901px) { .feste .satz { max-width: calc(100% - clamp(220px, 21vw, 320px) - 3rem); } }
+.feste .bild { position: absolute; z-index: 2; right: var(--rand); top: var(--weit); width: clamp(220px, 21vw, 320px); pointer-events: none;
+  transition: left .6s var(--ease), top .6s var(--ease), right .6s var(--ease); }
 .feste .bild > div { position: relative; aspect-ratio: 4 / 5; }
-.feste .bild img { position: absolute; inset: 0; opacity: 0; transition: opacity .7s var(--ease), filter 1.8s var(--ease), transform 2.2s var(--ease); }
+.feste .bild img { position: absolute; inset: 0; opacity: 0; transition: opacity .5s var(--ease), filter 1.8s var(--ease), transform 2.2s var(--ease); }
 .feste .bild img.an { opacity: 1; }
-@media (hover: none) { .feste .bild img:not(:first-child) { display: none; } }
+@media (hover: none), (max-width: 900px) { .feste .bild { position: static; width: 78%; margin-top: var(--mittel); } .feste .bild img:not(:first-child) { display: none; } }
 
 /* ---------- Tagungen: die Angaben als Etikett ---------- */
 /* Planerinnen vergleichen Angaben, darum stehen sie als Liste mit Haltung: links das Wort, rechts der Wert, Haarlinien wie auf einem Etikett; keine Kacheln */
@@ -224,9 +228,8 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
   .wein .zt, .tagungen .zt { margin-bottom: var(--mittel); }
   /* Hotel mobil: das Zimmer rückt halb nach rechts, damit das Doppel auch schmal sichtbar bleibt */
   .hotel .bild--b { margin: var(--eng) 0 0 33% !important; }
-  .feste .bild { position: static; margin-top: var(--mittel); }
-  .feste .satz { font-size: clamp(1.35rem, 6vw, 1.6rem); }
-  .feste .satz a { padding: 1.05em .02em; }
+  .feste .satz { font-size: clamp(1.6rem, 7.4vw, 2rem); }
+  .feste .satz a { font-size: .62em; padding: 1.05em .02em; }
   .tagungen .bild { width: 72%; margin-bottom: var(--mittel); }
   .angaben div { grid-template-columns: 6.5rem 1fr; }
   .angaben dd { font-size: 1.1rem; }
@@ -340,7 +343,7 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
       <img class="an" src="../bilder/wasem-jga-freundinnen-lachen.webp" alt="" loading="lazy">
       <img src="../bilder/wasem-jga-freundinnen-lachen.webp" alt="" loading="lazy">
       <img src="../bilder/wasem-weingarten-tafel-gedeckt.webp" alt="" loading="lazy">
-      <img src="../bilder/wasem-weingarten-abend-lichterkette.webp" alt="" loading="lazy">
+      <img src="../bilder/wasem-jga-sekt-einschenken.webp" alt="" loading="lazy">
       <img src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="" loading="lazy">
     </div></figure>
   </section>
@@ -442,10 +445,17 @@ satz.querySelectorAll('a').forEach((a, i) => {
 // Feste: wie im Hero, Anlass zeigen tauscht das Bild, der Satz tritt zurück
 const festSatz = document.querySelector('.feste .satz');
 const festBilder = [...document.querySelectorAll('.feste .bild img')];
+const festBild = document.querySelector('.feste .bild');
+// Das Foto springt neben das gezeigte Wort und bleibt in der Höhe des Satzes, damit die Überschrift frei bleibt
+const festHin = a => { if (!matchMedia('(hover: hover) and (min-width: 901px)').matches) return;
+  const sek = a.closest('section').getBoundingClientRect(), satzR = festSatz.getBoundingClientRect(), w = a.getBoundingClientRect(), b = festBild.offsetWidth, h = festBild.offsetHeight;
+  let x = w.right - sek.left + 24; if (x + b > sek.width - 16) x = w.left - sek.left - b - 24;
+  const y = Math.min(Math.max(w.top + w.height / 2 - h / 2, satzR.top), satzR.bottom - h) - sek.top;
+  festBild.style.left = x + 'px'; festBild.style.right = 'auto'; festBild.style.top = y + 'px'; };
 const festZeigen = i => festBilder.forEach((b, j) => b.classList.toggle('an', j === i));
 festSatz.querySelectorAll('a').forEach((a, i) => {
-  const an = () => { festSatz.classList.add('zeigt'); a.classList.add('aktiv'); festZeigen(i + 1); };
-  const ab = () => { festSatz.classList.remove('zeigt'); a.classList.remove('aktiv'); festZeigen(0); };
+  const an = () => { festSatz.classList.add('zeigt'); a.classList.add('aktiv'); festZeigen(i + 1); festHin(a); };
+  const ab = () => { festSatz.classList.remove('zeigt'); a.classList.remove('aktiv'); festZeigen(0); festBild.style.cssText = ''; };
   a.addEventListener('mouseenter', an); a.addEventListener('mouseleave', ab);
   a.addEventListener('focus', an); a.addEventListener('blur', ab);
 });
