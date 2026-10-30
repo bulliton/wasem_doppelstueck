@@ -1,6 +1,6 @@
 # Übergabe
 
-Stand: 2026-10-30 · **A-004 Runde 8: ganze Startseite in Richtung 1 „Programm“ gebaut (`prototyp/runde-8/index.html`, Commit a22d5bc). `pruefer` läuft/ausstehend, Benjamin hat sie noch nicht gesehen.**
+Stand: 2026-10-30 · **A-004 Runde 8: ganze Startseite in Richtung 1 „Programm“ gebaut (`prototyp/runde-8/index.html`, Commits a22d5bc + 5be5c5d). `pruefer` gelb, alle vier Befunde behoben und nachgemessen; Kurz-Nachprüfung für Grün steht aus, dann Merge. Benjamins Urteil offen.**
 
 ## Benjamins Entscheidungen
 - 30.10. (spät): Hero-Richtung **1 Programm** (`a-programm.html`): vier Angebote als riesige Bona-Nova-Liste, Bildfenster rechts, Signatur „doppelt“ (kursives Gegenstück rollt hoch, Cognac). B Moodboard und C Fasskeller verworfen; Oval nur nach Julias Bestätigung.
@@ -13,10 +13,10 @@ Stand: 2026-10-30 · **A-004 Runde 8: ganze Startseite in Richtung 1 „Programm
 - Geprüft 1440 + 375: kein Querscroll, Tippflächen ≥ 44 px, eine H1, 433 Wörter, KI-Look-Check ohne Treffer (Abschnitte 13 % Abweichung). Texte durch `text-kritik` (Dreier-Kette, „nicht X sondern Y“ entfernt). Pfeile an Knöpfen und Versal-Labels nach Projektregeln entfernt.
 
 ## Offen
-1. `pruefer`-Ampel abwarten; bei Grün Fast-Forward nach `main` (kein Push, main = GitHub Pages).
+1. `pruefer` kurz nachprüfen lassen (Befunde waren: Footer-Tippflächen 32 px, `href="#"` in Wein/Hotel, „bis 50“ statt „knapp 50“, Hero-CSS-Abweichungen nur mobil/Spezifität); bei Grün Fast-Forward nach `main` (kein Push, main = GitHub Pages).
 2. Benjamin die Startseite gerendert zeigen (`http://localhost:4321/prototyp/runde-8/index.html`) und Urteil einholen.
 3. Danach Deck-Folien auf Bona Nova, Hero + Brand-Sheet + Startseite ins Kunden-Deck.
-4. Prüfmarken: Julia (Fass-Bild, Ovalfass, 2.400 l, „in dem wir gern ausbauen“), Marie (Rückruf je Anlass, Plattform, Rollen-Zeilen der Familie), Foto vom Doppelstück im Keller fehlt. Links „Weine ansehen“/„Zimmer buchen“ sind Platzhalter (`#`).
+4. Prüfmarken: Julia (Fass-Bild, Ovalfass, 2.400 l, „in dem wir gern ausbauen“), Marie (Rückruf je Anlass, Plattform, Rollen-Zeilen der Familie), Foto vom Doppelstück im Keller fehlt. Links „Weine ansehen“/„Zimmer buchen“ zeigen vorerst auf doppelstueck.com (echte Shop- und Buchungs-URL fehlt).
 
 ## Hinweise
 - Branch `claude/warum-doppelstueck` (Worktree `.claude/worktrees/warum-doppelstueck`), nicht gemergt.
