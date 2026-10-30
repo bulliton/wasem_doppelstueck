@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Wasem Doppelstück · Runde 9 B Abendfolge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&family=Bona+Nova:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="basis.css">
+<style>
+/* B „Abendfolge“: vier Momente bei Wasem wechseln langsam, das Leinen-Band darunter sagt, welcher es ist */
+.hero { height: 100svh; min-height: 640px; display: grid; grid-template-rows: 1fr auto; }
+.buehne { position: relative; overflow: hidden; background: var(--espresso); }
+.buehne img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.9);
+  opacity: 0; transform: scale(1.08); transition: opacity 1.2s var(--ease), transform 7s linear; }
+.buehne img.an { opacity: 1; transform: scale(1); }
+.band { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; padding: 1.4rem var(--rand) 1.6rem; background: var(--leinen); }
+.band h1 { grid-column: 1 / -1; margin: 0; font: 500 .74rem/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: color-mix(in srgb, var(--espresso) 72%, transparent); }
+.band ol { list-style: none; margin: 0; padding: 0; display: flex; gap: clamp(1.5rem, 3.4vw, 3.5rem); }
+.band li a { display: block; font: 400 clamp(3rem, 6.2vw, 6.4rem)/1 var(--serif); letter-spacing: -.035em; }
+.band li a { color: color-mix(in srgb, var(--espresso) 45%, transparent); transition: color .4s var(--ease-ui); }
+.band li.an a, .band li a:hover, .band li a:focus-visible { color: var(--espresso); }
+.zeile { margin: 0; max-width: 15em; text-align: right; font: 400 1.05rem/1.4 var(--serif); }
+.zeile span { display: block; transition: opacity .5s; }
+.zeit { position: relative; height: 1px; margin-top: .9rem; background: color-mix(in srgb, var(--espresso) 15%, transparent); }
+.zeit i { position: absolute; inset: 0; background: var(--cognac); transform-origin: left; transform: scaleX(0); }
+.zeit.laeuft i { transform: scaleX(1); transition: transform 5.5s linear; }
+@media (max-width: 900px) {
+  .hero { min-height: 600px; }
+  .band { grid-template-columns: 1fr; gap: .6rem; padding: 1rem var(--rand) calc(52px + 1rem); }
+  .band ol { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+  .band li a { font-size: clamp(2.3rem, 11vw, 3rem); min-height: 44px; }
+  .zeile { display: none; }
+}
+</style>
+</head>
+<body>
+<a class="sr" href="#inhalt">Zum Inhalt</a>
+<nav class="nav nav--dunkel" aria-label="Hauptnavigation">
+  <button class="nav__menue" type="button" aria-expanded="false" aria-controls="menue"><i aria-hidden="true"></i>Menü</button>
+  <a class="nav__marke" href="#" aria-label="Wasem Doppelstück, Startseite"><span class="wm"></span><span class="w"></span></a>
+  <div class="nav__wege"><a class="anfragen" href="#anfragen">Anfragen</a><a class="buchen" href="#hotel">Zimmer buchen</a></div>
+</nav>
+
+<div class="menue" id="menue" role="dialog" aria-modal="true" aria-label="Menü" aria-hidden="true">
+  <div class="menue__text">
+    <div class="menue__kopf"><button class="menue__zu" type="button">Schließen</button></div>
+    <ol>
+      <li><a href="#wein">Wein</a></li>
+      <li><a href="#hotel">Hotel</a></li>
+      <li><a href="#feste">Feste</a></li>
+      <li><a href="#tagungen">Tagungen</a></li>
+      <li class="anfragen"><a href="#anfragen">Anfragen</a></li>
+    </ol>
+    <div class="menue__fuss"><p>Weingut · Stiegelgasse 50<br>Weinhotel · Stiegelgasse 70<br>55218 Ingelheim</p><p><a href="https://doppelstueck.com">Shop</a><br><a href="#hotel">Zimmer buchen</a></p></div>
+  </div>
+  <div class="menue__bild" aria-hidden="true">
+    <img class="an" src="../bilder/wasem-vinothek-theke.webp" alt="">
+    <img src="../runde-7/bestand/wasem-hotelzimmer-holzmosaik.webp" alt="">
+    <img src="../bilder/wasem-weingarten-abend-lichterkette.webp" alt="">
+    <img src="../bilder/wasem-steinwand-tafel-holzdecke.webp" alt="">
+    <img src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="">
+  </div>
+</div>
+
+<main id="inhalt">
+  <section class="hero">
+    <div class="buehne">
+      <img class="an" src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="Zwei Frauen stoßen im Weinberg über Ingelheim an, Abendlicht">
+      <img src="../bilder/wasem-hotelzimmer-balkon.webp" alt="Hotelzimmer mit offener Balkontür, Tisch und Sonnenschirm im Grünen" style="object-position: 50% 60%">
+      <img src="../bilder/wasem-weingarten-tafel-gruen.webp" alt="Gedeckte lange Tafel im Weingarten unter Bäumen">
+      <img src="../bilder/wasem-steinwand-tafel-holzdecke.webp" alt="Besprechungstisch vor Bruchsteinwand unter alter Holzdecke">
+    </div>
+    <div class="band">
+      <h1>Weingut und Weinhotel in Ingelheim</h1>
+      <div>
+        <ol>
+          <li class="an"><a href="#wein"><span class="wort" aria-hidden="true"><span>Wein</span><span>Wein</span></span><span class="sr">Wein</span></a></li>
+          <li><a href="#hotel"><span class="wort" aria-hidden="true"><span>Hotel</span><span>Hotel</span></span><span class="sr">Hotel</span></a></li>
+          <li><a href="#feste"><span class="wort" aria-hidden="true"><span>Feste</span><span>Feste</span></span><span class="sr">Feste</span></a></li>
+          <li><a href="#tagungen"><span class="wort" aria-hidden="true"><span>Tagungen</span><span>Tagungen</span></span><span class="sr">Tagungen</span></a></li>
+        </ol>
+        <div class="zeit" aria-hidden="true"><i></i></div>
+      </div>
+      <p class="zeile" aria-live="polite"><span>Abends im Weinberg über Ingelheim.</span></p>
+    </div>
+  </section>
+  <section class="danach" id="wein"><p>Ein Doppelstück lässt dem Wein Zeit. <em>So planen wir auch mit euch.</em></p></section>
+</main>
+<nav class="leiste" aria-label="Schnellwege"><a href="#hotel">Zimmer buchen</a><a href="#anfragen">Anfragen</a></nav>
+<script src="nav.js"></script>
+<script>
+// Die vier Momente wechseln alle 5,5 s; Zeigen oder Fokus hält an
+(() => {
+  const bilder = [...document.querySelectorAll('.buehne img')];
+  const punkte = [...document.querySelectorAll('.band li')];
+  const zeit = document.querySelector('.zeit');
+  const zeile = document.querySelector('.zeile span');
+  const saetze = ['Abends im Weinberg über Ingelheim.', 'Morgens auf dem Balkon, ein paar Häuser vom Weingut.', 'Eine lange Tafel, und niemand muss fahren.', 'Tagen mit Zimmern im Haus, abends ins Weingut.'];
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let i = 0, uhr;
+  const zeigen = n => {
+    i = n;
+    bilder.forEach((b, j) => b.classList.toggle('an', j === n));
+    punkte.forEach((p, j) => p.classList.toggle('an', j === n));
+    zeile.textContent = saetze[n];
+  };
+  const laufen = () => {
+    clearTimeout(uhr);
+    zeit.classList.remove('laeuft'); void zeit.offsetWidth;
+    if (still) return;
+    zeit.classList.add('laeuft');
+    uhr = setTimeout(() => { zeigen((i + 1) % 4); laufen(); }, 5500);
+  };
+  punkte.forEach((p, n) => {
+    const a = p.querySelector('a');
+    const halten = () => { zeigen(n); clearTimeout(uhr); zeit.classList.remove('laeuft'); };
+    a.addEventListener('mouseenter', halten);
+    a.addEventListener('focus', halten);
+    a.addEventListener('mouseleave', laufen);
+    a.addEventListener('blur', laufen);
+  });
+  laufen();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Wasem Doppelstück · Runde 9 A Etikett</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&family=Bona+Nova:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="basis.css">
+<style>
+/* A „Etikett“: der Abend im Weinberg randlos, die Angebote stehen auf einem Flaschenetikett */
+.hero { position: relative; height: 100svh; min-height: 620px; overflow: hidden; background: var(--espresso); }
+.hero picture img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 0% 40%;
+  filter: brightness(.9); transform: scale(1.07); transition: transform 2.4s var(--ease); }
+.geladen .hero picture img { transform: none; }
+.etikett { position: absolute; left: var(--rand); bottom: var(--rand); width: clamp(300px, 27vw, 400px);
+  padding: 1.6rem 1.5rem 1.4rem; background: var(--leinen);
+  opacity: 0; transform: translateY(1.5rem); transition: opacity 1s .5s var(--ease), transform 1.1s .5s var(--ease); }
+.geladen .etikett { opacity: 1; transform: none; }
+.etikett::before { content: ""; position: absolute; inset: 7px; border: 1px solid color-mix(in srgb, var(--espresso) 35%, transparent); pointer-events: none; }
+.etikett .w { width: 42px; margin: 0 0 .9rem; color: var(--espresso); }
+.etikett h1 { margin: 0; max-width: 13em; font: 400 1.2rem/1.25 var(--serif); letter-spacing: -.005em; }
+.etikett ol { list-style: none; margin: 1.1rem 0 1rem; padding: 1rem 0 0; border-top: 1px solid color-mix(in srgb, var(--espresso) 18%, transparent); }
+.etikett li a { display: block; padding: .1rem 0; font: 400 clamp(2rem, 2.6vw, 2.6rem)/1.08 var(--serif); letter-spacing: -.025em; }
+.etikett__ort { margin: 0; padding-top: .9rem; border-top: 1px solid color-mix(in srgb, var(--espresso) 18%, transparent);
+  font: 500 .7rem/1.4 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: color-mix(in srgb, var(--espresso) 72%, transparent); }
+.hero figcaption { position: absolute; right: var(--rand); bottom: var(--rand); font-size: .75rem; color: var(--leinen); opacity: .85; }
+@media (max-width: 900px) {
+  .hero { min-height: 560px; }
+  .nav--dunkel:not(.fest) { color: var(--leinen); } /* mobiles Bild ist oben dunkel */
+  .hero picture img { object-position: 50% 30%; }
+  .etikett { left: 50%; bottom: 76px; width: min(78vw, 320px); margin-left: calc(min(78vw, 320px) / -2); padding: 1.2rem 1rem 1rem; }
+  .etikett .w { width: 34px; margin-bottom: .6rem; }
+  .etikett h1 { font-size: 1.05rem; }
+  .etikett ol { display: grid; grid-template-columns: 1fr 1fr; gap: .2rem .5rem; margin: .8rem 0 .7rem; padding-top: .7rem; }
+  .etikett li a { font-size: 1.85rem; min-height: 44px; display: flex; align-items: center; }
+  .hero figcaption { display: none; }
+}
+</style>
+</head>
+<body>
+<a class="sr" href="#inhalt">Zum Inhalt</a>
+<nav class="nav nav--dunkel" aria-label="Hauptnavigation">
+  <button class="nav__menue" type="button" aria-expanded="false" aria-controls="menue"><i aria-hidden="true"></i>Menü</button>
+  <a class="nav__marke" href="#" aria-label="Wasem Doppelstück, Startseite"><span class="wm"></span><span class="w"></span></a>
+  <div class="nav__wege"><a class="anfragen" href="#anfragen">Anfragen</a><a class="buchen" href="#hotel">Zimmer buchen</a></div>
+</nav>
+
+<div class="menue" id="menue" role="dialog" aria-modal="true" aria-label="Menü" aria-hidden="true">
+  <div class="menue__text">
+    <div class="menue__kopf"><button class="menue__zu" type="button">Schließen</button></div>
+    <ol>
+      <li><a href="#wein">Wein</a></li>
+      <li><a href="#hotel">Hotel</a></li>
+      <li><a href="#feste">Feste</a></li>
+      <li><a href="#tagungen">Tagungen</a></li>
+      <li class="anfragen"><a href="#anfragen">Anfragen</a></li>
+    </ol>
+    <div class="menue__fuss"><p>Weingut · Stiegelgasse 50<br>Weinhotel · Stiegelgasse 70<br>55218 Ingelheim</p><p><a href="https://doppelstueck.com">Shop</a><br><a href="#hotel">Zimmer buchen</a></p></div>
+  </div>
+  <div class="menue__bild" aria-hidden="true">
+    <img class="an" src="../bilder/wasem-vinothek-theke.webp" alt="">
+    <img src="../runde-7/bestand/wasem-hotelzimmer-holzmosaik.webp" alt="">
+    <img src="../bilder/wasem-weingarten-abend-lichterkette.webp" alt="">
+    <img src="../bilder/wasem-steinwand-tafel-holzdecke.webp" alt="">
+    <img src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="">
+  </div>
+</div>
+
+<main id="inhalt">
+  <section class="hero">
+    <figure>
+      <picture>
+        <source media="(max-width: 900px)" srcset="../bilder/wasem-jga-freundinnen-lachen.webp">
+        <img src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="Zwei Frauen stoßen im Weinberg über Ingelheim mit Weißwein an, Abendlicht">
+      </picture>
+      <figcaption>Abends im Weinberg über Ingelheim</figcaption>
+    </figure>
+    <div class="etikett">
+      <span class="w" aria-hidden="true"></span>
+      <h1>Weingut und Weinhotel in Ingelheim</h1>
+      <ol>
+        <li><a href="#wein"><span class="wort" aria-hidden="true"><span>Wein</span><span>Wein</span></span><span class="sr">Wein</span></a></li>
+        <li><a href="#hotel"><span class="wort" aria-hidden="true"><span>Hotel</span><span>Hotel</span></span><span class="sr">Hotel</span></a></li>
+        <li><a href="#feste"><span class="wort" aria-hidden="true"><span>Feste</span><span>Feste</span></span><span class="sr">Feste</span></a></li>
+        <li><a href="#tagungen"><span class="wort" aria-hidden="true"><span>Tagungen</span><span>Tagungen</span></span><span class="sr">Tagungen</span></a></li>
+      </ol>
+      <p class="etikett__ort">Stiegelgasse 50 und 70</p>
+    </div>
+  </section>
+  <section class="danach" id="wein"><p>Ein Doppelstück lässt dem Wein Zeit. <em>So planen wir auch mit euch.</em></p></section>
+</main>
+<nav class="leiste" aria-label="Schnellwege"><a href="#hotel">Zimmer buchen</a><a href="#anfragen">Anfragen</a></nav>
+<script src="nav.js"></script>
+</body>
+</html>

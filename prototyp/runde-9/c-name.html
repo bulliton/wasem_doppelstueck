@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Wasem Doppelstück · Runde 9 C Name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&family=Bona+Nova:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="basis.css">
+<style>
+/* C „Name“: die gedeckte Tafel im Weingarten, darunter die Wortmarke randlos über die ganze Breite */
+.nav__marke .wm { display: none; }
+.nav__marke .w { display: block; width: 38px; }
+.hero { height: 100svh; min-height: 640px; display: grid; grid-template-rows: 1fr auto; }
+.bild { position: relative; overflow: hidden; background: var(--espresso); }
+.bild img { position: absolute; inset: 0; width: 100%; height: 115%; object-fit: cover; object-position: 50% 55%; filter: brightness(.88); will-change: transform; }
+.fuss { padding: clamp(.9rem, 1.6vw, 1.6rem) var(--rand) 1.3rem; background: var(--leinen); }
+.fuss .wm { width: 100%; color: var(--espresso); clip-path: inset(0 100% 0 0); transition: clip-path 1.6s .2s var(--ease-raum); }
+.geladen .fuss .wm { clip-path: inset(0); }
+.fuss__zeile { display: flex; justify-content: space-between; align-items: baseline; gap: 2rem; margin-top: clamp(.9rem, 1.4vw, 1.4rem); padding-top: .9rem; border-top: 1px solid color-mix(in srgb, var(--espresso) 16%, transparent); }
+.fuss h1 { margin: 0; font: 400 clamp(1.15rem, 1.5vw, 1.5rem)/1.2 var(--serif); }
+.fuss ol { list-style: none; margin: 0; padding: 0; display: flex; gap: clamp(1.2rem, 2.6vw, 2.8rem); }
+.fuss li a { display: block; font: 400 clamp(1.6rem, 2.3vw, 2.4rem)/1 var(--serif); letter-spacing: -.02em; }
+@media (max-width: 900px) {
+  .hero { min-height: 600px; }
+  .bild img { object-position: 50% 40%; }
+  .fuss { padding-bottom: calc(52px + .9rem); }
+  .fuss__zeile { flex-direction: column; gap: .6rem; }
+  .fuss ol { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; width: 100%; }
+  .fuss li a { font-size: 2rem; min-height: 44px; display: flex; align-items: center; }
+}
+</style>
+</head>
+<body>
+<a class="sr" href="#inhalt">Zum Inhalt</a>
+<nav class="nav" aria-label="Hauptnavigation">
+  <button class="nav__menue" type="button" aria-expanded="false" aria-controls="menue"><i aria-hidden="true"></i>Menü</button>
+  <a class="nav__marke" href="#" aria-label="Wasem Doppelstück, Startseite"><span class="wm"></span><span class="w"></span></a>
+  <div class="nav__wege"><a class="anfragen" href="#anfragen">Anfragen</a><a class="buchen" href="#hotel">Zimmer buchen</a></div>
+</nav>
+
+<div class="menue" id="menue" role="dialog" aria-modal="true" aria-label="Menü" aria-hidden="true">
+  <div class="menue__text">
+    <div class="menue__kopf"><button class="menue__zu" type="button">Schließen</button></div>
+    <ol>
+      <li><a href="#wein">Wein</a></li>
+      <li><a href="#hotel">Hotel</a></li>
+      <li><a href="#feste">Feste</a></li>
+      <li><a href="#tagungen">Tagungen</a></li>
+      <li class="anfragen"><a href="#anfragen">Anfragen</a></li>
+    </ol>
+    <div class="menue__fuss"><p>Weingut · Stiegelgasse 50<br>Weinhotel · Stiegelgasse 70<br>55218 Ingelheim</p><p><a href="https://doppelstueck.com">Shop</a><br><a href="#hotel">Zimmer buchen</a></p></div>
+  </div>
+  <div class="menue__bild" aria-hidden="true">
+    <img class="an" src="../bilder/wasem-vinothek-theke.webp" alt="">
+    <img src="../runde-7/bestand/wasem-hotelzimmer-holzmosaik.webp" alt="">
+    <img src="../bilder/wasem-weingarten-abend-lichterkette.webp" alt="">
+    <img src="../bilder/wasem-steinwand-tafel-holzdecke.webp" alt="">
+    <img src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="">
+  </div>
+</div>
+
+<main id="inhalt">
+  <section class="hero">
+    <div class="bild">
+      <picture>
+        <source media="(max-width: 900px)" srcset="../bilder/wasem-weingarten-abend-lichterkette.webp">
+        <img src="../bilder/wasem-weingarten-tafel-gruen.webp" alt="Gedeckte lange Tafel im Weingarten unter Bäumen, Blüten im Vordergrund">
+      </picture>
+    </div>
+    <div class="fuss">
+      <span class="wm" role="img" aria-label="Wasem Doppelstück"></span>
+      <div class="fuss__zeile">
+        <h1>Weingut und Weinhotel in Ingelheim</h1>
+        <ol>
+          <li><a href="#wein"><span class="wort" aria-hidden="true"><span>Wein</span><span>Wein</span></span><span class="sr">Wein</span></a></li>
+          <li><a href="#hotel"><span class="wort" aria-hidden="true"><span>Hotel</span><span>Hotel</span></span><span class="sr">Hotel</span></a></li>
+          <li><a href="#feste"><span class="wort" aria-hidden="true"><span>Feste</span><span>Feste</span></span><span class="sr">Feste</span></a></li>
+          <li><a href="#tagungen"><span class="wort" aria-hidden="true"><span>Tagungen</span><span>Tagungen</span></span><span class="sr">Tagungen</span></a></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <section class="danach" id="wein"><p>Ein Doppelstück lässt dem Wein Zeit. <em>So planen wir auch mit euch.</em></p></section>
+</main>
+<nav class="leiste" aria-label="Schnellwege"><a href="#hotel">Zimmer buchen</a><a href="#anfragen">Anfragen</a></nav>
+<script src="nav.js"></script>
+<script>
+// Innen-Parallax des Bildes, nur im Hero
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const img = document.querySelector('.bild img');
+  addEventListener('scroll', () => { if (scrollY < innerHeight) img.style.transform = `translateY(${scrollY * -0.12}px)`; }, { passive: true });
+})();
+</script>
+</body>
+</html>
