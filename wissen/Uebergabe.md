@@ -1,6 +1,6 @@
 # Übergabe
 
-Stand: 2026-10-30 · **A-004 Runde 7d: Schrift Bona Nova + Albert Sans gewählt. Brand-Sheet umgestellt, One-Shot-Hero mit Namenskapitel gebaut (`prototyp/runde-7/index.html`). Benjamins Urteil 30.10.: Hero „sehr oldschool und langweilig“, ohne Charakter. Nächster Schritt: Hero neu, aus Referenzen.**
+Stand: 2026-10-30 · **A-004 Runde 8: drei Hero-Richtungen gebaut (`prototyp/runde-8/`: A Programm, B Moodboard, C Fasskeller), Storyboard `prototyp/runde-8/storyboard-runde-8.jpg`, Konzept `docs/runde-8-hero-richtungen.md`. Wartet auf Benjamins Wahl.**
 
 ## Benjamins Entscheidungen
 - 30.10. (abends): Hero 7d abgelehnt („oldschool, langweilig“). Wünsche: Referenzseiten und navbar.gallery/footer.design als Inspiration; Doppelstück-Identität weiter ausbauen, attraktiv, zum Identifizieren für designverliebte Frauen (Hauptzielgruppe), passend zu Marie und Julia; auf einen Blick sehen, was angeboten wird (Ebenen Wein, Hotel, Feste, Tagungen) und dass alles funktioniert; „Anlass erzählen“ allein ist nicht der richtige Schritt; UI/UX intuitiv, klar aufgeteilt, Design außergewöhnlich. Bona Nova, Farbwelt und Namensgedanke bleiben.
@@ -17,7 +17,7 @@ Stand: 2026-10-30 · **A-004 Runde 7d: Schrift Bona Nova + Albert Sans gewählt.
 - Geprüft: 1440 und 375 ohne Querscroll, Schriften geladen, eine H1, alle Tippflächen ≥ 44 px, KI-Look-Check Note A (Desktop und Mobil), Kontraste AA.
 
 ## Offen
-1. **Hero neu (A-004 Runde 8):** Vorgehen: Skill `geschmack` (profil, 2–3 nächste Referenzen ★★★ aus Hotel/Hospitality, Moves), Nav- und Footer-Karten aus `geschmack/bausteine` plus gezielt navbar.gallery und footer.design für Nav/Footer; `design-brainstorm` mit 2–3 gebauten Key-Screen-Richtungen (nicht Text). Jede Richtung muss im ersten Screen die Angebots-Ebenen zeigen (Wein, Hotel, Feste, Tagungen) mit klarem Weg je Ebene, die Doppelstück-Identität sichtbar tragen und mobil zuerst funktionieren.
+1. **Runde 8 gebaut, Wahl offen.** Danach: gewählte Richtung zur ganzen Startseite ausbauen (Namenskapitel, Anlass-Formular), `pruefer`, Merge. Prüfmarke C: sind die Doppelstücke Ovalfässer (Julia)? Ursprünglicher Auftrag: Vorgehen: Skill `geschmack` (profil, 2–3 nächste Referenzen ★★★ aus Hotel/Hospitality, Moves), Nav- und Footer-Karten aus `geschmack/bausteine` plus gezielt navbar.gallery und footer.design für Nav/Footer; `design-brainstorm` mit 2–3 gebauten Key-Screen-Richtungen (nicht Text). Jede Richtung muss im ersten Screen die Angebots-Ebenen zeigen (Wein, Hotel, Feste, Tagungen) mit klarem Weg je Ebene, die Doppelstück-Identität sichtbar tragen und mobil zuerst funktionieren.
 2. Fertig-wenn Runde 8 (Vorschlag): (a) Besucherin versteht in 5 s Kategorie und alle Angebote, (b) jede Ebene ist mit einem Tipp erreichbar, (c) ein Markenmerkmal aus Doppelstück trägt den Hero, das kein anderer Betrieb hat, (d) Abgleich mit 2 benannten Referenzen dokumentiert, (e) `design-kritik` Note A, Desktop + Mobil.
 3. Danach: Deck-Folien auf Bona Nova, Hero und Brand-Sheet ins Kunden-Deck.
 4. Prüfmarken: Julia bestätigt das Fass-Bild; Marie klärt Rückruf je Anlass; Foto vom Doppelstück im Keller fehlt. Plattform mit Marie klären.

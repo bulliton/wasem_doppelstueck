@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Wasem Doppelstück · Richtung A Programm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;1,400&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="basis.css">
+<style>
+/* Richtung A: die vier Angebote als Inhaltsverzeichnis, Bildfenster wechselt */
+.hero { min-height: calc(100svh - 76px); padding: clamp(1.5rem, 3vw, 2.5rem) var(--rand) clamp(1.5rem, 3vw, 2.5rem); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.8vw, 2.5rem); grid-template-rows: auto 1fr auto; }
+.hero h1 { grid-column: 1 / 8; text-wrap: balance; margin: 0 0 clamp(1rem, 2vw, 1.5rem); font: 400 clamp(1.25rem, 1.8vw, 1.6rem)/1.25 var(--serif); }
+
+.programm { grid-column: 1 / 8; grid-row: 2; list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--linie); align-self: start; }
+.programm li { border-bottom: 1px solid var(--linie); }
+.programm a { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; padding: clamp(.35rem, .9vw, .7rem) 0; }
+/* Signatur „doppelt“: das Wort in Recte, darunter sein Gegenstück in Kursiv; beim Zeigen rollt das Gegenstück hoch */
+.wort { position: relative; display: block; overflow: hidden; height: 1em; font: 400 clamp(4rem, 7.4vw, 7.5rem)/1 var(--serif); letter-spacing: -.035em; }
+.wort > span { display: block; height: 1em; line-height: .92; transition: transform .7s var(--ease); }
+.wort > span + span { font-style: italic; color: var(--cognac); }
+.programm a:hover .wort > span, .programm a:focus-visible .wort > span, .programm li.an .wort > span { transform: translateY(-100%); }
+.fakt { text-align: right; font-size: .9rem; line-height: 1.35; color: var(--leise); max-width: 15rem; }
+.fakt b { display: block; font-weight: 500; color: var(--espresso); margin-top: .35rem; text-decoration: underline; text-underline-offset: .3em; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); }
+
+.fenster { grid-column: 9 / 13; grid-row: 1 / 4; position: relative; overflow: hidden; align-self: stretch; min-height: 60vh; background: var(--sand); }
+.fenster img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity .6s var(--ease), transform 1.4s var(--ease); }
+.fenster img.an { opacity: 1; transform: none; }
+.fenster figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: .7rem .9rem; background: var(--leinen); font-size: .8rem; color: var(--leise); }
+
+.name { grid-column: 1 / 8; grid-row: 3; display: flex; gap: 2rem; align-items: baseline; justify-content: space-between; margin-top: clamp(1.25rem, 2.5vw, 2rem); }
+.name p { margin: 0; font: italic 400 clamp(1.1rem, 1.5vw, 1.35rem)/1.35 var(--serif); max-width: 30rem; }
+.name a { font: 500 .9rem/1 var(--sans); text-decoration: underline; text-underline-offset: .3em; display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; }
+
+/* Einstieg: Zeilen nacheinander */
+.programm li { opacity: 0; transform: translateY(1.2rem); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.geladen .programm li { opacity: 1; transform: none; }
+.programm li:nth-child(2) { transition-delay: .08s; } .programm li:nth-child(3) { transition-delay: .16s; } .programm li:nth-child(4) { transition-delay: .24s; }
+
+@media (max-width: 900px) {
+  .hero { display: block; min-height: auto; padding-top: 1rem; padding-bottom: 5.5rem; }
+  .hero h1 { font-size: 1.15rem; margin-bottom: .9rem; }
+  .fenster { display: none; }
+  .programm a { grid-template-columns: 1fr auto; gap: .75rem; padding: .55rem 0; }
+  .wort { font-size: clamp(2.8rem, 13.5vw, 4.2rem); }
+  .daumen { width: 60px; aspect-ratio: 4 / 5; object-fit: cover; }
+  .fakt { grid-column: 1 / -1; grid-row: 2; text-align: left; max-width: none; font-size: .8rem; line-height: 1.35; margin-top: -.25rem; }
+  .fakt b { display: inline; margin: 0 0 0 .4rem; }
+  .name { display: block; margin-top: 1.25rem; }
+}
+@media (min-width: 901px) { .daumen { display: none; } }
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Hauptnavigation">
+  <a class="nav__marke" href="#" aria-label="Wasem Doppelstück, Startseite"><span class="wm"></span><span class="w"></span></a>
+  <ul><li><a href="#wein">Wein</a></li><li><a href="#hotel">Hotel</a></li><li><a href="#feste">Feste</a></li><li><a href="#tagungen">Tagungen</a></li></ul>
+  <a class="nav__buchen" href="#hotel">Zimmer buchen</a>
+  <button class="menue-knopf" type="button">Menü</button>
+</nav>
+
+<main>
+  <section class="hero">
+    <h1>Weingut und Weinhotel in Ingelheim. Was habt ihr vor?</h1>
+
+    <ol class="programm">
+      <li class="an" data-bild="0"><a href="#wein">
+        <span class="wort" aria-hidden="true"><span>Wein</span><span>Wein</span></span><span class="sr">Wein</span>
+        <span class="fakt">Bio-Weine vom Familienweingut, im Shop und in der Vinothek<b>Weine ansehen</b></span>
+        <img class="daumen" src="../bilder/wasem-vinothek-theke.webp" alt="">
+      </a></li>
+      <li data-bild="1"><a href="#hotel">
+        <span class="wort" aria-hidden="true"><span>Hotel</span><span>Hotel</span></span><span class="sr">Hotel</span>
+        <span class="fakt">50 Zimmer in zwei Häusern an der Stiegelgasse<b>Zimmer buchen</b></span>
+        <img class="daumen" src="../runde-7/bestand/wasem-hotelzimmer-holzmosaik.webp" alt="">
+      </a></li>
+      <li data-bild="2"><a href="#feste">
+        <span class="wort" aria-hidden="true"><span>Feste</span><span>Feste</span></span><span class="sr">Feste</span>
+        <span class="fakt">JGA, Hochzeit, Geburtstag, mit Weinprobe oder Wanderung<b>Fest anfragen</b></span>
+        <img class="daumen" src="../bilder/wasem-jga-sekt-einschenken.webp" alt="">
+      </a></li>
+      <li data-bild="3"><a href="#tagungen">
+        <span class="wort" aria-hidden="true"><span>Tagungen</span><span>Tagungen</span></span><span class="sr">Tagungen</span>
+        <span class="fakt">Raum für bis zu 50 Personen, Technik und Zimmer im Haus<b>Tagung anfragen</b></span>
+        <img class="daumen" src="../bilder/wasem-eventraum-tagung-hoch.webp" alt="">
+      </a></li>
+    </ol>
+
+    <figure class="fenster" aria-hidden="true">
+      <img class="an" src="../bilder/wasem-vinothek-theke.webp" alt="">
+      <img src="../runde-7/bestand/wasem-hotelzimmer-holzmosaik.webp" alt="">
+      <img src="../bilder/wasem-jga-sekt-einschenken.webp" alt="">
+      <img src="../bilder/wasem-eventraum-tagung-hoch.webp" alt="">
+      <figcaption>Vinothek im Weingut</figcaption>
+    </figure>
+
+    <div class="name">
+      <p>Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.</p>
+      <a href="#doppelstueck">Warum Doppelstück</a>
+    </div>
+  </section>
+</main>
+
+<nav class="leiste" aria-label="Schnellwege"><a href="#hotel">Zimmer buchen</a><a href="#anfrage">Anfragen</a></nav>
+<p class="entwurf">Entwurf Runde 8 A · Fotos doppelstueck.com</p>
+
+<script>
+requestAnimationFrame(() => document.documentElement.classList.add('geladen'));
+const zeilen = [...document.querySelectorAll('.programm li')];
+const bilder = [...document.querySelectorAll('.fenster img')];
+const text = ['Vinothek im Weingut', 'Hotelzimmer', 'Junggesellinnenabschied', 'Eventraum für Tagungen'];
+const cap = document.querySelector('.fenster figcaption');
+function zeige(i) {
+  zeilen.forEach((z, k) => z.classList.toggle('an', k === i));
+  bilder.forEach((b, k) => b.classList.toggle('an', k === i));
+  cap.textContent = text[i];
+}
+zeilen.forEach((z, i) => { z.addEventListener('mouseenter', () => zeige(i)); z.addEventListener('focusin', () => zeige(i)); });
+let y0 = 0; const nav = document.querySelector('.nav');
+addEventListener('scroll', () => { const y = scrollY; nav.classList.toggle('weg', y > y0 && y > 120); y0 = y; }, { passive: true });
+</script>
+</body>
+</html>
