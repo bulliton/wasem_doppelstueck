@@ -1,13 +1,14 @@
 # Übergabe
 
-Stand: 2026-10-30 (Abend) · **A-004 Runde 9: drei Hero/Nav-Varianten gebaut (`prototyp/runde-9/`, Commit 64ae0ca), Kritik gegen Personas und Kriterien (`docs/runde-9-personas-kriterien.md`). Empfehlung A „Etikett“ (hält alle 8 Kriterien, KI-Look A). Storyboard `prototyp/runde-9/storyboard-runde-9.jpg` liegt bei Benjamin; sein Urteil ist offen.**
+Stand: 2026-10-30 (spät) · **A-004 Runde 9: Benjamin hat A „Etikett“ gewählt. Ganze Startseite mit neuem Hero + Nav steht in `prototyp/runde-9/index.html` (aus runde-8 abgeleitet). Geprüft 1440/375: kein Querscroll, Tippflächen ≥ 44 px, keine Konsolenfehler, Nav-Logik ok. Nächster Schritt: Kapitel darunter mit den Persona-Kriterien kürzen (Offen 2), dann `pruefer`.**
 
+## Benjamins Entscheidungen
+- 30.10. (spät): Runde 9 **A Etikett** (Weinberg-Abendfoto randlos, Angebote auf Leinen-Etikett mit W, Nav über dem Bild). B Abendfolge und C Name nicht gewählt; C (Wortmarke randlos) als möglicher Footer-Schluss vorgemerkt.
 ## Runde 9 (Stand)
 - A Etikett: Weinberg-Abendfoto randlos, Angebote auf Leinen-Etikett mit W unten links (12 % der Fläche), Doppel-Rolle bei Hover. B Abendfolge: vier Momente im Wechsel über einem Leinen-Band (Band 23 %, wirkt wie Karussell). C Name: Weingarten-Tafel, Wortmarke randlos darunter (stärkste Marke, aber ohne Menschen, Bild dunkel).
 - Gemeinsame Nav (`basis.css`, `nav.js`): Menü links als Wort, Wortmarke Mitte, Anfragen + Zimmer buchen (1 px Rahmen) rechts; durchsichtig über dem Bild, nach dem Hero auf Leinen mit W, runter weg, hoch zurück. Menü als Vollbild-Raum mit Kapitelbild beim Hover, Esc, Fokusfalle. Mobil: Leiste Zimmer buchen | Anfragen.
 - Nächster Schritt nach Benjamins Wahl: gewählte Richtung in `prototyp/runde-8/index.html` (bzw. Kopie runde-9/index.html) als Hero + Nav einsetzen, dann Kapitel darunter mit derselben Schleife kürzen (Offen 2).
 
-## Benjamins Entscheidungen
 - 30.10. (spät): Hero-Richtung **1 Programm** (`a-programm.html`): vier Angebote als riesige Bona-Nova-Liste, Bildfenster rechts, Signatur „doppelt“ (kursives Gegenstück rollt hoch, Cognac). B Moodboard und C Fasskeller verworfen; Oval nur nach Julias Bestätigung.
 - 30.10.: Hero 7d abgelehnt („oldschool, langweilig“). Zielgruppe designverliebte Frauen; auf einen Blick alle Angebote und dass alles funktioniert.
 - 30.10.: Schrift Bona Nova + Albert Sans. Farbwelt fest. Namensgedanke „Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.“
@@ -31,4 +32,4 @@ Stand: 2026-10-30 (Abend) · **A-004 Runde 9: drei Hero/Nav-Varianten gebaut (`p
 - Deck v15 https://claude.ai/artifact/TSoUh6KXERev1LkYtXpz6E (nur per Artifact `read`).
 
 ## Starter-Prompt (neue Session)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md` und `docs/runde-9-personas-kriterien.md`. Benjamin hat eine Runde-9-Variante gewählt (in seiner Nachricht nennen). Setze sie als Hero + Nav in die ganze Startseite ein (`prototyp/runde-9/index.html` aus runde-8 ableiten), dann Kapitel darunter mit Persona-Kriterien kürzen, `design-kritik` bis A, `pruefer`. Kein Push.
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md` und `docs/runde-9-personas-kriterien.md`. Startseite mit Hero A „Etikett“ steht in `prototyp/runde-9/index.html`. Führe „Offen 2“ aus: Kapitel darunter (Namenskapitel, Wein, Hotel, Feste, Tagungen, Familie, Anlass, Footer) gegen die Personas und Kriterien prüfen, Text kürzen (Ziel deutlich unter 424 Wörter), mehr Atmosphäre statt Info, `text-kritik`, `design-kritik` bis A, dann `pruefer`. Benjamin als Storyboard zeigen. Kein Push.
