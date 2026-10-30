@@ -7,113 +7,88 @@
 <title>Wasem Doppelstück · Brand-Sheet Runde 7</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  /* Tagseite: Vinothek (Kalkwand, Eichenbalken, Mokka) */
-  --kalk: #F4EFE7;
-  --eiche: #A9784F;
-  --mokka: #2A1D15;
-  /* Nachtseite: Stammhaus zur blauen Stunde, Goldfolie der Wortmarke */
-  --nacht: #1F2552;
-  --daemmerung: #3A468E;
+  --leinen: #EEE7DD;
+  --sand: #D9CBB8;
+  --stein: #9C8B7C;
+  --cognac: #94623E;
+  --espresso: #2B201A;
   --gold: #C9A866;
-  --serif: "EB Garamond", Garamond, "Times New Roman", serif;
-  --sans: "Instrument Sans", system-ui, sans-serif;
+  --serif: "Bona Nova", Georgia, serif;
+  --sans: "Albert Sans", system-ui, sans-serif;
   --rand: clamp(1rem, 4vw, 4rem);
+  --linie: color-mix(in srgb, var(--espresso) 14%, transparent);
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--kalk); color: var(--mokka); font: 400 1rem/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--leinen); color: var(--espresso); font: 400 1.0625rem/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
 img { display: block; max-width: 100%; }
-.label { font: 500 .72rem/1.2 var(--sans); letter-spacing: .22em; text-transform: uppercase; }
-.versal { font-family: var(--serif); text-transform: uppercase; letter-spacing: .14em; }
-section { padding: clamp(3rem, 8vw, 7rem) var(--rand); }
-.kopf { display: flex; justify-content: space-between; gap: 1rem; padding: 1.25rem var(--rand); border-bottom: 1px solid color-mix(in srgb, var(--mokka) 15%, transparent); }
+.label { font: 500 .72rem/1.2 var(--sans); letter-spacing: .2em; text-transform: uppercase; }
+section { padding: clamp(3rem, 8vw, 7rem) var(--rand); border-top: 1px solid var(--linie); }
+h2 { margin: .75rem 0 1.25rem; font: 400 clamp(2rem, 4.5vw, 3.6rem)/1.05 var(--serif); letter-spacing: -.015em; max-width: 22ch; }
+.quelle { font-size: .85rem; color: color-mix(in srgb, var(--espresso) 72%, transparent); margin: .75rem 0 0; max-width: 60ch; }
+.kopf { display: flex; justify-content: space-between; gap: 1rem; padding: 1.25rem var(--rand); }
 
 /* 1 Gedanke */
-.gedanke { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); align-items: end; }
-.gedanke h1 { margin: 0; font: 400 clamp(5rem, 17vw, 15rem)/.82 var(--serif); letter-spacing: -.02em; }
-.gedanke h1 em { font-style: italic; color: var(--eiche); }
-.gedanke p { margin: 0 0 1rem; font: 400 clamp(1.25rem, 2vw, 1.6rem)/1.35 var(--serif); max-width: 32ch; }
-.gedanke .klein { font: 400 1rem/1.55 var(--sans); max-width: 44ch; }
-.vorschlag { display: inline-block; margin-top: .5rem; color: var(--eiche); }
+.gedanke { border-top: 0; display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: clamp(2rem, 5vw, 5rem); align-items: end; }
+.gedanke h1 { margin: .75rem 0 0; font: 400 clamp(2.8rem, 7.4vw, 7.2rem)/.98 var(--serif); letter-spacing: -.025em; }
+.gedanke h1 span { display: block; text-wrap: balance; }
+.gedanke h1 span + span { padding-left: clamp(1.5rem, 12vw, 12rem); color: var(--cognac); }
+.gedanke p { margin: 0 0 1rem; max-width: 40ch; }
 
-/* 2 Paare */
-.paare { border-top: 1px solid color-mix(in srgb, var(--mokka) 15%, transparent); }
-.paare ul { list-style: none; margin: 2rem 0 0; padding: 0; }
-.paare li { display: grid; grid-template-columns: 1fr auto 1fr; align-items: baseline; gap: 1rem; padding: .9rem 0; border-bottom: 1px solid color-mix(in srgb, var(--mokka) 12%, transparent); font: 400 clamp(1.6rem, 4.2vw, 3.4rem)/1.1 var(--serif); }
-.paare li span:first-child { text-align: right; }
-.paare li i { font-size: .7em; color: var(--eiche); }
-.paare li span:last-child { font-style: italic; }
-.paare .notiz { margin-top: 1.5rem; max-width: 60ch; }
-
-/* 3 Zeichen */
-.zeichen { background: var(--nacht); color: var(--kalk); }
-.zeichen__buehne { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
-.w-gross { width: 100%; max-width: 520px; aspect-ratio: 1128 / 816; }
-.w-gross .v { transition: transform 1.4s cubic-bezier(.65, 0, .35, 1); }
-.zeichen.offen .w-gross .v-links { transform: translateX(-9%); }
-.zeichen.offen .w-gross .v-rechts { transform: translateX(9%); }
+/* 2 Zeichen */
+.zeichen { background: var(--espresso); color: var(--leinen); border: 0; }
+.zeichen .label { color: var(--gold); }
+.zeichen__buehne { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.wortmarke-gross { color: var(--gold); width: 100%; }
+.wortmarke-gross svg { width: 100%; height: auto; display: block; }
+.goldlinie { height: 1px; background: var(--gold); margin: 2.5rem 0; }
 .zeichen p { max-width: 42ch; }
-.zeichen h2, .farbe h2, .schrift h2, .spiel h2 { margin: .5rem 0 1rem; font: 400 clamp(2rem, 4.5vw, 3.6rem)/1.05 var(--serif); }
-.knopf { margin-top: 1rem; min-height: 44px; padding: 0 1.1rem; border: 1px solid var(--gold); background: none; color: var(--gold); font: 500 .8rem var(--sans); letter-spacing: .14em; text-transform: uppercase; cursor: pointer; }
 .groessen { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 3rem; }
-.groessen div { display: flex; align-items: end; gap: .9rem; padding: 1rem 1.2rem; }
-.groessen .hell { background: var(--kalk); }
-.groessen .dunkel { background: var(--nacht); outline: 1px solid color-mix(in srgb, var(--gold) 35%, transparent); }
-.groessen .schwarz { background: #000; }
-.groessen svg { height: auto; }
-.wortmarke { margin-top: 3rem; max-width: 640px; }
+.groessen div { display: flex; align-items: end; gap: 1.2rem; padding: 1.2rem 1.4rem; }
+.groessen .hell { background: var(--leinen); color: var(--espresso); }
+.groessen .dunkel { outline: 1px solid color-mix(in srgb, var(--gold) 40%, transparent); color: var(--gold); }
+.groessen svg { height: auto; display: block; }
+.zeichen .quelle { color: color-mix(in srgb, var(--leinen) 75%, transparent); }
 
-/* 4 Farbe */
-.farbe__reihe { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: color-mix(in srgb, var(--mokka) 15%, transparent); margin-top: 2rem; }
-.seite { background: var(--kalk); padding: 1.25rem; }
-.seite--nacht { background: var(--nacht); color: var(--kalk); }
-.seite figure { margin: 0 0 1rem; aspect-ratio: 16 / 9; overflow: hidden; }
-.seite figure img { width: 100%; height: 100%; object-fit: cover; }
-.chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; }
-.chip { aspect-ratio: 1; padding: .6rem; display: flex; flex-direction: column; justify-content: end; font: 500 .72rem/1.3 var(--sans); }
+/* 3 Farbe */
+.farbe__reihe { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(1.5rem, 4vw, 4rem); margin-top: 2rem; align-items: start; }
+.farbe figure { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; }
+.farbe figure img { width: 100%; height: 100%; object-fit: cover; }
+.chips { display: grid; grid-template-columns: 6fr 3fr 1.6fr 1.4fr 1.2fr .8fr; height: clamp(14rem, 30vw, 22rem); }
+.chip { padding: .7rem; display: flex; flex-direction: column; justify-content: end; font: 500 .72rem/1.35 var(--sans); }
 .chip b { font-weight: 600; display: block; }
-.quelle { font-size: .8rem; opacity: .75; margin: .75rem 0 0; }
-.kontrast { margin-top: 1.5rem; font-size: .85rem; columns: 2 18rem; }
+.anteile { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.anteile li { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding: .7rem 0; border-bottom: 1px solid var(--linie); font-size: .95rem; }
+.kontrast { margin-top: 1.5rem; font-size: .85rem; columns: 2 16rem; }
 
-/* 5 Schrift */
-.schrift__muster { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); margin-top: 2rem; }
-.muster-serif { font: 400 clamp(2.6rem, 6vw, 5.4rem)/1 var(--serif); margin: 0; }
-.muster-serif em { color: var(--eiche); }
-.muster-versal { font-size: clamp(1rem, 1.6vw, 1.25rem); margin: 1.25rem 0 0; }
-.muster-sans { font: 400 1.125rem/1.55 var(--sans); }
-.muster-sans .label { display: block; margin-bottom: .5rem; color: var(--eiche); }
+/* 4 Schrift */
+.schrift__muster { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); margin-top: 2rem; align-items: start; }
+.muster-gross { font: 400 clamp(3.4rem, 10vw, 9.5rem)/.9 var(--serif); letter-spacing: -.03em; margin: 0; }
+.muster-h2 { font: 400 clamp(1.9rem, 3.4vw, 2.6rem)/1.1 var(--serif); margin: 2rem 0 0; max-width: 20ch; }
+.muster-alphabet { font: 400 clamp(1.2rem, 2vw, 1.5rem)/1.4 var(--serif); margin: 1.5rem 0 0; color: var(--cognac); }
+.muster-sans p { margin: 0 0 1rem; }
+.muster-sans .lead { font-size: 1.25rem; line-height: 1.5; }
+.skala { list-style: none; padding: 0; margin: 2rem 0 0; }
+.skala li { display: flex; justify-content: space-between; gap: 1rem; padding: .55rem 0; border-bottom: 1px solid var(--linie); font-size: .9rem; }
 
-/* 6 Wechselspiel */
-.spiel { border-top: 1px solid color-mix(in srgb, var(--mokka) 15%, transparent); }
-.storyboard { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
-.storyboard figure { margin: 0; }
-.storyboard svg { width: 100%; height: auto; display: block; }
-.storyboard figcaption { margin-top: .6rem; font-size: .9rem; }
-.regeln { margin-top: 2.5rem; columns: 2 20rem; column-gap: 3rem; }
-.regeln p { margin: 0 0 1rem; break-inside: avoid; }
+/* 5 Regeln */
+.regeln { columns: 2 22rem; column-gap: 3rem; margin-top: 2rem; }
+.regeln p { margin: 0 0 1.25rem; break-inside: avoid; }
+.regeln b { font: 400 1.35rem/1.2 var(--serif); display: block; margin-bottom: .3rem; }
 
-footer { background: var(--nacht); color: var(--gold); padding: 2rem var(--rand); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+footer { background: var(--sand); padding: 2rem var(--rand); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 
 @media (max-width: 760px) {
   .gedanke, .zeichen__buehne, .farbe__reihe, .schrift__muster { grid-template-columns: 1fr; }
-  .storyboard { grid-template-columns: 1fr; }
-  .paare li { grid-template-columns: 1fr; gap: 0; }
-  .paare li span:first-child { text-align: left; }
+  .chips { grid-template-columns: repeat(3, 1fr); height: auto; }
+  .chip { aspect-ratio: 1; }
+  .farbe figure { aspect-ratio: 3 / 2; }
 }
-@media (prefers-reduced-motion: reduce) { .w-gross .v { transition: none; } }
 </style>
 </head>
 <body>
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <clipPath id="links" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="575" height="816"/></clipPath>
-    <clipPath id="rechts" clipPathUnits="userSpaceOnUse"><rect x="553" y="0" width="575" height="816"/></clipPath>
-    <symbol id="w" viewBox="0 0 1128 816"><use href="#w-pfad"/></symbol>
-  </defs>
-</svg>
 
 <header class="kopf">
   <span class="label">Wasem Doppelstück · Brand-Sheet</span>
@@ -122,164 +97,118 @@ footer { background: var(--nacht); color: var(--gold); padding: 2rem var(--rand)
 
 <section class="gedanke" aria-labelledby="h-gedanke">
   <div>
-    <p class="label">Markengedanke</p>
-    <h1 id="h-gedanke">Beides.</h1>
+    <p class="label">Warum Doppelstück</p>
+    <h1 id="h-gedanke"><span>Ein Doppelstück lässt dem Wein Zeit.</span><span>So planen wir auch mit euch.</span></h1>
   </div>
   <div>
-    <p>Wer zu Wasem kommt, muss sich nicht entscheiden. Am Tag das Weingut, am Abend das Weinhotel, und beides liegt in derselben Gasse.</p>
-    <p class="klein">Doppelstück heißt hier: Zwei Dinge, die zusammengehören, werden besser, wenn man sie nicht trennt. Der Wein und das Bett. Das Fest und die Ruhe. Das alte Holz und das helle Licht. Die Eltern und die Töchter. Was Gäste kaufen, ist der Abend, der nicht mit der Heimfahrt endet.</p>
-    <span class="label vorschlag">Vorschlag · Wortlaut prüft text-kritik vor dem Hero</span>
+    <p>Doppelstück heißt das große Eichenfass mit 2.400&nbsp;Litern, mit dem wir im Keller gern arbeiten. Darin hat ein Wein Platz und Zeit, bis er nach seinen Trauben schmeckt.</p>
+    <p>Für Gäste heißt das: Ein Mensch mit Namen fragt nach und plant Wein, Raum und Zimmer in einer Gasse. Ihr müsst vorher nicht wissen, wie euer Tag aussehen soll.</p>
+    <p class="quelle">Freigegeben am 30.10. Fass-Bild bestätigt Julia vor dem Kunden-Deck.</p>
   </div>
-</section>
-
-<section class="paare" aria-labelledby="h-paare">
-  <p class="label" id="h-paare">So wird verkauft: jedes Angebot ist ein Paar</p>
-  <ul>
-    <li><span>Probieren</span><i>&amp;</i><span>bleiben</span></li>
-    <li><span>Feiern</span><i>&amp;</i><span>ausschlafen</span></li>
-    <li><span>Tagen</span><i>&amp;</i><span>anstoßen</span></li>
-    <li><span>Heiraten</span><i>&amp;</i><span>frühstücken</span></li>
-  </ul>
-  <p class="notiz">Links steht, was im Weingut passiert, rechts, was das Hotel daraus macht. Weinprobe, JGA, Tagung und Hochzeit bekommen so dieselbe Logik, und jede Seite verkauft beide Häuser auf einmal. Namen der Pakete sind Vorschläge.</p>
 </section>
 
 <section class="zeichen" aria-labelledby="h-zeichen">
   <div class="zeichen__buehne">
-    <svg class="w-gross" viewBox="0 0 1128 816" role="img" aria-labelledby="t-w">
-      <title id="t-w">Das W der Wasem-Wortmarke aus zwei ineinandergreifenden V</title>
-      <g class="v v-links" clip-path="url(#links)"><use href="#w-pfad" fill="#C9A866"/></g>
-      <g class="v v-rechts" clip-path="url(#rechts)"><use href="#w-pfad" fill="#F4EFE7"/></g>
-    </svg>
+    <div class="wortmarke-gross" id="wortmarke-gross" aria-hidden="true"></div>
     <div>
-      <p class="label" style="color:var(--gold)">Das Zeichen</p>
-      <h2>Das W war schon immer ein Doppel.</h2>
-      <p>Im Garamond-W der eigenen Wortmarke überkreuzen sich zwei V. Das ist das Zeichen: kein neues Logo, sondern das W, das heute schon auf Fässern, Etiketten und dem Schild am Stammhaus steht, gelesen als zwei Hälften, die ineinandergreifen. Links Gold für das Weingut, rechts Kalk für das Hotel.</p>
-      <p>In Bewegung gehen die Hälften auseinander und schließen sich wieder, sobald beide Häuser auf der Seite vorkommen.</p>
-      <button class="knopf" type="button" id="w-knopf" aria-pressed="false">Hälften lösen</button>
+      <p class="label">Das Zeichen</p>
+      <h2 id="h-zeichen">Die Wortmarke bleibt, wie sie ist.</h2>
+      <p>Kein neues Logo. Die Wortmarke aus der Originaldatei steht in Gold auf Espresso oder in Espresso auf Leinen. Wo der Platz knapp wird (Handy, gescrollte Navigation, Favicon), übernimmt das W vom Etikett allein.</p>
     </div>
   </div>
-  <div class="groessen" aria-label="Größentest 96, 48, 32 und 16 Pixel">
-    <div class="hell">
-      <svg width="96" viewBox="0 0 1128 816" aria-hidden="true"><g clip-path="url(#links)"><use href="#w-pfad" fill="#A9784F"/></g><g clip-path="url(#rechts)"><use href="#w-pfad" fill="#1F2552"/></g></svg>
-      <svg width="48" viewBox="0 0 1128 816" aria-hidden="true"><g clip-path="url(#links)"><use href="#w-pfad" fill="#A9784F"/></g><g clip-path="url(#rechts)"><use href="#w-pfad" fill="#1F2552"/></g></svg>
-      <svg width="32" viewBox="0 0 1128 816" aria-hidden="true"><use href="#w-pfad" fill="#1F2552"/></svg>
-      <svg width="16" viewBox="0 0 1128 816" aria-hidden="true"><use href="#w-pfad" fill="#1F2552"/></svg>
-    </div>
-    <div class="dunkel">
-      <svg width="96" viewBox="0 0 1128 816" aria-hidden="true"><g clip-path="url(#links)"><use href="#w-pfad" fill="#C9A866"/></g><g clip-path="url(#rechts)"><use href="#w-pfad" fill="#F4EFE7"/></g></svg>
-      <svg width="48" viewBox="0 0 1128 816" aria-hidden="true"><g clip-path="url(#links)"><use href="#w-pfad" fill="#C9A866"/></g><g clip-path="url(#rechts)"><use href="#w-pfad" fill="#F4EFE7"/></g></svg>
-      <svg width="32" viewBox="0 0 1128 816" aria-hidden="true"><use href="#w-pfad" fill="#C9A866"/></svg>
-      <svg width="16" viewBox="0 0 1128 816" aria-hidden="true"><use href="#w-pfad" fill="#C9A866"/></svg>
-    </div>
-    <div class="schwarz">
-      <svg width="96" viewBox="0 0 1128 816" aria-hidden="true"><use href="#w-pfad" fill="#C9A866"/></svg>
-      <svg width="32" viewBox="0 0 1128 816" aria-hidden="true"><use href="#w-pfad" fill="#C9A866"/></svg>
-      <svg width="16" viewBox="0 0 1128 816" aria-hidden="true"><use href="#w-pfad" fill="#C9A866"/></svg>
-    </div>
+  <div class="goldlinie" aria-hidden="true"></div>
+  <div class="groessen" aria-label="Größentest des W bei 96, 48, 32 und 16 Pixeln">
+    <div class="hell" data-w="96 48 32 16"></div>
+    <div class="dunkel" data-w="96 48 32 16"></div>
   </div>
-  <p class="quelle">Unter 48 px einfarbig: die Zweiteilung trägt erst ab etwa 48 px. Wortmarke bleibt die Originaldatei:</p>
-  <img class="wortmarke" src="../marke/wasem-wortmarke-original.png" alt="Wortmarke Wasem Doppelstück in Goldfolie">
+  <p class="quelle">Das W ist einfarbig und ganz; die Teilung in zwei V aus Runde 7 ist gestrichen. Gold nur als Schrift, Zeichen und Linie auf Espresso, nie als Fläche.</p>
 </section>
 
 <section class="farbe" aria-labelledby="h-farbe">
   <p class="label">Farbwelt aus dem eigenen Haus</p>
-  <h2 id="h-farbe">Eine Tagseite, eine Nachtseite.</h2>
+  <h2 id="h-farbe">Beige wie die Vinothek, dunkel wie die Flaschen.</h2>
   <div class="farbe__reihe">
-    <div class="seite">
-      <figure><img src="../bilder/wasem-vinothek-theke.webp" alt="Vinothek mit Eichenbalken, weißer Theke und Weinregalen"></figure>
-      <div class="chips">
-        <div class="chip" style="background:#F4EFE7;outline:1px solid #2A1D1522"><b>Kalk</b>#F4EFE7</div>
-        <div class="chip" style="background:#A9784F;color:#F4EFE7"><b>Eiche</b>#A9784F</div>
-        <div class="chip" style="background:#2A1D15;color:#F4EFE7"><b>Mokka</b>#2A1D15</div>
+    <figure><img src="../bilder/wasem-vinothek-theke.webp" alt="Vinothek mit Eichenbalken, heller Theke und Weinregalen"></figure>
+    <div>
+      <div class="chips" role="list">
+        <div class="chip" role="listitem" style="background:#EEE7DD;outline:1px solid #2B201A22"><b>Leinen</b>#EEE7DD</div>
+        <div class="chip" role="listitem" style="background:#D9CBB8"><b>Sand</b>#D9CBB8</div>
+        <div class="chip" role="listitem" style="background:#9C8B7C;color:#2B201A"><b>Stein</b>#9C8B7C</div>
+        <div class="chip" role="listitem" style="background:#94623E;color:#EEE7DD"><b>Cognac</b>#94623E</div>
+        <div class="chip" role="listitem" style="background:#2B201A;color:#EEE7DD"><b>Espresso</b>#2B201A</div>
+        <div class="chip" role="listitem" style="background:#2B201A;color:#C9A866;box-shadow:inset 0 2px 0 #C9A866"><b>Gold</b>Linie</div>
       </div>
-      <p class="quelle">Aus der Vinothek: gekalkte Wände, Eichenbalken und Theke, dunkle Fliesen und Vorhänge der Zimmer. Grund der Seite, Text, Holz als zweiter Ton. Foto: doppelstueck.com.</p>
-    </div>
-    <div class="seite seite--nacht">
-      <figure><img src="bestand/wasem-stammhaus-nacht-fassade.webp" alt="Das Stammhaus in der Stiegelgasse zur blauen Stunde mit beleuchteter Fassade"></figure>
-      <div class="chips">
-        <div class="chip" style="background:#1F2552;outline:1px solid #C9A86655;color:#F4EFE7"><b>Nacht</b>#1F2552</div>
-        <div class="chip" style="background:#3A468E;color:#F4EFE7"><b>Dämmerung</b>#3A468E</div>
-        <div class="chip" style="background:#C9A866;color:#1F2552"><b>Gold</b>#C9A866</div>
-      </div>
-      <p class="quelle">Vom Stammhaus zur blauen Stunde: Himmel gemessen (#3A468E), daraus die Nachtfläche; Gold aus der Folie der Wortmarke gemessen (#C9A866). Einzige Farbfläche der Seite, nur fürs Hotel und den Abend. Foto: doppelstueck.com.</p>
+      <ul class="anteile">
+        <li><b>Leinen</b>Grund jeder Seite. Text steht auf Leinen, nie auf einem Foto.</li>
+        <li><b>Sand</b>Zweite Fläche für Fußzeile, Formulare, ruhige Bänder.</li>
+        <li><b>Stein</b>Linien und Bildunterschriften, nie für Fließtext.</li>
+        <li><b>Cognac</b>Akzent für große Schrift und Links, unter 24&nbsp;px nur unterstrichen.</li>
+        <li><b>Espresso</b>Text und genau eine dunkle Fläche pro Seite: das Namenskapitel.</li>
+        <li><b>Gold</b>Nur als Linie, Wortmarke und Zeichen auf Espresso.</li>
+      </ul>
+      <div class="kontrast" id="kontrast" aria-live="polite"></div>
+      <p class="quelle">Abgeleitet aus Einrichtung und Flaschen: gekalkte Wände, Eichenbalken, dunkle Glasflaschen, Goldfolie der Wortmarke. Foto: doppelstueck.com.</p>
     </div>
   </div>
-  <div class="kontrast" id="kontrast" aria-live="polite"></div>
 </section>
 
 <section class="schrift" aria-labelledby="h-schrift">
-  <p class="label">Schrift zur Wortmarke</p>
-  <h2 id="h-schrift">Garamond spricht, die Grotesk erklärt.</h2>
+  <p class="label">Schrift zur Wortmarke · gewählt am 30.10.</p>
+  <h2 id="h-schrift">Bona Nova spricht, Albert Sans erklärt.</h2>
   <div class="schrift__muster">
     <div>
-      <p class="muster-serif">Probieren <em>&amp; bleiben</em></p>
-      <p class="versal muster-versal">Weingut · Weinhotel · Stiegelgasse</p>
-      <p class="quelle">EB Garamond: dieselbe Garamond-Familie wie die Wortmarke. Versal, weit gesperrt für Orte und Häuser (wie das Logo), kursiv für die zweite Hälfte jedes Paars. Regular, nie fett.</p>
+      <p class="muster-gross">Was habt ihr vor?</p>
+      <p class="muster-h2">Ein Doppelstück lässt dem Wein Zeit.</p>
+      <p class="muster-alphabet">Aa Gg Ww Qq &amp; 2.400 · „Ingelheim“ · <i>Spätburgunder</i></p>
+      <p class="quelle">Bona Nova: Buchschrift wie die Garamond der Wortmarke, aber mit spitzen Serifen und einem eigenwilligen g. Regular für alles Große, Kursiv nur für Weinnamen, Bold nie.</p>
     </div>
     <div class="muster-sans">
-      <span class="label">Instrument Sans · UI und Fließtext</span>
-      Nach der Weinprobe geht ihr nicht zum Auto, sondern durch dieselbe Gasse ins Bett. Die Flaschen vom Abend gibt es morgen im Shop.
-      <p class="quelle">Schmal, warm, gesprochen wie die TikTok-Captions der beiden. Knöpfe, Preise, Navigation. Text oben ist Platzhalter.</p>
+      <p class="lead">Erzählt uns euren Anlass, wir planen ihn mit euch, bis nichts mehr offen ist.</p>
+      <p>Albert Sans trägt Fließtext, Knöpfe, Preise und Navigation. Offen, freundlich und gut lesbar auf dem Handy; das Du und die kurzen Sätze halten den Ton locker wie auf Instagram.</p>
+      <ul class="skala">
+        <li><span>Display (nur Hero)</span><span>Bona Nova 64–160&nbsp;px</span></li>
+        <li><span>H2</span><span>Bona Nova 32–58&nbsp;px</span></li>
+        <li><span>Lead</span><span>Albert Sans 20&nbsp;px</span></li>
+        <li><span>Text</span><span>Albert Sans 17&nbsp;px, Zeilenhöhe 1,6</span></li>
+        <li><span>Label</span><span>Albert Sans 12&nbsp;px Versal, gesperrt</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="spiel" aria-labelledby="h-spiel">
-  <p class="label">Wechselspiel</p>
-  <h2 id="h-spiel">Die Seite wird beim Scrollen vom Tag zur Nacht.</h2>
-  <div class="storyboard">
-    <figure>
-      <svg viewBox="0 0 320 200" role="img" aria-label="Bild 1: heller Hero"><rect width="320" height="200" fill="#F4EFE7"/><rect x="0" y="0" width="320" height="140" fill="#A9784F" opacity=".55"/><text x="16" y="168" font-family="EB Garamond" font-size="26" fill="#2A1D15">Probieren</text><text x="16" y="188" font-family="Instrument Sans" font-size="9" fill="#2A1D15" letter-spacing="2">WEINGUT · INGELHEIM</text><g transform="translate(232 152) scale(.06)"><g clip-path="url(#links)"><use href="#w-pfad" fill="#A9784F" transform="translate(-60 0)"/></g><g clip-path="url(#rechts)"><use href="#w-pfad" fill="#1F2552" transform="translate(60 0)"/></g></g></svg>
-      <figcaption>1 · Tag. Randloser Hero aus Vinothek oder Weingarten, Kalkgrund, das W steht offen.</figcaption>
-    </figure>
-    <figure>
-      <svg viewBox="0 0 320 200" role="img" aria-label="Bild 2: Dämmerung"><defs><linearGradient id="dg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4EFE7"/><stop offset="1" stop-color="#3A468E"/></linearGradient></defs><rect width="320" height="200" fill="url(#dg)"/><text x="16" y="110" font-family="EB Garamond" font-size="26" fill="#2A1D15">Probieren</text><text x="140" y="140" font-family="EB Garamond" font-style="italic" font-size="26" fill="#F4EFE7">&amp; bleiben</text><g transform="translate(232 150) scale(.06)"><g clip-path="url(#links)"><use href="#w-pfad" fill="#C9A866" transform="translate(-25 0)"/></g><g clip-path="url(#rechts)"><use href="#w-pfad" fill="#F4EFE7" transform="translate(25 0)"/></g></g></svg>
-      <figcaption>2 · Dämmerung. Ein Kapitel lang dunkelt der Grund ab, die zweite Hälfte des Paars kommt dazu, das W schließt sich.</figcaption>
-    </figure>
-    <figure>
-      <svg viewBox="0 0 320 200" role="img" aria-label="Bild 3: Nacht"><rect width="320" height="200" fill="#1F2552"/><rect x="170" y="20" width="134" height="110" fill="#C9A866" opacity=".35"/><text x="16" y="60" font-family="EB Garamond" font-style="italic" font-size="26" fill="#F4EFE7">bleiben</text><text x="16" y="80" font-family="Instrument Sans" font-size="9" fill="#C9A866" letter-spacing="2">WEINHOTEL · STIEGELGASSE 70</text><rect x="16" y="150" width="100" height="28" fill="none" stroke="#C9A866"/><text x="28" y="168" font-family="Instrument Sans" font-size="9" fill="#C9A866" letter-spacing="1.5">ZIMMER ANSEHEN</text><g transform="translate(232 150) scale(.06)"><use href="#w-pfad" fill="#C9A866"/></g></svg>
-      <figcaption>3 · Nacht. Hotelkapitel auf Nachtblau mit Gold, Zimmer im warmen Licht. Danach wird es wieder Tag (Shop, Familie).</figcaption>
-    </figure>
-  </div>
+<section class="regeln-abschnitt" aria-labelledby="h-regeln">
+  <p class="label">So bleibt es Wasem</p>
+  <h2 id="h-regeln">Vier Regeln für jede Seite.</h2>
   <div class="regeln">
-    <p><b>Eine Signatur.</b> Der Übergang Tag zu Nacht ist die einzige große Bewegung, und er hat einen Grund: Er zeigt, dass nach dem Weingut noch ein zweites Haus kommt. Alles andere bleibt ruhig.</p>
-    <p><b>Text nie auf Fotos.</b> Schrift steht auf Kalk oder Nachtblau, nie im Bild (Ilonas Lesbarkeit). Fotos bleiben randlos und warm.</p>
-    <p><b>Paare statt Listen.</b> Überschriften, Angebote und Knöpfe kommen paarweise: Garamond aufrecht für den Tag, kursiv für die Nacht.</p>
-    <p><b>Hochwertig, aber nah.</b> Gold nur als Linie, Schrift und Zeichen, nie als Fläche. Die Grotesk und das Du halten den Ton locker wie auf TikTok.</p>
+    <p><b>Text nie auf Fotos.</b>Schrift steht auf Leinen oder Espresso. Fotos laufen randlos und warm, die Navigation darf über dem Hero liegen (Ilonas Lesbarkeit).</p>
+    <p><b>Eine dunkle Fläche.</b>Espresso trägt pro Seite genau ein Kapitel. Auf der Startseite ist es das Namenskapitel, mit einer Goldlinie als einzigem Schmuck.</p>
+    <p><b>Bewegung mit Zeit.</b>Die eine Signatur der Seite ist ruhig: Der zweite Satz des Namenskapitels kommt nach einer Pause. Sonst nur Reaktion auf Klicks.</p>
+    <p><b>Ein Mensch, keine Maschine.</b>Jede Anfrage endet bei einer Person mit Namen. Knöpfe sagen, was passiert („Anlass erzählen“), nicht „Mehr erfahren“.</p>
   </div>
 </section>
 
 <footer>
-  <span class="versal">Wasem Doppelstück · Stiegelgasse 50 &amp; 70 · Ingelheim</span>
+  <span class="label">Wasem Doppelstück · Stiegelgasse 50 und 70 · Ingelheim</span>
   <span class="label">Entwurf, nicht öffentlich</span>
 </footer>
 
 <script>
-// W-Pfad einmal aus der Markendatei laden und als <path id="w-pfad"> bereitstellen
-fetch('../marke/wasem-w.svg').then(r => r.text()).then(t => {
-  const doc = new DOMParser().parseFromString(t, 'image/svg+xml');
-  const p = doc.querySelector('path');
-  const defs = document.querySelector('defs');
-  const g = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-  g.id = 'w-pfad';
-  g.setAttribute('d', p.getAttribute('d'));
-  g.setAttribute('transform', p.getAttribute('transform'));
-  defs.appendChild(g);
+// Marken-SVGs aus den Originaldateien einsetzen (currentColor)
+const lade = u => fetch(u).then(r => r.text());
+lade('../marke/wasem-wortmarke.svg').then(t => {
+  document.getElementById('wortmarke-gross').innerHTML = t.replace('role="img"', 'aria-hidden="true"');
 });
-
-const knopf = document.getElementById('w-knopf');
-const zeichen = document.querySelector('.zeichen');
-knopf.addEventListener('click', () => {
-  const offen = zeichen.classList.toggle('offen');
-  knopf.setAttribute('aria-pressed', offen);
-  knopf.textContent = offen ? 'Hälften schließen' : 'Hälften lösen';
+lade('../marke/wasem-w.svg').then(t => {
+  document.querySelectorAll('[data-w]').forEach(box => {
+    box.innerHTML = box.dataset.w.split(' ').map(w => t.replace('<svg ', `<svg width="${w}" aria-hidden="true" `).replace('role="img"', '')).join('');
+  });
 });
 
 // Kontraste rechnen (WCAG)
 const lum = h => { const c = h.match(/\w\w/g).map(x => { x = parseInt(x, 16) / 255; return x <= .03928 ? x / 12.92 : ((x + .055) / 1.055) ** 2.4; }); return .2126 * c[0] + .7152 * c[1] + .0722 * c[2]; };
 const kr = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((m, n) => n - m); return (x + .05) / (y + .05); };
-const paare = [['Mokka auf Kalk', '#2A1D15', '#F4EFE7'], ['Eiche auf Kalk', '#A9784F', '#F4EFE7'], ['Kalk auf Nacht', '#F4EFE7', '#1F2552'], ['Gold auf Nacht', '#C9A866', '#1F2552'], ['Kalk auf Dämmerung', '#F4EFE7', '#3A468E'], ['Nacht auf Gold', '#1F2552', '#C9A866']];
-document.getElementById('kontrast').innerHTML = paare.map(([n, a, b]) => { const k = kr(a, b); return `<div>${n}: <b>${k.toFixed(1)} : 1</b> ${k >= 4.5 ? 'Fließtext' : k >= 3 ? 'nur groß (ab 24 px)' : 'nur Deko'}</div>`; }).join('');
+const paare = [['Espresso auf Leinen', '#2B201A', '#EEE7DD'], ['Espresso auf Sand', '#2B201A', '#D9CBB8'], ['Cognac auf Leinen', '#94623E', '#EEE7DD'], ['Stein auf Leinen', '#9C8B7C', '#EEE7DD'], ['Leinen auf Espresso', '#EEE7DD', '#2B201A'], ['Gold auf Espresso', '#C9A866', '#2B201A']];
+document.getElementById('kontrast').innerHTML = paare.map(([n, a, b]) => { const k = kr(a, b); return `<div>${n}: <b>${k.toFixed(1)} : 1</b> ${k >= 4.5 ? 'Fließtext' : k >= 3 ? 'nur groß (ab 24 px)' : 'nur Linie und Deko'}</div>`; }).join('');
 </script>
 </body>
 </html>

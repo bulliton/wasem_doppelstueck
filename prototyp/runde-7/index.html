@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Wasem Doppelstück · Weingut und Weinhotel in Ingelheim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;1,400&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="../bilder/wasem-weinberg-abendlicht-glaeser.webp">
+<style>
+:root {
+  --leinen: #EEE7DD;
+  --sand: #D9CBB8;
+  --stein: #9C8B7C;
+  --cognac: #94623E;
+  --espresso: #2B201A;
+  --gold: #C9A866;
+  --serif: "Bona Nova", Georgia, serif;
+  --sans: "Albert Sans", system-ui, sans-serif;
+  --rand: clamp(1rem, 4vw, 4rem);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --linie: color-mix(in srgb, var(--espresso) 14%, transparent);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--leinen); color: var(--espresso); font: 400 1.0625rem/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--cognac); outline-offset: 3px; }
+.label { font: 500 .75rem/1.2 var(--sans); letter-spacing: .18em; text-transform: uppercase; }
+.zeile { display: block; overflow: hidden; padding-bottom: .08em; }
+.zeile > span { display: block; }
+
+/* Navigation: liegt auf dem Hero, verschwindet beim Runterscrollen, kommt beim Hochscrollen auf Leinen zurück */
+.nav { position: fixed; inset: 0 0 auto; z-index: 20; height: 80px; padding: 0 var(--rand); display: flex; align-items: center; justify-content: space-between; gap: 2rem; color: var(--espresso); transition: transform .3s cubic-bezier(.23, 1, .32, 1), background-color .4s; }
+.nav.weg { transform: translateY(-100%); }
+.nav.grund { background: var(--leinen); box-shadow: 0 1px 0 var(--linie); }
+.nav__marke { display: flex; align-items: center; height: 44px; text-decoration: none; }
+.nav__marke .wm { width: 230px; }
+.nav__marke .w { width: 38px; display: none; }
+.nav.grund .nav__marke .wm { display: none; }
+.nav.grund .nav__marke .w { display: block; }
+.nav__marke svg { width: 100%; height: auto; display: block; }
+.nav ul { list-style: none; display: flex; gap: 2rem; margin: 0 auto 0 0; padding: 0 0 0 3rem; }
+.nav ul a { display: inline-flex; align-items: center; min-height: 44px; font: 500 .95rem/1 var(--sans); text-decoration: none; }
+.nav ul a:hover { text-decoration: underline; text-underline-offset: .35em; }
+.nav__rechts { display: flex; align-items: center; gap: 1.5rem; }
+.nav__rechts a { font: 500 .95rem/1 var(--sans); text-decoration: underline; text-underline-offset: .35em; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); display: inline-flex; align-items: center; min-height: 44px; }
+.menue-knopf { display: none; min-height: 44px; padding: 0 .25rem; border: 0; background: none; color: inherit; font: 500 .95rem var(--sans); cursor: pointer; }
+
+/* Hero */
+.hero { min-height: 100svh; display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+.hero__bild { position: relative; overflow: hidden; min-height: 52svh; }
+.hero__bild img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transform: scale(1.08); transition: transform 2.2s var(--ease); }
+.geladen .hero__bild img { transform: scale(1); }
+.hero__band { padding: clamp(1.25rem, 2.6vw, 2.25rem) var(--rand) clamp(1.5rem, 3vw, 2.75rem); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.8vw, 2.5rem); align-items: end; }
+.hero__kat { grid-column: 1 / -1; margin: 0 0 .5rem; color: color-mix(in srgb, var(--espresso) 78%, transparent); }
+.hero h1 { grid-column: 1 / -1; margin: 0; font: 400 clamp(4rem, 11.2vw, 11rem)/.92 var(--serif); letter-spacing: -.035em; }
+.hero h1 .zeile { display: inline-block; vertical-align: top; }
+.hero__unter { grid-column: 6 / span 5; margin: 1.25rem 0 0; font-size: 1.25rem; line-height: 1.45; max-width: 30ch; }
+.hero__aktion { grid-column: 11 / span 2; justify-self: end; margin-top: 1.25rem; }
+.knopf { display: inline-flex; align-items: center; min-height: 52px; padding: 0 1.5rem; background: var(--espresso); color: var(--leinen); font: 500 1rem/1 var(--sans); text-decoration: none; border: 0; cursor: pointer; transition: background-color .2s var(--ease); white-space: nowrap; }
+.knopf:hover { background: var(--cognac); }
+.hero h1 .zeile > span, .hero__kat, .hero__unter, .hero__aktion { transform: translateY(101%); opacity: 0; transition: transform .9s var(--ease), opacity .6s var(--ease); }
+.hero__kat, .hero__unter, .hero__aktion { transform: translateY(12px); }
+.geladen .hero h1 .zeile > span, .geladen .hero__kat, .geladen .hero__unter, .geladen .hero__aktion { transform: none; opacity: 1; }
+.geladen .hero h1 .zeile:nth-child(2) > span { transition-delay: .08s; }
+.geladen .hero__unter { transition-delay: .35s; }
+.geladen .hero__aktion { transition-delay: .45s; }
+
+/* Namenskapitel: die eine dunkle Fläche, die eine Signatur (der zweite Satz lässt sich Zeit) */
+.fass { background: var(--espresso); color: var(--leinen); padding: clamp(5rem, 11vw, 10rem) var(--rand) clamp(5rem, 10vw, 9rem); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.8vw, 2.5rem); }
+.fass__linie { grid-column: 1 / -1; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 2.4s var(--ease); }
+.fass__label { grid-column: 1 / -1; margin: 1.5rem 0 0; color: var(--gold); }
+.fass h2 { grid-column: 1 / span 11; margin: clamp(2.5rem, 5vw, 4.5rem) 0 0; font: 400 clamp(2.4rem, 5.6vw, 5.4rem)/1.04 var(--serif); letter-spacing: -.02em; }
+.fass h2 .zeile > span { text-wrap: balance; }
+.fass h2 .zeile + .zeile { padding-left: clamp(0rem, 16.6%, 14rem); color: var(--sand); }
+.fass__text { grid-column: 1 / span 5; margin-top: clamp(3rem, 6vw, 5.5rem); }
+.fass__text p { margin: 0 0 1rem; max-width: 42ch; color: color-mix(in srgb, var(--leinen) 88%, transparent); }
+.fass__text .lead { font-size: 1.25rem; line-height: 1.5; color: var(--leinen); }
+.fass__text a { display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: .3em; text-decoration-color: var(--gold); }
+.fass figure { grid-column: 7 / -1; margin: clamp(3rem, 6vw, 5.5rem) calc(var(--rand) * -1) 0 0; }
+.fass figure div { aspect-ratio: 3 / 2; overflow: hidden; }
+.fass figure img { width: 100%; height: 100%; object-fit: cover; }
+.fass figcaption { margin-top: .75rem; padding-right: var(--rand); font-size: .85rem; color: var(--stein); }
+.fass h2 .zeile > span { transform: translateY(101%); transition: transform 1.1s var(--ease); }
+.fass.sichtbar .fass__linie { transform: scaleX(1); }
+.fass.sichtbar h2 .zeile:first-child > span { transform: none; transition-delay: .2s; }
+.fass.sichtbar h2 .zeile + .zeile > span { transform: none; transition-delay: 1.9s; transition-duration: 1.4s; }
+
+/* Anlass als Satz */
+.anlass { padding: clamp(5rem, 10vw, 9rem) var(--rand); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.8vw, 2.5rem); }
+.anlass__kopf { grid-column: 1 / span 4; }
+.anlass__kopf h2 { margin: 0; font: 400 clamp(2rem, 3.6vw, 3.2rem)/1.08 var(--serif); letter-spacing: -.015em; }
+.anlass__kopf p { margin: 1rem 0 0; max-width: 32ch; }
+.anlass form { grid-column: 6 / -1; }
+.anlass fieldset { border: 0; margin: 0; padding: 0; font: 400 clamp(1.6rem, 3vw, 2.6rem)/1.6 var(--serif); }
+.anlass legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.feld { font: inherit; color: var(--cognac); background: none; border: 0; border-bottom: 1px solid var(--espresso); padding: 0 .1em; margin: 0 .1em; border-radius: 0; min-height: 44px; }
+.feld:focus { outline: none; border-bottom: 2px solid var(--cognac); }
+.feld--zahl { width: 2.6ch; text-align: center; }
+select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
+.feld--datum { font-size: .7em; vertical-align: .15em; }
+.kontakt { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.5rem; align-items: end; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--linie); }
+.kontakt label { display: block; font-size: .9rem; margin-bottom: .35rem; }
+.kontakt input { width: 100%; font: 400 1.125rem var(--sans); color: var(--espresso); background: none; border: 0; border-bottom: 1px solid var(--espresso); padding: .5rem 0; min-height: 44px; border-radius: 0; }
+.kontakt input:focus { outline: none; border-bottom: 2px solid var(--cognac); }
+.anlass__danach { margin: 1.25rem 0 0; font-size: .95rem; color: color-mix(in srgb, var(--espresso) 78%, transparent); max-width: 52ch; }
+.danke { display: none; font: 400 clamp(1.6rem, 3vw, 2.6rem)/1.3 var(--serif); margin: 0; }
+.gesendet fieldset, .gesendet .kontakt, .gesendet .anlass__danach { display: none; }
+.gesendet .danke { display: block; }
+
+/* Fuß */
+.fuss { background: var(--sand); padding: clamp(3rem, 6vw, 5rem) var(--rand) 2rem; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.8vw, 2.5rem); row-gap: 2rem; font-size: .95rem; }
+.fuss__marke { grid-column: 1 / span 5; }
+.fuss__marke svg { width: 100%; max-width: 420px; height: auto; display: block; }
+.fuss address { grid-column: 7 / span 3; font-style: normal; }
+.fuss ul { grid-column: 10 / span 3; list-style: none; margin: 0; padding: 0; }
+.fuss li a { display: inline-flex; align-items: center; min-height: 44px; }
+.fuss__klein { grid-column: 1 / -1; padding-top: 1.5rem; border-top: 1px solid var(--linie); font-size: .8rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+/* Menü (mobil) */
+.menue { position: fixed; inset: 0; z-index: 30; background: var(--leinen); padding: 6rem var(--rand) 2rem; display: none; flex-direction: column; justify-content: space-between; }
+.menue.offen { display: flex; }
+.menue ul { list-style: none; margin: 0; padding: 0; }
+.menue li a { display: block; padding: .4rem 0; font: 400 2.6rem/1.15 var(--serif); text-decoration: none; }
+.menue__zu { position: absolute; top: 18px; right: var(--rand); min-height: 44px; min-width: 44px; border: 0; background: none; font: 500 .95rem var(--sans); color: var(--espresso); cursor: pointer; }
+
+@media (max-width: 960px) {
+  .nav ul, .nav__rechts a { display: none; }
+  .menue-knopf { display: block; }
+  .hero__unter { grid-column: 1 / span 8; }
+  .hero__aktion { grid-column: 1 / -1; justify-self: start; }
+  .fass__text, .fass figure { grid-column: 1 / -1; }
+  .fass figure { margin-right: calc(var(--rand) * -1); margin-left: calc(var(--rand) * -1); }
+  .fass figcaption { padding: 0 var(--rand); }
+  .anlass__kopf, .anlass form { grid-column: 1 / -1; }
+  .anlass form { margin-top: 2.5rem; }
+}
+@media (max-width: 640px) {
+  .nav { height: 64px; }
+  .nav__marke .wm { display: none; }
+  .nav__marke .w { display: block; width: 34px; }
+  .hero h1 { font-size: clamp(3.4rem, 18.5vw, 6rem); line-height: .9; }
+  .hero h1 .zeile { display: block; }
+  .hero h1 .zeile + .zeile { padding-left: 14vw; }
+  .hero__unter { grid-column: 1 / -1; font-size: 1.125rem; }
+  .knopf { width: 100%; justify-content: center; }
+  .hero__aktion { justify-self: stretch; }
+  .fass h2 { grid-column: 1 / -1; }
+  .fass h2 .zeile + .zeile { padding-left: 0; }
+  .kontakt { grid-template-columns: 1fr; }
+  .fuss__marke, .fuss address, .fuss ul { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+  .hero__bild img, .hero h1 .zeile > span, .hero__kat, .hero__unter, .hero__aktion, .fass h2 .zeile > span, .fass__linie { transform: none !important; opacity: 1 !important; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="Hauptnavigation">
+  <a class="nav__marke" href="#oben" aria-label="Wasem Doppelstück, zur Startseite">
+    <span class="wm" data-svg="../marke/wasem-wortmarke.svg"></span>
+    <span class="w" data-svg="../marke/wasem-w.svg"></span>
+  </a>
+  <ul>
+    <li><a href="#">Weingut</a></li>
+    <li><a href="#">Weinhotel</a></li>
+    <li><a href="#">Feste und Tagungen</a></li>
+    <li><a href="#">Shop</a></li>
+  </ul>
+  <div class="nav__rechts">
+    <a href="#">Zimmer buchen</a>
+    <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="menue">Menü</button>
+  </div>
+</nav>
+
+<div class="menue" id="menue" role="dialog" aria-modal="true" aria-label="Menü">
+  <button class="menue__zu" type="button">Schließen</button>
+  <ul>
+    <li><a href="#">Weingut</a></li>
+    <li><a href="#">Weinhotel</a></li>
+    <li><a href="#">Feste und Tagungen</a></li>
+    <li><a href="#">Shop</a></li>
+    <li><a href="#">Zimmer buchen</a></li>
+  </ul>
+  <p class="label">Stiegelgasse 50 und 70 · Ingelheim</p>
+</div>
+
+<main id="oben">
+  <header class="hero">
+    <div class="hero__bild">
+      <img src="../bilder/wasem-weinberg-abendlicht-glaeser.webp" alt="Zwei Frauen stoßen im Weinberg über Ingelheim im Abendlicht mit Weißwein an" fetchpriority="high">
+    </div>
+    <div class="hero__band">
+      <p class="hero__kat label">Weingut · Weinhotel · Ingelheim</p>
+      <h1><span class="zeile"><span>Was habt</span></span> <span class="zeile"><span>ihr vor?</span></span></h1>
+      <p class="hero__unter">Erzählt uns euren Anlass, wir planen ihn mit euch, bis nichts mehr offen ist.</p>
+      <div class="hero__aktion"><a class="knopf" href="#anlass">Anlass erzählen</a></div>
+    </div>
+  </header>
+
+  <section class="fass" id="fass" aria-labelledby="h-fass">
+    <div class="fass__linie" aria-hidden="true"></div>
+    <p class="fass__label label">Warum wir Doppelstück heißen</p>
+    <h2 id="h-fass"><span class="zeile"><span>Ein Doppelstück lässt dem Wein Zeit.</span></span><span class="zeile"><span>So planen wir auch mit euch.</span></span></h2>
+    <div class="fass__text">
+      <p class="lead">Doppelstück heißt das große Eichenfass mit 2.400&nbsp;Litern, mit dem wir im Keller gern arbeiten. Darin hat ein Wein Platz und Zeit, bis er nach seinen Trauben schmeckt.</p>
+      <p>Der Name steht bei uns auch für zwei Schwestern, zwei Generationen, Weingut und Hotel in einer Gasse. Für euch heißt das: Ihr müsst noch nicht wissen, wie euer Tag aussehen soll. Erzählt uns den Anlass, wir nehmen uns die Zeit, fragen nach und planen Wein, Raum und Zimmer mit euch, bis er nach euch aussieht.</p>
+      <p><a href="#anlass">Anlass erzählen</a></p>
+    </div>
+    <figure>
+      <div><img src="../bilder/wasem-steinwand-tafel-holzdecke.webp" alt="Gedeckte Tafel in einem Raum mit Bruchsteinwand und alten Holzbalken" loading="lazy"></div>
+      <figcaption>Platzhalter aus doppelstueck.com. Hier gehört ein Foto vom Doppelstück im Keller hin (Shoot).</figcaption>
+    </figure>
+  </section>
+
+  <section class="anlass" id="anlass" aria-labelledby="h-anlass">
+    <div class="anlass__kopf">
+      <h2 id="h-anlass">Erzählt uns euren Anlass.</h2>
+      <p>Drei Angaben reichen für den Anfang. Den Rest klären wir im Gespräch.</p>
+    </div>
+    <form id="anfrage" novalidate>
+      <fieldset>
+        <legend>Euer Anlass in einem Satz</legend>
+        Wir sind <input class="feld feld--zahl" type="number" inputmode="numeric" min="1" max="200" value="12" aria-label="Personen"> Leute, wir planen
+        <select class="feld" aria-label="Anlass">
+          <option>einen Junggesellinnenabschied</option>
+          <option>eine Hochzeit</option>
+          <option>einen Geburtstag</option>
+          <option>eine Tagung</option>
+          <option>eine Weinprobe</option>
+          <option>etwas anderes</option>
+        </select>
+        und denken an den <input class="feld feld--datum" type="date" aria-label="Wunschdatum">.
+      </fieldset>
+      <div class="kontakt">
+        <div>
+          <label for="kontakt">Wie erreichen wir euch? E-Mail oder Telefon</label>
+          <input id="kontakt" name="kontakt" type="text" autocomplete="email">
+        </div>
+        <button class="knopf" type="submit">Anlass schicken</button>
+      </div>
+      <p class="anlass__danach">Darauf antwortet euch ein Mensch aus unserem Team, mit Namen und Telefonnummer.</p>
+      <p class="danke" role="status">Danke. Wir melden uns bei euch und fragen nach, was ihr euch vorstellt.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div class="fuss__marke" data-svg="../marke/wasem-wortmarke.svg"></div>
+  <address>Weingut · Stiegelgasse 50<br>Weinhotel · Stiegelgasse 70<br>55218 Ingelheim</address>
+  <ul>
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">Impressum</a></li>
+    <li><a href="#">Datenschutz</a></li>
+  </ul>
+  <p class="fuss__klein"><span>Entwurf Runde 7, nicht öffentlich</span><span>Fotos: doppelstueck.com</span></p>
+</footer>
+
+<script>
+// Marken-SVGs aus den Originaldateien einsetzen (currentColor)
+document.querySelectorAll('[data-svg]').forEach(el => {
+  fetch(el.dataset.svg).then(r => r.text()).then(t => { el.innerHTML = t.replace('role="img"', 'aria-hidden="true" focusable="false"'); });
+});
+
+// Hero-Einstieg nach dem Laden der Schrift
+const zeigen = () => document.body.classList.add('geladen');
+document.fonts.ready.then(() => setTimeout(zeigen, 60));
+setTimeout(zeigen, 1200);
+
+// Navigation: weg beim Runterscrollen, zurück auf Leinen beim Hochscrollen
+const nav = document.getElementById('nav');
+const heroHoehe = () => document.querySelector('.hero__bild').offsetHeight - 80;
+let zuletzt = 0;
+addEventListener('scroll', () => {
+  const y = scrollY;
+  nav.classList.toggle('weg', y > zuletzt && y > 120);
+  nav.classList.toggle('grund', y > 40 && y <= zuletzt || y > heroHoehe() && y <= zuletzt);
+  if (y < 40) nav.classList.remove('grund');
+  zuletzt = y;
+}, { passive: true });
+
+// Namenskapitel: einmalig, sobald es ins Bild kommt
+new IntersectionObserver((eintraege, beob) => {
+  eintraege.forEach(e => { if (e.isIntersecting) { e.target.classList.add('sichtbar'); beob.unobserve(e.target); } });
+}, { rootMargin: '0px 0px -25% 0px' }).observe(document.getElementById('fass'));
+
+// Menü
+const menue = document.getElementById('menue');
+const knopf = document.querySelector('.menue-knopf');
+const zu = () => { menue.classList.remove('offen'); knopf.setAttribute('aria-expanded', 'false'); knopf.focus(); };
+knopf.addEventListener('click', () => { menue.classList.add('offen'); knopf.setAttribute('aria-expanded', 'true'); menue.querySelector('.menue__zu').focus(); });
+menue.querySelector('.menue__zu').addEventListener('click', zu);
+menue.querySelectorAll('a').forEach(a => a.addEventListener('click', zu));
+addEventListener('keydown', e => { if (e.key === 'Escape' && menue.classList.contains('offen')) zu(); });
+
+// Anfrage (Prototyp: nichts wird gesendet)
+document.getElementById('anfrage').addEventListener('submit', e => { e.preventDefault(); e.target.classList.add('gesendet'); });
+</script>
+</body>
+</html>
