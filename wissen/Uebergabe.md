@@ -1,35 +1,29 @@
 # Übergabe
 
-Stand: 2026-10-30 (spät) · **A-004 Runde 9: Benjamin hat A „Etikett“ gewählt. Ganze Startseite mit neuem Hero + Nav steht in `prototyp/runde-9/index.html` (aus runde-8 abgeleitet). Geprüft 1440/375: kein Querscroll, Tippflächen ≥ 44 px, keine Konsolenfehler, Nav-Logik ok. Nächster Schritt: Kapitel darunter mit den Persona-Kriterien kürzen (Offen 2), dann `pruefer`.**
+Stand: 2026-10-30 (Nacht) · **A-004: Runde 9 ist für Benjamin „okay, aber nicht special, sieht AI aus“. Vier Referenzen auf Detailebene seziert (`docs/sektion/`). Nächster Schritt: Pilot-Umbau Hero + Namenskapitel nach `docs/sektion/README.md`. Wartet auf Wochenlimit-Reset (Fr 21:59).**
 
 ## Benjamins Entscheidungen
-- 30.10. (spät): Runde 9 **A Etikett** (Weinberg-Abendfoto randlos, Angebote auf Leinen-Etikett mit W, Nav über dem Bild). B Abendfolge und C Name nicht gewählt; C (Wortmarke randlos) als möglicher Footer-Schluss vorgemerkt.
-## Runde 9 (Stand)
-- A Etikett: Weinberg-Abendfoto randlos, Angebote auf Leinen-Etikett mit W unten links (12 % der Fläche), Doppel-Rolle bei Hover. B Abendfolge: vier Momente im Wechsel über einem Leinen-Band (Band 23 %, wirkt wie Karussell). C Name: Weingarten-Tafel, Wortmarke randlos darunter (stärkste Marke, aber ohne Menschen, Bild dunkel).
-- Gemeinsame Nav (`basis.css`, `nav.js`): Menü links als Wort, Wortmarke Mitte, Anfragen + Zimmer buchen (1 px Rahmen) rechts; durchsichtig über dem Bild, nach dem Hero auf Leinen mit W, runter weg, hoch zurück. Menü als Vollbild-Raum mit Kapitelbild beim Hover, Esc, Fokusfalle. Mobil: Leiste Zimmer buchen | Anfragen.
-- Nächster Schritt nach Benjamins Wahl: gewählte Richtung in `prototyp/runde-8/index.html` (bzw. Kopie runde-9/index.html) als Hero + Nav einsetzen, dann Kapitel darunter mit derselben Schleife kürzen (Offen 2).
+- 30.10. (Nacht): Pilot freigegeben: erst Referenzen sezieren (Was, Warum, Markenidee), dann Hero + Namenskapitel auf dieses Niveau, Vergleich neben der Referenz.
+- 30.10. (spät): Runde 9 **A Etikett** gewählt (Weinberg-Abendfoto randlos, Angebote auf Leinen-Etikett mit W). C (Wortmarke randlos) als möglicher Footer-Schluss.
+- 30.10.: Schrift Bona Nova + Albert Sans, Farbwelt fest, Namensgedanke „Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.“ Zielgruppe designverliebte Frauen.
 
-- 30.10. (spät): Hero-Richtung **1 Programm** (`a-programm.html`): vier Angebote als riesige Bona-Nova-Liste, Bildfenster rechts, Signatur „doppelt“ (kursives Gegenstück rollt hoch, Cognac). B Moodboard und C Fasskeller verworfen; Oval nur nach Julias Bestätigung.
-- 30.10.: Hero 7d abgelehnt („oldschool, langweilig“). Zielgruppe designverliebte Frauen; auf einen Blick alle Angebote und dass alles funktioniert.
-- 30.10.: Schrift Bona Nova + Albert Sans. Farbwelt fest. Namensgedanke „Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.“
-
-## Zuletzt erledigt (Startseite)
-- Abschnittsfolge: Hero (unverändert) → Namenskapitel auf Espresso (einzige Farbfläche, Zeilen-Maske) → Wein (Bild links) → Hotel (bricht das Raster: Bild 21:9 volle Breite, Text zweispaltig darunter) → Feste (hoch, links) → Tagungen (hoch, rechts) → Familie (Marie, Julia, Ilona, Burkhard, Magda, versetzte Reihe; Franzi und Elena für Feste/Tagungen) → Anlass als Satz (aus 7d) → Footer ruhig auf Sand mit Wortmarke.
-- Kapitelwörter wiederholen die Doppel-Rolle der Hero-Liste beim Hereinscrollen; sonst keine neue Signatur. Menü mobil als Vollbild (vier Kapitel + „Anfragen“ in Cognac, Esc, Fokusfalle).
-- Geprüft 1440 + 375: kein Querscroll, Tippflächen ≥ 44 px, eine H1, 433 Wörter, KI-Look-Check ohne Treffer (Abschnitte 13 % Abweichung). Texte durch `text-kritik` (Dreier-Kette, „nicht X sondern Y“ entfernt). Pfeile an Knöpfen und Versal-Labels nach Projektregeln entfernt.
+## Zuletzt erledigt
+- `docs/sektion/jagerhof.md`, `lorunser.md`, `closapalta.md`, `maxwell.md`: je 25–30 Details mit Grund und Markenidee, KI-Gegenüberstellung, Übertragung auf Wasem (Commit 7a106b9).
+- `docs/sektion/README.md`: acht gemeinsame Lehren, Diagnose Runde 9, Übertragung (Klären als Bewegung, Zweiteiler gerade/kursiv, Angebote als klickbarer Satz mit Bildtausch, Cognac nur für Anfragen/Buchen) und Fertig-wenn-Liste für den Pilot.
+- Startseite Runde 9 mit Hero A in `prototyp/runde-9/index.html` (geprüft 1440/375).
 
 ## Offen
-1. ~~Runde 9 Hero + Nav~~ gebaut, Benjamins Wahl offen. Alter Ablauf: Ablauf: (a) 3 Personas (JGA-Organisatorin designverliebt, Paar fürs Wochenende, Tagungsplanerin) je: woher kommt sie (Instagram, Google, Empfehlung), was wünscht sie, welches Gefühl sucht sie, was muss sie in 5 s sehen; (b) Markengefühl festhalten (Instagram-Captions lesen, Räume, Doppelstück-Gedanke); (c) daraus 5 Kriterien Wirkung + 3 Kriterien Bedienung; (d) 2–3 Hero/Nav-Varianten bauen, die zuerst Atmosphäre zeigen (großes echtes Bild/Film, wenig Text, Angebote weiter mit einem Blick erreichbar, aber leiser), Faktzeilen aus dem Hero raus; (e) `design-kritik` gegen genau diese Kriterien, Schleife bis A; (f) Benjamin als Storyboard zeigen. Die vier Angebote und Doppel-Rolle dürfen bleiben, aber nicht als Hauptbild.
-2. Danach Kapitel darunter mit derselben Schleife prüfen (Textmenge kürzen).
-3. Merge erst nach Benjamins Freigabe und grünem `pruefer` (Befunde Runde 8 sind behoben, 5be5c5d).
-4. Prüfmarken: Julia (Fass-Bild, Ovalfass, 2.400 l, „in dem wir gern ausbauen“), Marie (Rückruf je Anlass, Plattform, Rollen-Zeilen der Familie), Foto vom Doppelstück im Keller fehlt. Shop/Buchung zeigen vorerst auf doppelstueck.com.
+1. Pilot: Hero + Namenskapitel in `prototyp/runde-9/` (oder Kopie `runde-10/`) nach README umbauen, Vorher/Nachher neben Jägerhof/Lorünser als Storyboard zeigen.
+2. Fehler: Wortmarke in der Nav auf hellem Himmel unsichtbar; Label „Entwurf Runde 8“ unten rechts.
+3. Danach Kapitel darunter mit derselben Methode, dann `pruefer`, Merge erst nach Benjamins Freigabe.
+4. Prüfmarken Julia/Marie (Fass, 2.400 l, Rückruf, Rollen), Foto Doppelstück im Keller fehlt.
+5. Setup-Vorschlag in `wissen/Vorschlaege.md` (Geschmacks-Skill um Detail-Sektion erweitern).
 
 ## Hinweise
 - Branch `claude/warum-doppelstueck` (Worktree `.claude/worktrees/warum-doppelstueck`), nicht gemergt.
-- Browser-Pane friert Übergänge ein: per JS `*{transition:none!important}`, Klasse `geladen` auf html, `sichtbar` auf `.fass,.kapitel,.auf`. Pane-Screenshots hängen einen Schritt nach (vor dem Screenshot `wait` 1 s).
-- Headless-Chrome mit hohem Fenster taugt nicht für Ganzseiten-Shots (Hero hat `100svh`); abschnittsweise im Pane scrollen.
-- Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866 nur als Linie auf Espresso.
-- Deck v15 https://claude.ai/artifact/TSoUh6KXERev1LkYtXpz6E (nur per Artifact `read`).
+- Referenz-Screenshots liegen flüchtig unter `/private/tmp/claude-501/sektion/<name>/`; bei Bedarf neu aufnehmen (Playwright: `NODE_PATH="/Users/benjamin/GitHub Repos/anfragen-maschine/node_modules"`).
+- Browser-Pane friert Übergänge ein: per JS `*{transition:none!important}`, Klasse `geladen` auf html, `sichtbar` auf `.fass,.kapitel,.auf`.
+- Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866.
 
 ## Starter-Prompt (neue Session)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md` und `docs/runde-9-personas-kriterien.md`. Startseite mit Hero A „Etikett“ steht in `prototyp/runde-9/index.html`. Führe „Offen 2“ aus: Kapitel darunter (Namenskapitel, Wein, Hotel, Feste, Tagungen, Familie, Anlass, Footer) gegen die Personas und Kriterien prüfen, Text kürzen (Ziel deutlich unter 424 Wörter), mehr Atmosphäre statt Info, `text-kritik`, `design-kritik` bis A, dann `pruefer`. Benjamin als Storyboard zeigen. Kein Push.
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md` und `docs/sektion/README.md` (bei Bedarf einzelne Sektionen per grep). Baue den Pilot: Hero + Namenskapitel von `prototyp/runde-9/index.html` nach der Übertragung und der Fertig-wenn-Liste im README um (keine Karte, kein Goldstrich, Reveal „Klären“, Angebote als klickbarer Satz mit Bildtausch, Zweiteiler gerade/kursiv, Cognac nur für Anfragen/Buchen; Nav-Wortmarke und Label fixen). Jede Entscheidung mit „weil“-Satz. Vergleich neben Jägerhof/Lorünser im selben Viewport, `design-kritik`, Benjamin als Storyboard zeigen. Kein Push.
