@@ -1,6 +1,10 @@
 # Übergabe
 
-Stand: 2026-10-29 · **A-004 Runde 7c: Namensgedanke „Ein Doppelstück lässt dem Wein Zeit“, vier neue Schriften, Deck v15. Wartet auf Benjamins drei Antworten.**
+Stand: 2026-10-30 · **A-004 Runde 7c: Benjamin findet Deck v15 gut (Namensgedanke und Reihenfolge Hero → Namenskapitel freigegeben). Offen nur die Schriftwahl 1–4, dann Brand-Sheet und Hero.**
+
+## Benjamins Urteil zu Deck v15 (30.10.)
+- „Find ich gut, weiter wie empfohlen“: Namensgedanke „Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.“ trägt; Hero „Was habt ihr vor?“ oben, Namenskapitel direkt darunter.
+- Schrift (Bona Nova, Imbue, Hedvig Letters, Bellefair) noch nicht gewählt: als erste Frage der nächsten Session stellen, bevor gebaut wird.
 
 ## Benjamins Urteil zu Deck v14 (29.10.)
 - Richtung 2 „Was habt ihr vor?“ bleibt.
@@ -15,7 +19,7 @@ Stand: 2026-10-29 · **A-004 Runde 7c: Namensgedanke „Ein Doppelstück lässt 
 - **Deck v15** https://claude.ai/artifact/TSoUh6KXERev1LkYtXpz6E (12 Folien, Artifact-Zähler „Version 16“): `idee`, `paare` raus; `name` neu (Warum Doppelstück), `vorhaben` (Hero), `fass` neu (Namenskapitel), `kritik` neu (verworfen und offen), Schrift a/b mit neuen Specimens, Freigabefragen neu.
 
 ## Offen
-1. Benjamins Antworten im Deck: (1) trägt der Namensgedanke, (2) Schrift 1–4, (3) Hero oben, Namenskapitel darunter.
+1. Schriftwahl 1–4 (Fragen 1 und 3 am 30.10. freigegeben).
 2. Danach: Brand-Sheet `prototyp/runde-7/brand-sheet.html` auf Beige-Tokens und gewählte Schrift (zeigt noch Navy und das W aus zwei V), dann One-Shot-Hero mit Namenskapitel `prototyp/runde-7/index.html`, Desktop und Mobil, `design-kritik`.
 3. Prüfmarken vor dem Kunden-Deck: Julia bestätigt das Fass-Bild; Marie klärt, wer bei welchem Anlass zurückruft (Franzi, Elena Events; Adelin Vertrieb) und wie schnell.
 
@@ -27,4 +31,4 @@ Stand: 2026-10-29 · **A-004 Runde 7c: Namensgedanke „Ein Doppelstück lässt 
 - Branch `claude/warum-doppelstueck` (Worktree `.claude/worktrees/warum-doppelstueck`), nicht gemergt, kein Push. Ältere Runden in der Git-Historie dieser Datei und in `docs/design-ideen-runde-*.md`.
 
 ## Starter-Prompt (neue Session)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md`, `docs/design-ideen-runde-7c.md` und Benjamins Antworten zu den drei Freigabefragen im Deck v15. Dann Brand-Sheet auf Beige und gewählte Schrift umstellen, One-Shot-Hero mit Namenskapitel `prototyp/runde-7/index.html` Desktop und Mobil bauen (`frontend-design`, Moves aus `geschmack`), `design-kritik`. Kein Push.
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md` und `docs/design-ideen-runde-7c.md`. Namensgedanke und Reihenfolge sind freigegeben; falls Benjamin die Schrift (1 Bona Nova, 2 Imbue, 3 Hedvig Letters, 4 Bellefair) noch nicht genannt hat, zuerst danach fragen. Dann Brand-Sheet auf Beige und gewählte Schrift umstellen, One-Shot-Hero mit Namenskapitel `prototyp/runde-7/index.html` Desktop und Mobil bauen (`frontend-design`, Moves aus `geschmack`), `design-kritik`. Kein Push.
