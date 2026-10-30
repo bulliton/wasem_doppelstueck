@@ -1,6 +1,11 @@
 # Übergabe
 
-Stand: 2026-10-30 · **A-004 Runde 8: ganze Startseite in Richtung 1 „Programm“ gebaut (`prototyp/runde-8/index.html`, Commits a22d5bc + 5be5c5d). `pruefer` gelb, alle vier Befunde behoben und nachgemessen; Kurz-Nachprüfung für Grün steht aus, dann Merge. Benjamins Urteil (30.10. spät): zu informativ, zu viel Text, kein Vibe, Nav basic. Nächster Schritt Runde 9: Vibe-Pass für Hero und Nav mit Persona- und Kritik-Schleife.**
+Stand: 2026-10-30 (Abend) · **A-004 Runde 9: drei Hero/Nav-Varianten gebaut (`prototyp/runde-9/`, Commit 64ae0ca), Kritik gegen Personas und Kriterien (`docs/runde-9-personas-kriterien.md`). Empfehlung A „Etikett“ (hält alle 8 Kriterien, KI-Look A). Storyboard `prototyp/runde-9/storyboard-runde-9.jpg` liegt bei Benjamin; sein Urteil ist offen.**
+
+## Runde 9 (Stand)
+- A Etikett: Weinberg-Abendfoto randlos, Angebote auf Leinen-Etikett mit W unten links (12 % der Fläche), Doppel-Rolle bei Hover. B Abendfolge: vier Momente im Wechsel über einem Leinen-Band (Band 23 %, wirkt wie Karussell). C Name: Weingarten-Tafel, Wortmarke randlos darunter (stärkste Marke, aber ohne Menschen, Bild dunkel).
+- Gemeinsame Nav (`basis.css`, `nav.js`): Menü links als Wort, Wortmarke Mitte, Anfragen + Zimmer buchen (1 px Rahmen) rechts; durchsichtig über dem Bild, nach dem Hero auf Leinen mit W, runter weg, hoch zurück. Menü als Vollbild-Raum mit Kapitelbild beim Hover, Esc, Fokusfalle. Mobil: Leiste Zimmer buchen | Anfragen.
+- Nächster Schritt nach Benjamins Wahl: gewählte Richtung in `prototyp/runde-8/index.html` (bzw. Kopie runde-9/index.html) als Hero + Nav einsetzen, dann Kapitel darunter mit derselben Schleife kürzen (Offen 2).
 
 ## Benjamins Entscheidungen
 - 30.10. (spät): Hero-Richtung **1 Programm** (`a-programm.html`): vier Angebote als riesige Bona-Nova-Liste, Bildfenster rechts, Signatur „doppelt“ (kursives Gegenstück rollt hoch, Cognac). B Moodboard und C Fasskeller verworfen; Oval nur nach Julias Bestätigung.
@@ -13,7 +18,7 @@ Stand: 2026-10-30 · **A-004 Runde 8: ganze Startseite in Richtung 1 „Programm
 - Geprüft 1440 + 375: kein Querscroll, Tippflächen ≥ 44 px, eine H1, 433 Wörter, KI-Look-Check ohne Treffer (Abschnitte 13 % Abweichung). Texte durch `text-kritik` (Dreier-Kette, „nicht X sondern Y“ entfernt). Pfeile an Knöpfen und Versal-Labels nach Projektregeln entfernt.
 
 ## Offen
-1. **Runde 9: Hero + Nav auf Wirkung umbauen.** Ablauf: (a) 3 Personas (JGA-Organisatorin designverliebt, Paar fürs Wochenende, Tagungsplanerin) je: woher kommt sie (Instagram, Google, Empfehlung), was wünscht sie, welches Gefühl sucht sie, was muss sie in 5 s sehen; (b) Markengefühl festhalten (Instagram-Captions lesen, Räume, Doppelstück-Gedanke); (c) daraus 5 Kriterien Wirkung + 3 Kriterien Bedienung; (d) 2–3 Hero/Nav-Varianten bauen, die zuerst Atmosphäre zeigen (großes echtes Bild/Film, wenig Text, Angebote weiter mit einem Blick erreichbar, aber leiser), Faktzeilen aus dem Hero raus; (e) `design-kritik` gegen genau diese Kriterien, Schleife bis A; (f) Benjamin als Storyboard zeigen. Die vier Angebote und Doppel-Rolle dürfen bleiben, aber nicht als Hauptbild.
+1. ~~Runde 9 Hero + Nav~~ gebaut, Benjamins Wahl offen. Alter Ablauf: Ablauf: (a) 3 Personas (JGA-Organisatorin designverliebt, Paar fürs Wochenende, Tagungsplanerin) je: woher kommt sie (Instagram, Google, Empfehlung), was wünscht sie, welches Gefühl sucht sie, was muss sie in 5 s sehen; (b) Markengefühl festhalten (Instagram-Captions lesen, Räume, Doppelstück-Gedanke); (c) daraus 5 Kriterien Wirkung + 3 Kriterien Bedienung; (d) 2–3 Hero/Nav-Varianten bauen, die zuerst Atmosphäre zeigen (großes echtes Bild/Film, wenig Text, Angebote weiter mit einem Blick erreichbar, aber leiser), Faktzeilen aus dem Hero raus; (e) `design-kritik` gegen genau diese Kriterien, Schleife bis A; (f) Benjamin als Storyboard zeigen. Die vier Angebote und Doppel-Rolle dürfen bleiben, aber nicht als Hauptbild.
 2. Danach Kapitel darunter mit derselben Schleife prüfen (Textmenge kürzen).
 3. Merge erst nach Benjamins Freigabe und grünem `pruefer` (Befunde Runde 8 sind behoben, 5be5c5d).
 4. Prüfmarken: Julia (Fass-Bild, Ovalfass, 2.400 l, „in dem wir gern ausbauen“), Marie (Rückruf je Anlass, Plattform, Rollen-Zeilen der Familie), Foto vom Doppelstück im Keller fehlt. Shop/Buchung zeigen vorerst auf doppelstueck.com.
@@ -26,4 +31,4 @@ Stand: 2026-10-30 · **A-004 Runde 8: ganze Startseite in Richtung 1 „Programm
 - Deck v15 https://claude.ai/artifact/TSoUh6KXERev1LkYtXpz6E (nur per Artifact `read`).
 
 ## Starter-Prompt (neue Session)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md` und die oberste Design-Lesson. Benjamin findet Startseite Runde 8 (`prototyp/runde-8/index.html`) zu informativ, zu textlastig, ohne Vibe, Nav basic. Führe „Offen 1“ aus: Personas + Gefühl + Marke → Kriterien → 2–3 Hero/Nav-Varianten unter `prototyp/runde-9/` (Skills `geschmack`, `frontend-design`, `design-brainstorm`) → `design-kritik`-Schleife gegen die Kriterien bis A → Storyboard an Benjamin. Kein Push.
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md` und `docs/runde-9-personas-kriterien.md`. Benjamin hat eine Runde-9-Variante gewählt (in seiner Nachricht nennen). Setze sie als Hero + Nav in die ganze Startseite ein (`prototyp/runde-9/index.html` aus runde-8 ableiten), dann Kapitel darunter mit Persona-Kriterien kürzen, `design-kritik` bis A, `pruefer`. Kein Push.
