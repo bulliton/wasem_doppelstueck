@@ -51,4 +51,20 @@ Anlass: Runde 9 war für Benjamin „okay, aber nicht special, sieht AI aus“. 
 | Zweite Hälfte klärt langsamer (3 s statt 1,8 s) | Der Satz handelt von Zeit. |
 | Espresso-Fläche genau einmal | Sie ist der Keller, in dem das Doppelstück liegt. |
 
+### Kapitel darunter (Wein bis Anlass, 30.10.)
+| Entscheidung | weil |
+|---|---|
+| Jede Kapitelüberschrift ein Zweiteiler, aufrecht Tatsache, kursiv Gefühl; Doppel-Rolle (Wort/Wort in Cognac) und Zeilenmaske raus | Das Doppel ist Satzregel der Marke wie im Namenskapitel; Cognac bleibt für Anfragen/Buchen; Zeilenmaske ist Standard-Reveal. |
+| Reveal Klären für Überschrift, Bild und Text, kursive Hälfte langsamer | Dieselbe Bewegung wie Hero und Name: eine Idee, die ganze Seite. |
+| Drei Abstandsstufen (eng, mittel, weit) | Abstand hat je eine Bedeutung (Clos Apalta): gehört zusammen, neuer Gedanke, neues Kapitel. |
+| Bildnotiz klein über dem Bild („Stiegelgasse 50, die Vinothek“) | Sagt, wo man steht, statt das Bild zu betiteln (Clos Apalta). |
+| Wein: Bild links groß, Text unten rechts am Bildrand, Shop als Textlink | Erst den Ort sehen, dann lesen; Shop ist kein Anfragen/Buchen, also kein Cognac. |
+| Hotel: zwei Zimmerbilder versetzt, groß links und klein tiefer rechts; „50“ groß über den Angaben | Zwei Häuser als Doppel im Bildsatz; die Zimmerzahl ist die Angabe, die Gruppenplanerinnen zuerst suchen. Fassadenfoto verworfen, weil sein Nachtblau aus der Palette fällt (Lesson 27.10.). |
+| Feste: Anlässe klickbar im Satz, Hover tauscht das Bild, Klick wählt den Anlass im Formular vor | Jägerhof-Lehre 4 und 5 wie im Hero; niemand muss den Anlass zweimal sagen. Mobil feste Bildwahl, Tippflächen 44 px. |
+| Tagungen: Angaben als Liste mit Haarlinien (Personen, Technik, Pauschalen, Dazu) | Planerinnen vergleichen Werte; Etikettform statt Kacheln. |
+| Familie: Marie und Julia groß, Ilona, Burkhard, Magda kleiner in zweiter Reihe | Größe nach Zuständigkeit: wer mit euch plant und den Wein macht, steht vorn. |
+| Anlass: Zweiteiler endet auf „klären“, Formular als Satz bleibt, Knopf Cognac | Der Name kommt am Schluss als Wort zurück; Cognac nur hier und bei Buchen. |
+
+Gemessen: Cognac nur auf „Zimmer buchen“, „Fest anfragen“, „Tagung anfragen“ (plus Formular); 1440/375 ohne Überlauf, keine Tippfläche unter 44 px, KI-Look-Skript A. Storyboard `prototyp/runde-10/storyboard-runde-10-kapitel.jpg`. Neue Texte (Überschriften, Feste-Satz) sind Vorschläge, noch nicht durch `text-kritik`.
+
 Offen: Das Keller-Foto zeigt Julia an Edelstahltanks, der Text spricht vom Eichenfass (Foto Doppelstück fehlt, Shoot). Maßstab: H1 50 px ist ruhiger als Jägerhofs 200-px-Wort; bewusst Lesesatz statt Plakat, von Benjamin zu entscheiden.

@@ -1,30 +1,31 @@
 # Übergabe
 
-Stand: 2026-10-30 (spät) · **A-004: Pilot Runde 10 (Hero + Namenskapitel) von Benjamin freigegeben („Ja, weiterbauen“). Nächster Schritt: Kapitel darunter mit derselben Methode.**
+Stand: 2026-10-30 (Nacht) · **A-004: Runde 10 komplett (Hero, Name, Wein, Hotel, Feste, Tagungen, Familie, Anlass). Urteil Benjamin zu den Kapiteln offen.**
 
 ## Benjamins Entscheidungen
 - 30.10. (spät): Pilot Runde 10 trägt: ruhiger Lesesatz (H1 50 px) und Bild im Leinen-Passepartout bleiben, Kapitel darunter weiterbauen.
 - 30.10. (Nacht): Pilot freigegeben: erst Referenzen sezieren, dann Hero + Namenskapitel auf dieses Niveau, Vergleich neben der Referenz.
-- 30.10. (spät): Runde 9 **A Etikett** gewählt (Weinberg-Abendfoto, Angebote auf Leinen-Etikett). C (Wortmarke randlos) als möglicher Footer-Schluss.
+- 30.10. (spät): Runde 9 **A Etikett** gewählt. C (Wortmarke randlos) als möglicher Footer-Schluss.
 - 30.10.: Schrift Bona Nova + Albert Sans, Farbwelt fest, Namensgedanke „Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.“ Zielgruppe designverliebte Frauen.
 
 ## Zuletzt erledigt
-- `prototyp/runde-10/index.html` (Kopie Runde 9, nutzt `../runde-9/basis.css` und `nav.js`): Hero = Bild im Leinen-Passepartout, darunter H1-Satz mit vier klickbaren Angeboten (Albert Sans, Versal); Hover/Fokus dimmt Satz auf 22 % und tauscht Bild; Reveal „Klären“ (blur → scharf); Sättigung 80 %. Nav-Wortmarke lesbar, Entwurfslabel weg.
-- Namenskapitel: Zweiteiler, zweite Hälfte drei Spalten versetzt und langsamer klärend, Text darunter, Foto Julia im Keller; kein Goldstrich, keine Maske.
-- „weil“-Tabelle in `docs/sektion/README.md` (Abschnitt Pilot Runde 10). Storyboard `prototyp/runde-10/storyboard-runde-10.jpg`. KI-Look-Skript A (1440/375), kein Überlauf, Tippflächen 47 px. Commit 6fd12f6.
+- `prototyp/runde-10/index.html`: Kapitel Wein bis Anlass neu. Jede Überschrift Zweiteiler (aufrecht/kursiv), Reveal Klären überall, Doppel-Rolle und Zeilenmaske raus, drei Abstandsstufen, Bildnotizen über Bildern. Hotel: zwei Zimmer versetzt + „50“. Feste: Anlässe klickbar im Satz mit Bildtausch, Klick wählt Anlass im Formular vor. Tagungen: Angaben-Liste. Familie: Größe nach Zuständigkeit. Cognac nur Anfragen/Buchen (gemessen).
+- „weil“-Tabelle in `docs/sektion/README.md` (Abschnitt „Kapitel darunter“). Storyboard Referenz neben Wasem: `prototyp/runde-10/storyboard-runde-10-kapitel.jpg`. KI-Look A (1440/375), kein Überlauf, Tippflächen ≥ 44 px.
+- design-kritik: Fassaden-Nachtfoto (Nachtblau) im Hotel durch Balkonzimmer ersetzt.
 
 ## Offen
-1. Kapitel Wein/Hotel/Feste/Tagungen, Familie, Anlass in `prototyp/runde-10/index.html` mit derselben Methode umbauen (Pilot freigegeben).
-2. Keller-Foto zeigt Edelstahltanks, Text sagt Eichenfass: Foto Doppelstück fehlt (Shoot).
-3. Hero-Satz durch `text-kritik` (Wortlaut ist Vorschlag). Mobil: feste Collage statt Hover erwägen.
-4. Danach `pruefer`, Merge erst nach Benjamins Freigabe.
-5. Prüfmarken Julia/Marie (Fass, 2.400 l, Rückruf, Rollen). Setup-Vorschlag in `wissen/Vorschlaege.md`.
+1. Benjamins Urteil zu den Kapiteln (Storyboard zeigen).
+2. Neue Überschriften und Feste-Satz durch `text-kritik` (alles Vorschläge). Hero-Satz ebenso.
+3. Keller-Foto zeigt Edelstahltanks, Text sagt Eichenfass: Foto Doppelstück fehlt (Shoot).
+4. Prüfmarken Julia/Marie: Fass 2.400 l, 50 Zimmer, Personen 30/50, bio seit 2022, Rollen.
+5. Danach `pruefer`, Merge erst nach Benjamins Freigabe. Setup-Vorschlag in `wissen/Vorschlaege.md`.
 
 ## Hinweise
 - Branch `claude/warum-doppelstueck` (Worktree `.claude/worktrees/warum-doppelstueck`), nicht gemergt.
-- Screenshots headless per Playwright (`NODE_PATH="/Users/benjamin/GitHub Repos/anfragen-maschine/node_modules"`), mit `hasTouch` greift `(hover: none)`. Referenz-Screens flüchtig unter `/private/tmp/claude-501/sektion/<name>/`.
-- Browser-Pane friert Übergänge ein: per JS `*{transition:none!important}`, Klasse `geladen` auf html, `sichtbar` auf `.fass,.kapitel,.auf`.
+- Screenshots headless per Playwright (`NODE_PATH="/Users/benjamin/GitHub Repos/anfragen-maschine/node_modules"`), file://-URL reicht; mit `hasTouch` greift `(hover: none)`. Referenz-Screens flüchtig unter `/private/tmp/claude-501/sektion/<name>/`.
+- Für Screenshots: per JS `*{transition:none!important}`, Klasse `geladen` auf html, `sichtbar` auf `.fass,.kapitel`.
+- Bona Nova hat Mediävalziffern: große Zahlen mit `font-variant-numeric: lining-nums`.
 - Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866.
 
 ## Starter-Prompt (neue Session)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md` und im README `docs/sektion/README.md` den Abschnitt „Pilot Runde 10“. Der Pilot (`prototyp/runde-10/`) ist freigegeben; baue die Kapitel darunter (Wein, Hotel, Feste, Tagungen, Familie, Anlass) mit derselben Methode (Idee Klären, Zweiteiler gerade/kursiv, Cognac nur Anfragen/Buchen, jede Entscheidung mit „weil“), Vergleich neben Referenz, `design-kritik`, Storyboard. Kein Push.
+> Sonnet 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md`. Runde 10 ist komplett; lass die Überschriften und den Feste-Satz in `prototyp/runde-10/index.html` durch `text-kritik` laufen (Wortlaut sind Vorschläge, keine Fakten erfinden), Benjamins Urteil zu den Kapiteln einarbeiten, dann `pruefer`. Kein Push.
