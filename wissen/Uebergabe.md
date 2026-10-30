@@ -1,33 +1,30 @@
 # Übergabe
 
-Stand: 2026-10-30 · **A-004 Runde 8: drei Hero-Richtungen gebaut (`prototyp/runde-8/`: A Programm, B Moodboard, C Fasskeller), Storyboard `prototyp/runde-8/storyboard-runde-8.jpg`, Konzept `docs/runde-8-hero-richtungen.md`. Wartet auf Benjamins Wahl.**
+Stand: 2026-10-30 · **A-004 Runde 8: Benjamin hat Richtung 1 „Programm“ gewählt (`prototyp/runde-8/a-programm.html`). Nächster Schritt: daraus die ganze Startseite bauen.**
 
 ## Benjamins Entscheidungen
-- 30.10. (abends): Hero 7d abgelehnt („oldschool, langweilig“). Wünsche: Referenzseiten und navbar.gallery/footer.design als Inspiration; Doppelstück-Identität weiter ausbauen, attraktiv, zum Identifizieren für designverliebte Frauen (Hauptzielgruppe), passend zu Marie und Julia; auf einen Blick sehen, was angeboten wird (Ebenen Wein, Hotel, Feste, Tagungen) und dass alles funktioniert; „Anlass erzählen“ allein ist nicht der richtige Schritt; UI/UX intuitiv, klar aufgeteilt, Design außergewöhnlich. Bona Nova, Farbwelt und Namensgedanke bleiben.
-- 30.10.: Schrift 1 **Bona Nova** (Display) + **Albert Sans** (Text, UI).
-- 30.10.: Deck v15 „find ich gut“: Namensgedanke „Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.“, Hero „Was habt ihr vor?“ oben, Namenskapitel direkt darunter.
-- 29.10.: Richtung 2 bleibt, Und-Paare raus, Fraunces raus.
+- 30.10. (spät): Hero-Richtung **1 Programm**: die vier Angebote Wein, Hotel, Feste, Tagungen als riesige Bona-Nova-Liste (Inhaltsverzeichnis), Bildfenster rechts wechselt beim Zeigen, Signatur „doppelt“ (kursives Gegenstück rollt hoch, Cognac). B Moodboard und C Fasskeller verworfen; das Oval aus C nur nach Julias Bestätigung (Ovalfass) als spätere Bildform.
+- 30.10.: Hero 7d abgelehnt („oldschool, langweilig“). Zielgruppe designverliebte Frauen; auf einen Blick alle Angebote und dass alles funktioniert.
+- 30.10.: Schrift Bona Nova + Albert Sans. Farbwelt fest. Namensgedanke „Ein Doppelstück lässt dem Wein Zeit. So planen wir auch mit euch.“
 
-## Zuletzt erledigt (Runde 7d)
-- **Brand-Sheet** `prototyp/runde-7/brand-sheet.html` neu: Namensgedanke statt „Beides.“, Wortmarke und W einfarbig aus den Originaldateien (V-Teilung und Navy gestrichen), Beige-Tokens mit Rollen und Kontrasten (Cognac auf Leinen 4,2 : 1 nur groß, Stein nur Linie), Schrift Bona Nova + Albert Sans mit Skala, vier Regeln (Text nie auf Foto, eine dunkle Fläche, Bewegung mit Zeit, ein Mensch mit Namen).
-- **Startseite** `prototyp/runde-7/index.html`:
-  - Hero: Foto randlos oben (`wasem-weinberg-abendlicht-glaeser`), Navigation transparent darauf (Wortmarke Desktop, W mobil und gescrollt; verschwindet beim Runterscrollen, kommt auf Leinen zurück), Leinen-Band mit Zeile „Weingut · Weinhotel · Ingelheim“, H1 „Was habt ihr vor?“ (Desktop eine Zeile ~160 px, mobil zwei Zeilen versetzt), Unterzeile, Knopf „Anlass erzählen“. Einstieg: Zeilen-Maske + Bild-Zoom 1,08 → 1.
-  - Namenskapitel: einzige Espresso-Fläche, Goldlinie zieht sich auf, H2 Satz 1 kommt, Satz 2 erst nach 1,9 s (Signatur „Zeit“), Bodytext aus Runde 7c, Bild bricht rechts randlos aus. Bild ist Platzhalter (Steinwand-Raum), echtes Doppelstück-Foto fehlt (Shoot), so beschriftet.
-  - „Anlass als Satz“: „Wir sind [12] Leute, wir planen [Anlass] und denken an den [Datum].“, Kontaktfeld, Knopf „Anlass schicken“ (Prototyp sendet nichts), Fuß auf Sand mit Wortmarke.
-- Geprüft: 1440 und 375 ohne Querscroll, Schriften geladen, eine H1, alle Tippflächen ≥ 44 px, KI-Look-Check Note A (Desktop und Mobil), Kontraste AA.
+## Zuletzt erledigt (Runde 8)
+- Drei Hero-Richtungen unter `prototyp/runde-8/` (gemeinsame `basis.css`: Tokens, Nav auf Leinen mit Wortmarke per CSS-Maske aus Originaldatei, Buchen-Leiste mobil „Zimmer buchen · Anfragen“), Storyboard `prototyp/runde-8/storyboard-runde-8.jpg`, Konzept + Fertig-wenn `docs/runde-8-hero-richtungen.md`.
+- Fakten im Hero nur aus `docs/briefing.md`: 50 Zimmer in zwei Häusern, Bio-Weine im Shop und in der Vinothek, Tagungsraum bis 50 Personen.
+- Geprüft 1440×900 und 375×812: kein Querscroll, alle vier Wege im ersten Screen, eine H1, KI-Look mobil A (Desktop-Fehltreffer Nav-Unterstreichung umgebaut). Entfernt: Nummern 01–04, farbiges Wort in H1.
+- navbar.gallery / footer.design gesichtet: nur SaaS, nichts übernommen.
 
 ## Offen
-1. **Runde 8 gebaut, Wahl offen.** Danach: gewählte Richtung zur ganzen Startseite ausbauen (Namenskapitel, Anlass-Formular), `pruefer`, Merge. Prüfmarke C: sind die Doppelstücke Ovalfässer (Julia)? Ursprünglicher Auftrag: Vorgehen: Skill `geschmack` (profil, 2–3 nächste Referenzen ★★★ aus Hotel/Hospitality, Moves), Nav- und Footer-Karten aus `geschmack/bausteine` plus gezielt navbar.gallery und footer.design für Nav/Footer; `design-brainstorm` mit 2–3 gebauten Key-Screen-Richtungen (nicht Text). Jede Richtung muss im ersten Screen die Angebots-Ebenen zeigen (Wein, Hotel, Feste, Tagungen) mit klarem Weg je Ebene, die Doppelstück-Identität sichtbar tragen und mobil zuerst funktionieren.
-2. Fertig-wenn Runde 8 (Vorschlag): (a) Besucherin versteht in 5 s Kategorie und alle Angebote, (b) jede Ebene ist mit einem Tipp erreichbar, (c) ein Markenmerkmal aus Doppelstück trägt den Hero, das kein anderer Betrieb hat, (d) Abgleich mit 2 benannten Referenzen dokumentiert, (e) `design-kritik` Note A, Desktop + Mobil.
-3. Danach: Deck-Folien auf Bona Nova, Hero und Brand-Sheet ins Kunden-Deck.
-4. Prüfmarken: Julia bestätigt das Fass-Bild; Marie klärt Rückruf je Anlass; Foto vom Doppelstück im Keller fehlt. Plattform mit Marie klären.
+1. **Startseite in Richtung 1 bauen** (`prototyp/runde-8/index.html`, Hero aus `a-programm.html` übernehmen): Abschnittsfolge 7–10 nach Skill `geschmack` (ruhiges Raster + drei Ausreißer): Hero-Liste → Namenskapitel (einzige Espresso-Fläche, Text aus Runde 7d) → je Angebot ein Kapitel (Bild/Text wechselseitig, Kapitelwort aus der Liste wiederholt) → Familie/Team mit Namen → Anlass-Formular als Satz (aus 7d) → Footer (`footer-flaeche-name-einladung` oder ruhig, da Espresso schon belegt). Menü „Menü“ mobil als Vollbild (`menue-vollbild-kapitel`). Die Doppel-Rolle der Liste darf in Kapitelüberschriften wiederkehren, sonst keine neue Signatur.
+2. Fertig-wenn: (a) Hero unverändert in Kraft, (b) jedes Angebot hat ein Kapitel mit einem Weg, (c) höchstens drei Ausreißer, (d) `design-kritik` Note A Desktop + Mobil, (e) `pruefer` grün vor Merge.
+3. Danach Deck-Folien auf Bona Nova, Hero + Brand-Sheet ins Kunden-Deck.
+4. Prüfmarken: Julia (Fass-Bild, Ovalfass, 2.400 l), Marie (Rückruf je Anlass, Plattform), Foto vom Doppelstück im Keller fehlt.
 
 ## Hinweise
-- Browser-Pane läuft oft versteckt: CSS-Übergänge und Scroll-Events frieren dort ein. Zum Prüfen per JS `*{transition:none!important}` einsetzen und `scroll` selbst auslösen.
-- Farbwelt fest: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866 nur als Linie auf Espresso.
-- Deck v15 https://claude.ai/artifact/TSoUh6KXERev1LkYtXpz6E; Quelldateien nur per Artifact `read`.
-- Telefonnotiz `~/Downloads/Demo-Webseite-Feedback.rtf` mit `textutil -convert txt -stdout` lesen; Belege Z. 100, 122, 128, 304, 308, 319.
-- Branch `claude/warum-doppelstueck` (Worktree `.claude/worktrees/warum-doppelstueck`), nicht gemergt, kein Push. Vorschau: launch.json `repo`, `http://localhost:4321/prototyp/runde-7/index.html`.
+- Branch `claude/warum-doppelstueck` (Worktree `.claude/worktrees/warum-doppelstueck`), **nicht gemergt** (erst nach `pruefer`), kein Push (main = GitHub Pages).
+- Vorschau: launch.json `repo`, `http://localhost:4321/prototyp/runde-8/a-programm.html`. Browser-Pane friert Übergänge ein: per JS `*{transition:none!important}` + Klasse `geladen` setzen.
+- Screenshots für Storyboards: Chrome headless, mobil über eine 375-px-iframe-Hülle (sonst ist das Fenster zu breit).
+- Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866 nur als Linie auf Espresso.
+- Deck v15 https://claude.ai/artifact/TSoUh6KXERev1LkYtXpz6E (nur per Artifact `read`).
 
 ## Starter-Prompt (neue Session)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md` und die oberste Design-Lesson. Hero 7d (`prototyp/runde-7/index.html`) ist abgelehnt. Baue Runde 8: erst Skill `geschmack` (Referenzen, Moves, Bausteine Nav/Footer, gezielt navbar.gallery und footer.design), dann 2–3 Hero-Richtungen als gebaute Key-Screens Desktop + Mobil unter `prototyp/runde-8/`, die die Angebots-Ebenen auf einen Blick zeigen und die Doppelstück-Identität für designverliebte Frauen tragen. Bona Nova, Farbwelt, Namensgedanke bleiben. Fertig-wenn aus der Übergabe nennen, `design-kritik`, dann Benjamin als Storyboard zur Wahl zeigen. Kein Push.
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md`. Benjamin hat Hero-Richtung 1 „Programm“ gewählt (`prototyp/runde-8/a-programm.html`). Baue daraus die ganze Startseite `prototyp/runde-8/index.html` nach Punkt „Offen 1“ (Skill `geschmack` für Abschnittsfolge und Bausteine, Texte durch `text-kritik`), prüfe 1440 + 375, `design-kritik`, dann `pruefer` und Benjamin gerendert zeigen. Kein Push.
