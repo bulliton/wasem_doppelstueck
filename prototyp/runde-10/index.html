@@ -43,6 +43,25 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 .gerahmt > div { position: relative; }
 .gerahmt > div::after { content: ""; position: absolute; inset: 8px; border: 1px solid color-mix(in srgb, var(--gold) 80%, transparent); pointer-events: none; z-index: 2; }
 
+/* ---------- Runde 12: Akzent aus der Flasche (Vergleich, Umschalter unten links) ---------- */
+/* Die Farbe ist das Etikett der Gutsweine, gemessen am Shopfoto: Rot #E33C16 (Chardonnay, Grauburgunder, Cabernet Blanc), Koralle #EC5F3F (Spätburgunder, Portugieser, Liebesstück).
+   Wie auf der Flasche bleibt sie klein: die Kapsel oben, nie das ganze Glas. Cognac behält Anfragen und Buchen */
+html[data-akzent="rot"] { --akzent: #E33C16; }
+html[data-akzent="koralle"] { --akzent: #EC5F3F; }
+/* Kapsel: zwischen den Haken sitzt auf der Goldlinie ein kurzer Farbstreifen, wie die Kapsel auf dem Flaschenhals; sie kommt, wenn die Linie gezogen ist */
+html[data-akzent] .ausl { background: linear-gradient(var(--akzent), var(--akzent)) no-repeat var(--haken, 1.2rem) 0 / 0 3px; transition: background-size .6s 1.5s var(--ease); }
+html[data-akzent] .sichtbar .ausl { background-size: calc(4.2rem + 1px) 3px; }
+@media (prefers-reduced-motion: reduce) { html[data-akzent] .ausl { transition: none; } }
+/* Hero: das gewählte Angebot leuchtet in der Etikettfarbe, während der Satz zurücktritt; der eine Farbfleck im ersten Screen */
+html[data-akzent] .hero h1 a.aktiv, html[data-akzent] .feste .satz a.aktiv { color: var(--akzent); text-decoration-color: var(--akzent); text-decoration-thickness: 2px; }
+html[data-akzent] .hero h1 a:focus-visible { outline: 2px solid var(--akzent); outline-offset: 4px; }
+/* Umschalter nur für den Vergleich, fliegt nach der Wahl raus */
+.akzentwahl { position: fixed; right: 1rem; bottom: 1rem; z-index: 95; display: flex; gap: .2rem; padding: .3rem; background: var(--leinen); border: 1px solid color-mix(in srgb, var(--espresso) 25%, transparent); font: 500 .72rem/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+.akzentwahl button { font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--espresso); background: none; border: 0; min-height: 36px; padding: 0 .7rem; cursor: pointer; display: inline-flex; align-items: center; gap: .45rem; }
+.akzentwahl button[aria-pressed="true"] { background: var(--espresso); color: var(--leinen); }
+.akzentwahl i { width: .7rem; height: .7rem; background: var(--f); }
+@media (max-width: 900px) { .akzentwahl { top: 4.6rem; bottom: auto; right: 50%; transform: translateX(50%); } }
+
 /* ---------- Hero Runde 10: Bild im Leinen-Passepartout, darunter ein Satz ---------- */
 /* weil Text nie aufs Foto gehört (Ilona) und die Wortmarke auf Leinen immer lesbar bleibt; die Leinenfläche ist dieselbe wie die Seite darunter, man steht schon im Haus */
 .hero { height: 100svh; min-height: 640px; display: grid; grid-template-rows: 84px minmax(0, 1fr) auto; padding: 0 var(--rand); background: var(--leinen); }
@@ -619,6 +638,23 @@ document.querySelectorAll('[data-wachsen]').forEach(fig => {
 
 // Anlass: Entwurf, schickt nichts ab
 document.querySelector('.anlass form').addEventListener('submit', e => { e.preventDefault(); e.currentTarget.classList.add('gesendet'); });
+
+// Akzent-Vergleich: ?akzent=rot|koralle, sonst Bestand
+(() => {
+  const wahl = [['bestand', 'Bestand', 'var(--cognac)'], ['rot', 'Rot', '#E33C16'], ['koralle', 'Koralle', '#EC5F3F']];
+  const setze = a => {
+    if (a === 'bestand') delete document.documentElement.dataset.akzent; else document.documentElement.dataset.akzent = a;
+    leiste.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.a === a));
+    history.replaceState(null, '', a === 'bestand' ? location.pathname : '?akzent=' + a);
+  };
+  const leiste = document.createElement('div');
+  leiste.className = 'akzentwahl'; leiste.setAttribute('role', 'group'); leiste.setAttribute('aria-label', 'Akzentfarbe vergleichen');
+  leiste.innerHTML = wahl.map(([a, t, f]) => `<button type="button" data-a="${a}"><i style="--f:${f}"></i>${t}</button>`).join('');
+  leiste.addEventListener('click', e => { const b = e.target.closest('button'); if (b) setze(b.dataset.a); });
+  document.body.append(leiste);
+  const start = new URLSearchParams(location.search).get('akzent');
+  setze(wahl.some(w => w[0] === start) ? start : 'bestand');
+})();
 </script>
 </body>
 </html>
