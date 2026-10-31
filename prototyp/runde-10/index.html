@@ -268,13 +268,13 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 .sichtbar .unterschrift b { clip-path: inset(0 -.2em 0 0); }
 /* Abgeschickt: die Kapsel läuft über die ganze Linie, wie ein Siegel über dem Brief */
 .anlass.geschickt .ausl { background-size: calc(100% - var(--haken, 1.2rem)) 3px; transition: background-size 1.2s var(--ease); }
-@media (prefers-reduced-motion: reduce) { .unterschrift b { clip-path: none; transition: none; } .anlass.geschickt .ausl { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .feste .bild, .feste .bild img { transition: none; } .unterschrift b { clip-path: none; transition: none; } .anlass.geschickt .ausl { transition: none; } }
 .anlass form { grid-column: 7 / -1; }
 .anlass fieldset { border: 0; margin: 0; padding: 0; font: 400 clamp(1.7rem, 2.9vw, 2.6rem)/1.65 var(--serif); }
 .anlass legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .feld { font: inherit; color: var(--cognac); background: none; border: 0; border-bottom: 1px solid var(--cognac); padding: 0 .1em; border-radius: 0; min-height: 44px; transition: border-color .2s var(--ease-ui); }
 .feld:focus { outline: none; border-bottom-width: 2px; }
-.feld--zahl { width: 2.2ch; text-align: center; -moz-appearance: textfield; }
+.feld.feld--zahl { width: 2.2ch; min-width: 44px; text-align: center; -moz-appearance: textfield; }
 .feld--zahl::-webkit-inner-spin-button { -webkit-appearance: none; }
 .feld--datum { width: 8.5ch; }
 /* Runde 14: Beispiel in Stein, Eingetragenes in Cognac, damit nichts schon ausgefüllt aussieht; alle Lücken mit derselben Cognac-Linie */
