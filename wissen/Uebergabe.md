@@ -1,6 +1,12 @@
 # Übergabe
 
-Stand: 2026-10-31 (Nacht) · **A-004 Runde 11 gebaut auf Branch `claude/runde-11`** (Worktree `.claude/worktrees/brave-meitner-8193a0`, zweigt von `claude/warum-doppelstueck` 3c4797a ab). Commit 5235a77. `pruefer`: gelb, beide Befunde behoben (Wein-Endbild mobil/Reduced Motion sofort, Menübilder im Bildton). Nicht gemergt, nicht gepusht.
+Stand: 2026-10-31 (spät) · Runde 12 Akzent-Vergleich gebaut (51869c9), Wahl offen. Davor: **A-004 Runde 11 gebaut auf Branch `claude/runde-11`** (Worktree `.claude/worktrees/brave-meitner-8193a0`, zweigt von `claude/warum-doppelstueck` 3c4797a ab). Commit 5235a77. `pruefer`: gelb, beide Befunde behoben (Wein-Endbild mobil/Reduced Motion sofort, Menübilder im Bildton). Nicht gemergt, nicht gepusht.
+
+## Runde 12 (31.10., spät): Akzent aus der Flasche gebaut, Wahl offen
+- Shop durchgesehen (19 Produktfotos): Gutswein-Etiketten sind rotorange. Gemessen (Median der Etikettfläche): **Rot #E33C16** (neue Weißwein-Etiketten Chardonnay, Grauburgunder, Cabernet Blanc, Riesling), **Koralle #EC5F3F** (Spätburgunder, Portugieser, Liebesstück, Rosé). Ortsweine sind Türkis, Literweine Creme.
+- Eingebaut in `prototyp/runde-10/index.html` (Commit 51869c9), Umschalter `?akzent=rot|koralle` (unten rechts, mobil oben): Kapsel (3 px Farbstreifen zwischen den Haken auf der Ausleger-Linie) und aktives Angebot im Hero und Feste-Satz. Bestand unverändert, Cognac bleibt Anfragen/Buchen.
+- Empfehlung an Benjamin: Rot. Nach der Wahl Umschalter entfernen, Akzent fest setzen, `pruefer`.
+- DESIGN.md mit Entscheidungs-Anker (Auftrag aus Session „Design-Prozess“) liegt fertig im Scratchpad dieser Session; der Worktree-Hook verbietet Schreiben im Hauptcheckout, Commit auf main macht Benjamin oder die Design-Prozess-Session. Offene Frage dort: Hero-Gate Variante 1 (main) gegen Lesesatz-Hero (Runde 10/11).
 
 ## Benjamins Urteil Runde 11 (31.10., Nacht)
 - „Geht schon in die Richtung.“ Weiter feminin, sanft, Pinterest.
@@ -30,4 +36,4 @@ Stand: 2026-10-31 (Nacht) · **A-004 Runde 11 gebaut auf Branch `claude/runde-11
 - Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866. Schrift Bona Nova + Albert Sans.
 
 ## Starter-Prompt (neue Session, Opus 5.5)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/runde-11` (Worktree `.claude/worktrees/brave-meitner-8193a0`). Lies `wissen/Uebergabe.md` (Benjamins Urteil Runde 11). Finde die Wasem-Flasche mit Rot/Orange im Shop, miss die Farbe, zeig zwei Akzent-Varianten in `prototyp/runde-10/index.html` als Vergleich, dann „Offen“ 2 bis 4. Kein Push.
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/runde-11` (Worktree `.claude/worktrees/brave-meitner-8193a0`). Lies `wissen/Uebergabe.md` (Runde 12). Hol Benjamins Akzent-Wahl (Rot #E33C16 oder Koralle #EC5F3F, Vergleich über `?akzent=`), setz sie fest, Umschalter raus, dann „Offen“ 2 bis 4. Kein Push.
