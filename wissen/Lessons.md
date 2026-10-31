@@ -3,6 +3,7 @@
 Eine Zeile pro Lektion: Regel — Grund. Neue oben. Doppeltes zusammenführen. Ziel < 80 Zeilen.
 
 ## Technik
+- Der Worktree-Hook verbietet Edit/Write in fremden Worktrees: um auf einem anderen Branch weiterzuarbeiten, im eigenen Worktree `git checkout -b claude/<thema> <branch>` statt in den fremden Ordner zu schreiben — 31.10., Runde 11.
 
 ## Design
 - Runde 10b: Texte „okay auf den ersten Blick“, aber Sections (z. B. Hotel: zwei Fotos versetzt, große „50“, Fließtext, Knopf) wirken „hingeklatscht“, „basic“, Motion „nur ganz leicht, nicht cool und smooth“. Components, UI und UX müssen aus der Brand Identity wachsen und sie pushen: jede Section ein Anmutungsrahmen, der sofort das Markengefühl trägt (Wow-Reaktion der Zielgruppe: „so etwas habe ich noch nie gesehen“). Das W (Etikett, Wortmarke) als Rahmen-/Formelement prüfen, ohne Kitsch. Personen (Familie) alle gleich groß, alle gleichberechtigt. Design-Kritik/Feedback-Schleife muss den Geschmack aktiv nach vorn treiben, nicht nur Regeln abhaken — Benjamin, 30.10.

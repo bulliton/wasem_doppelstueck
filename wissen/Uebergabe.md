@@ -1,29 +1,29 @@
 # Übergabe
 
-Stand: 2026-10-30 (Nacht) · **A-004 Runde 10c: Benjamin wählte für das Hotel A „Schild“. B, 10b-Hotel und Umschalter sind entfernt. Nächster Schritt: Formensatz auf die übrigen Kapitel.**
+Stand: 2026-10-31 (Nacht) · **A-004 Runde 11 gebaut auf Branch `claude/runde-11`** (Worktree `.claude/worktrees/brave-meitner-8193a0`, zweigt von `claude/warum-doppelstueck` 3c4797a ab). Commit 5235a77. `pruefer` lief bei Übergabe noch, Ampel offen. Nicht gemergt, nicht gepusht.
 
-## Benjamins Entscheidungen
-- 30.10. (Nacht): Hotel-Rahmen **A Schild** gewählt (Aushängeschild am Stammhaus, schwingt an den Rand, Zimmer öffnet sich dahinter, Schild wird Buchungsspalte).
-- 30.10. (Nacht, nach 10b): Components/UI/UX aus der Brand Identity, jede Section ein Anmutungsrahmen, Motion „cool und smooth“, Familie alle gleich groß, das W als Rahmen-/Formelement ohne Kitsch.
-- 30.10.: Pilot Runde 10 (Lesesatz-Hero, Bild im Leinen-Passepartout) bleibt. Schrift Bona Nova + Albert Sans, Farbwelt fest, Zielgruppe designverliebte Frauen.
+## Warum ein neuer Branch
+- Der Worktree-Schutz verbietet Schreiben in fremde Worktrees. Darum steht Runde 11 nicht auf `claude/warum-doppelstueck`, sondern auf `claude/runde-11` im Worktree der Key-Screens-Session. `claude/runde-11` enthält den ganzen Stand von `claude/warum-doppelstueck` plus Runde 11.
+- `claude/key-screens` (3b82a0c) bleibt Sackgasse. Schließen erst nach Rückfrage.
 
-## Zuletzt erledigt
-- `prototyp/runde-10/index.html`: Hotel jetzt nur noch Rahmen A (`.hotel--a`, JS `zeichneA`); B und 10b liegen im Commit a253932, falls man sie noch einmal braucht.
-  - **A Schild:** das echte Aushängeschild am Stammhaus (Schwarz, „Stammhaus“, W) hängt an einer Goldlinie, wandert beim Scrollen mit Federschwung an den Rand, dahinter öffnet sich das Zimmer (Holzmosaik); am Ende ist das Schild die Spalte mit 50, Satz, Buchen.
-  - **B Fenster:** Espresso, zwei Fenstergruppen (Stammhaus, Haus Klassik) gehen nacheinander an, das letzte wird das Balkonzimmer und nimmt die Fläche.
-  - Bühne 230 svh gepinnt, Fortschritt mit lerp-Auslauf; mobil ohne Pin als Folge; Reduced Motion zeigt das Endbild.
-- Storyboard mit Jägerhof-Referenz: `prototyp/runde-10/storyboard-runde-10c-hotel.jpg`. Keine JS-Fehler, mobil kein Überlauf.
+## Zuletzt erledigt (Runde 11, `prototyp/runde-10/index.html`)
+- Formensatz aus dem Schild auf alle Kapitel: Goldlinie als Ausleger mit zwei Haken, die Überschrift schwingt daran ein (ohne Versal-Label). Goldrahmen 8 px auf Feste-Foto, Tagungsfoto, Familie, Tagungs-Etikett.
+- Samt: Bildton `--ton` (saturate .76, sepia .08), Korn 7 %, Feste und Familie auf Sand, Linie dort Richtung Cognac.
+- Wein: Bild öffnet sich beim Scrollen vom Passepartout bis randlos (lerp, kein Pin). Einziger Pin bleibt das Hotel.
+- Tagungen: Loch weg, Angaben auf hellem Etikett. Familie: fünf gleich groß, mobil Wischreihe.
+- Kritik neben Jägerhof: `docs/runde-11-kritik.md` (Wein A−, Hotel A, Feste A−, Tagungen A−, Familie A, Anlass B+).
 
 ## Offen
-1. Formensatz aus A (Goldlinie als Ausleger, Schild-Fläche Schwarz mit Goldhaarlinie, Motion „Bild übernimmt die Fläche“ mit lerp-Auslauf, höchstens ein Pin pro Seite: das ist schon das Hotel) auf die übrigen Kapitel übertragen (Motion mit Gewicht, ein Rahmen je Kapitel), Familie alle gleich groß und gleich gerahmt.
-2. `design-kritik` als Persona-Schleife bis A, `text-kritik` (Überschriften, Feste-Satz, Hero, neue Bildnotizen), dann `pruefer`, Merge nur nach Freigabe.
-3. Keller-Foto zeigt Edelstahl statt Doppelstück (Shoot). Prüfmarken Julia/Marie: Fass 2.400 l, 50 Zimmer, Personen 30/50, bio seit 2022, Rollen; welches Haus das Holzmosaik-Zimmer ist.
+1. Ampel des `pruefer` lesen und Befunde beheben.
+2. Benjamins Urteil zur Runde 11 (Pinterest-Beige getroffen?).
+3. Anlass auf A heben: Schluss-Signatur wie Jägerhofs Unterschrift. Feste: zu viel Sand unter dem Knopf.
+4. Danach `text-kritik` (Überschriften unverändert seit Runde 10), Merge nur nach Freigabe.
+5. Prüfmarken aus Runde 10 bleiben (Fass 2.400 l, 50 Zimmer, Personen 30/50, bio seit 2022, Magda, Keller-Foto Edelstahl).
 
 ## Hinweise
-- Branch `claude/warum-doppelstueck` (Worktree `.claude/worktrees/warum-doppelstueck`), nicht gemergt, nicht gepusht.
-- W als CSS-Maske aus `prototyp/marke/wasem-w.svg`: braucht http (Server `repo-4322`), nicht file://.
-- Stufen-Screenshots: Playwright-Skript nach Muster scratch `stufen.js` (scrollt die Bühne auf p = 0/.3/.55/.8/1, wartet 2,2 s für den Auslauf). `NODE_PATH="/Users/benjamin/GitHub Repos/anfragen-maschine/node_modules"`. Referenzen unter `/private/tmp/claude-501/sektion/<name>/` (flüchtig).
-- Bona Nova: große Zahlen mit `lining-nums`. Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866.
+- Server: launch.json-Eintrag `runde11-4323` (Port 4323, Root = dieser Worktree). Änderung an launch.json ist nicht committet.
+- Prüfskripte: scratchpad `kapitel.js` (Kapitel bei 1440/375), `wein.js` (Wein-Stufen). Fullpage-Screenshots zeigen das Korn nur im ersten Viewport, das ist ein Screenshot-Effekt.
+- Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866. Schrift Bona Nova + Albert Sans.
 
-## Starter-Prompt (neue Session)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/warum-doppelstueck`. Lies `wissen/Uebergabe.md`. Hotel steht als Rahmen A „Schild“. Arbeite Punkt 1 und 2 unter „Offen“ ab, Kapitel für Kapitel mit Vergleich neben der Referenz, in `prototyp/runde-10/index.html` (Server `repo-4322`). Kein Push.
+## Starter-Prompt (neue Session, Opus 5.5)
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/runde-11` (Worktree `.claude/worktrees/brave-meitner-8193a0`). Lies `wissen/Uebergabe.md` und `docs/runde-11-kritik.md`. Hol Benjamins Urteil zur Runde 11, dann „Offen“ 3 und 4. Kein Push.
