@@ -14,15 +14,43 @@
 /* Startseite Runde 10: Hero als Satz mit Bildtausch, Namenskapitel und Kapitel als Zweiteiler. Idee: das Doppelstück lässt dem Wein Zeit (Klären). */
 .raster { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.8vw, 2.5rem); padding: 0 var(--rand); }
 
+/* ---------- Runde 11: Formensatz aus dem Schild, Samt ---------- */
+/* Bildton: Sättigung runter, ein Hauch Sepia, damit jedes Foto in derselben beigen Familie steht wie Leinen und Sand; das Pinterest-Gefühl kommt aus der Einheit */
+:root { --ton: saturate(.76) sepia(.08); }
+/* Korn wie auf Leinenpapier: macht die Flächen samtig statt digital glatt */
+body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: .07; mix-blend-mode: multiply;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='k'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23k)'/%3E%3C/svg%3E"); }
+/* Sand-Kapitel: die Seite atmet in zwei Tönen; Feste und Familie sind die warmen, weil dort Menschen sind */
+.kapitel.sand { background: var(--sand); padding-bottom: var(--weit); }
+.sand .text p, .sand .notiz, .sand li span { color: color-mix(in srgb, var(--espresso) 80%, transparent); }
+
+/* Ausleger: jedes Kapitel hängt an derselben Goldlinie wie das Schild am Stammhaus. Die Linie läuft vom Seitenrand herein, zwei Haken fallen herab, die Überschrift hängt daran und schwingt aus */
+/* Linienfarbe: Gold auf Leinen; auf Sand ein Stück Richtung Cognac, sonst verschwindet sie grau */
+.kapitel { --goldlinie: var(--gold); }
+.kapitel.sand { --goldlinie: color-mix(in srgb, var(--gold) 55%, var(--cognac)); }
+/* die Haken reichen bis an die Oberlänge der ersten Zeile: die Überschrift hängt wirklich daran */
+.ausl { grid-column: 1 / -1; position: relative; height: 2.8rem; margin-bottom: -.55rem; }
+.ausl::before { content: ""; position: absolute; top: 0; left: calc(-1 * var(--rand)); width: calc(var(--rand) + var(--ende, 38%)); height: 1px; background: var(--goldlinie); transform-origin: 0 0; transform: scaleX(0); transition: transform 1.3s var(--ease); }
+.ausl::after { content: ""; position: absolute; top: 0; left: var(--haken, 1.2rem); width: 4.2rem; height: 100%; border-left: 1px solid var(--goldlinie); border-right: 1px solid var(--goldlinie); transform-origin: 0 0; transform: scaleY(0); transition: transform .7s .9s var(--ease); }
+.sichtbar .ausl::before { transform: none; }
+.sichtbar .ausl::after { transform: none; }
+/* die Überschrift schwingt am Haken ein: dieselbe Feder wie das Schild, nur kleiner */
+.ausl ~ .zt, .ausl ~ .anlass__kopf .zt { transform-origin: 3.3rem 0; transform: rotate(-2.2deg); transition: transform 1.8s 1.1s cubic-bezier(.3, 1.6, .5, 1); }
+.sichtbar .ausl ~ .zt, .sichtbar .ausl ~ .anlass__kopf .zt { transform: none; }
+
+/* Rahmen: die goldene Haarlinie innen vom Schild, auf Fotos und dem Etikett; derselbe Abstand (8 px) überall, damit es ein Zeichen ist und keine Deko */
+.gerahmt > div { position: relative; }
+.gerahmt > div::after { content: ""; position: absolute; inset: 8px; border: 1px solid color-mix(in srgb, var(--gold) 80%, transparent); pointer-events: none; z-index: 2; }
+
 /* ---------- Hero Runde 10: Bild im Leinen-Passepartout, darunter ein Satz ---------- */
 /* weil Text nie aufs Foto gehört (Ilona) und die Wortmarke auf Leinen immer lesbar bleibt; die Leinenfläche ist dieselbe wie die Seite darunter, man steht schon im Haus */
 .hero { height: 100svh; min-height: 640px; display: grid; grid-template-rows: 84px minmax(0, 1fr) auto; padding: 0 var(--rand); background: var(--leinen); }
 .hero__bild { grid-row: 2; position: relative; margin: 0; overflow: hidden; background: var(--sand); }
 /* Klären: jedes Bild kommt aus leichter Trübung scharf, weil Wein im Doppelstück ruht, bis er klar ist. Sättigung gedämpft, damit Leinen und Bild eine Familie sind */
 .hero__bild img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%;
-  opacity: 0; filter: blur(16px) saturate(.8); transform: scale(1.025);
+  opacity: 0; filter: blur(16px) var(--ton); transform: scale(1.025);
   transition: opacity .7s var(--ease), filter 1.5s var(--ease), transform 2s var(--ease); }
-.geladen .hero__bild img.an { opacity: 1; filter: blur(0) saturate(.8); transform: none; }
+.geladen .hero__bild img.an { opacity: 1; filter: blur(0) var(--ton); transform: none; }
 .hero__bild .start { object-position: 0% 40%; }
 
 .hero__satz { grid-row: 3; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.8vw, 2.5rem); align-items: end;
@@ -72,7 +100,7 @@
 .fass .fass__text.klar, .fass figure.klar { transition-delay: 1.8s; }
 .fass.sichtbar .klar { opacity: 1; filter: none; }
 .fass figure { grid-column: 1 / 4; grid-row: 2; align-self: start; margin: clamp(3rem, 8vh, 5.5rem) 0 0; }
-.fass figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; filter: saturate(.8); }
+.fass figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; filter: var(--ton); }
 .fass figcaption { margin-top: .6rem; font-size: .78rem; color: color-mix(in srgb, var(--leinen) 62%, transparent); }
 .fass__text { grid-column: 4 / 9; grid-row: 2; margin-top: clamp(3rem, 8vh, 5.5rem); color: color-mix(in srgb, var(--leinen) 84%, transparent); font-size: 1.06rem; }
 .fass__text p { margin: 0 0 1rem; max-width: 46ch; }
@@ -94,8 +122,8 @@
 /* Bilder klären mit, Sättigung 80 % wie im Hero, damit Leinen und Foto eine Familie sind */
 .bild { margin: 0; }
 .bild > div { overflow: hidden; background: var(--sand); }
-.bild img { width: 100%; height: 100%; object-fit: cover; filter: blur(14px) saturate(.8); transform: scale(1.03); transition: filter 1.8s var(--ease), transform 2.2s var(--ease); }
-.sichtbar .bild img { filter: saturate(.8); transform: none; }
+.bild img { width: 100%; height: 100%; object-fit: cover; filter: blur(14px) var(--ton); transform: scale(1.03); transition: filter 1.8s var(--ease), transform 2.2s var(--ease); }
+.sichtbar .bild img { filter: var(--ton); transform: none; }
 /* Bildnotiz klein über dem Bild (Clos Apalta): sagt, wo man steht, statt das Bild zu beschriften; kleingeschrieben, weil sie eine Randnotiz ist, kein Titel */
 .notiz { display: block; margin: 0 0 .6rem; font-size: .8rem; color: var(--leise); }
 .text p { margin: 0 0 1rem; max-width: 42ch; color: var(--leise); }
@@ -108,10 +136,17 @@
 
 /* ---------- Wein: ein Raum, eine Theke ---------- */
 /* Überschrift über die Bildbreite, Text unten rechts am Bildrand; weil man erst den Ort sieht und dann liest, was dort passiert */
+/* Runde 11: das Bild übernimmt die Fläche. Es beginnt im Leinen-Passepartout wie im Hero und öffnet sich beim Scrollen bis an die Ränder (ohne Pin, mit lerp-Auslauf); erst dann steht man in der Vinothek */
 .wein .zt { grid-column: 1 / 10; margin-bottom: var(--mittel); }
-.wein .bild { grid-column: 1 / 9; }
-.wein .bild > div { aspect-ratio: 3 / 2; }
-.wein .text { grid-column: 10 / 13; align-self: end; }
+.wein .bild { grid-column: 1 / -1; margin: 0 calc(-1 * var(--rand)); }
+/* die Bildnotiz wandert mit der linken Bildkante, damit sie am Bild bleibt */
+.wein .notiz { padding-left: max(var(--rand), (1 - var(--g, 1)) * 21%); }
+.wein .bild > div { aspect-ratio: 16 / 8; clip-path: inset(calc((1 - var(--g, 1)) * 9%) calc((1 - var(--g, 1)) * 21%)); }
+.wein .bild img { transform: scale(calc(1.14 - var(--g, 1) * .14)); transition: filter 1.8s var(--ease); }
+.wein .text { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; margin-top: var(--mittel); }
+.wein .text .lead { grid-column: 1 / 6; margin: 0; }
+.wein .text p:not(.lead) { grid-column: 7 / 11; margin: .3rem 0 0; }
+.wein .text .link { grid-column: 7 / 11; justify-self: start; }
 
 /* ---------- Hotel: zwei Häuser, zwei Bilder ---------- */
 /* Doppel als Bildsatz: zwei Zimmer, das große links, das kleinere tiefer rechts, wie zwei Hausnummern in einer Gasse; beide warm, weil das Nachtblau der Fassadenfotos aus der Leinen-Palette fällt */
@@ -142,7 +177,7 @@
 .schild__info .weg { width: 100%; justify-content: center; }
 .schild__info .weg:hover { background: var(--leinen); color: var(--espresso); }
 .zimmer { position: absolute; top: calc(var(--oben) + 2.2rem); bottom: var(--unten); left: var(--zx, 50%); right: var(--rand); margin: 0; clip-path: inset(0 calc(var(--auf, 0) * 1%) 0 0); background: var(--sand); }
-.zimmer img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.8); transform: scale(var(--zoom, 1.15)); transform-origin: 30% 50%; }
+.zimmer img { width: 100%; height: 100%; object-fit: cover; filter: var(--ton); transform: scale(var(--zoom, 1.15)); transform-origin: 30% 50%; }
 .zimmer .notiz { position: absolute; top: calc(-1 * 1.6rem); left: 0; margin: 0; opacity: var(--info, 0); }
 
 
@@ -157,8 +192,8 @@
 .feste .satz.zeigt a { color: inherit; }
 .feste .satz a.aktiv { color: var(--espresso); text-decoration-color: var(--espresso); }
 .feste .text { grid-column: 1 / 6; margin-top: var(--mittel); }
-@media (min-width: 901px) { .feste .satz { max-width: calc(100% - clamp(220px, 21vw, 320px) - 3rem); } }
-.feste .bild { position: absolute; z-index: 2; right: var(--rand); top: var(--weit); width: clamp(220px, 21vw, 320px); pointer-events: none;
+@media (min-width: 901px) { .feste .satz { max-width: calc(100% - clamp(260px, 25vw, 380px) - 3rem); } }
+.feste .bild { position: absolute; z-index: 2; right: var(--rand); top: var(--weit); width: clamp(260px, 25vw, 380px); pointer-events: none;
   transition: left .6s var(--ease), top .6s var(--ease), right .6s var(--ease); }
 .feste .bild > div { position: relative; aspect-ratio: 4 / 5; }
 .feste .bild img { position: absolute; inset: 0; opacity: 0; transition: opacity .5s var(--ease), filter 1.8s var(--ease), transform 2.2s var(--ease); }
@@ -167,27 +202,31 @@
 
 /* ---------- Tagungen: die Angaben als Etikett ---------- */
 /* Planerinnen vergleichen Angaben, darum stehen sie als Liste mit Haltung: links das Wort, rechts der Wert, Haarlinien wie auf einem Etikett; keine Kacheln */
-.tagungen .bild { grid-column: 1 / 6; grid-row: 1 / 3; }
+/* Runde 11: die Angaben stehen auf einem hellen Etikett mit derselben Goldeinfassung wie das Schild: was Planerinnen weitergeben, sieht aus wie ein Gegenstand, den man weiterreicht */
+.tagungen .bild { grid-column: 1 / 6; grid-row: 2 / 5; }
 .tagungen .bild > div { aspect-ratio: 4 / 5; }
-.tagungen .zt { grid-column: 7 / 13; align-self: start; }
-.tagungen .text { grid-column: 7 / 13; grid-row: 2; align-self: end; }
-.angaben { margin: var(--mittel) 0 var(--eng); border-top: 1px solid var(--linie); }
+.tagungen .ausl { grid-column: 7 / 13; grid-row: 1; --haken: 0rem; --ende: 30%; }
+.tagungen .ausl::before { left: calc(-1 * (100vw - 100%)); width: calc(100vw - 100% + var(--ende)); }
+.tagungen .zt { grid-column: 7 / 13; grid-row: 2; align-self: start; }
+.tagungen .text { grid-column: 7 / 13; grid-row: 3; align-self: start; }
+.etikett { position: relative; margin-top: var(--mittel); padding: 1.6rem 2rem 1.8rem; background: color-mix(in srgb, var(--sand) 50%, var(--leinen)); }
+.etikett::before { content: ""; position: absolute; inset: 8px; border: 1px solid color-mix(in srgb, var(--gold) 80%, transparent); pointer-events: none; }
+.etikett .weg { position: relative; margin-top: 1.2rem; }
+.angaben { margin: 0; }
+.angaben div:last-child { border-bottom: 0; }
 .angaben div { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; padding: .9rem 0; border-bottom: 1px solid var(--linie); }
 .angaben dt { font: 500 .72rem/1.9 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--leise); }
 .angaben dd { margin: 0; font: 400 1.2rem/1.4 var(--serif); }
 
 /* ---------- Familie ---------- */
-/* Größe nach Zuständigkeit: wer mit euch plant und den Wein macht, steht groß; die Eltern und Magda daneben kleiner und tiefer, wie eine zweite Reihe am Tisch */
+/* Runde 11 (Benjamin): alle gleich groß und gleich gerahmt, eine Reihe wie Porträts an einer Wand; wer was macht, sagt die Zeile darunter, nicht die Bildgröße */
 .familie .zt { grid-column: 1 / 9; margin-bottom: var(--mittel); }
-.familie ul { grid-column: 1 / -1; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: subgrid; align-items: end; }
-.familie li:nth-child(1) { grid-column: 1 / 4; }
-.familie li:nth-child(2) { grid-column: 4 / 7; }
-.familie li:nth-child(3) { grid-column: 7 / 9; }
-.familie li:nth-child(4) { grid-column: 9 / 11; }
-.familie li:nth-child(5) { grid-column: 11 / 13; }
-.familie .bild > div { aspect-ratio: 4 / 5; }
-.familie b { display: block; margin-top: .9rem; font: 400 1.5rem/1.1 var(--serif); }
-.familie li:nth-child(n+3) b { font-size: 1.2rem; }
+.familie ul { grid-column: 1 / -1; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 2rem); }
+.familie .bild > div { aspect-ratio: 3 / 4; }
+/* versetztes Klären: eins nach dem anderen, wie Leute, die nacheinander an den Tisch kommen */
+.familie li:nth-child(2) .bild img { transition-delay: .15s; } .familie li:nth-child(3) .bild img { transition-delay: .3s; }
+.familie li:nth-child(4) .bild img { transition-delay: .45s; } .familie li:nth-child(5) .bild img { transition-delay: .6s; }
+.familie b { display: block; margin-top: 1rem; font: 400 1.4rem/1.1 var(--serif); }
 .familie li span { display: block; margin-top: .3rem; font-size: .88rem; color: var(--leise); }
 .familie__team { grid-column: 4 / 10; margin: var(--mittel) 0 0; font: italic 400 clamp(1.25rem, 1.6vw, 1.45rem)/1.4 var(--serif); }
 
@@ -254,12 +293,18 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
   .angaben div { grid-template-columns: 6.5rem 1fr; }
   .angaben dd { font-size: 1.1rem; }
 
-  .familie ul { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.5rem 1rem; }
-  .familie li:nth-child(1) { grid-column: 1 / 4 !important; }
-  .familie li:nth-child(2) { grid-column: 4 / 7 !important; }
-  .familie li:nth-child(n+3) { grid-column: span 2 !important; }
-  .familie li:nth-child(n+3) span { font-size: .78rem; }
+  /* mobil: dieselbe Reihe zum Wischen, jedes Porträt gleich breit, das nächste schaut an */
+  .familie ul { display: flex; gap: 1rem; margin: 0 calc(-1 * var(--rand)); padding: 0 var(--rand) .5rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 var(--rand); scrollbar-width: none; }
+  .familie li { flex: 0 0 62%; scroll-snap-align: start; }
   .familie__team { grid-column: 1 / -1; }
+  .wein .bild > div { aspect-ratio: 4 / 3; }
+  .wein .text { display: block; }
+  .wein .text p:not(.lead) { margin-top: 1rem; }
+  .etikett { padding: 1.3rem 1.4rem 1.5rem; }
+  .ausl { height: 2.2rem; margin-bottom: -.4rem; }
+  /* mobil: erst die Überschrift am Haken, dann Bild, dann Etikett */
+  .tagungen .bild { order: 2; } .tagungen .text { order: 3; }
+  .tagungen .zt { margin-bottom: var(--mittel); }
 
   .anlass form { margin-top: 2rem; }
   .anlass fieldset { font-size: clamp(1.45rem, 6.4vw, 1.8rem); line-height: 1.75; }
@@ -283,7 +328,7 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
   .hotel--a .buehne__halt > .zimmer { order: 2; }
 }
 @media (prefers-reduced-motion: reduce) and (min-width: 901px) { .buehne { height: 100svh; } }
-@media (prefers-reduced-motion: reduce) { .klar { opacity: 1; filter: none; } }
+@media (prefers-reduced-motion: reduce) { .klar { opacity: 1; filter: none; } .ausl::before, .ausl::after, .ausl ~ .zt, .ausl ~ .anlass__kopf .zt { transform: none !important; transition: none; } }
 </style>
 </head>
 <body>
@@ -345,8 +390,9 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
   </section>
 
   <section class="kapitel wein raster" id="wein" aria-labelledby="h-wein">
+    <span class="ausl" aria-hidden="true"></span>
     <h2 class="zt" id="h-wein"><span class="klar">Burgunder aus Ingelheim,</span> <span class="zweit klar">probiert sie an unserer Theke.</span></h2>
-    <figure class="bild"><figcaption class="notiz">Stiegelgasse 50, die Vinothek</figcaption><div><img src="../bilder/wasem-vinothek-theke.webp" alt="Vinothek im Weingut mit Theke, Barhockern und Weinregal unter alten Holzbalken" loading="lazy"></div></figure>
+    <figure class="bild" data-wachsen><figcaption class="notiz">Stiegelgasse 50, die Vinothek</figcaption><div><img src="../bilder/wasem-vinothek-theke.webp" alt="Vinothek im Weingut mit Theke, Barhockern und Weinregal unter alten Holzbalken" loading="lazy"></div></figure>
     <div class="text klar">
       <p class="lead">Julia macht die Weine, ihr Vater Burkhard ist Kellermeister.</p>
       <p>Im Mittelpunkt steht Spätburgunder, dazu Riesling, Grau- und Weißburgunder, Sekt und Alkoholfreies. Bio seit 2022.</p>
@@ -355,7 +401,7 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
   </section>
 
   <section class="kapitel hotel--a" id="hotel" aria-labelledby="h-hotel-a">
-    <div class="raster"><h2 class="zt" id="h-hotel-a"><span class="klar">Ein Weinhotel in zwei Häusern,</span> <span class="zweit klar">eins davon im Hof des Weinguts.</span></h2></div>
+    <div class="raster"><span class="ausl" aria-hidden="true"></span><h2 class="zt" id="h-hotel-a"><span class="klar">Ein Weinhotel in zwei Häusern,</span> <span class="zweit klar">eins davon im Hof des Weinguts.</span></h2></div>
     <div class="buehne"><div class="buehne__halt">
       <span class="ausleger" aria-hidden="true"></span>
       <figure class="zimmer"><figcaption class="notiz">hinter dem Schild, eins der Zimmer</figcaption><img src="../runde-7/bestand/wasem-hotelzimmer-holzmosaik.webp" alt="Hotelzimmer mit Holzmosaik an der Wand" loading="lazy"></figure>
@@ -373,14 +419,15 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
   </section>
 
 
-  <section class="kapitel feste raster" id="feste" aria-labelledby="h-feste">
+  <section class="kapitel feste raster sand" id="feste" aria-labelledby="h-feste">
+    <span class="ausl" aria-hidden="true"></span>
     <h2 class="zt" id="h-feste"><span class="klar">Ihr feiert im Weingarten,</span> <span class="zweit klar">und schlaft gleich nebenan.</span></h2>
     <p class="satz klar">Bei uns feiern Freundinnen ihren <a href="#anlass" data-anlass="0">Junggesellinnenabschied</a>, Paare ihre <a href="#anlass" data-anlass="1">Hochzeit</a> mit freier Trauung in den Weinbergen, Familien <a href="#anlass" data-anlass="2">Geburtstage</a>, und Gruppen ziehen zur <a href="#anlass" data-anlass="5">Weinwanderung</a> los.</p>
     <div class="text klar">
       <p>Dazu Workshops wie Keramik oder Makramee und die Rundfahrt mit der Winzerin.</p>
       <a class="weg" href="#anlass">Fest anfragen</a>
     </div>
-    <figure class="bild" aria-hidden="true"><div>
+    <figure class="bild gerahmt" aria-hidden="true"><div>
       <img class="an" src="../bilder/wasem-jga-freundinnen-lachen.webp" alt="" loading="lazy">
       <img src="../bilder/wasem-jga-freundinnen-lachen.webp" alt="" loading="lazy">
       <img src="../bilder/wasem-weingarten-tafel-gedeckt.webp" alt="" loading="lazy">
@@ -390,9 +437,10 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
   </section>
 
   <section class="kapitel tagungen raster" id="tagungen" aria-labelledby="h-tagungen">
-    <figure class="bild"><figcaption class="notiz">der Eventraum im Stammhaus</figcaption><div><img src="../bilder/wasem-eventraum-tagung-hoch.webp" alt="Eventraum im Stammhaus, für eine Tagung gestellt" loading="lazy"></div></figure>
+    <span class="ausl" aria-hidden="true"></span>
+    <figure class="bild gerahmt"><figcaption class="notiz">der Eventraum im Stammhaus</figcaption><div><img src="../bilder/wasem-eventraum-tagung-hoch.webp" alt="Eventraum im Stammhaus, für eine Tagung gestellt" loading="lazy"></div></figure>
     <h2 class="zt" id="h-tagungen"><span class="klar">Ihr tagt im Stammhaus,</span> <span class="zweit klar">die Zimmer liegen im selben Haus.</span></h2>
-    <div class="text klar">
+    <div class="text klar"><div class="etikett">
       <dl class="angaben">
         <div><dt>Personen</dt><dd>am besten 30, Platz für knapp 50</dd></div>
         <div><dt>Technik</dt><dd>für hybride Treffen</dd></div>
@@ -400,22 +448,24 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
         <div><dt>Dazu</dt><dd>Zimmer und Rahmenprogramm, gleich mitgeplant</dd></div>
       </dl>
       <a class="weg" href="#anlass" data-anlass="3">Tagung anfragen</a>
-    </div>
+    </div></div>
   </section>
 
-  <section class="kapitel familie raster" aria-labelledby="h-familie">
+  <section class="kapitel familie raster sand" aria-labelledby="h-familie">
+    <span class="ausl" aria-hidden="true"></span>
     <h2 class="zt" id="h-familie"><span class="klar">Drei Generationen an der Stiegelgasse,</span> <span class="zweit klar">ihr wisst vorher, wer euch empfängt.</span></h2>
     <ul>
-      <li><figure class="bild"><div><img src="../bilder/wasem-familie-marie-tafel.webp" alt="Marie Wasem" loading="lazy"></div></figure><b>Marie</b><span>kümmert sich um Planung und Zahlen</span></li>
-      <li><figure class="bild"><div><img src="../bilder/wasem-familie-julia-keller.webp" alt="Julia Wasem im Weinkeller" loading="lazy"></div></figure><b>Julia</b><span>macht die Weine</span></li>
-      <li><figure class="bild"><div><img src="../bilder/wasem-familie-ilona-anstossen.webp" alt="Ilona Wasem" loading="lazy"></div></figure><b>Ilona</b><span>leitet das Weinhotel</span></li>
-      <li><figure class="bild"><div><img src="../bilder/wasem-familie-burkhard-weinberg.webp" alt="Burkhard Wasem im Weinberg" loading="lazy"></div></figure><b>Burkhard</b><span>Kellermeister</span></li>
-      <li><figure class="bild"><div><img src="../bilder/wasem-familie-magda-tafel.webp" alt="Magda Wasem" loading="lazy"></div></figure><b>Magda</b><span>backt für Gäste und Team</span></li>
+      <li><figure class="bild gerahmt"><div><img src="../bilder/wasem-familie-marie-tafel.webp" alt="Marie Wasem" loading="lazy"></div></figure><b>Marie</b><span>kümmert sich um Planung und Zahlen</span></li>
+      <li><figure class="bild gerahmt"><div><img src="../bilder/wasem-familie-julia-keller.webp" alt="Julia Wasem im Weinkeller" loading="lazy"></div></figure><b>Julia</b><span>macht die Weine</span></li>
+      <li><figure class="bild gerahmt"><div><img src="../bilder/wasem-familie-ilona-anstossen.webp" alt="Ilona Wasem" loading="lazy"></div></figure><b>Ilona</b><span>leitet das Weinhotel</span></li>
+      <li><figure class="bild gerahmt"><div><img src="../bilder/wasem-familie-burkhard-weinberg.webp" alt="Burkhard Wasem im Weinberg" loading="lazy"></div></figure><b>Burkhard</b><span>Kellermeister</span></li>
+      <li><figure class="bild gerahmt"><div><img src="../bilder/wasem-familie-magda-tafel.webp" alt="Magda Wasem" loading="lazy"></div></figure><b>Magda</b><span>backt für Gäste und Team</span></li>
     </ul>
     <p class="familie__team klar">Feste und Tagungen planen Franzi und Elena mit euch.</p>
   </section>
 
   <section class="kapitel anlass raster" id="anlass" aria-labelledby="h-anlass">
+    <span class="ausl" aria-hidden="true"></span>
     <div class="anlass__kopf">
       <h2 class="zt" id="h-anlass"><span class="klar">Erzählt uns euren Anlass,</span> <span class="zweit klar">den Rest klären wir im Gespräch.</span></h2>
       <p class="klar">Drei Angaben reichen für den Anfang. Darauf antwortet euch ein Mensch aus unserem Team, mit Namen und Telefonnummer.</p>
@@ -551,6 +601,19 @@ if (buehne) {
   };
   requestAnimationFrame(tick);
 }
+
+// Runde 11: Bild übernimmt die Fläche (Wein). Fortschritt vom Eintritt unten bis zur oberen Drittellinie, mit Auslauf; kein Pin, der gehört dem Hotel
+document.querySelectorAll('[data-wachsen]').forEach(fig => {
+  const rahmen = fig.querySelector('div');
+  let ist = 0;
+  const lauf = () => {
+    let soll = 1;
+    if (!still.matches && !ruhig.matches) { const r = rahmen.getBoundingClientRect(); soll = sanft(teil(1 - r.top / innerHeight, .05, .75)); }
+    ist = lerp(ist, soll, .08); if (Math.abs(ist - soll) < .0005) ist = soll;
+    fig.style.setProperty('--g', ist.toFixed(4)); requestAnimationFrame(lauf);
+  };
+  requestAnimationFrame(lauf);
+});
 
 // Anlass: Entwurf, schickt nichts ab
 document.querySelector('.anlass form').addEventListener('submit', e => { e.preventDefault(); e.currentTarget.classList.add('gesendet'); });
