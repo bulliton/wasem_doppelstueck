@@ -1,6 +1,6 @@
 # Übergabe
 
-Stand: 2026-10-31 (Nacht) · **Runde 12: Akzent Rot #E33C16 fest gesetzt** (Commit cc08df0) auf Branch `claude/runde-11` (Worktree `.claude/worktrees/brave-meitner-8193a0`, zweigt von `claude/warum-doppelstueck` 3c4797a ab). `pruefer` dazu lief beim Schreiben noch, Ampel offen. Nicht gemergt, nicht gepusht.
+Stand: 2026-10-31 (Nacht) · **Runde 12: Akzent Rot #E33C16 fest gesetzt** (Commit cc08df0) auf Branch `claude/runde-11` (Worktree `.claude/worktrees/brave-meitner-8193a0`, zweigt von `claude/warum-doppelstueck` 3c4797a ab). `pruefer`: **grün**, 0 Befunde (Kriterien gemessen; Reduced Motion nur im Code belegt). Nicht gemergt, nicht gepusht.
 
 ## Zuletzt erledigt
 - Akzent aus der Gutswein-Flasche: Rot #E33C16 (neue Weißwein-Etiketten, gemessen am Shopfoto) gewählt nach Übergabe-Empfehlung; Koralle #EC5F3F nur noch als Kommentar in `prototyp/runde-10/index.html` Z. 46–49. Rückwechsel = eine Variable `--akzent` auf `:root`.
@@ -9,8 +9,8 @@ Stand: 2026-10-31 (Nacht) · **Runde 12: Akzent Rot #E33C16 fest gesetzt** (Comm
 - Geprüft bei 1440 und 375: keine Konsolenfehler, Hero-Wort „Wein“ in Rot, Rest tritt zurück.
 
 ## Offen
-1. `pruefer`-Ampel zu cc08df0 lesen, Befunde beheben.
-2. Benjamin die Wahl Rot zeigen und bestätigen lassen (er hat noch nicht selbst gewählt).
+1. Benjamin die Wahl Rot zeigen und bestätigen lassen (er hat noch nicht selbst gewählt); danach ist der Branch merge-bereit (launch.json und `prototyp/_pruef/` nicht mitnehmen).
+2. (pruefer zu cc08df0 erledigt: grün.)
 3. Anlass auf A heben: Schluss-Signatur wie Jägerhofs Unterschrift. Feste: zu viel Sand unter dem Knopf.
 4. Danach `text-kritik` (Überschriften unverändert seit Runde 10), Merge nur nach Freigabe.
 5. Prüfmarken aus Runde 10 bleiben (Fass 2.400 l, 50 Zimmer, Personen 30/50, bio seit 2022, Magda, Keller-Foto Edelstahl).
@@ -23,4 +23,4 @@ Stand: 2026-10-31 (Nacht) · **Runde 12: Akzent Rot #E33C16 fest gesetzt** (Comm
 - Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866, Akzent Rot #E33C16. Schrift Bona Nova + Albert Sans.
 
 ## Starter-Prompt (neue Session, Opus 5.5)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/runde-11` (Worktree `.claude/worktrees/brave-meitner-8193a0`). Lies `wissen/Uebergabe.md`. pruefer-Ampel zu cc08df0 abarbeiten, dann „Offen“ 3 und 4 (Anlass-Signatur, Feste-Sand, text-kritik). Kein Push.
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/runde-11` (Worktree `.claude/worktrees/brave-meitner-8193a0`). Lies `wissen/Uebergabe.md`. Benjamins Bestätigung für Akzent Rot holen, dann „Offen“ 3 und 4 (Anlass-Signatur, Feste-Sand, text-kritik). Kein Push.
