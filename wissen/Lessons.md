@@ -3,6 +3,7 @@
 Eine Zeile pro Lektion: Regel — Grund. Neue oben. Doppeltes zusammenführen. Ziel < 80 Zeilen.
 
 ## Technik
+- Wer einen Vergleichs-Umschalter (`html[data-x] …`) entfernt, muss die Bestandsregeln mit derselben Eigenschaft ersetzen, nicht nur das Präfix streichen: ohne Präfix gewinnt die spätere Bestandsregel (Hero-Link blieb Espresso) — 31.10., Runde 12.
 - Der Worktree-Hook verbietet Edit/Write in fremden Worktrees: um auf einem anderen Branch weiterzuarbeiten, im eigenen Worktree `git checkout -b claude/<thema> <branch>` statt in den fremden Ordner zu schreiben — 31.10., Runde 11.
 
 ## Design
