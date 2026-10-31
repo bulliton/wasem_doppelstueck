@@ -2,6 +2,10 @@
 
 Stand: 2026-10-31 (Nacht) · **A-004 Runde 11 gebaut auf Branch `claude/runde-11`** (Worktree `.claude/worktrees/brave-meitner-8193a0`, zweigt von `claude/warum-doppelstueck` 3c4797a ab). Commit 5235a77. `pruefer`: gelb, beide Befunde behoben (Wein-Endbild mobil/Reduced Motion sofort, Menübilder im Bildton). Nicht gemergt, nicht gepusht.
 
+## Benjamins Urteil Runde 11 (31.10., Nacht)
+- „Geht schon in die Richtung.“ Weiter feminin, sanft, Pinterest.
+- Neu: **eine Akzentfarbe für „Pep“** aus einer echten Wasem-Flasche, die sie verkaufen: ein Rot oder Orange (Etikett/Kapsel; welche Flasche, weiß er nicht genau). Erst die Flasche finden (doppelstueck.com Shop, Instagram-Captions), Farbe aus dem Original messen, dann setzen.
+
 ## Warum ein neuer Branch
 - Der Worktree-Schutz verbietet Schreiben in fremde Worktrees. Darum steht Runde 11 nicht auf `claude/warum-doppelstueck`, sondern auf `claude/runde-11` im Worktree der Key-Screens-Session. `claude/runde-11` enthält den ganzen Stand von `claude/warum-doppelstueck` plus Runde 11.
 - `claude/key-screens` (3b82a0c) bleibt Sackgasse. Schließen erst nach Rückfrage.
@@ -14,8 +18,8 @@ Stand: 2026-10-31 (Nacht) · **A-004 Runde 11 gebaut auf Branch `claude/runde-11
 - Kritik neben Jägerhof: `docs/runde-11-kritik.md` (Wein A−, Hotel A, Feste A−, Tagungen A−, Familie A, Anlass B+).
 
 ## Offen
-1. Erneuter `pruefer`-Durchlauf vor jedem Merge.
-2. Benjamins Urteil zur Runde 11 (Pinterest-Beige getroffen?).
+1. **Akzentfarbe aus der Flasche:** Shop auf doppelstueck.com nach Flaschen mit rotem/orangem Etikett oder Kapsel durchsehen, Farbwert aus dem Produktfoto messen, 2 Varianten (Rot, Orange) als Vergleich zum Bestand zeigen (Lesson: Palette nicht still ersetzen). Akzent sparsam: z. B. Ausleger-Haken, Hover im Hero/Feste-Satz, ein Fleck pro Screen; Cognac bleibt Anfragen/Buchen, außer der Akzent ersetzt ihn begründet.
+2. Erneuter `pruefer`-Durchlauf vor jedem Merge.
 3. Anlass auf A heben: Schluss-Signatur wie Jägerhofs Unterschrift. Feste: zu viel Sand unter dem Knopf.
 4. Danach `text-kritik` (Überschriften unverändert seit Runde 10), Merge nur nach Freigabe.
 5. Prüfmarken aus Runde 10 bleiben (Fass 2.400 l, 50 Zimmer, Personen 30/50, bio seit 2022, Magda, Keller-Foto Edelstahl).
@@ -26,4 +30,4 @@ Stand: 2026-10-31 (Nacht) · **A-004 Runde 11 gebaut auf Branch `claude/runde-11
 - Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866. Schrift Bona Nova + Albert Sans.
 
 ## Starter-Prompt (neue Session, Opus 5.5)
-> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/runde-11` (Worktree `.claude/worktrees/brave-meitner-8193a0`). Lies `wissen/Uebergabe.md` und `docs/runde-11-kritik.md`. Hol Benjamins Urteil zur Runde 11, dann „Offen“ 3 und 4. Kein Push.
+> Opus 5.5. Projekt wasem-doppelstueck-website, Branch `claude/runde-11` (Worktree `.claude/worktrees/brave-meitner-8193a0`). Lies `wissen/Uebergabe.md` (Benjamins Urteil Runde 11). Finde die Wasem-Flasche mit Rot/Orange im Shop, miss die Farbe, zeig zwei Akzent-Varianten in `prototyp/runde-10/index.html` als Vergleich, dann „Offen“ 2 bis 4. Kein Push.
