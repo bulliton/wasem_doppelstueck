@@ -36,6 +36,7 @@ Eine Zeile pro Lektion: Regel — Grund. Neue oben. Doppeltes zusammenführen. Z
 - Der Claude-Design-Prototyp (Juni) ist KI-Look: dunkles Luxus-Monogramm passt nicht zu einem herzlichen Familienweingut; Neustart bei null mit Briefing, Markenkern, Stimme — Benjamin, 26.10.
 
 ## Inhalt
+- Das Instagram-Konto @wasemdoppelstueck ist als Alkohol-Konto auf 18+ gestellt: ohne Login weder Profil noch Posts. Captions über `site:instagram.com wasemdoppelstueck` (DuckDuckGo-Snippets), Bilder nur mit Benjamins eingeloggtem Chrome oder Export von Marie — 31.10., Material-Gate A-006.
 - Ein Hero-Satz ist zuerst Verkaufsstrategie, dann Text: „Noch ein Glas? Ihr schlaft ja hier.“ war „wack“, „wie Wikipedia“, nicht durchdacht; wer landet, versteht ihn nicht. Vor dem Satz klären, wer kauft, was nur Wasem hat (Weingut + Weinhotel in einer Gasse) und was der Besucher im ersten Screen lesen muss (`docs/runde-5-strategie-und-auftrag.md`) — Benjamin, 26.10.
 - Claims und Idee-Sätze für Wasem müssen Gefühl tragen und junge Frauen ansprechen (cooles Design, coole Räume, lockerer Ton wie auf Instagram); „Kommt auf ein Glas. Bleibt den ganzen Tag.“ und „aus einem Glas Wein wird ein ganzer Tag“ lesen sich trocken wie Wikipedia — Benjamin, 26.10. Vor neuen Texten Instagram-Captions lesen.
 - Nicht mit „Frauenunternehmen“ oder „zwei Schwestern“ als Botschaft werben; die Familie darf vorkommen, die Botschaft sind Räume, Erlebnis, Stil — Benjamin, 26.10.

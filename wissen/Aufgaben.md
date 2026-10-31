@@ -35,5 +35,5 @@ Status: eingang
 Quelle: Benjamin 26.10. · Modell: scout · Abnahme: Mails liegen in ~/Downloads, Fakten in docs/briefing.md ergänzt
 
 ## A-006 · Konzeptrunde 2 nach Benjamins Feedback
-Status: fertig (26.10., Benjamin hat Richtung A freigegeben; docs/design-ideen-konzeptrunde-2.md)
+Status: fertig (31.10.: Benjamin wählt Hero „Lesesatz Runde 11“, Hero-Gate Variante 1 verworfen; Richtung A am 26.10. freigegeben)
 Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: docs/instagram-ton.md, 2–3 eigene Richtungen gegen docs/art-direction.md verglichen, Storyboard von Benjamin freigegeben

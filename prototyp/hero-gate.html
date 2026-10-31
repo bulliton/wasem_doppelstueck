@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hero-Gate Wasem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kalk:#F5F0E8; --grund:#F5F0E8; --text:#2B1E17; --leise:#6B584B; --hofblau:#1F2D48;
+  --serif:"Bodoni Moda", Georgia, serif; --sans:"Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --rand:3vw; --ease:cubic-bezier(.23,1,.32,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--grund);color:var(--text)}
+body{font:400 16px/1.55 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.vis-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* Navigation: transparent über dem Hero, versteckt beim Runterscrollen */
+.nav{position:fixed;inset:0 0 auto 0;z-index:20;height:80px;display:flex;align-items:center;gap:40px;padding:0 var(--rand);color:var(--kalk);transition:transform .3s var(--ease),background .4s var(--ease),color .4s var(--ease)}
+.nav.is-hidden{transform:translateY(-100%)}
+.nav.is-solid{background:var(--grund);color:var(--text);box-shadow:0 1px 0 rgba(43,30,23,.12)}
+.nav__logo{font:500 15px/1 var(--serif);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.nav__links{display:flex;gap:32px;margin-left:auto;list-style:none;font-size:15px}
+.nav__links a,.nav__book,.nav__menu{text-decoration:none;background:none;border:0;color:inherit;font:inherit;cursor:pointer}
+.nav__links a:hover,.nav__book:hover{text-decoration:underline;text-underline-offset:5px}
+.nav__book{font-weight:500;border-bottom:1px solid currentColor;padding-bottom:2px}
+.nav__menu{display:none;font-size:15px}
+.on-grund .nav{color:var(--text)}
+
+/* Gemeinsame Textbausteine */
+.claim{font-family:var(--serif);font-weight:400;font-style:italic;line-height:1.04;letter-spacing:-.01em}
+.sub{font-size:17px;line-height:1.5;max-width:30em}
+.ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:22px}
+.cta{display:inline-block;font:500 16px/1 var(--sans);text-decoration:none;padding:16px 26px;background:var(--kalk);color:var(--text);border-radius:2px;transition:transform .2s var(--ease)}
+.cta:active{transform:scale(.97)}
+.cta--dunkel{background:var(--text);color:var(--kalk)}
+.link{font-size:16px;text-decoration:underline;text-underline-offset:5px}
+.credit{position:absolute;right:var(--rand);bottom:14px;font-size:11px;letter-spacing:.04em;opacity:.75}
+.kapitelwort{font:500 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--leise);margin-bottom:22px}
+.h2{font:400 clamp(40px,5.4vw,88px)/1 var(--serif);letter-spacing:-.02em}
+.raum-p{font-size:18px;line-height:1.55;max-width:31em;margin-top:28px}
+figure{position:relative}
+figcaption{font-size:13px;color:var(--leise);margin-top:10px}
+
+.hero{position:relative;min-height:100dvh;overflow:hidden}
+.variante{display:none}
+body[data-v="1"] .v1, body[data-v="2"] .v2, body[data-v="3"] .v3{display:block}
+
+/* ---------- Variante 1: Film, Name randlos, Varianz 3 ---------- */
+.v1 .hero{color:var(--kalk);display:flex;align-items:flex-end}
+.v1 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.72) saturate(.95);transform-origin:50% 60%}
+.v1 .hero__text{position:relative;padding:0 var(--rand) 6vh}
+.v1 .claim{font-size:clamp(26px,2.6vw,40px);margin-bottom:1.2vh}
+.v1 h1 .name{display:block;font:400 clamp(64px,13.2vw,212px)/.9 var(--serif);letter-spacing:-.035em;margin-left:-.04em}
+.v1 .unter{display:flex;flex-wrap:wrap;align-items:center;gap:14px 40px;margin-top:3vh}
+.v1 .unter .ctas{margin-top:0}
+.v1 .link{color:var(--kalk)}
+.v1 .sig{padding:18vh var(--rand) 22vh;display:grid;grid-template-columns:repeat(12,1fr);gap:0 2vw}
+.v1 .sig__text{grid-column:1/6;align-self:start;position:sticky;top:16vh}
+.v1 .collage{grid-column:6/13;display:grid;grid-template-columns:repeat(10,1fr);gap:2vw;align-items:start}
+.v1 .collage figure:nth-child(1){grid-column:1/5;margin-top:0}
+.v1 .collage figure:nth-child(2){grid-column:5/11;margin-top:12vh}
+.v1 .collage figure:nth-child(3){grid-column:1/5;margin-top:4vh}
+.v1 .collage figure:nth-child(4){grid-column:5/11;margin-top:18vh}
+.v1 .collage img{width:100%;object-fit:cover}
+.v1 .collage figure:nth-child(1) img{aspect-ratio:3/4}
+.v1 .collage figure:nth-child(2) img{aspect-ratio:4/3}
+.v1 .collage figure:nth-child(3) img{aspect-ratio:4/5}
+.v1 .collage figure:nth-child(4) img{aspect-ratio:3/2}
+
+/* ---------- Variante 2: Satz unten links, Kapitelstrom, Varianz 6 ---------- */
+.v2 .hero{color:var(--kalk)}
+.v2 .hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%;filter:brightness(.86)}
+.v2 .hero__text{position:absolute;left:var(--rand);bottom:7vh;right:var(--rand)}
+.v2 h1 .name{display:block;font:500 13px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;margin-bottom:2.4vh}
+.v2 h1 .claim{display:block;font-size:clamp(44px,6.6vw,112px);max-width:9.5em}
+.v2 .unter{margin-left:8.5vw;margin-top:3.2vh}
+.v2 .link{color:var(--kalk)}
+.v2 .sig{padding:16vh 0 10vh;overflow:hidden}
+.v2 .sig__text{padding:0 var(--rand);display:grid;grid-template-columns:repeat(12,1fr);gap:0 2vw;margin-bottom:9vh}
+.v2 .sig__text .h2{grid-column:1/7}
+.v2 .sig__text .raum-p{grid-column:8/12;margin-top:0;align-self:end}
+.v2 .strom{display:flex;gap:2.4vw;align-items:flex-start;padding:0 var(--rand);width:max-content}
+.v2 .strom figure{flex:none}
+.v2 .strom img{width:100%;object-fit:cover}
+.v2 .strom figure:nth-child(1){width:30vw}.v2 .strom figure:nth-child(1) img{height:58vh}
+.v2 .strom figure:nth-child(2){width:45vw;margin-top:8vh}.v2 .strom figure:nth-child(2) img{height:50vh}
+.v2 .strom figure:nth-child(3){width:25vw}.v2 .strom figure:nth-child(3) img{height:44vh}
+.v2 .strom figure:nth-child(4){width:38vw;margin-top:12vh}.v2 .strom figure:nth-child(4) img{height:46vh}
+.v2 .strom figure:nth-child(5){width:28vw;margin-top:3vh}.v2 .strom figure:nth-child(5) img{height:56vh}
+.v2 .strom figure:nth-child(6){width:42vw}.v2 .strom figure:nth-child(6) img{height:52vh}
+
+/* ---------- Variante 3: Name in zwei Größen, Wörter färben sich, Varianz 8 ---------- */
+.v3 .hero{isolation:isolate;height:100dvh;min-height:640px;padding:118px var(--rand) 0;display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:auto 1fr;gap:0 2vw}
+.v3 h1{grid-column:1/13;grid-row:1}
+.v3 h1 .name{display:block;font:400 10.6vw/.86 var(--serif);text-transform:uppercase;letter-spacing:-.02em}
+.v3 h1 .name small{display:block;font-size:.45em;line-height:1;letter-spacing:.02em;margin-bottom:.08em}
+.v3 .hero__text{grid-column:1/6;grid-row:2;align-self:end;padding-bottom:7vh}
+.v3 .claim{font-size:clamp(34px,3.7vw,60px);margin-bottom:2.2vh}
+.v3 .hero__bild{grid-column:7/13;grid-row:2;margin-right:calc(-1 * var(--rand));margin-top:3vh;position:relative;z-index:-1;height:100%;min-height:360px}
+.v3 .hero__bild img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.v3 .hero__bild2{position:absolute;left:-13vw;bottom:10vh;width:15vw;aspect-ratio:3/4}
+.v3 .hero__bild2 img{width:100%;height:100%;object-fit:cover}
+.v3 .credit{color:var(--kalk)}
+.v3 .sig{background:var(--hofblau);color:var(--kalk);min-height:100dvh;display:flex;flex-direction:column;justify-content:center;padding:14vh var(--rand)}
+.v3 .sig__h{font:400 italic clamp(20px,1.8vw,26px)/1.2 var(--serif);color:rgba(245,240,232,.8);margin-bottom:4vh}
+.v3 .faerben{font:400 clamp(34px,3.8vw,58px)/1.16 var(--serif);max-width:20em;letter-spacing:-.01em}
+.v3 .faerben span{color:rgba(245,240,232,.25)}
+.v3 .sig .cta{margin-top:7vh;align-self:flex-start}
+
+/* ---------- Mobil ---------- */
+@media (max-width:767px){
+  :root{--rand:20px}
+  .nav{height:62px;gap:18px}
+  .nav__logo{font-size:13px;letter-spacing:.14em}
+  .nav__links{display:none}
+  .nav__menu{display:inline;margin-left:auto}
+  .sub{font-size:16px}
+  .cta{padding:15px 22px}
+  .credit{font-size:10px;bottom:8px}
+  .v1 .claim{font-size:24px}
+  .v1 h1 .name{font-size:17.5vw;line-height:.92}
+  .v1 .hero__text{padding-bottom:7vh}
+  .v1 .sig{display:block;padding:12vh var(--rand)}
+  .v1 .sig__text{position:static;margin-bottom:6vh}
+  .v1 .collage{grid-template-columns:1fr 1fr;gap:12px}
+  .v1 .collage figure:nth-child(n){grid-column:auto;margin-top:0}
+  .v1 .collage figure:nth-child(even){margin-top:6vh}
+  .v2 h1 .claim{font-size:46px}
+  .v2 .unter{margin-left:0}
+  .v2 .sig__text{display:block}
+  .v2 .sig__text .raum-p{margin-top:24px}
+  .v2 .strom-wrap{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .v2 .strom{gap:14px;padding:0 var(--rand)}
+  .v2 .strom figure{scroll-snap-align:start;margin-top:0!important}
+  .v2 .strom figure:nth-child(n){width:72vw}
+  .v2 .strom figure:nth-child(n) img{height:52vh}
+  .v3 .hero{display:block;height:auto;min-height:100dvh;padding-top:96px}
+  .v3 h1 .name{font-size:11.6vw}
+  .v3 .hero__bild{margin:4vh calc(-1 * var(--rand)) 0 18vw;height:38svh;min-height:0}
+  .v3 .hero__bild2{display:none}
+  .v3 .hero__text{padding:4vh 0 6vh}
+  .v3 .claim{font-size:32px}
+}
+@media (prefers-reduced-motion:reduce){.v3 .faerben span{color:var(--kalk)}}
+</style>
+</head>
+<body data-v="1">
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#">Wasem Doppelstück</a>
+  <ul class="nav__links">
+    <li><a href="#">Wein</a></li>
+    <li><a href="#">Erleben</a></li>
+    <li><a href="#">Übernachten &amp; Tagen</a></li>
+  </ul>
+  <button class="nav__menu" type="button">Menü</button>
+  <a class="nav__book" href="#">Zimmer finden</a>
+</header>
+
+<main>
+<!-- Variante 1 -->
+<div class="variante v1">
+  <section class="hero">
+    <video autoplay muted playsinline loop preload="metadata" poster="video/wasem-weinberg-lese-poster.jpg" aria-hidden="true">
+      <source src="video/wasem-weinberg-lese-600-hoch.mp4" media="(max-width: 767px)" type="video/mp4">
+      <source src="video/wasem-weinberg-lese-1600.mp4" type="video/mp4">
+    </video>
+    <div class="hero__text">
+      <h1><span class="claim" style="display:block">Noch ein Glas? Ihr schlaft ja hier.</span><span class="name">Wasem Doppelstück</span></h1>
+      <div class="unter">
+        <p class="sub">Bio-Weingut und Weinhotel mit 50 Zimmern, mitten in Ingelheim.</p>
+        <div class="ctas"><a class="cta" href="#">Zimmer finden</a><a class="link" href="#">Weinproben &amp; Events</a></div>
+      </div>
+    </div>
+    <p class="credit">Film: Wasem Doppelstück, Lese (Bestand)</p>
+  </section>
+  <section class="sig">
+    <div class="sig__text">
+      <h2 class="h2">Zwei Häuser, ein Weinhotel.</h2>
+      <p class="raum-p" data-raum></p>
+    </div>
+    <div class="collage" data-collage></div>
+  </section>
+</div>
+
+<!-- Variante 2 -->
+<div class="variante v2">
+  <section class="hero">
+    <img src="fotos/wasem-weinberg-abendlicht-glaeser.webp" alt="Zwei Frauen stoßen im Weinberg über Ingelheim bei Abendlicht mit Weißwein an" fetchpriority="high">
+    <div class="hero__text">
+      <h1><span class="name">Wasem Doppelstück</span><span class="claim">Noch ein Glas? Ihr schlaft ja hier.</span></h1>
+      <div class="unter">
+        <p class="sub">Bio-Weingut und Weinhotel mit 50 Zimmern, mitten in Ingelheim.</p>
+        <div class="ctas"><a class="cta" href="#">Zimmer finden</a><a class="link" href="#">Weinproben &amp; Events</a></div>
+      </div>
+    </div>
+    <p class="credit">Foto: doppelstueck.com (Bestand)</p>
+  </section>
+  <section class="sig">
+    <div class="sig__text">
+      <div style="grid-column:1/7"><h2 class="h2">Zwei Häuser, ein Weinhotel.</h2></div>
+      <p class="raum-p" data-raum style="grid-column:8/12"></p>
+    </div>
+    <div class="strom-wrap"><div class="strom" data-strom></div></div>
+  </section>
+</div>
+
+<!-- Variante 3 -->
+<div class="variante v3">
+  <section class="hero">
+    <h1><span class="name"><small>Wasem</small>Doppelstück</span></h1>
+    <div class="hero__text">
+      <p class="claim">Noch ein Glas? Ihr schlaft ja hier.</p>
+      <p class="sub">Bio-Weingut und Weinhotel mit 50 Zimmern, mitten in Ingelheim.</p>
+      <div class="ctas"><a class="cta cta--dunkel" href="#">Zimmer finden</a><a class="link" href="#">Weinproben &amp; Events</a></div>
+    </div>
+    <div class="hero__bild">
+      <img src="fotos/wasem-stammhaus-fassade-blaue-stunde.webp" alt="Das Stammhaus des Weinguts in der Stiegelgasse zur blauen Stunde, die Fenster warm beleuchtet" fetchpriority="high">
+      <figure class="hero__bild2"><img src="fotos/wasem-vinothek-theke-holzbalken.webp" alt="Vinothek mit Theke, Barhockern und alten Holzbalken"></figure>
+      <p class="credit">Fotos: doppelstueck.com (Bestand)</p>
+    </div>
+  </section>
+  <section class="sig">
+    <h2 class="sig__h">Zwei Häuser, ein Weinhotel.</h2>
+    <p class="faerben" data-faerben></p>
+    <a class="cta" href="#">Zimmer finden</a>
+  </section>
+</div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+const v = (new URLSearchParams(location.search).get('v') || '1').replace(/[^123]/g, '') || '1';
+document.body.dataset.v = v;
+if (v === '3') document.body.classList.add('on-grund');
+// Varianten, die nicht gezeigt werden, laden nichts (Film nur in Variante 1)
+document.querySelectorAll('.variante').forEach(el => { if (!el.classList.contains('v' + v)) el.remove(); });
+
+const RAUM = 'Im Stammhaus schlaft ihr im Hof des Weinguts, im Haus Klassik ein paar Häuser weiter, mit Aufzug und Tiefgarage. Probiert und gefeiert wird nebenan in Vinothek und Eventraum. Morgens gibt es Frühstück, und wer mag, geht vorher noch durch die Reben.';
+const RAEUME = [
+  ['wasem-stammhaus-zimmer-dachbalken', 'Stammhaus, Zimmer unter den alten Balken', 'Doppelzimmer im Stammhaus mit Dachbalken und warmem Licht'],
+  ['wasem-vinothek-theke-holzbalken', 'Vinothek im Weingut', 'Vinothek mit Theke und Holzbalken'],
+  ['wasem-klassik-zimmer-dachschraege', 'Haus Klassik, Zimmer mit Dachschräge', 'Helles Doppelzimmer mit Dachschräge und Holzmosaik'],
+  ['wasem-eventraum-lange-tafel', 'Eventraum für Tagung und Feier', 'Eventraum mit langer Holztafel und Stühlen'],
+  ['wasem-klassik-balkon-hof', 'Balkon im Haus Klassik', 'Balkon mit Sonnenschirm und Bistrotisch über grünem Garten'],
+  ['wasem-stammhaus-zimmer-abendlicht', 'Stammhaus am Abend', 'Zimmer im Stammhaus mit indirektem Abendlicht']
+];
+const fig = ([f, cap, alt]) => `<figure><img src="fotos/${f}.webp" alt="${alt}" loading="lazy"><figcaption>${cap}</figcaption></figure>`;
+document.querySelectorAll('[data-raum]').forEach(p => p.textContent = RAUM);
+const col = document.querySelector('[data-collage]'); if (col) col.innerHTML = RAEUME.slice(0, 4).map(fig).join('');
+const strom = document.querySelector('[data-strom]'); if (strom) strom.innerHTML = RAEUME.map(fig).join('');
+const fa = document.querySelector('[data-faerben]'); if (fa) fa.innerHTML = RAUM.split(' ').map(w => `<span>${w}</span>`).join(' ');
+
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mobil = matchMedia('(max-width: 767px)').matches;
+
+// Navigation: runter versteckt, hoch zurück auf Grund
+const nav = document.getElementById('nav'); let lastY = 0;
+const hero = document.querySelector('.hero');
+addEventListener('scroll', () => {
+  const y = scrollY, heroH = hero.offsetHeight;
+  nav.classList.toggle('is-hidden', y > lastY && y > 120);
+  nav.classList.toggle('is-solid', y > heroH * .6 && y < lastY);
+  if (y < 40) nav.classList.remove('is-solid', 'is-hidden');
+  lastY = y;
+}, { passive: true });
+
+if (!still && window.gsap) {
+  gsap.registerPlugin(ScrollTrigger);
+  if (window.Lenis) {
+    const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
+  }
+  if (v === '1') {
+    // Hero: Name driftet, Film zoomt aus. Signatur: Collage, jedes Bild mit eigener Geschwindigkeit
+    gsap.to('.v1 h1 .name', { yPercent: -30, ease: 'none', scrollTrigger: { trigger: '.v1 .hero', start: 'top top', end: 'bottom top', scrub: true } });
+    gsap.fromTo('.v1 .hero video', { scale: 1.08 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.v1 .hero', start: 'top top', end: 'bottom top', scrub: 1 } });
+    const tempo = mobil ? [-4, -10, -6, -12] : [-6, -18, -10, -24];
+    gsap.utils.toArray('.v1 .collage figure').forEach((f, i) => gsap.fromTo(f, { yPercent: 0 }, { yPercent: tempo[i], ease: 'none', scrollTrigger: { trigger: '.v1 .collage', start: 'top bottom', end: 'bottom top', scrub: 1 } }));
+  }
+  if (v === '2' && !mobil) {
+    // Signatur: horizontaler Kapitelstrom, gepinnt
+    const track = document.querySelector('.v2 .strom');
+    const weg = () => track.scrollWidth - innerWidth;
+    gsap.to(track, { x: () => -weg(), ease: 'none', scrollTrigger: { trigger: '.v2 .strom-wrap', start: 'top 14%', end: () => '+=' + weg(), pin: '.v2 .sig', scrub: 1, invalidateOnRefresh: true } });
+  }
+  if (v === '3') {
+    // Signatur: Wörter färben sich, Desktop gepinnt, mobil ohne Pin
+    const spans = gsap.utils.toArray('.v3 .faerben span');
+    gsap.to(spans, { color: '#F5F0E8', stagger: .1, ease: 'none', scrollTrigger: mobil
+      ? { trigger: '.v3 .faerben', start: 'top 70%', end: 'top 20%', scrub: .75 }
+      : { trigger: '.v3 .sig', start: 'top top', end: '+=120%', pin: true, scrub: .75 } });
+  }
+} else {
+  document.querySelectorAll('.v3 .faerben span').forEach(s => s.style.color = '#F5F0E8');
+}
+</script>
+</body>
+</html>
