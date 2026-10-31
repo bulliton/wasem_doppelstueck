@@ -44,9 +44,9 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 .gerahmt > div::after { content: ""; position: absolute; inset: 8px; border: 1px solid color-mix(in srgb, var(--gold) 80%, transparent); pointer-events: none; z-index: 2; }
 
 /* ---------- Runde 12: Akzent aus der Flasche ---------- */
-/* Die Farbe ist das Etikett der Gutsweine, gemessen am Shopfoto: Rot #E33C16 (neue Weißwein-Etiketten Chardonnay, Grauburgunder, Cabernet Blanc, Riesling).
-   Gewählt vor Koralle #EC5F3F (Spätburgunder, Portugieser), weil Rot neben Cognac und Sand klar absetzt. Wie auf der Flasche bleibt sie klein: die Kapsel oben, nie das ganze Glas. Cognac behält Anfragen und Buchen */
-:root { --akzent: #E33C16; }
+/* Die Farbe ist das Etikett der Gutsweine, gemessen am Shopfoto: Koralle #EC5F3F (Spätburgunder, Portugieser, Liebesstück, Rosé).
+   Benjamin wählte Koralle vor Rot #E33C16 (neue Weißwein-Etiketten). Wie auf der Flasche bleibt sie klein: die Kapsel oben, nie das ganze Glas. Cognac behält Anfragen und Buchen */
+:root { --akzent: #EC5F3F; }
 /* Kapsel: zwischen den Haken sitzt auf der Goldlinie ein kurzer Farbstreifen, wie die Kapsel auf dem Flaschenhals; sie kommt, wenn die Linie gezogen ist */
 .ausl { background: linear-gradient(var(--akzent), var(--akzent)) no-repeat var(--haken, 1.2rem) 0 / 0 3px; transition: background-size .6s 1.5s var(--ease); }
 .sichtbar .ausl { background-size: calc(4.2rem + 1px) 3px; }
