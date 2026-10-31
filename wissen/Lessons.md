@@ -10,6 +10,7 @@ Eine Zeile pro Lektion: Regel — Grund. Neue oben. Doppeltes zusammenführen. Z
 - Der Claude-Design-Prototyp (Juni) ist KI-Look: dunkles Luxus-Monogramm passt nicht zu einem herzlichen Familienweingut; Neustart bei null mit Briefing, Markenkern, Stimme — Benjamin, 26.10.
 
 ## Inhalt
+- Das Instagram-Konto @wasemdoppelstueck ist als Alkohol-Konto auf 18+ gestellt: ohne Login weder Profil noch Posts. Captions über `site:instagram.com wasemdoppelstueck` (DuckDuckGo-Snippets), Bilder nur mit Benjamins eingeloggtem Chrome oder Export von Marie — 31.10., Material-Gate A-006.
 - Claims und Idee-Sätze für Wasem müssen Gefühl tragen und junge Frauen ansprechen (cooles Design, coole Räume, lockerer Ton wie auf Instagram); „Kommt auf ein Glas. Bleibt den ganzen Tag.“ und „aus einem Glas Wein wird ein ganzer Tag“ lesen sich trocken wie Wikipedia — Benjamin, 26.10. Vor neuen Texten Instagram-Captions lesen.
 - Nicht mit „Frauenunternehmen“ oder „zwei Schwestern“ als Botschaft werben; die Familie darf vorkommen, die Botschaft sind Räume, Erlebnis, Stil — Benjamin, 26.10.
 - In Deck-Befunden immer den Schluss für den Kunden mitliefern (warum braucht ihr das?); „fehlt auf der Startseite“ allein reicht nicht — Benjamin, 26.10.
