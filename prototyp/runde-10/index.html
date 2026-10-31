@@ -43,24 +43,16 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 .gerahmt > div { position: relative; }
 .gerahmt > div::after { content: ""; position: absolute; inset: 8px; border: 1px solid color-mix(in srgb, var(--gold) 80%, transparent); pointer-events: none; z-index: 2; }
 
-/* ---------- Runde 12: Akzent aus der Flasche (Vergleich, Umschalter unten links) ---------- */
-/* Die Farbe ist das Etikett der Gutsweine, gemessen am Shopfoto: Rot #E33C16 (Chardonnay, Grauburgunder, Cabernet Blanc), Koralle #EC5F3F (Spätburgunder, Portugieser, Liebesstück).
-   Wie auf der Flasche bleibt sie klein: die Kapsel oben, nie das ganze Glas. Cognac behält Anfragen und Buchen */
-html[data-akzent="rot"] { --akzent: #E33C16; }
-html[data-akzent="koralle"] { --akzent: #EC5F3F; }
+/* ---------- Runde 12: Akzent aus der Flasche ---------- */
+/* Die Farbe ist das Etikett der Gutsweine, gemessen am Shopfoto: Rot #E33C16 (neue Weißwein-Etiketten Chardonnay, Grauburgunder, Cabernet Blanc, Riesling).
+   Gewählt vor Koralle #EC5F3F (Spätburgunder, Portugieser), weil Rot neben Cognac und Sand klar absetzt. Wie auf der Flasche bleibt sie klein: die Kapsel oben, nie das ganze Glas. Cognac behält Anfragen und Buchen */
+:root { --akzent: #E33C16; }
 /* Kapsel: zwischen den Haken sitzt auf der Goldlinie ein kurzer Farbstreifen, wie die Kapsel auf dem Flaschenhals; sie kommt, wenn die Linie gezogen ist */
-html[data-akzent] .ausl { background: linear-gradient(var(--akzent), var(--akzent)) no-repeat var(--haken, 1.2rem) 0 / 0 3px; transition: background-size .6s 1.5s var(--ease); }
-html[data-akzent] .sichtbar .ausl { background-size: calc(4.2rem + 1px) 3px; }
-@media (prefers-reduced-motion: reduce) { html[data-akzent] .ausl { transition: none; } }
-/* Hero: das gewählte Angebot leuchtet in der Etikettfarbe, während der Satz zurücktritt; der eine Farbfleck im ersten Screen */
-html[data-akzent] .hero h1 a.aktiv, html[data-akzent] .feste .satz a.aktiv { color: var(--akzent); text-decoration-color: var(--akzent); text-decoration-thickness: 2px; }
-html[data-akzent] .hero h1 a:focus-visible { outline: 2px solid var(--akzent); outline-offset: 4px; }
-/* Umschalter nur für den Vergleich, fliegt nach der Wahl raus */
-.akzentwahl { position: fixed; right: 1rem; bottom: 1rem; z-index: 95; display: flex; gap: .2rem; padding: .3rem; background: var(--leinen); border: 1px solid color-mix(in srgb, var(--espresso) 25%, transparent); font: 500 .72rem/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; }
-.akzentwahl button { font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--espresso); background: none; border: 0; min-height: 36px; padding: 0 .7rem; cursor: pointer; display: inline-flex; align-items: center; gap: .45rem; }
-.akzentwahl button[aria-pressed="true"] { background: var(--espresso); color: var(--leinen); }
-.akzentwahl i { width: .7rem; height: .7rem; background: var(--f); }
-@media (max-width: 900px) { .akzentwahl { top: 4.6rem; bottom: auto; right: 50%; transform: translateX(50%); } }
+.ausl { background: linear-gradient(var(--akzent), var(--akzent)) no-repeat var(--haken, 1.2rem) 0 / 0 3px; transition: background-size .6s 1.5s var(--ease); }
+.sichtbar .ausl { background-size: calc(4.2rem + 1px) 3px; }
+@media (prefers-reduced-motion: reduce) { .ausl { transition: none; } }
+/* Hero und Feste-Satz: das gewählte Angebot leuchtet in der Etikettfarbe (Regeln bei .hero h1 a.aktiv und .feste .satz a.aktiv), der eine Farbfleck im ersten Screen */
+.hero h1 a:focus-visible { outline: 2px solid var(--akzent); outline-offset: 4px; }
 
 /* ---------- Hero Runde 10: Bild im Leinen-Passepartout, darunter ein Satz ---------- */
 /* weil Text nie aufs Foto gehört (Ilona) und die Wortmarke auf Leinen immer lesbar bleibt; die Leinenfläche ist dieselbe wie die Seite darunter, man steht schon im Haus */
@@ -87,7 +79,7 @@ html[data-akzent] .hero h1 a:focus-visible { outline: 2px solid var(--akzent); o
 /* Hover verändert die Umgebung: der Satz tritt auf 22 % zurück, das Wort bleibt, das Bild darüber wird zu seiner Welt */
 .hero h1.zeigt { color: color-mix(in srgb, var(--espresso) 22%, transparent); }
 .hero h1.zeigt a { color: inherit; }
-.hero h1 a.aktiv { color: var(--espresso); text-decoration-color: var(--espresso); }
+.hero h1 a.aktiv { color: var(--akzent); text-decoration-color: var(--akzent); text-decoration-thickness: 2px; }
 /* Bildzeile oben rechts im Band, neben der kurzen ersten Zeile: sie wechselt mit dem Bild */
 .hero__ort { grid-column: 9 / 13; grid-row: 1; align-self: start; justify-self: end; text-align: right; margin: .35rem 0 0; font-size: .8rem; line-height: 1.45; color: var(--leise); }
 .hero__ort span { display: block; }
@@ -210,7 +202,7 @@ html[data-akzent] .hero h1 a:focus-visible { outline: 2px solid var(--akzent); o
 .feste .satz a { font: 500 .5em/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; vertical-align: .22em; padding: .9em .02em; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .45em; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); position: relative; z-index: 3; }
 .feste .satz.zeigt { color: color-mix(in srgb, var(--espresso) 22%, transparent); }
 .feste .satz.zeigt a { color: inherit; }
-.feste .satz a.aktiv { color: var(--espresso); text-decoration-color: var(--espresso); }
+.feste .satz a.aktiv { color: var(--akzent); text-decoration-color: var(--akzent); text-decoration-thickness: 2px; }
 .feste .text { grid-column: 1 / 6; margin-top: var(--mittel); }
 @media (min-width: 901px) { .feste .satz { max-width: calc(100% - clamp(260px, 25vw, 380px) - 3rem); } }
 .feste .bild { position: absolute; z-index: 2; right: var(--rand); top: var(--weit); width: clamp(260px, 25vw, 380px); pointer-events: none;
@@ -638,23 +630,6 @@ document.querySelectorAll('[data-wachsen]').forEach(fig => {
 
 // Anlass: Entwurf, schickt nichts ab
 document.querySelector('.anlass form').addEventListener('submit', e => { e.preventDefault(); e.currentTarget.classList.add('gesendet'); });
-
-// Akzent-Vergleich: ?akzent=rot|koralle, sonst Bestand
-(() => {
-  const wahl = [['bestand', 'Bestand', 'var(--cognac)'], ['rot', 'Rot', '#E33C16'], ['koralle', 'Koralle', '#EC5F3F']];
-  const setze = a => {
-    if (a === 'bestand') delete document.documentElement.dataset.akzent; else document.documentElement.dataset.akzent = a;
-    leiste.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.a === a));
-    history.replaceState(null, '', a === 'bestand' ? location.pathname : '?akzent=' + a);
-  };
-  const leiste = document.createElement('div');
-  leiste.className = 'akzentwahl'; leiste.setAttribute('role', 'group'); leiste.setAttribute('aria-label', 'Akzentfarbe vergleichen');
-  leiste.innerHTML = wahl.map(([a, t, f]) => `<button type="button" data-a="${a}"><i style="--f:${f}"></i>${t}</button>`).join('');
-  leiste.addEventListener('click', e => { const b = e.target.closest('button'); if (b) setze(b.dataset.a); });
-  document.body.append(leiste);
-  const start = new URLSearchParams(location.search).get('akzent');
-  setze(wahl.some(w => w[0] === start) ? start : 'bestand');
-})();
 </script>
 </body>
 </html>
