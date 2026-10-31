@@ -1,26 +1,23 @@
 # Übergabe
 
-Stand: 2026-10-31 (Nacht) · **Hero entschieden: Lesesatz Runde 11** (Benjamin über Session „Design-Prozess“). Hero-Gate Variante 1 (Lese-Film) verworfen. Akzent Koralle #EC5F3F fest. `claude/runde-11` enthält jetzt auch main (Hero-Gate-Pilot, Fotos, Video, DESIGN.md) und ist die Basis der Key-Screens.
+Stand: 2026-10-31 (spät) · **Akzent-Text #C33413 entschieden** (Benjamins Wahl, Variante 3). Hero Lesesatz Runde 11, Akzent Koralle #EC5F3F für Kapsel und Flächen.
 
 ## Zuletzt erledigt
-- Akzent: Benjamin wählte **Koralle #EC5F3F** vor Rot #E33C16 (`prototyp/runde-10/index.html` Z. 49, Variable `--akzent`). Umschalter entfernt. Sitzt auf Kapsel (`.ausl`), aktivem Angebot in Hero und Feste-Satz; Cognac bleibt Anfragen/Buchen.
-- `DESIGN.md`: Entscheidungen Akzent Koralle und Hero Lesesatz Runde 11 (Bona Nova bleibt, Bodoni Moda verworfen) nachgetragen, alte offene Fragen geschlossen.
-- `~/.claude/skills/geschmack/wahlen.csv`: Zeile 31.10. Hero-Gate mit Vermerk „von Benjamin durch Lesesatz Runde 11 ersetzt“.
-- main in `claude/runde-11` gemergt: Konflikte inhaltlich gelöst (A-006 fertig; Lessons beide; zwei Instagram-Dokumente: `docs/instagram-ton.md` = Sichtung 31.10., `docs/instagram-ton-2026-10-26.md` = Konzeptrunde 2).
-- Kontrastprüfung Koralle: auf Leinen 2,73 : 1, auf Sand 2,1 : 1 (Rot 3,47, Cognac 4,2). Unter WCAG für Text.
+- `prototyp/runde-10/index.html` Z. 49: neue Variable `--akzent-text: #C33413`; aktive Angebots-Links in Hero (Z. 82) und Feste-Satz (Z. 205) nutzen sie. Kapsel `.ausl` und Fokusrahmen bleiben `--akzent` Koralle.
+- Kontrast #C33413: Leinen 4,48 : 1, Sand 3,45 : 1 (große Schrift erfüllt). Im Browser gemessen: Links rgb(195, 52, 19), Kapsel rgb(236, 95, 63).
+- `DESIGN.md`: Entscheidung eingetragen, offene Frage Koralle-Textfarbe geschlossen.
 
 ## Offen
-0. (Erledigt 31.10.: Fast-Forward von `claude/runde-11` nach main nach Benjamins Ja trotz pruefer gelb, Video 5,98 MB aus Runde 5/6 bleibt.)
-1. **Koralle als Textfarbe** (offene Frage in `DESIGN.md`): Vorschlag Koralle für Kapsel und Flächen, dunklerer Koralle-Ton für die aktiven Links. Wahl bei Benjamin.
-2. Key-Screens auf `prototyp/runde-10/index.html` weiter: Anlass auf A heben (Schluss-Signatur wie Jägerhof), Feste: zu viel Sand unter dem Knopf, danach `text-kritik`.
-3. Prüfmarken aus Runde 10 bleiben (Fass 2.400 l, 50 Zimmer, Personen 30/50, bio seit 2022, Magda, Keller-Foto Edelstahl).
-4. Mit Marie klären: Weinetiketten als Zimmernummern, Fotos/Rohdaten, Instagram-Export.
-5. Branches `claude/key-screens`, `claude/hero-gate-pilot-96d6b3` und Worktree `brave-meitner-8193a0` nur nach Benjamins Ja löschen. Nichts pushen.
+1. Key-Screens auf `prototyp/runde-10/index.html` weiter: Anlass auf A heben (Schluss-Signatur wie Jägerhof), Feste: zu viel Sand unter dem Knopf, danach `text-kritik`.
+2. Prüfmarken aus Runde 10 bleiben (Fass 2.400 l, 50 Zimmer, Personen 30/50, bio seit 2022, Magda, Keller-Foto Edelstahl).
+3. Mit Marie klären: Weinetiketten als Zimmernummern, Fotos/Rohdaten, Instagram-Export.
+4. Branches `claude/key-screens`, `claude/hero-gate-pilot-96d6b3` und Worktree `brave-meitner-8193a0` nur nach Benjamins Ja löschen. Nichts pushen.
+5. Video 5,98 MB aus Runde 5/6 (pruefer gelb) bleibt vorerst.
 
 ## Hinweise
-- Server: launch.json-Eintrag `runde11-4323` (Port 4323, Root = Worktree), Änderung an launch.json nicht committet. `prototyp/_pruef/` ist gitignored.
-- Hero-Links haben 0,35 s Farbüberblendung: berechnete Farbe direkt nach Klassenwechsel zeigt noch Espresso.
-- Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866, Akzent Koralle #EC5F3F. Schrift Bona Nova + Albert Sans.
+- Server: launch.json-Eintrag `runde11-4323` (Port 4323, Root = Worktree `brave-meitner-8193a0`), Änderung an launch.json nicht committet. `prototyp/_pruef/` ist gitignored.
+- Aktive Links sind beim Laden leer; `.aktiv` kommt erst per Klick/Hover. Hero-Links haben 0,35 s Farbüberblendung.
+- Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866, Akzent Koralle #EC5F3F, Akzent-Text #C33413. Schrift Bona Nova + Albert Sans.
 
 ## Starter-Prompt (neue Session, Opus 5.5)
-> Opus 5.5. Projekt wasem-doppelstueck-website, neuer Worktree von main (Hero Lesesatz Runde 11, Akzent Koralle). Lies `wissen/Uebergabe.md` und `DESIGN.md`. Dann Benjamins Wahl zur Koralle-Textfarbe holen (offene Frage), dann „Offen“ 2. Kein Push.
+> Opus 5.5. Projekt wasem-doppelstueck-website, neuer Worktree von main (Hero Lesesatz Runde 11, Akzent Koralle, Akzent-Text #C33413). Lies `wissen/Uebergabe.md` und `DESIGN.md`. Dann „Offen“ 1: Anlass auf A heben, Feste-Sand unter dem Knopf, `design-kritik` mit Persona-Schleife, `text-kritik`. Kein Push.

@@ -46,7 +46,7 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 /* ---------- Runde 12: Akzent aus der Flasche ---------- */
 /* Die Farbe ist das Etikett der Gutsweine, gemessen am Shopfoto: Koralle #EC5F3F (Spätburgunder, Portugieser, Liebesstück, Rosé).
    Benjamin wählte Koralle vor Rot #E33C16 (neue Weißwein-Etiketten). Wie auf der Flasche bleibt sie klein: die Kapsel oben, nie das ganze Glas. Cognac behält Anfragen und Buchen */
-:root { --akzent: #EC5F3F; }
+:root { --akzent: #EC5F3F; --akzent-text: #C33413; }
 /* Kapsel: zwischen den Haken sitzt auf der Goldlinie ein kurzer Farbstreifen, wie die Kapsel auf dem Flaschenhals; sie kommt, wenn die Linie gezogen ist */
 .ausl { background: linear-gradient(var(--akzent), var(--akzent)) no-repeat var(--haken, 1.2rem) 0 / 0 3px; transition: background-size .6s 1.5s var(--ease); }
 .sichtbar .ausl { background-size: calc(4.2rem + 1px) 3px; }
@@ -79,7 +79,7 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 /* Hover verändert die Umgebung: der Satz tritt auf 22 % zurück, das Wort bleibt, das Bild darüber wird zu seiner Welt */
 .hero h1.zeigt { color: color-mix(in srgb, var(--espresso) 22%, transparent); }
 .hero h1.zeigt a { color: inherit; }
-.hero h1 a.aktiv { color: var(--akzent); text-decoration-color: var(--akzent); text-decoration-thickness: 2px; }
+.hero h1 a.aktiv { color: var(--akzent-text); text-decoration-color: var(--akzent-text); text-decoration-thickness: 2px; }
 /* Bildzeile oben rechts im Band, neben der kurzen ersten Zeile: sie wechselt mit dem Bild */
 .hero__ort { grid-column: 9 / 13; grid-row: 1; align-self: start; justify-self: end; text-align: right; margin: .35rem 0 0; font-size: .8rem; line-height: 1.45; color: var(--leise); }
 .hero__ort span { display: block; }
@@ -202,7 +202,7 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 .feste .satz a { font: 500 .5em/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; vertical-align: .22em; padding: .9em .02em; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .45em; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); position: relative; z-index: 3; }
 .feste .satz.zeigt { color: color-mix(in srgb, var(--espresso) 22%, transparent); }
 .feste .satz.zeigt a { color: inherit; }
-.feste .satz a.aktiv { color: var(--akzent); text-decoration-color: var(--akzent); text-decoration-thickness: 2px; }
+.feste .satz a.aktiv { color: var(--akzent-text); text-decoration-color: var(--akzent-text); text-decoration-thickness: 2px; }
 .feste .text { grid-column: 1 / 6; margin-top: var(--mittel); }
 @media (min-width: 901px) { .feste .satz { max-width: calc(100% - clamp(260px, 25vw, 380px) - 3rem); } }
 .feste .bild { position: absolute; z-index: 2; right: var(--rand); top: var(--weit); width: clamp(260px, 25vw, 380px); pointer-events: none;
