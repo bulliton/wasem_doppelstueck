@@ -10,7 +10,7 @@ Stand: 2026-10-31 (Nacht) · **Hero entschieden: Lesesatz Runde 11** (Benjamin �
 - Kontrastprüfung Koralle: auf Leinen 2,73 : 1, auf Sand 2,1 : 1 (Rot 3,47, Cognac 4,2). Unter WCAG für Text.
 
 ## Offen
-0. **Fast-Forward nach main wartet:** `pruefer` gelb zu 8e93812, einziger Befund `prototyp/video/wasem-lese-hero-desktop.mp4` 5,98 MB (> 5 MB Prüfgrenze, < 6 MB laut `design-regeln.md`), geladen von `prototyp/runde-5/` und `runde-6/`. Nach Benjamins Ja: im Hauptcheckout `git merge --ff-only claude/runde-11`, dann Sichtprüfung. Kein Push.
+0. (Erledigt 31.10.: Fast-Forward von `claude/runde-11` nach main nach Benjamins Ja trotz pruefer gelb, Video 5,98 MB aus Runde 5/6 bleibt.)
 1. **Koralle als Textfarbe** (offene Frage in `DESIGN.md`): Vorschlag Koralle für Kapsel und Flächen, dunklerer Koralle-Ton für die aktiven Links. Wahl bei Benjamin.
 2. Key-Screens auf `prototyp/runde-10/index.html` weiter: Anlass auf A heben (Schluss-Signatur wie Jägerhof), Feste: zu viel Sand unter dem Knopf, danach `text-kritik`.
 3. Prüfmarken aus Runde 10 bleiben (Fass 2.400 l, 50 Zimmer, Personen 30/50, bio seit 2022, Magda, Keller-Foto Edelstahl).
@@ -23,4 +23,4 @@ Stand: 2026-10-31 (Nacht) · **Hero entschieden: Lesesatz Runde 11** (Benjamin �
 - Farben: Leinen #EEE7DD, Sand #D9CBB8, Stein #9C8B7C, Cognac #94623E, Espresso #2B201A, Gold #C9A866, Akzent Koralle #EC5F3F. Schrift Bona Nova + Albert Sans.
 
 ## Starter-Prompt (neue Session, Opus 5.5)
-> Opus 5.5. Projekt wasem-doppelstueck-website, neuer Worktree von main (Hero Lesesatz Runde 11, Akzent Koralle). Lies `wissen/Uebergabe.md` und `DESIGN.md`. Falls main noch nicht auf `claude/runde-11` steht: Offen 0. Dann Benjamins Wahl zur Koralle-Textfarbe holen (offene Frage), dann „Offen“ 2. Kein Push.
+> Opus 5.5. Projekt wasem-doppelstueck-website, neuer Worktree von main (Hero Lesesatz Runde 11, Akzent Koralle). Lies `wissen/Uebergabe.md` und `DESIGN.md`. Dann Benjamins Wahl zur Koralle-Textfarbe holen (offene Frage), dann „Offen“ 2. Kein Push.
