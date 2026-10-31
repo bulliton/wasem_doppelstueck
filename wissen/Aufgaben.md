@@ -35,5 +35,5 @@ Status: eingang
 Quelle: Benjamin 26.10. · Modell: scout · Abnahme: Mails liegen in ~/Downloads, Fakten in docs/briefing.md ergänzt
 
 ## A-006 · Konzeptrunde 2 nach Benjamins Feedback
-Status: frei
+Status: läuft
 Quelle: Benjamin 26.10. · Modell: architekt (Opus) · Abnahme: docs/instagram-ton.md, 2–3 eigene Richtungen gegen docs/art-direction.md verglichen, Storyboard von Benjamin freigegeben

@@ -5,3 +5,5 @@ dist/
 !.env.example
 .claude/worktrees/
 .claude/settings.local.json
+prototyp/video/roh/
+prototyp/_pruef/
