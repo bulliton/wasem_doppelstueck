@@ -196,7 +196,9 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 /* ---------- Feste: der zweite große Moment der Seite ---------- */
 /* Der Satz läuft groß über die ganze Breite (Jägerhof-Maßstab), weil Feste das ist, wofür die Hauptzielgruppe kommt; die Anlässe stehen klickbar darin.
    Hover dimmt den Satz und das Foto springt an das gezeigte Wort: die Umgebung antwortet, nicht der Link. Das Foto liegt über gedimmtem Text, nie Text auf dem Foto */
+/* Runde 13: Sand endet kurz nach dem Knopf (vorher 180 px Leerfläche), das Foto steht unten bündig mit dem Knopf und schließt den Satz ab */
 .feste { position: relative; }
+.feste.sand { padding-bottom: clamp(4rem, 8vh, 6rem); }
 .feste .zt { grid-column: 1 / 8; }
 .feste .satz { grid-column: 1 / -1; margin: var(--mittel) 0 0; max-width: 21em; font: 400 clamp(2.3rem, 4.6vw, 4.6rem)/1.16 var(--serif); letter-spacing: -.02em; color: var(--espresso); transition: color .35s var(--ease-ui); position: relative; z-index: 1; }
 .feste .satz a { font: 500 .5em/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; vertical-align: .22em; padding: .9em .02em; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .45em; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); position: relative; z-index: 3; }
@@ -205,9 +207,11 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 .feste .satz a.aktiv { color: var(--akzent-text); text-decoration-color: var(--akzent-text); text-decoration-thickness: 2px; }
 .feste .text { grid-column: 1 / 6; margin-top: var(--mittel); }
 @media (min-width: 901px) { .feste .satz { max-width: calc(100% - clamp(260px, 25vw, 380px) - 3rem); } }
-.feste .bild { position: absolute; z-index: 2; right: var(--rand); top: var(--weit); width: clamp(260px, 25vw, 380px); pointer-events: none;
+.feste .bild { position: absolute; z-index: 2; right: var(--rand); bottom: clamp(4rem, 8vh, 6rem); width: clamp(260px, 25vw, 380px); pointer-events: none;
   transition: left .6s var(--ease), top .6s var(--ease), right .6s var(--ease); }
 .feste .bild > div { position: relative; aspect-ratio: 4 / 5; }
+/* Desktop: das Foto steht hoch bis an den Satz heran, damit über ihm keine leere Ecke bleibt */
+@media (min-width: 901px) { .feste .bild > div { aspect-ratio: 3 / 5; } }
 .feste .bild img { position: absolute; inset: 0; opacity: 0; transition: opacity .5s var(--ease), filter 1.8s var(--ease), transform 2.2s var(--ease); }
 .feste .bild img.an { opacity: 1; }
 @media (hover: none), (max-width: 900px) { .feste .bild { position: static; width: 78%; margin-top: var(--mittel); } .feste .bild img:not(:first-child) { display: none; } }
@@ -243,10 +247,27 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 .familie__team { grid-column: 4 / 10; margin: var(--mittel) 0 0; font: italic 400 clamp(1.25rem, 1.6vw, 1.45rem)/1.4 var(--serif); }
 
 /* ---------- Anlass als Satz ---------- */
-.anlass { padding-bottom: clamp(6rem, 16vh, 10rem); }
+.anlass { padding-top: clamp(5rem, 12vh, 8rem); padding-bottom: clamp(5rem, 12vh, 8rem); }
 .anlass .zt { grid-column: 1 / 6; }
 .anlass__kopf { grid-column: 1 / 6; }
 .anlass__kopf p { margin: var(--eng) 0 0; max-width: 32ch; color: var(--leise); }
+/* Runde 13: Brief und Antwort. Links schreibt das Haus und unterschreibt, rechts steht euer Satz zurück; die Unterschrift macht aus „ein Mensch aus dem Team“ zwei Namen, die man vorher bei der Familie gesehen hat (Jägerhof schließt mit der Unterschrift der Gastgeber) */
+/* Die Goldlinie, an der jedes Kapitel hängt, läuft hier einmal über die ganze Breite: die Seite schließt mit derselben Linie, mit der sie das Schild trägt */
+.anlass .ausl { --ende: 100%; }
+.anlass__kopf { grid-row: 2; } .anlass form { grid-row: 2 / 4; }
+/* Desktop: die Unterschrift schließt die linke Spalte unten bündig mit dem Formular ab, mobil steht sie am Ende */
+.anlass .unterschrift { grid-column: 1 / 6; grid-row: 3; align-self: end; }
+.unterschrift { display: grid; grid-template-columns: auto 1fr; column-gap: 1.1rem; align-items: center; margin-top: var(--mittel); padding-top: var(--eng); border-top: 1px solid var(--goldlinie); max-width: 30rem; }
+.unterschrift .gruss { font-size: .875rem; color: var(--leise); }
+.unterschrift .w-zeichen { grid-row: 1 / 4; width: 4.6rem; color: var(--espresso); }
+.unterschrift b { font: italic 400 clamp(2.4rem, 3.9vw, 3.6rem)/1.05 var(--serif); letter-spacing: -.01em; color: var(--cognac);
+  clip-path: inset(0 100% 0 0); transition: clip-path 1.6s 1.4s cubic-bezier(.6, .1, .3, 1); }
+.unterschrift span:last-child { font-size: .875rem; color: var(--leise); }
+/* die Namen ziehen sich von links auf wie Tinte, wenn das Kapitel ankommt */
+.sichtbar .unterschrift b { clip-path: inset(0 -.2em 0 0); }
+/* Abgeschickt: die Kapsel läuft über die ganze Linie, wie ein Siegel über dem Brief */
+.anlass.geschickt .ausl { background-size: calc(100% - var(--haken, 1.2rem)) 3px; transition: background-size 1.2s var(--ease); }
+@media (prefers-reduced-motion: reduce) { .unterschrift b { clip-path: none; transition: none; } .anlass.geschickt .ausl { transition: none; } }
 .anlass form { grid-column: 7 / -1; }
 .anlass fieldset { border: 0; margin: 0; padding: 0; font: 400 clamp(1.7rem, 2.9vw, 2.6rem)/1.65 var(--serif); }
 .anlass legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
@@ -254,7 +275,8 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 .feld:focus { outline: none; border-bottom-width: 2px; }
 .feld--zahl { width: 2.2ch; text-align: center; -moz-appearance: textfield; }
 .feld--zahl::-webkit-inner-spin-button { -webkit-appearance: none; }
-.feld--datum { width: 12ch; }
+.feld--datum { width: 8.5ch; }
+.feld::placeholder { color: color-mix(in srgb, var(--cognac) 85%, transparent); }
 select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
 .kontakt { display: grid; grid-template-columns: 1fr auto; gap: 1rem 1.5rem; align-items: end; margin-top: 2rem; max-width: 46rem; }
 .kontakt label { display: block; font-size: .9rem; margin-bottom: .35rem; color: var(--leise); }
@@ -319,6 +341,9 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
   .tagungen .zt { margin-bottom: var(--mittel); }
 
   .anlass form { margin-top: 2rem; }
+  .anlass__kopf, .anlass form, .anlass .unterschrift { grid-column: 1 / -1; grid-row: auto; }
+  .unterschrift b { font-size: clamp(1.7rem, 8vw, 2.1rem); }
+  .unterschrift .w-zeichen { width: 3.4rem; }
   .anlass fieldset { font-size: clamp(1.45rem, 6.4vw, 1.8rem); line-height: 1.75; }
   .kontakt { grid-template-columns: 1fr; }
 
@@ -480,7 +505,7 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
     <span class="ausl" aria-hidden="true"></span>
     <div class="anlass__kopf">
       <h2 class="zt" id="h-anlass"><span class="klar">Erzählt uns euren Anlass,</span> <span class="zweit klar">den Rest klären wir im Gespräch.</span></h2>
-      <p class="klar">Drei Angaben reichen für den Anfang. Darauf antwortet euch ein Mensch aus unserem Team, mit Namen und Telefonnummer.</p>
+      <p class="klar">Drei Angaben reichen für den Anfang. Eine von uns beiden meldet sich dann bei euch.</p>
     </div>
     <form class="klar" novalidate>
       <fieldset>
@@ -495,14 +520,15 @@ select.feld { appearance: none; padding-right: .2em; cursor: pointer; }
           <option>eine Weinwanderung</option>
           <option>etwas anderes</option>
         </select>
-        und denken an den <input class="feld feld--datum" type="date" aria-label="Wunschdatum">.
+        und denken an den <input class="feld feld--datum" type="text" placeholder="Juni 2027" aria-label="Wunschdatum oder Monat">.
       </fieldset>
       <div class="kontakt">
         <div><label for="kontakt">Wie erreichen wir euch? E-Mail oder Telefon</label><input id="kontakt" type="text" autocomplete="email"></div>
         <button class="weg" type="submit">Anlass schicken</button>
       </div>
-      <p class="danke" role="status">Danke. Wir melden uns bei euch und fragen nach, was ihr euch vorstellt.</p>
+      <p class="danke" role="status">Danke, euer Anlass ist angekommen. Wir fragen nach, was ihr euch vorstellt.</p>
     </form>
+    <p class="unterschrift"><span class="w-zeichen" role="img" aria-label="W, das Zeichen von Wasem"></span><span class="gruss">Bis bald,</span><b>Franzi und Elena</b><span>Wasem Doppelstück, Stiegelgasse 50</span></p>
   </section>
 </main>
 
@@ -554,7 +580,7 @@ const festHin = a => { if (!matchMedia('(hover: hover) and (min-width: 901px)').
   const sek = a.closest('section').getBoundingClientRect(), satzR = festSatz.getBoundingClientRect(), w = a.getBoundingClientRect(), b = festBild.offsetWidth, h = festBild.offsetHeight;
   let x = w.right - sek.left + 24; if (x + b > sek.width - 16) x = w.left - sek.left - b - 24;
   const y = Math.min(Math.max(w.top + w.height / 2 - h / 2, satzR.top), satzR.bottom - h) - sek.top;
-  festBild.style.left = x + 'px'; festBild.style.right = 'auto'; festBild.style.top = y + 'px'; };
+  festBild.style.left = x + 'px'; festBild.style.right = 'auto'; festBild.style.top = y + 'px'; festBild.style.bottom = 'auto'; };
 const festZeigen = i => festBilder.forEach((b, j) => b.classList.toggle('an', j === i));
 festSatz.querySelectorAll('a').forEach((a, i) => {
   const an = () => { festSatz.classList.add('zeigt'); a.classList.add('aktiv'); festZeigen(i + 1); festHin(a); };
@@ -629,7 +655,7 @@ document.querySelectorAll('[data-wachsen]').forEach(fig => {
 });
 
 // Anlass: Entwurf, schickt nichts ab
-document.querySelector('.anlass form').addEventListener('submit', e => { e.preventDefault(); e.currentTarget.classList.add('gesendet'); });
+document.querySelector('.anlass form').addEventListener('submit', e => { e.preventDefault(); e.currentTarget.classList.add('gesendet'); e.currentTarget.closest('.anlass').classList.add('geschickt'); });
 </script>
 </body>
 </html>
