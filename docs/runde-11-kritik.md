@@ -25,4 +25,4 @@ KI-Look-Liste: keine Karten mit Icons, keine Pillen, kein Verlauf, keine Versal-
 
 ## Geprüft
 - Playwright 1440×900 und 375×812: keine JS-Fehler, kein Querscroll; Wein-Stufen bei drei Scrollständen; Haken enden an der Oberlänge (Messung).
-- Nicht geprüft: echtes Gerät, Safari; Reduced Motion nur per CSS-Regel, nicht emuliert.
+- Nicht geprüft: echtes Gerät, Safari; Reduced Motion vom pruefer emuliert, Endbild sofort (Fix nach gelber Ampel).

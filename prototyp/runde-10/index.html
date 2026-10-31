@@ -17,6 +17,7 @@
 /* ---------- Runde 11: Formensatz aus dem Schild, Samt ---------- */
 /* Bildton: Sättigung runter, ein Hauch Sepia, damit jedes Foto in derselben beigen Familie steht wie Leinen und Sand; das Pinterest-Gefühl kommt aus der Einheit */
 :root { --ton: saturate(.76) sepia(.08); }
+.menue__bild img { filter: var(--ton); }
 /* Korn wie auf Leinenpapier: macht die Flächen samtig statt digital glatt */
 body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: .07; mix-blend-mode: multiply;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='k'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23k)'/%3E%3C/svg%3E"); }
@@ -605,7 +606,8 @@ if (buehne) {
 // Runde 11: Bild übernimmt die Fläche (Wein). Fortschritt vom Eintritt unten bis zur oberen Drittellinie, mit Auslauf; kein Pin, der gehört dem Hotel
 document.querySelectorAll('[data-wachsen]').forEach(fig => {
   const rahmen = fig.querySelector('div');
-  let ist = 0;
+  // mobil und bei Reduced Motion sofort das Endbild, kein Aufgehen beim Laden
+  let ist = still.matches || ruhig.matches ? 1 : 0;
   const lauf = () => {
     let soll = 1;
     if (!still.matches && !ruhig.matches) { const r = rahmen.getBoundingClientRect(); soll = sanft(teil(1 - r.top / innerHeight, .05, .75)); }
